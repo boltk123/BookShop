@@ -83,7 +83,8 @@ nav ul li:nth-child(6) {
 }
 .arrow-icons img {
   width: 40px;
-  margin-right: 25px;
+  margin-top: 25px;
+  margin-left: 90px;
 }
 .feature-img {
   height: 80%;
