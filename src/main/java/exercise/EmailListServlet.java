@@ -16,7 +16,7 @@ public class EmailListServlet extends HttpServlet {
                           HttpServletResponse response)
             throws ServletException, IOException {
 
-        String url = "/login_exercise";
+        String url = "/exercise.jsp";
 
         // get current action
         String action = request.getParameter("action");
@@ -26,7 +26,7 @@ public class EmailListServlet extends HttpServlet {
 
         // perform action and set URL to appropriate page
         if (action.equals("join")) {
-            url = "/login_exercise";    // the "join" page
+            url = "/exercise.jsp";    // the "join" page
         }
         else if (action.equals("add")) {
             // get parameters from the request
@@ -42,11 +42,11 @@ public class EmailListServlet extends HttpServlet {
             if (firstName == null || lastName == null || email == null ||
                     firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
                 message = "Please fill out all three text boxes.";
-                url = "/login_exercise";
+                url = "/exercise.jsp";
             }
             else {
                 message = "";
-                url = "/thanks_exercise";
+                url = "/thanks.jsp";
                 UserDB.insert(user);
             }
             request.setAttribute("user", user);

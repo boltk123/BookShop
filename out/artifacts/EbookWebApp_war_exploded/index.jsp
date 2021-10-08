@@ -5,7 +5,7 @@
 <head>
     <meta charset="ISO-8859-1">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <title>Online Shop</title>
+    <title>Đa Thay doi</title>
 </head>
 <body>
 <div class="container">
@@ -17,7 +17,7 @@
                 <li><a href="">About</a></li>
                 <li><a href="">Collections</a></li>
                 <li><a href="">Category</a></li>
-                <li><a href="login_exercise" >Exercise</a>
+                <li><a href="exercise.jsp" >Exercise</a>
 
                 </li>
                 <li><a href="login.jsp">Sign Up</a></li>

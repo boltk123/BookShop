@@ -1,23 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="EbookWebApp:war exploded">
-    <output-path>$PROJECT_DIR$/target/EbookWebApp-1.0-SNAPSHOT</output-path>
-    <properties id="maven-jee-properties">
-      <options>
-        <exploded>true</exploded>
-        <module>EbookWebApp</module>
-        <packaging>war</packaging>
-      </options>
-    </properties>
+  <artifact type="exploded-war" build-on-make="true" name="EbookWebApp:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/EbookWebApp_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="EbookWebApp" />
         </element>
-      </element>
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/EbookWebApp-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jstl:jstl:1.2" />
+        </element>
       </element>
       <element id="javaee-facet-resources" facet="EbookWebApp/web/Web" />
+      <element id="javaee-facet-resources" facet="EbookWebApp/javaeeApplication/javaEEApplication" />
     </root>
   </artifact>
 </component>

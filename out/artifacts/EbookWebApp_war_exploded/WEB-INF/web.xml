@@ -23,22 +23,23 @@
         <servlet-name>login</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+    <!--
     <servlet>
-        <servlet-name>exercise</servlet-name>
-        <jsp-file>/exercise/exercise.jsp</jsp-file> <!-- Your JSP. Must begin with '/' -->
+    <servlet-name>exercise</servlet-name>
+    <jsp-file>/exercise/exercise.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>exercise</servlet-name>
-        <url-pattern>/login_exercise</url-pattern> <!-- Any URL you want here -->
+        <url-pattern>/login_exercise</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>thanks</servlet-name>
-        <jsp-file>/exercise/thanks.jsp</jsp-file> <!-- Your JSP. Must begin with '/' -->
+        <jsp-file>/exercise/thanks.jsp</jsp-file>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>thanks</servlet-name>
-        <url-pattern>/thanks_exercise</url-pattern> <!-- Any URL you want here -->
-    </servlet-mapping>
+        <url-pattern>/thanks_exercise</url-pattern>
+    </servlet-mapping> -->
 
 </web-app>
