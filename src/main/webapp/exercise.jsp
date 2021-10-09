@@ -13,7 +13,7 @@
     <p>To join our email list, enter your name and
        email address below.</p>
     <p><i>${message}</i></p>
-    <form action="EmailListServlet" method="post">
+    <form action="TestServlet" method="post">
         <input type="hidden" name="action" value="add">       
         <label class="pad_top">Email:</label>
         <input type="email" name="email" value="${user.email}"><br>
