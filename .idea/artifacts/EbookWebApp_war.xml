@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="EbookWebApp:war">
-    <output-path>$PROJECT_DIR$/out/artifacts/EbookWebApp_war</output-path>
-    <root id="archive" name="EbookWebApp_war.war">
-      <element id="artifact" artifact-name="EbookWebApp:war exploded" />
-    </root>
-  </artifact>
-</component>
