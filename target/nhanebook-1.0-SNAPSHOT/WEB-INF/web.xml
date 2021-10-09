@@ -13,7 +13,16 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>emailList</servlet-name>
-        <url-pattern>/EmailListServlet</url-pattern>
+        <url-pattern>/emailList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Survey</servlet-name>
+        <servlet-class>exercise.nhanebook.SurveyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Survey</servlet-name>
+        <url-pattern>/survey</url-pattern>
     </servlet-mapping>
 
 </web-app>
