@@ -19,15 +19,19 @@
 <span>${user.firstName}</span><br>
 <label>Last Name:</label>
 <span>${user.lastName}</span><br>
-
+<p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
+<form action="survey.jsp" method="get">
+    <input type="submit" value="Survey">
+</form>
 <p>To enter another email address, click on the Back
     button in your browser or the Return button shown
     below.</p>
 
 <form action="" method="post">
-    <input type="hidden" name="action" value="join">
+    <input type="hidden" name="action" value="add">
     <input type="submit" value="Return">
 </form>
+
 <%@ include file="/includes/footer.jsp" %>
 </body>
 </html>

@@ -20,9 +20,6 @@
                 <li><a href="exercise.jsp" >Exercise</a></li>
                 <li><a href="login.jsp">Sign Up</a></li>
             </ul>
-            <ul>
-
-            </ul>
         </nav>
         <img src="image/cart.png" class="cart">
     </div>
