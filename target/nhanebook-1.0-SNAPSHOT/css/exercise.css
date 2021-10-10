@@ -16,11 +16,15 @@ h2 {
     color: teal;
     margin-bottom: .5em;
 }
+p {
+    color: #fff;
+}
 label {
     float: left;
     width: 7em;
     margin-bottom: 0.5em;
     font-weight: bold;
+    color: #fff;
 }
 input[type="text"], input[type="email"] {  /* An attribute selector */
     width: 15em;
@@ -30,6 +34,7 @@ input[type="text"], input[type="email"] {  /* An attribute selector */
 span {
     margin-left: 0.5em;
     margin-bottom: 0.5em;
+    color: #fff;
 }
 br {
     clear: both;
@@ -46,7 +51,9 @@ br {
   height: 100%;
   width: 100%;
   background-image: url(../image/random.jpg);
+  
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
 }
