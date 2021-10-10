@@ -17,7 +17,7 @@
                 <li><a href="">About</a></li>
                 <li><a href="">Collections</a></li>
                 <li><a href="">Category</a></li>
-                <li><a href="exercise.jsp" >Exercise</a></li>
+                <li><a href="exercise_list.jsp" >Exercise</a></li>
                 <li><a href="login.jsp">Sign Up</a></li>
             </ul>
         </nav>

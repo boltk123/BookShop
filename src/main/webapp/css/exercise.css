@@ -17,14 +17,14 @@ h2 {
     margin-bottom: .5em;
 }
 p {
-    color: #fff;
+    color: #c775b7;
 }
 label {
     float: left;
     width: 7em;
     margin-bottom: 0.5em;
     font-weight: bold;
-    color: #fff;
+    color: #c775b7;
 }
 input[type="text"], input[type="email"] {  /* An attribute selector */
     width: 15em;
@@ -34,7 +34,7 @@ input[type="text"], input[type="email"] {  /* An attribute selector */
 span {
     margin-left: 0.5em;
     margin-bottom: 0.5em;
-    color: #fff;
+    color: #c775b7;
 }
 br {
     clear: both;
@@ -50,7 +50,7 @@ br {
 .backgr {
   height: 100%;
   width: 100%;
-  background-image: url(../image/random.jpg);
+  background-image: url(../image/background.png);
   
   background-position: center;
   background-repeat: no-repeat;
