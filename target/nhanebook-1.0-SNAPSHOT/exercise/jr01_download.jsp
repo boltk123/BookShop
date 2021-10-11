@@ -9,20 +9,21 @@
 
 <h1>Downloads</h1>
 
-<h2>Paddlefoot - The First CD</h2>
+<h2>Joe Rut - Genuine Wood Grained Finish</h2>
     
 <table>
+
 <tr>
-    <th>Song title</th>
-    <th>Audio Format</th>
+    <td width="200"><b>Song title</b></td>
+    <td width="150"><b>Audio Format</b></td>
 </tr>
 <tr>
-    <td>64 Corvair</td>
-    <td><a href="/Heroku/sound/${productCode}/corvair.mp3">MP3</a></td>
+    <td>Filter</td>
+    <td><a href="DownloadFileSupportServlet?filename=filter.mp3&amp;directory=/sound/jr01/">MP3</a></td>
 </tr>
 <tr>
-    <td>Whiskey Before Breakfast</td>
-    <td><a href="/Heroku/sound/${productCode}/whiskey.mp3">MP3</a></td>
+    <td>So Long Lazy Ray</td>
+    <td><a href="DownloadFileSupportServlet?filename=so_long.mp3&amp;directory=/sound/jr01/">MP3</a></td>
 </tr>
 </table>
 

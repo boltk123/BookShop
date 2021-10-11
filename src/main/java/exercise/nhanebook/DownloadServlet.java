@@ -86,12 +86,12 @@ public class DownloadServlet extends HttpServlet {
                 String path = sc.getRealPath("/WEB-INF/EmailList.txt");
                 user = UserIO.getUser(emailAddress, path);
                 session.setAttribute("user", user);
-                url = "/" + productCode + "_download.jsp";
+                url = "/exercise/" + productCode + "_download.jsp";
             }
         }
         // if User object exists, go to Downloads page
         else {
-            url = "/" + productCode + "_download.jsp";
+            url = "/exercise/" + productCode + "_download.jsp";
         }
         return url;
     }
@@ -127,7 +127,7 @@ public class DownloadServlet extends HttpServlet {
 
         // create and return a URL for the appropriate Download page
         Product product = (Product) session.getAttribute("product");
-        String url = "/" + product.getCode() + "_download.jsp";
+        String url = "/exercise/" + product.getCode() + "_download.jsp";
         return url;
     }
 

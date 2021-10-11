@@ -13,15 +13,15 @@ public class DownloadFileSupportServlet extends HttpServlet {
     final String[][] contentTypes = {{"xml", "text/xml"}, {"pdf", "application/pdf"}, {"mp3", "audio/mpeg"}};
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Thư mục chưa file
-        final String file_location = "D:/Heroku/src/main/webapp/sound/8601";
+
+        // final String file_location = "D:/Heroku/src/main/webapp/sound/8601";
         // Tên của file
         Object requestObject = request.getParameter("filename");
-        //final String file_location = (String) request.getParameter("file_location");
+        String directory = (String) request.getParameter("directory");
         if(requestObject != null){
             String fileName = (String) requestObject;
             String contentType = getContentType(fileName.split("\\.")[1]);
-            String path = getServletContext().getRealPath("/sound/8601/star.mp3");
+            String path = getServletContext().getRealPath(directory + fileName);
             //File file = new File(file_location + "/" + fileName);
             File file = new File(path);
             response.setContentType(contentType);

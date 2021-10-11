@@ -9,21 +9,20 @@
 
 <h1>Downloads</h1>
 
-<h2>Joe Rut - Genuine Wood Grained Finish</h2>
+<h2>Paddlefoot - The Second CD</h2>
     
 <table>
-
 <tr>
-    <td width="200"><b>Song title</b></td>
-    <td width="150"><b>Audio Format</b></td>
+    <th>Song title</th>
+    <th>Audio Format</th>
 </tr>
 <tr>
-    <td>Filter</td>
-    <td><a href="/Heroku/sound/${productCode}/filter.mp3">MP3</a></td>
+    <td>Neon Lights</td>
+    <td><a href="DownloadFileSupportServlet?filename=neon.mp3&amp;directory=/sound/pf02/">MP3</a></td>
 </tr>
 <tr>
-    <td>So Long Lazy Ray</td>
-    <td><a href="/Heroku/sound/${productCode}/so_long.mp3">MP3</a></td>
+    <td>Tank Hill</td>
+    <td><a href="DownloadFileSupportServlet?filename=tank.mp3&amp;directory=/sound/pf02/">MP3</a></td>
 </tr>
 </table>
 
