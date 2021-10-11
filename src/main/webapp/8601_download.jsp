@@ -18,11 +18,13 @@
 </tr>
 <tr>
     <td>You Are a Star</td>
-    <td><a href="/musicStore/sound/${productCode}/star.mp3">MP3</a></td>
+    <!--<td><a href="/Heroku/sound/{productCode}/star.mp3">MP3</a></td> -->
+    <td><a href="DownloadFileSupportServlet?filename=star.mp3&amp;file_location=/Heroku/src/main/webapp/sound/8601">MP3</a></td>
 </tr>
 <tr>
     <td>Don't Make No Difference</td>
-    <td><a href="/musicStore/sound/${productCode}/no_difference.mp3">MP3</a></td>
+    <!--<td><a href="/Heroku/sound/{productCode}/no_difference.mp3">MP3</a></td>-->
+    <td><a href="DownloadFileSupportServlet?filename=no_difference.mp3&amp;file_location=/Heroku/src/main/webapp/sound/8601">MP3</a></td>
 </tr>
 </table>
 

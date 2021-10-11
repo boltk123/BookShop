@@ -13,6 +13,6 @@
 <body>
     <H1>Exercise List</H1>
     <a href="exercise.jsp"> Email List - Survey</a><br>
-    <a href="index2.jsp">Music Download - Cookie</a>
+    <a href="album_list.jsp">Music Download - Cookie</a>
 </body>
 </html>
