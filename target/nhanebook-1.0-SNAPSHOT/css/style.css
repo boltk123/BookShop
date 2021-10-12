@@ -128,8 +128,8 @@ nav{
 }
 .home_container {
     width: 100%;
-    min-height: 760px;
-    background-image:url("/image/home_img.png");
+    min-height: 500px;
+    background-image:url("../image/home_img.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -240,7 +240,7 @@ nav{
     margin-top: 100px;
 }
 .exercises_container{
-    background-image: url("/image/exercise_wall.jpg");
+    background-image: url("../image/exercise_wall.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
