@@ -10,7 +10,7 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-@WebServlet(name = "CartServletExercise", value = "/cart")
+@WebServlet(name = "CartServletExercise", urlPatterns= "/cart")
 public class CartServlet extends HttpServlet {
 
     @Override

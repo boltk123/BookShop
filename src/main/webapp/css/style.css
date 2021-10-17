@@ -266,6 +266,7 @@ nav{
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 15px;
+    height: 50px;
 }
 .exercises a{
     text-decoration: none;
@@ -280,6 +281,7 @@ nav{
     background-position: right bottom;
     background-size: 200% 100%;
     transition: all 0.5s ease-out;
+    align-items: center;
 }
 .exercises a:hover{
     color: white;

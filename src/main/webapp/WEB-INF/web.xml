@@ -46,6 +46,24 @@
         <servlet-name>DownloadFileSupportServlet</servlet-name>
         <url-pattern>/DownloadFileSupportServlet</url-pattern>
     </servlet-mapping>
+        <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <scripting-invalid>true</scripting-invalid>
+        </jsp-property-group>
+    </jsp-config>
+    <context-param>
+        <param-name>custServEmail</param-name>
+        <param-value>custserv@murach.com</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>EmailListServletEL</servlet-name>
+        <servlet-class>email.EmailListServletEL</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmailListServletEL</servlet-name>
+        <url-pattern>/emailListEL</url-pattern>
+    </servlet-mapping>
     <!--
     <servlet>
         <servlet-name>CartServletExercise</servlet-name>

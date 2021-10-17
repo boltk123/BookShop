@@ -5,13 +5,13 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "TestServlet", value = "/TestServlet")
+@WebServlet(name = "TestServlet", urlPatterns= "/test")
 public class TestServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String url="/testJSP.jsp";
 
-        String message ="Xai post method";
+        String message ="Xai get method";
         request.setAttribute("message",message);
         System.out.println("Post mehtod");
 
@@ -20,7 +20,7 @@ public class TestServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String message ="Xai get method";
+        String message ="Xai post method";
         String url="/testJSP.jsp";
         request.setAttribute("message",message);
         System.out.println("Post mehtod");
