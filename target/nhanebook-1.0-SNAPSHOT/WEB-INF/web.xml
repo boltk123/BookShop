@@ -49,7 +49,7 @@
         <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>
-            <scripting-invalid>true</scripting-invalid>
+            <scripting-invalid>false</scripting-invalid>
         </jsp-property-group>
     </jsp-config>
     <context-param>
@@ -64,13 +64,14 @@
         <servlet-name>EmailListServletEL</servlet-name>
         <url-pattern>/emailListEL</url-pattern>
     </servlet-mapping>
-    <!--
+
     <servlet>
-        <servlet-name>CartServletExercise</servlet-name>
+        <servlet-name>CartServlet</servlet-name>
         <servlet-class>exercise.nhanebook.CartServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>CartServletExercise</servlet-name>
+        <servlet-name>CartServlet</servlet-name>
         <url-pattern>/cart</url-pattern>
-    </servlet-mapping> -->
+    </servlet-mapping>
+
 </web-app>

@@ -32,7 +32,10 @@
             <input type="hidden" name="action" value="add">
             <input type="submit" value="Return">
         </form>
-
+        <p>Return to Homepage</p>
+        <form action="index.html">
+            <input type="submit"  value="Back To Home Page">
+        </form>
         <%@ include file="/includes/footer.jsp" %>
     </div>
 </body>

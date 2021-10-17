@@ -20,8 +20,12 @@ public class EmailListServlet extends HttpServlet {
         if(action == null){
             action = "join";
         }
+        else if(action.equals("homepage")){
+            url = "/index.html";
+
+        }
         // perform action and set URL to appropriate page
-        if (action.equals("join")) {
+        else if (action.equals("join")) {
             url = "/exercise.jsp";    // the "join" page
         }
         else if (action.equals("add")) {

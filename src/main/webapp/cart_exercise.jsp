@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Murach's Java Servlets and JSP</title>
-    <link rel="stylesheet" href="../css/cart_exercise.css" type="text/css"/>
+    <link rel="stylesheet" href="css/cart_exercise.css" type="text/css"/>
 </head>
 <body>
     
@@ -47,6 +47,9 @@
             </form></td>
     </tr>
 </table>
-        
+<br>
+<form action="index.html">
+    <input type="submit"  value="Back To Home Page">
+</form><br>
 </body>
 </html>

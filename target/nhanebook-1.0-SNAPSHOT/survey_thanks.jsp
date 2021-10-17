@@ -30,7 +30,12 @@
             <c:if test="${user.wantsUpdates == 'Yes'}">
                 <label>Contact Via:</label>
                 <span>${user.contactVia}</span>
-            </c:if>   
+            </c:if>
+            <br>
+            <form action="index.html">
+                <input type="submit"  value="Back To Home Page">
+            </form><br>
+            <%@ include file="/includes/footer.jsp" %>
         </div>
     </div>
 </body>

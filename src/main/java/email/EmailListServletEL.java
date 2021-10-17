@@ -7,8 +7,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 import business.UserEL;
-import data.UserDBEL;
-import data.UserIOEL;
+import data.exercise.UserDBEL;
+import data.exercise.UserIOEL;
 
 public class EmailListServletEL extends HttpServlet
 {    

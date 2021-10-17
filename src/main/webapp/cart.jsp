@@ -55,7 +55,7 @@
   <input type="submit" value="Continue Shopping">
 </form>
 
-<form action="checkout.jsp" method="post">
+<form action="cart" method="post">
   <input type="hidden" name="action" value="checkout">
   <input type="submit" value="Checkout">
 </form>

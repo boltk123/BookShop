@@ -30,6 +30,10 @@
             <label>&nbsp;</label>
             <input type="submit" value="Join Now" class="margin_left">
         </form>
+        <form action="emailList" method="post">
+            <input type="hidden" name="action" value="homepage">
+            <input type="submit"  value="Back To Home Page">
+        </form>
         <%@ include file="/includes/footer.jsp" %>
     </div>
     </body>
