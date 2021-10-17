@@ -1,26 +1,24 @@
 package exercise.nhanebook;
 
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
-//@WebServlet="cart"
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
 
-@WebServlet(name = "CartServletExercise", urlPatterns= "/cart")
 public class CartServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request,
-                          HttpServletResponse response)
+            HttpServletResponse response)
             throws ServletException, IOException {
-
-        String url = "/index.jsp";
+        
+        String url = "/cart_exercise.jsp";
         ServletContext sc = getServletContext();
-
+        
         // get current action
         String action = request.getParameter("action");
         if (action == null) {
@@ -29,8 +27,8 @@ public class CartServlet extends HttpServlet {
 
         // perform action and set URL to appropriate page
         if (action.equals("shop")) {
-            url = "/index.jsp";    // the "index" page
-        }
+            url = "/cart_exercise.jsp";    // the "index" page
+        } 
         else if (action.equals("cart")) {
             String productCode = request.getParameter("productCode");
             String quantityString = request.getParameter("quantity");
@@ -69,17 +67,28 @@ public class CartServlet extends HttpServlet {
             url = "/cart.jsp";
         }
         else if (action.equals("checkout")) {
+            HttpSession session = request.getSession();
             url = "/checkout.jsp";
+            Cart cart = (Cart) session.getAttribute("cart");
+            if (cart == null) {
+                url = "/cart_exercise.jsp";
+            }
+            else{
+                cart.setCartTotal();
+                session.setAttribute("cart", cart);
+                url = "/checkout.jsp";
+            }
+
         }
 
-        sc.getRequestDispatcher(url)
-                .forward(request, response);
+        sc.getRequestDispatcher(url).
+                forward(request, response);
     }
-
+    
     @Override
     protected void doGet(HttpServletRequest request,
-                         HttpServletResponse response)
+            HttpServletResponse response)
             throws ServletException, IOException {
         doPost(request, response);
-    }
+    }    
 }
