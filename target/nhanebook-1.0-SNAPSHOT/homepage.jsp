@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="image/book store logo.png" class="logo">
+            <img src="image/bookshoplogo.png" class="logo">
             <nav>
                 <ul>
                     <li><a href="">Home</a></li>
@@ -16,7 +16,7 @@
                     <li><a href="">Collections</a></li>
                     <li><a href="">Category</a></li>
                     <li><a href="">Sign Up</a></li>
-                    <li><a href="">Log In</a></li>
+                    <li><a href="login.jsp">Log In</a></li>
         
                 </ul>
                 <ul>
