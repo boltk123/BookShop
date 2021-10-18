@@ -1,15 +1,15 @@
 package exercise.nhanebook;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
+import java.io.*;
+import javax.servlet.*;
 import javax.servlet.http.*;
-import java.io.IOException;
 
-public class DownloadServlet extends HttpServlet {
+
+public class DownloadServlet_old extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request,
-            HttpServletResponse response)
+                      HttpServletResponse response)
             throws IOException, ServletException {
 
         // get current action
@@ -38,11 +38,11 @@ public class DownloadServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request,
-            HttpServletResponse response)
+                       HttpServletResponse response)
             throws IOException, ServletException {
 
         String action = request.getParameter("action");
-        
+
         // perform action and set URL to appropriate page
         String url = "/album_list.jsp";
         if (action.equals("registerUser")) {
@@ -56,33 +56,39 @@ public class DownloadServlet extends HttpServlet {
     }
 
     private String checkUser(HttpServletRequest request,
-            HttpServletResponse response) {
+                             HttpServletResponse response) {
 
         String productCode = request.getParameter("productCode");
         HttpSession session = request.getSession();
-        session.setAttribute("productCode", productCode);
+
+        // get Product object and set it as session attribute
+        ServletContext sc = this.getServletContext();
+        String productPath = sc.getRealPath("/WEB-INF/products.txt");
+        Product product = ProductIO.getProduct(productCode, productPath);
+        session.setAttribute("product", product);
+
+        // get the User object
         User user = (User) session.getAttribute("user");
 
         String url;
         // if User object doesn't exist, check email cookie
         if (user == null) {
             Cookie[] cookies = request.getCookies();
-            String emailAddress = 
-                CookieUtil.getCookieValue(cookies, "emailCookie");
+            String emailAddress =
+                    CookieUtil.getCookieValue(cookies, "emailCookie");
 
             // if cookie doesn't exist, go to Registration page
             if (emailAddress == null || emailAddress.equals("")) {
                 url = "/register.jsp";
-            } 
+            }
             // if cookie exists, create User object and go to Downloads page
             else {
-                ServletContext sc = getServletContext();
                 String path = sc.getRealPath("/WEB-INF/EmailList.txt");
                 user = UserIO.getUser(emailAddress, path);
                 session.setAttribute("user", user);
                 url = "/" + productCode + "_download.jsp";
             }
-        } 
+        }
         // if User object exists, go to Downloads page
         else {
             url = "/" + productCode + "_download.jsp";
@@ -91,7 +97,7 @@ public class DownloadServlet extends HttpServlet {
     }
 
     private String registerUser(HttpServletRequest request,
-            HttpServletResponse response) {
+                                HttpServletResponse response) {
 
         // get the user data
         String email = request.getParameter("email");
@@ -113,26 +119,20 @@ public class DownloadServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("user", user);
 
-        // add a cookie that stores the user's email as a cookie
-        Cookie c1 = new Cookie("emailCookie", email);
-        c1.setMaxAge(60 * 60 * 24 * 365 * 2); // set age to 2 years
-        c1.setPath("/");                      // allow entire app to access it
-        response.addCookie(c1);
-
-        // add a cookie that stores the user's as a cookie
-        Cookie c2 = new Cookie("firstNameCookie", firstName);
-        c2.setMaxAge(60 * 60 * 24 * 365 * 2); // set age to 2 years
-        c2.setPath("/");                      // allow entire app to access it
-        response.addCookie(c2);
+        // add a cookie that stores the user's email to browser
+        Cookie c = new Cookie("emailCookie", email);
+        c.setMaxAge(60 * 60 * 24 * 365 * 2); // set age to 2 years
+        c.setPath("/");                      // allow entire app to access it
+        response.addCookie(c);
 
         // create and return a URL for the appropriate Download page
-        String productCode = (String) session.getAttribute("productCode");
-        String url = "/" + productCode + "_download.jsp";
+        Product product = (Product) session.getAttribute("product");
+        String url = "/" + product.getCode() + "_download.jsp";
         return url;
     }
 
     private String deleteCookies(HttpServletRequest request,
-            HttpServletResponse response) {
+                                 HttpServletResponse response) {
 
         Cookie[] cookies = request.getCookies();
         for (Cookie cookie : cookies) {
