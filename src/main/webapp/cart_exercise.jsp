@@ -48,6 +48,10 @@
     </tr>
 </table>
 <br>
+<form action="cart" method="post">
+    <input type="hidden" name="action" value="seecart">
+    <input type="submit"  value="See Cart">
+</form>
 <form action="index.html">
     <input type="submit"  value="Back To Home Page">
 </form><br>

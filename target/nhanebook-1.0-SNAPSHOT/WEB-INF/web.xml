@@ -83,4 +83,13 @@
         <url-pattern>/cart</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ProductsServlet</servlet-name>
+        <servlet-class>exercise.nhanebook.ProductsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductsServlet</servlet-name>
+        <url-pattern>/loadProducts</url-pattern>
+    </servlet-mapping>
+
 </web-app>
