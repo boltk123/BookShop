@@ -128,7 +128,7 @@ nav{
 }
 .home_container {
     width: 100%;
-    min-height: 500px;
+    min-height: 800px;
     background-image:url("../image/home_img.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -142,14 +142,14 @@ nav{
     font-size: 17px;
     padding: 70px 0;
     text-align: center;
+    padding-top: 175px;
 }
 /* Home ends */
 
 /* Members starts*/
 
 #members{
-    margin-top: 100px;
-    padding-top: 10px;
+    
 }
 .members_container{
     padding-top: 100px;
@@ -237,7 +237,7 @@ nav{
 
 /* Exercises starts*/
 #exercises{
-    margin-top: 100px;
+
 }
 .exercises_container{
     background-image: url("../image/exercise_wall.jpg");

@@ -6,34 +6,38 @@
     <meta charset="utf-8">
     <title>Murach's Java Servlets and JSP</title>
     <link rel="stylesheet" href="css/exercise.css" type="text/css"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
 </head>
 
 <body>
     <div class="backgr">   
-        <div>   
+        <div class="box">   
             <h1>Thanks for taking our survey!</h1>
 
-            <p>Here is the information that you entered:</p>
+            <p>Here is the information that you entered:</p><br>
 
             <label>Email:</label>
-            <span>${user.email}</span><br>
+            <p>${user.email}</p><br>
             <label>First Name:</label>
-            <span>${user.firstName}</span><br>
+            <p>${user.firstName}</p><br>
             <label>Last Name:</label>
-            <span>${user.lastName}</span><br>
+            <p>${user.lastName}</p><br>
             <label>Heard From:</label>
-            <span>${user.heardFrom}</span><br>
+            <p>${user.heardFrom}</p><br>
             <label>Updates:</label>
-            <span>${user.wantsUpdates}</span><br>
+            <p>${user.wantsUpdates}</p><br>
 
             <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
             <c:if test="${user.wantsUpdates == 'Yes'}">
                 <label>Contact Via:</label>
-                <span>${user.contactVia}</span>
+                <p>${user.contactVia}</p>
             </c:if>
             <br>
             <form action="index.html">
-                <input type="submit"  value="Back To Home Page">
+                <div class="centered"><input class="button" type="submit"  value="Back To Home Page"></div>
             </form><br>
             <%@ include file="/includes/footer.jsp" %>
         </div>
