@@ -3,13 +3,17 @@
 <head>
     <meta charset="utf-8">
     <title>Murach's Java Servlets and JSP</title>
-    <link rel="stylesheet" href="css/cart_exercise.css" type="text/css"/>
+    <link rel="stylesheet" href="css/exercise.css" type="text/css"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
 </head>
-<body>
+<body class="backgr">
 
-<h1>Your cart</h1>
+<h1 class="centered">Your cart</h1>
 
-<table>
+<table class="box cart">
   <tr>
     <th>Quantity</th>
     <th>Description</th>
@@ -25,7 +29,7 @@
       <form action="cart" method="post">
         <input type="hidden" name="productCode"
                value="<c:out value='${item.product.code}'/>">
-        <input type=text name="quantity"
+        <input class="quant" type=text name="quantity"
                value="<c:out value='${item.quantity}'/>" id="quantity">
         <input type="submit" value="Update">
       </form>
@@ -48,17 +52,17 @@
 </c:forEach>
 </table>
 
-<p><b>To change the quantity</b>, enter the new quantity 
+<p class="centered"><b>To change the quantity</b>, enter the new quantity 
       and click on the Update button.</p>
   
 <form action="" method="post">
   <input type="hidden" name="action" value="shop">
-  <input type="submit" value="Continue Shopping">
+  <div class="centered"><input class="button" type="submit" value="Continue Shopping"></div>
 </form>
 
 <form action="cart" method="post">
   <input type="hidden" name="action" value="checkout">
-  <input type="submit" value="Checkout">
+  <div class="centered"><input class="button" type="submit" value="Checkout"></div>
 </form>
 
 </body>

@@ -11,10 +11,8 @@
       rel="stylesheet"
     />
 </head>
-<body>
-    <div class="backgr">    
-        <div class="box" id="emailList">
-            <%@ include file="/includes/header.html" %>
+<body class="backgr">  
+        <div class="box">            
             <h1>Join our email list</h1>
             <p>To join our email list, enter your name and
                email address below.</p>
@@ -39,9 +37,6 @@
                 <input type="hidden" name="action" value="homepage">
                 <div class="centered"><input class="button" type="submit"  value="Back To Home Page"></div>
                     </form><br>
-            <%@ include file="/includes/footer.jsp" %>
         </div>
-    </div>
-    </body>
-
-</html>
+<%@ include file="/includes/footer.jsp" %>
+        

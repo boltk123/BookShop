@@ -3,27 +3,31 @@
 <head>
     <meta charset="utf-8">
     <title>Murach's Java Servlets and JSP</title>
-    <link rel="stylesheet" href="css/cart_exercise.css" type="text/css"/>
+    <link rel="stylesheet" href="css/exercise.css" type="text/css"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
 </head>
-<body>
+<body class="backgr">
     
-<h1>CD list</h1>
-<table>
+<h1 class="centered">CD list</h1>
+<table class="box">
     <tr>
-        <th>Description</th>
-        <th class="right">Price</th>
+        <th><h2>Description</h2></th>
+        <th class="right"><h2>Price</h2></th>
         <th>&nbsp;</th>
     </tr>
     <tr>
-        <td>86 (the band) - True Life Songs and Pictures</td>
+        <td><p>86 (the band) - True Life Songs and Pictures</p></td>
         <td class="right">$14.95</td>
         <td><form action="cart" method="post">
                 <input type="hidden" name="productCode" value="8601">
-                <input type="submit" value="Add To Cart">
+                <input class="" type="submit" value="Add To Cart">
             </form><!--<a href="cart?productCode=8601">Add To Cart</a>--></td>
     </tr>
     <tr>
-        <td>Paddlefoot - The first CD</td>
+        <td><p>Paddlefoot - The first CD</p></td>
         <td class="right">$12.95</td>
         <td><form action="cart" method="post">
                 <input type="hidden" name="productCode" value="pf01">
@@ -31,7 +35,7 @@
             </form></td>
     </tr>
     <tr>
-        <td>Paddlefoot - The second CD</td>
+        <td><p>Paddlefoot - The second CD</p></td>
         <td class="right">$14.95</td>
         <td><form action="cart" method="post">
                 <input type="hidden" name="productCode" value="pf02">
@@ -39,7 +43,7 @@
             </form></td>
     </tr>
     <tr>
-        <td>Joe Rut - Genuine Wood Grained Finish</td>
+        <td><p>Joe Rut - Genuine Wood Grained Finish</p></td>
         <td class="right">$14.95</td>
         <td><form action="cart" method="post">
                 <input type="hidden" name="productCode" value="jr01">
@@ -50,10 +54,10 @@
 <br>
 <form action="cart" method="post">
     <input type="hidden" name="action" value="seecart">
-    <input type="submit"  value="See Cart">
+    <div class=centered><input class="button" type="submit"  value="See Cart"></div>
 </form>
 <form action="index.html">
-    <input type="submit"  value="Back To Home Page">
+    <div class=centered><input class="button" type="submit"  value="Back To Home Page"></div>
 </form><br>
 </body>
 </html>
