@@ -4,6 +4,7 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
 .heading {
     font-size: 60px;
     color: white;
@@ -53,8 +54,9 @@
     color: white;
 }
 body {
-    background-color: #12172b;
-    background-image: url(../image/home_img.png);
+    height: 100px;
+    background-color: #28aaaa;
+    /*background-image: url(../image/bubble_background.png)*/;
     font-family: "Poppins", sans-serif;
 }
 html{
@@ -194,10 +196,33 @@ nav{
 /* Home starts */
 #home{
 }
-.home_container {
+.home{
+    width: 100%;
+    min-height: 950px;
+    background-image: url("../image/bubble_background.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.home_content{
+    color: #fbfcfd;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.home .home_content p{
+    font-size: 40px;
+}
+.home .home_content h3{
+    font-size: 60px;
+}
+
+home_container {
     width: 100%;
     min-height: 800px;
-    background-image:url("../image/home_img.png");
+    background-image:url("../image/bubble_background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -212,6 +237,7 @@ nav{
     text-align: center;
     padding-top: 175px;
 }
+
 /* Home ends */
 
 /* Members starts*/
