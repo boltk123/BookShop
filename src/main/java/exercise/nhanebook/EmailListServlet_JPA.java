@@ -8,7 +8,7 @@ public class EmailListServlet_JPA extends HttpServlet{
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response)
             throws ServletException, IOException {
-        String url = "/exercise.jsp";
+        String url = "/emaillist_JPA.jsp";
 
         // get current action
         String action = request.getParameter("action");
@@ -18,7 +18,7 @@ public class EmailListServlet_JPA extends HttpServlet{
 
         // perform action and set URL to appropriate page
         if (action.equals("join")) {
-            url = "/exercise.jsp";    // the "join" page
+            url = "/emaillist_JPA.jsp";    // the "join" page
         }
         else if (action.equals("add")) {
             // get parameters from the request
@@ -37,7 +37,7 @@ public class EmailListServlet_JPA extends HttpServlet{
             if (UserDB_JPA.emailExists(user.getEmail())) {
                 message = "This email address already exists.<br>" +
                         "Please enter another email address.";
-                url = "/exercise.jsp";
+                url = "/emaillist_JPA.jsp";
             }
             else {
                 message = "";
