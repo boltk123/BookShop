@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class UserIO {
-    public static boolean add(User user, String filepath) {
+    public static boolean add(User_JDBC user, String filepath) {
         try {
             File file = new File(filepath);
             PrintWriter out = new PrintWriter(
@@ -21,17 +21,17 @@ public class UserIO {
         }
     }
 
-    public static User getUser(String email, String filepath) {
+    public static User_JDBC getUser(String email, String filepath) {
         try {
             File file = new File(filepath);
             BufferedReader in = new BufferedReader(
                     new FileReader(file));
-            User user = new User();
+            User_JDBC user = new User_JDBC();
             String line = in.readLine();
             while (line != null) {
                 StringTokenizer t = new StringTokenizer(line, "|");
                 if (t.countTokens() < 3) {
-                    return new User("", "", "");
+                    return new User_JDBC("", "", "");
                 }
                 String token = t.nextToken();
                 if (token.equalsIgnoreCase(email)) {
@@ -51,9 +51,9 @@ public class UserIO {
         }
     }
 
-    public static ArrayList<User> getUsers(String filepath) {
+    public static ArrayList<User_JDBC> getUsers(String filepath) {
         try {
-            ArrayList<User> users = new ArrayList<User>();
+            ArrayList<User_JDBC> users = new ArrayList<User_JDBC>();
             BufferedReader in = new BufferedReader(
                     new FileReader(filepath));
             String line = in.readLine();
@@ -62,7 +62,7 @@ public class UserIO {
                 String email = t.nextToken();
                 String firstName = t.nextToken();
                 String lastName = t.nextToken();
-                User user = new User(firstName, lastName, email);
+                User_JDBC user = new User_JDBC(firstName, lastName, email);
                 users.add(user);
                 line = in.readLine();
             }

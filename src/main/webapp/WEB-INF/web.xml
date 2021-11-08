@@ -76,6 +76,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>EmailListServletJPA</servlet-name>
+        <servlet-class>exercise.nhanebook.EmailListServlet_JPA</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmailListServletJPA</servlet-name>
+        <url-pattern>/EmailListServlet_JPA</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>CartServlet</servlet-name>
         <servlet-class>exercise.nhanebook.CartServlet</servlet-class>
     </servlet>

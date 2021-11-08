@@ -33,7 +33,7 @@ public class SurveyServlet extends HttpServlet {
         }
         
         // store data in User object
-        User user = new User();
+        User_JDBC user = new User_JDBC();
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setEmail(email);        

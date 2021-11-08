@@ -2,7 +2,6 @@ package exercise.nhanebook;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
 
 public class EmailListServlet extends HttpServlet {
@@ -35,7 +34,7 @@ public class EmailListServlet extends HttpServlet {
             String email = request.getParameter("email");
 
             // store data in User object
-            User user = new User(firstName, lastName, email);
+            User_JDBC user = new User_JDBC(firstName, lastName, email);
 
             // validate the parameters
             String message;

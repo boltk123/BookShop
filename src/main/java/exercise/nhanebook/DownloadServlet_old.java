@@ -67,7 +67,7 @@ public class DownloadServlet_old extends HttpServlet {
         session.setAttribute("product", product);
 
         // get the User object
-        User user = (User) session.getAttribute("user");
+        User_JDBC user = (User_JDBC) session.getAttribute("user");
 
         String url;
         // if User object doesn't exist, check email cookie
@@ -104,7 +104,7 @@ public class DownloadServlet_old extends HttpServlet {
         String lastName = request.getParameter("lastName");
 
         // store the data in a User object
-        User user = new User();
+        User_JDBC user = new User_JDBC();
         user.setEmail(email);
         user.setFirstName(firstName);
         user.setLastName(lastName);
