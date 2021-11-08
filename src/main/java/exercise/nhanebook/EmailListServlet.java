@@ -47,7 +47,7 @@ public class EmailListServlet extends HttpServlet {
             else {
                 message = "";
                 url = "/thanks.jsp";
-                UserDB.insert(user);
+                //UserDB.insert(user);
             }
             request.setAttribute("user", user);
             request.setAttribute("message", message);

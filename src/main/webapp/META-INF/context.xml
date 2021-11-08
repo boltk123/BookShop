@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/EbookWebApp">
-    <Resource name="jdbc/murach" auth="Container"
-              driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://localhost:8080/murach"
-              username="murach_user" password="sesame"
+    <Resource name="jdbc/test" auth="Container"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost:5432/test"
+              username="postgres" password="12345"
               maxActive="100" maxIdle="30" maxWait="10000"
               logAbandoned="true" removeAbandoned="true"
               removeAbandonedTimeout="60" type="javax.sql.DataSource" />

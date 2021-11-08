@@ -68,7 +68,7 @@
     </context-param>
     <servlet>
         <servlet-name>EmailListServletEL</servlet-name>
-        <servlet-class>email.EmailListServletEL</servlet-class>
+        <servlet-class>exercise.nhanebook.EmailListServletEL</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>EmailListServletEL</servlet-name>
@@ -93,4 +93,12 @@
         <url-pattern>/loadProducts</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SqlGateway</servlet-name>
+        <servlet-class>exercise.nhanebook.SqlGatewayServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SqlGateway</servlet-name>
+        <url-pattern>/sqlGateway</url-pattern>
+    </servlet-mapping>
 </web-app>

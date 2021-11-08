@@ -1,6 +1,6 @@
 package data.exercise;
 
-import business.UserEL;
+import exercise.nhanebook.UserEL;
 
 public class UserDBEL {
 

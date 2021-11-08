@@ -1,9 +1,7 @@
-package sql;
+package exercise.nhanebook;
 
 import java.sql.*;
 import java.util.ArrayList;
-
-import business.UserEL;
 
 public class UserDB {
 
@@ -11,7 +9,6 @@ public class UserDB {
         ConnectionPool pool = ConnectionPool.getInstance();
         Connection connection = pool.getConnection();
         PreparedStatement ps = null;
-
         String query
                 = "INSERT INTO User (Email, FirstName, LastName) "
                 + "VALUES (?, ?, ?)";

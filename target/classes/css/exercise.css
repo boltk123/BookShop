@@ -1,0 +1,117 @@
+/* The styles for the elements */
+body {
+    font-family:'Roboto', sans-serif;   
+
+}
+
+label {
+    float: left;
+    width: 9em;
+    font-weight: bold;
+    color: #c775b7;
+    margin-left: 40px;
+    margin-top: 5px;
+    margin-right: 50px;
+    font-size: 16px;
+    text-align: left;
+}
+input[type="text"], input[type="email"] {  /* An attribute selector */
+    width: 15em;
+    margin-top:  5px;
+}
+span{
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 900;
+}
+br {
+    clear: both;
+}
+body, html{
+    height: 100%;
+}
+
+.backgr{
+  width: 100%;
+  background-image: url(../image/background.png);
+  height:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box {
+    width: 500px;
+    background-color : white;
+    margin : 60px auto;
+    border: solid 2px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+ a{
+    text-decoration: none;
+    color: black;
+    background: white;
+    border: solid 2px;
+    border-radius: 7px;
+    padding: 5px 20px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    display: inline-block;
+    transition: .5s ;
+}
+a:hover{
+    font-size: 18px;
+    color:white;
+    background: blue;
+    transition: .5s  ;
+}
+
+.box h1{
+    font-size: 140%;
+    color: teal;
+    font-weight: 900;
+    text-align: center;
+}
+.box p {
+    color: black;
+    font-weight: bolder;
+    margin: 5px 10px;
+    text-align: center;
+    font-size: 16px;
+}
+.box h2 {
+    font-size: 160%;
+    color:#ff437f;
+    font-weight: 900;
+    text-align: center;
+}
+.button{
+    text-decoration: none;
+    background:#ff3faa ;
+    background: linear-gradient(to right,#ff7057 ,#ff3faa  )  ;
+    border: none;
+    border-radius: 10px;
+    height: 26px;
+    width: 200px;
+    
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;   
+    letter-spacing: 3px;
+    font-weight: 900;
+}
+.centered{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.cart {
+    width: 1000px;
+}
+.cart input[type=text]{
+    width: 50px;
+    text-align: right;
+}
+

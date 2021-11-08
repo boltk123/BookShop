@@ -12,7 +12,6 @@ public class Cart implements Serializable {
     // List of items
     private ArrayList<LineItem> items;
     private double cart_total;
-
     public void setTotal(double s) {
         cart_total = s;
     }
@@ -21,7 +20,6 @@ public class Cart implements Serializable {
        NumberFormat currency = NumberFormat.getCurrencyInstance();
        return currency.format(this.cart_total);
     }
-
     // constructor
     public Cart() {
         items = new ArrayList<LineItem>();
