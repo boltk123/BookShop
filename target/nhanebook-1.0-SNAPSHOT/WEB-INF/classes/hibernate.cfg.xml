@@ -11,6 +11,5 @@
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
         <property name="show_sql">true</property>
-        <mapping resource="Book_contents.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>

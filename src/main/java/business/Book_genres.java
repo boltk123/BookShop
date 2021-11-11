@@ -10,22 +10,30 @@ import java.io.Serializable;
 public class Book_genres implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long book_id;
-    private Long genre_id;
+    private int book_id;
+    private int genre_id;
 
-    public void setBook_id(Long book_id) {
+    public Book_genres() {
+    }
+
+    public Book_genres(int book_id, int genre_id) {
+        this.book_id = book_id;
+        this.genre_id = genre_id;
+    }
+
+    public void setBook_id(int book_id) {
         this.book_id = book_id;
     }
 
-    public Long getBook_id() {
+    public int getBook_id() {
         return book_id;
     }
 
-    public Long getGenre_id() {
+    public int getGenre_id() {
         return genre_id;
     }
 
-    public void setGenre_id(Long genre_id) {
+    public void setGenre_id(int genre_id) {
         this.genre_id = genre_id;
     }
 }

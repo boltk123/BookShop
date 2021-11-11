@@ -812,7 +812,7 @@ false Zulu
 13158||-9223372036854775808|U|G
 13158||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>594</IntrospectionStateNumber>
+      <IntrospectionStateNumber>668</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="4" parent="1" name="pg_execute_server_program">
@@ -877,7 +877,7 @@ false Zulu
       <Comment>standard public schema</Comment>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>595</IntrospectionStateNumber>
+      <IntrospectionStateNumber>669</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="3" name="plpgsql">
@@ -986,309 +986,298 @@ false Zulu
     <table id="31" parent="17" name="authors">
       <ObjectId>16429</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>527</StateNumber>
+      <StateNumber>606</StateNumber>
     </table>
     <table id="32" parent="17" name="book_authors">
       <ObjectId>16437</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>528</StateNumber>
+      <StateNumber>613</StateNumber>
     </table>
-    <table id="33" parent="17" name="book_contents">
-      <ObjectId>16475</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>572</StateNumber>
-    </table>
-    <table id="34" parent="17" name="book_genres">
+    <table id="33" parent="17" name="book_genres">
       <ObjectId>16447</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>530</StateNumber>
+      <StateNumber>620</StateNumber>
     </table>
-    <table id="35" parent="17" name="books">
+    <table id="34" parent="17" name="books">
       <ObjectId>16452</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>531</StateNumber>
+      <StateNumber>667</StateNumber>
     </table>
-    <table id="36" parent="17" name="genres">
+    <table id="35" parent="17" name="genres">
       <ObjectId>16457</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>532</StateNumber>
+      <StateNumber>639</StateNumber>
     </table>
-    <table id="37" parent="17" name="publishers">
+    <table id="36" parent="17" name="publishers">
       <ObjectId>16462</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>533</StateNumber>
+      <StateNumber>642</StateNumber>
     </table>
-    <table id="38" parent="17" name="user_jpa">
+    <table id="37" parent="17" name="user_jpa">
       <ObjectId>16421</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>519</StateNumber>
     </table>
-    <table id="39" parent="17" name="usertest">
+    <table id="38" parent="17" name="usertest">
       <ObjectId>16406</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>502</StateNumber>
     </table>
-    <column id="40" parent="31" name="author_id">
+    <column id="39" parent="31" name="author_id">
       <Position>1</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>527</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>606</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="41" parent="31" name="first_name">
+    <column id="40" parent="31" name="first_name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>527</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="42" parent="31" name="last_name">
+    <column id="41" parent="31" name="last_name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>527</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="31" name="middle_name">
+    <column id="42" parent="31" name="middle_name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>527</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="44" parent="31" name="authors_pkey">
-      <ObjectId>16435</ObjectId>
-      <StateNumber>527</StateNumber>
+    <index id="43" parent="31" name="authors_pkey">
+      <ObjectId>16487</ObjectId>
+      <StateNumber>606</StateNumber>
       <ColNames>author_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
+      <ClassIds>1978</ClassIds>
     </index>
-    <key id="45" parent="31" name="authors_pkey">
-      <ObjectId>16436</ObjectId>
-      <StateNumber>527</StateNumber>
+    <key id="44" parent="31" name="authors_pkey">
+      <ObjectId>16488</ObjectId>
+      <StateNumber>606</StateNumber>
       <ColNames>author_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>authors_pkey</UnderlyingIndexName>
     </key>
-    <column id="46" parent="32" name="book_id">
+    <column id="45" parent="32" name="book_id">
       <Position>1</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>528</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>609</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="47" parent="32" name="author_id">
+    <column id="46" parent="32" name="author_id">
       <Position>2</Position>
-      <DataType>bigint|0s</DataType>
-      <StateNumber>528</StateNumber>
-      <TypeId>20</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>613</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <index id="48" parent="32" name="book_authors_pkey">
-      <ObjectId>16440</ObjectId>
-      <StateNumber>528</StateNumber>
+    <index id="47" parent="32" name="book_authors_pkey">
+      <ObjectId>16496</ObjectId>
+      <StateNumber>613</StateNumber>
       <ColNames>book_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
+      <ClassIds>1978</ClassIds>
     </index>
-    <key id="49" parent="32" name="book_authors_pkey">
-      <ObjectId>16441</ObjectId>
-      <StateNumber>528</StateNumber>
+    <key id="48" parent="32" name="book_authors_pkey">
+      <ObjectId>16497</ObjectId>
+      <StateNumber>609</StateNumber>
       <ColNames>book_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>book_authors_pkey</UnderlyingIndexName>
     </key>
-    <column id="50" parent="33" name="book_id">
+    <column id="49" parent="33" name="book_id">
       <Position>1</Position>
-      <DataType>bigint|0s</DataType>
-      <StateNumber>572</StateNumber>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="51" parent="33" name="book_cover">
-      <Position>2</Position>
-      <DataType>bytea|0s</DataType>
-      <StateNumber>572</StateNumber>
-      <TypeId>17</TypeId>
-    </column>
-    <column id="52" parent="34" name="book_id">
-      <Position>1</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>530</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>619</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="53" parent="34" name="genre_id">
+    <column id="50" parent="33" name="genre_id">
       <Position>2</Position>
-      <DataType>bigint|0s</DataType>
-      <StateNumber>530</StateNumber>
-      <TypeId>20</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>620</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <index id="54" parent="34" name="book_genres_pkey">
-      <ObjectId>16450</ObjectId>
-      <StateNumber>530</StateNumber>
+    <index id="51" parent="33" name="book_genres_pkey">
+      <ObjectId>16515</ObjectId>
+      <StateNumber>620</StateNumber>
       <ColNames>book_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
+      <ClassIds>1978</ClassIds>
     </index>
-    <key id="55" parent="34" name="book_genres_pkey">
-      <ObjectId>16451</ObjectId>
-      <StateNumber>530</StateNumber>
+    <key id="52" parent="33" name="book_genres_pkey">
+      <ObjectId>16516</ObjectId>
+      <StateNumber>619</StateNumber>
       <ColNames>book_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>book_genres_pkey</UnderlyingIndexName>
     </key>
-    <column id="56" parent="35" name="book_id">
+    <column id="53" parent="34" name="book_id">
       <Position>1</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>531</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>623</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="57" parent="35" name="published_date">
+    <column id="54" parent="34" name="published_date">
       <Position>2</Position>
       <DataType>date|0s</DataType>
       <StateNumber>531</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="58" parent="35" name="publisher_id">
+    <column id="55" parent="34" name="publisher_id">
       <Position>3</Position>
-      <DataType>bigint|0s</DataType>
-      <StateNumber>531</StateNumber>
-      <TypeId>20</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>624</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="59" parent="35" name="rating">
+    <column id="56" parent="34" name="rating">
       <Position>4</Position>
-      <DataType>bigint|0s</DataType>
-      <StateNumber>531</StateNumber>
-      <TypeId>20</TypeId>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>662</StateNumber>
+      <TypeId>701</TypeId>
     </column>
-    <column id="60" parent="35" name="title">
+    <column id="57" parent="34" name="title">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>531</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="61" parent="35" name="total_pages">
+    <column id="58" parent="34" name="total_pages">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>531</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="62" parent="35" name="books_pkey">
-      <ObjectId>16455</ObjectId>
-      <StateNumber>531</StateNumber>
+    <column id="59" parent="34" name="book_cover">
+      <Position>7</Position>
+      <DataType>bytea|0s</DataType>
+      <StateNumber>667</StateNumber>
+      <TypeId>17</TypeId>
+    </column>
+    <index id="60" parent="34" name="books_pkey">
+      <ObjectId>16525</ObjectId>
+      <StateNumber>662</StateNumber>
       <ColNames>book_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
+      <ClassIds>1978</ClassIds>
     </index>
-    <key id="63" parent="35" name="books_pkey">
-      <ObjectId>16456</ObjectId>
-      <StateNumber>531</StateNumber>
+    <key id="61" parent="34" name="books_pkey">
+      <ObjectId>16526</ObjectId>
+      <StateNumber>623</StateNumber>
       <ColNames>book_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>books_pkey</UnderlyingIndexName>
     </key>
-    <column id="64" parent="36" name="genre_id">
+    <column id="62" parent="35" name="genre_id">
       <Position>1</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>532</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>634</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="65" parent="36" name="genre">
+    <column id="63" parent="35" name="genre">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>532</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="66" parent="36" name="parent_id">
+    <column id="64" parent="35" name="parent_id">
       <Position>3</Position>
-      <DataType>bigint|0s</DataType>
-      <StateNumber>532</StateNumber>
-      <TypeId>20</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>639</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <index id="67" parent="36" name="genres_pkey">
-      <ObjectId>16460</ObjectId>
-      <StateNumber>532</StateNumber>
+    <index id="65" parent="35" name="genres_pkey">
+      <ObjectId>16547</ObjectId>
+      <StateNumber>639</StateNumber>
       <ColNames>genre_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
+      <ClassIds>1978</ClassIds>
     </index>
-    <key id="68" parent="36" name="genres_pkey">
-      <ObjectId>16461</ObjectId>
-      <StateNumber>532</StateNumber>
+    <key id="66" parent="35" name="genres_pkey">
+      <ObjectId>16548</ObjectId>
+      <StateNumber>634</StateNumber>
       <ColNames>genre_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>genres_pkey</UnderlyingIndexName>
     </key>
-    <column id="69" parent="37" name="publisher_id">
+    <column id="67" parent="36" name="publisher_id">
       <Position>1</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>533</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>642</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="70" parent="37" name="name">
+    <column id="68" parent="36" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>533</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="71" parent="37" name="publishers_pkey">
-      <ObjectId>16465</ObjectId>
-      <StateNumber>533</StateNumber>
+    <index id="69" parent="36" name="publishers_pkey">
+      <ObjectId>16558</ObjectId>
+      <StateNumber>642</StateNumber>
       <ColNames>publisher_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
+      <ClassIds>1978</ClassIds>
     </index>
-    <key id="72" parent="37" name="publishers_pkey">
-      <ObjectId>16466</ObjectId>
-      <StateNumber>533</StateNumber>
+    <key id="70" parent="36" name="publishers_pkey">
+      <ObjectId>16559</ObjectId>
+      <StateNumber>642</StateNumber>
       <ColNames>publisher_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>publishers_pkey</UnderlyingIndexName>
     </key>
-    <column id="73" parent="38" name="userid">
+    <column id="71" parent="37" name="userid">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>519</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="74" parent="38" name="email">
+    <column id="72" parent="37" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="75" parent="38" name="firstname">
+    <column id="73" parent="37" name="firstname">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="76" parent="38" name="lastname">
+    <column id="74" parent="37" name="lastname">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="77" parent="38" name="user_jpa_pkey">
+    <index id="75" parent="37" name="user_jpa_pkey">
       <ObjectId>16427</ObjectId>
       <StateNumber>519</StateNumber>
       <ColNames>userid</ColNames>
@@ -1298,39 +1287,39 @@ false Zulu
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="78" parent="38" name="user_jpa_pkey">
+    <key id="76" parent="37" name="user_jpa_pkey">
       <ObjectId>16428</ObjectId>
       <StateNumber>519</StateNumber>
       <ColNames>userid</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>user_jpa_pkey</UnderlyingIndexName>
     </key>
-    <column id="79" parent="39" name="userid">
+    <column id="77" parent="38" name="userid">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>502</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="80" parent="39" name="firstname">
+    <column id="78" parent="38" name="firstname">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>502</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="81" parent="39" name="lastname">
+    <column id="79" parent="38" name="lastname">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>502</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="82" parent="39" name="emailaddress">
+    <column id="80" parent="38" name="emailaddress">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>502</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="83" parent="39" name="usertest_pkey">
+    <index id="81" parent="38" name="usertest_pkey">
       <ObjectId>16409</ObjectId>
       <StateNumber>502</StateNumber>
       <ColNames>userid</ColNames>
@@ -1340,7 +1329,7 @@ false Zulu
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="84" parent="39" name="usertest_pkey">
+    <key id="82" parent="38" name="usertest_pkey">
       <ObjectId>16410</ObjectId>
       <StateNumber>502</StateNumber>
       <ColNames>userid</ColNames>

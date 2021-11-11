@@ -9,13 +9,24 @@ import java.io.Serializable;
 @Entity
 public class Publishers implements Serializable {
 
+    private int publisher_id;
+    private String name;
+
+    public Publishers() {
+    }
+
+    public Publishers(int publisher_id, String name) {
+        this.publisher_id = publisher_id;
+        this.name = name;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long getPublisher_id() {
+    public int getPublisher_id() {
         return publisher_id;
     }
 
-    public void setPublisher_id(Long publisher_id) {
+    public void setPublisher_id(int publisher_id) {
         this.publisher_id = publisher_id;
     }
 
@@ -27,6 +38,5 @@ public class Publishers implements Serializable {
         this.name = name;
     }
 
-    private Long publisher_id;
-    private String name;
+
 }

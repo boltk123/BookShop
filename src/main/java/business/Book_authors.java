@@ -11,21 +11,29 @@ public class Book_authors implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long book_id;
-    private Long author_id;
+    private int book_id;
+    private int author_id;
 
-    public void setBook_id(Long book_id) {
+    public Book_authors() {
+    }
+
+    public Book_authors(int book_id, int author_id) {
+        this.book_id = book_id;
+        this.author_id = author_id;
+    }
+
+    public void setBook_id(int book_id) {
         this.book_id = book_id;
     }
 
-    public Long getBook_id() {
+    public int getBook_id() {
         return book_id;
     }
-    public Long getAuthor_id() {
+    public int getAuthor_id() {
         return author_id;
     }
 
-    public void setAuthor_id(Long author_id) {
+    public void setAuthor_id(int author_id) {
         this.author_id = author_id;
     }
 

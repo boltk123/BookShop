@@ -10,15 +10,24 @@ public class Genres {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long genre_id;
+    private int genre_id;
     private String genre;
-    private Long parent_id;
+    private int parent_id;
 
-    public void setGenre_id(Long genre_id) {
+    public Genres(int genre_id, String genre, int parent_id) {
+        this.genre_id = genre_id;
+        this.genre = genre;
+        this.parent_id = parent_id;
+    }
+
+    public Genres() {
+    }
+
+    public void setGenre_id(int genre_id) {
         this.genre_id = genre_id;
     }
 
-    public Long getGenre_id() {
+    public int getGenre_id() {
         return genre_id;
     }
 
@@ -30,11 +39,11 @@ public class Genres {
         this.genre = genre;
     }
 
-    public Long getParent_id() {
+    public int getParent_id() {
         return parent_id;
     }
 
-    public void setParent_id(Long parent_id) {
+    public void setParent_id(int parent_id) {
         this.parent_id = parent_id;
     }
 

@@ -1,8 +1,5 @@
 package servlets;
 
-import business.Book_contents;
-import business.Books;
-import database.Book_contentsDB;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -16,7 +13,7 @@ public class HomepageServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
     }
-
+    /*
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Book_contentsDB book_contentsDB = new Book_contentsDB();
@@ -29,4 +26,5 @@ public class HomepageServlet extends HttpServlet {
         sc.getRequestDispatcher(url).
                 forward(request, response);
     }
+    */
 }

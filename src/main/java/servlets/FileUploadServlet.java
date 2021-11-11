@@ -1,16 +1,14 @@
 package servlets;
 
-import business.Book_contents;
-import org.apache.commons.io.FileUtils;
+import business.Books;
+import database.BooksDB;
 import org.apache.commons.io.IOUtils;
-import org.hibernate.Session;
-import utility.HibernateUtil;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.*;
 import java.nio.file.Paths;
-import java.util.List;
 
 @WebServlet(name = "FileUploadServlet", value = "/FileUpload")
 
@@ -42,8 +40,8 @@ public class FileUploadServlet extends HttpServlet {
         InputStream fileContent = filePart.getInputStream();
 
         System.out.println("Hibernate save image into database");
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
+        //Session session = HibernateUtil.getSessionFactory().openSession();
+        //session.beginTransaction();
         //final File file = File.createTempFile(PREFIX, SUFFIX);
         //File file = new File("C://");
         //save image into database
@@ -62,10 +60,10 @@ public class FileUploadServlet extends HttpServlet {
         */
 
         // insert into database
-        Book_contents bookContents = new Book_contents();
-        bookContents.setBook_cover(bFile);
-        session.save(bookContents);
-
+        int book_id = Integer.parseInt((request.getParameter("book_id")));
+        Books book = new Books(book_id, "Sach1", 1000, 4.5, null, 10, bFile);
+        BooksDB.insertBook(book);
+        //session.save(bookContents);
         /*
         //Get image from database
         Book_contents avatar2 = (Book_contents)session.get(Book_contents.class, bookContents.getBook_id());
@@ -79,7 +77,6 @@ public class FileUploadServlet extends HttpServlet {
             e.printStackTrace();
         }
         */
-
-        session.getTransaction().commit();
+        //session.getTransaction().commit();
     }
 }
