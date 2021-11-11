@@ -10,7 +10,5 @@
         <input type="file" name="file" multiple/>
         <input type="submit" value="Upload" />
     </form>
-
-
 </body>
 </html>
