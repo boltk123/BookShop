@@ -37,7 +37,7 @@
         <p>Second users: ${users[1].email}</p><br>
         <p>Customer service email: ${initParam.custServEmail}</p>
         <br>
-        <form action="index.html">
+        <form action="index.jsp">
             <div class="centered"><input class="button" type="submit"  value="Home Page"></div>
         </form><br>
     </div>

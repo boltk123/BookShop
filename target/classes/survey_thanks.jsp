@@ -36,7 +36,7 @@
                 <p>${user.contactVia}</p>
             </c:if>
             <br>
-            <form action="index.html">
+            <form action="index.jsp">
                 <div class="centered"><input class="button" type="submit"  value="Back To Home Page"></div>
             </form><br>
             <%@ include file="/includes/footer.jsp" %>

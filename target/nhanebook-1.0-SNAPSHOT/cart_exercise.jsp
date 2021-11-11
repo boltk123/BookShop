@@ -56,7 +56,7 @@
     <input type="hidden" name="action" value="seecart">
     <div class=centered><input class="button" type="submit"  value="See Cart"></div>
 </form>
-<form action="index.html">
+<form action="index.jsp">
     <div class=centered><input class="button" type="submit"  value="Back To Home Page"></div>
 </form><br>
 </body>

@@ -43,7 +43,7 @@
     <div class="centered"><input class="button" type="submit" value="Continue Shopping"></div>
 </form>
 
-<form action="index.html" method="post">
+<form action="index.jsp" method="post">
     <input type="hidden" name="action" value="checkout">
     <div class="centered"><input class="button" type="submit" value="Home Page"></div>
 </form>

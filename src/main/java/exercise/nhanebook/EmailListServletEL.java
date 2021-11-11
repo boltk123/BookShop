@@ -6,10 +6,6 @@ import java.util.Date;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-import exercise.nhanebook.UserEL;
-import data.exercise.UserDBEL;
-import data.exercise.UserIOEL;
-
 public class EmailListServletEL extends HttpServlet
 {
     @Override

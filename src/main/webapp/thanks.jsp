@@ -38,7 +38,7 @@
                 <div class="centered"><input type="submit" value="Return"  class="button"></div>
             </form>
             <p>Return to Homepage</p>
-            <form action="index.html">
+            <form action="index.jsp">
                 <div class="centered"><input type="submit"  value="Back To Home Page"  class="button"></div>
             </form>
             <%@ include file="/includes/footer.jsp" %>

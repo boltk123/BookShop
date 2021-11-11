@@ -22,13 +22,13 @@
     <nav class="bg-color-3 d-flex justify-around p-1">
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
-                <a href="/index.html" class="image-highlight">
+                <a href="/index.jsp" class="image-highlight">
                     <img src="./assets/images/book.svg" alt="bookshop-logo">
                     <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
-                <a href="/index.html">
+                <a href="/index.jsp">
                     <img src="./assets/images/home-run.svg" alt="home-logo" class="navbar-icon">
                     <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
                 </a>
@@ -312,7 +312,7 @@
         <div class="flex-grow-1 p-1">
             <p class="font-style-2 color-1 font-size-s  border-bottom-2">Navigation</p>
             <ul class="list-style-none py-half">
-                <li class="font-style-2 color-2 font-size-sm underline pointer py-half"><a href="index.html" class="d-block">Home</a></li>
+                <li class="font-style-2 color-2 font-size-sm underline pointer py-half"><a href="index.jsp" class="d-block">Home</a></li>
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Sign In</li>
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Sign Up</li>
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Terms & Conditions</li>
