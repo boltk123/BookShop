@@ -9,6 +9,9 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.*;
 import java.nio.file.Paths;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @WebServlet(name = "FileUploadServlet", value = "/FileUpload")
 
@@ -35,7 +38,7 @@ public class FileUploadServlet extends HttpServlet {
         }
         */
         response.setContentType("text/html;charset=UTF-8");
-        final Part filePart = request.getPart("file"); // Retrieves <input type="file" name="file">
+        final Part filePart = request.getPart("book_cover"); // Retrieves <input type="file" name="file">
         String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
         InputStream fileContent = filePart.getInputStream();
 
@@ -46,6 +49,7 @@ public class FileUploadServlet extends HttpServlet {
         //File file = new File("C://");
         //save image into database
         //FileUtils.copyInputStreamToFile(fileContent, file);
+        // Book cover in binary format
         byte[] bFile = IOUtils.toByteArray(fileContent);
         /*
         try {
@@ -61,8 +65,23 @@ public class FileUploadServlet extends HttpServlet {
 
         // insert into database
         int book_id = Integer.parseInt((request.getParameter("book_id")));
-        Books book = new Books(book_id, "Sach1", 1000, 4.5, null, 10, bFile);
-        BooksDB.insertBook(book);
+        String title = request.getParameter("title");
+        String date = request.getParameter("published_date");
+        try {
+            Date published_date = new SimpleDateFormat("yyyy-mm-dd").parse(date);
+            int published_id = Integer.parseInt(request.getParameter("published_id"));
+            int total_pages = Integer.parseInt(request.getParameter("total_pages"));
+            double rating = Double.parseDouble(request.getParameter("rating"));
+            double cost = Double.parseDouble(request.getParameter("cost"));
+            String description = request.getParameter("description");
+            Books book = new Books(book_id, title, total_pages, rating, cost, published_date, published_id, description, bFile);
+            BooksDB.insertBook(book);
+            RequestDispatcher rd = request.getRequestDispatcher("ImageServlet");
+            rd.forward(request,response);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
         //session.save(bookContents);
         /*
         //Get image from database

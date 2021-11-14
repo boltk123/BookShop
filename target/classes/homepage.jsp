@@ -57,7 +57,7 @@
                 </a>
             </li>
             <li class="d-none visible-in-lg">
-                <a href="uploader.jsp">
+                <a href="BooksTableInput.jsp">
                     <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight">User Name</span>
                 </a>
             </li>
@@ -129,7 +129,7 @@
             <h2 class="d-none">This is hidden</h2>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="./assets/images/non-fiction-img-1.jpg" alt="non-fiction-img-1"
+                <img src="data:image/jpg;base64,${non_fiction_book1.base64Image}" alt="non-fiction-img-1"
                      class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">"Surely You're Joking, Mr.

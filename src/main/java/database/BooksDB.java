@@ -47,4 +47,16 @@ public class BooksDB {
         }
         return books;
     }
+    public static List<Books> selectBooksByGenre(String genre) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        String qString = "SELECT b from Books b, Book_genres bg, Genres g"
+                + " WHERE b.book_id = bg.book_id AND bg.genre_id = g.genre_id"
+                + " AND g.genre = :genre";
+        TypedQuery<Books> q = em.createQuery(qString, Books.class);
+        q.setParameter("genre", genre);
+
+        List<Books> books;
+        books = q.getResultList();
+        return books;
+    }
 }
