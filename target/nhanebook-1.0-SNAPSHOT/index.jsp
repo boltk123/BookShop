@@ -22,7 +22,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#members">Members</a></li>
                 <li><a href="#exercises">Exercises</a></li>
-                <li><a href="homepage.jsp">Project</a></li>
+                <li><a href="HomePage">Project</a></li>
 
             </ul>
             <div class="burger">
