@@ -149,46 +149,46 @@
     </div>
     <!-- Content Page -->
     <section class="">
-        <div class="rounded-circle">
-            <h2 class="mb-0"><span class="counter">5000</span></h2>
+        <div class="round">
+            <h2 class="">5000</h2>
             <h5 class="">Users</h5>
         </div>
-        <div class="rounded-circle">
-            <div class="rounded-circle mx-auto">
-                <h2 class="mb-0"><span class="counter">4.8</span>k</h2>
+        <div class="round">
+            <div class="round mx-auto">
+                <h2 class="">4.8k</h2>
                 <h5 class="">Books</h5>
             </div>
         </div>
-        <div class="rounded-circle">
-            <div class="rounded-circle mx-auto">
-                <h2 class="mb-0"><span class="counter">1.2</span>k</h2>
+        <div class="round">
+            <div class="round mx-auto">
+                <h2 class="">1.2k</h2>
                 <h5 class="">Sale</h5>
             </div>
         </div>
-        <div class="rounded-circle">
+        <div class="round">
             <div class="rounded-circle mx-auto">
-                <h2 class="mb-0"><span class="counter">690</span></h2>
+                <h2 class="">690</h2>
                 <h5 class="">Orders</h5>
             </div>
         </div>
-        <div class="rounded-circle">
+        <div class="round">
             <div class="rounded-circle mx-auto">
                 <h4 class="card-title mb-0">Summary</h4>
             </div>
         </div>
-        <div class="rounded-circle">
+        <div class="round">
             <div class="rounded-circle mx-auto">
                 <h4 class="card-title mb-0">Income</h4>
                 <h5 class="">95%</h5>
             </div>
         </div>
-        <div class="rounded-circle">
+        <div class="round">
             <div class="rounded-circle mx-auto">
                 <h4 class="card-title mb-0">Profit</h4>
                 <h5 class="">72%</h5>
             </div>
         </div>
-        <div class="rounded-circle">
+        <div class="round">
             <div class="rounded-circle mx-auto">
                 <h4 class="card-title mb-0">Expenses</h4>
                 <h5 class="">75%</h5>

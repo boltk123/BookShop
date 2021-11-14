@@ -3,91 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin category</title>
+  <title>Admin books</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/homepage.css">
   <link rel="stylesheet" href="css/table.css">
 </head>
 <body>
-  <header>
-    <nav class="bg-color-3 d-flex justify-around p-1">
-      <ul class="list-style-none d-flex align-center justify-center">
-        <li>
-          <a href="homepage.jsp" class="image-highlight">
-            <img src="./assets/images/book.svg" alt="bookshop-logo">
-            <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
-          </a>
-        </li>
-        <li class="pl-2 d-none visible-in-md">
-          <a href="homepage.jsp">
-            <img src="./assets/images/home-run.svg" alt="home-logo" class="navbar-icon">
-            <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
-          </a>
-        </li>
-        <li class="pl-2 d-none visible-in-md">
-          <a href="collection.jsp">
-            <img src="./assets/images/bookshelf.svg" alt="collection-logo" class="navbar-icon">
-            <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight">COLLECTIONS</span>
-          </a>
-        </li>
-        <li class="pl-2">
-          <a href="#">
-            <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
-            <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">PURCHASE LIST</span>
-          </a>
-        </li>
-        <li class="pl-2">
-          <button type="button"
-                  class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">REQUEST
-            FOR STOCK</button>
-        </li>
-      </ul>
+<header>
+  <nav class="bg-color-3 d-flex justify-around p-1">
+    <ul class="list-style-none d-flex align-center justify-center">
+      <li>
+        <a href="/index.jsp" class="image-highlight">
+          <img src="./assets/images/book.svg" alt="bookshop-logo">
+          <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
+        </a>
+      </li>
+      <li class="pl-2 d-none visible-in-md">
+        <a href="/index.jsp">
+          <img src="./assets/images/home-run.svg" alt="home-logo" class="navbar-icon">
+          <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
+        </a>
+      </li>
+      <li class="pl-2 d-none visible-in-md">
+        <a href="#">
+          <img src="./assets/images/bookshelf.svg" alt="collection-logo" class="navbar-icon">
+          <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight">COLLECTIONS</span>
+        </a>
+      </li>
+      <li class="pl-2">
+        <a href="#">
+          <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
+          <span
+                  class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">PURCHASE
+                            LIST</span>
+        </a>
+      </li>
+      <li class="pl-2">
+        <button type="button"
+                class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">REQUEST
+          FOR STOCK</button>
+      </li>
+    </ul>
 
-      <ul class="list-style-none d-flex justify-around align-center user-info">
-        <li class="d-none visible-in-lg">
-          <a href="#" class="image-highlight">
-            <img src="./assets/images/mail.svg" alt="mail-icon" class="navbar-icon">
-            <span
-                    class="d-inline-block bg-color-1 mail-notification font-size-sm font-style-2 color-white">12</span>
-          </a>
-        </li>
-        <li class="d-none visible-in-lg">
-          <a href="#">
-            <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight">User Name</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="./assets/images/person.svg" alt="user-img" class="image-highlight pl-1">
-          </a>
-        </li>
-        <li class="pl-1">
-          <a href="search.jsp" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">Search</a>
-        </li>
-      </ul>
-    </nav>
+    <ul class="list-style-none d-flex justify-around align-center user-info">
+      <li class="d-none visible-in-lg">
+        <a href="#" class="image-highlight">
+          <img src="./assets/images/mail.svg" alt="mail-icon" class="navbar-icon">
+          <span
+                  class="d-inline-block bg-color-1 mail-notification font-size-sm font-style-2 color-white">12</span>
+        </a>
+      </li>
+      <li class="d-none visible-in-lg">
+        <a href="#">
+          <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight">User Name</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./assets/images/person.svg" alt="user-img" class="image-highlight pl-1">
+        </a>
+      </li>
+      <li class="pl-1">
+        <a href="search.html" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">Search</a>
+      </li>
+    </ul>
+  </nav>
 
-    <section class="hero-section d-none flex-column p-1">
-      <h2 class="d-none">This is added to remove validators errors.</h2>
-      <div class="mx-auto">
-        <h1 class="hero-title font-style-2 color-white">BOOKSHOP</h1>
-        <h4 class="font-style-1 color-white font-size-md py-1">Search for your desired book</h4>
-        <form action="#" class="hero-form d-flex align-center py-1">
-          <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
-            <option value="all" class="genre-selector">All genre</option>
-            <option value="non-fiction" class="genre-selector">Non Fiction</option>
-            <option value="fiction" class="genre-selector" selected>Fiction</option>
-            <option value="academic" class="genre-selector">Academic</option>
-          </select>
-          <input type="text" placeholder="What do you search for ?" value="philosophy"
-                 class="p-1 border-0 font-style-1 font-size-sm border-right flex-grow-1 pointer">
-          <input type="text" value="life" placeholder="Search..."
-                 class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer">
-          <a href="search.jsp" class="default-btn font-size-sm font-style-2 bg-color-3 ml-1">Search</a>
-        </form>
-      </div>
-    </section>
-  </header>
+  <section class="hero-section d-none flex-column p-1">
+    <h2 class="d-none">This is added to remove validators errors.</h2>
+    <div class="mx-auto">
+      <h1 class="hero-title font-style-2 color-white">BOOKSHOP</h1>
+      <h4 class="font-style-1 color-white font-size-md py-1">Search for your desired book</h4>
+      <form action="#" class="hero-form d-flex align-center py-1">
+        <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
+          <option value="all" class="genre-selector">All genre</option>
+          <option value="non-fiction" class="genre-selector">Non Fiction</option>
+          <option value="fiction" class="genre-selector" selected>Fiction</option>
+          <option value="academic" class="genre-selector">Academic</option>
+        </select>
+        <input type="text" placeholder="What do you search for ?" value="philosophy"
+               class="p-1 border-0 font-style-1 font-size-sm border-right flex-grow-1 pointer">
+        <input type="text" value="life" placeholder="Search..."
+               class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer">
+        <a href="search.html" class="default-btn font-size-sm font-style-2 bg-color-3 ml-1">Search</a>
+      </form>
+    </div>
+  </section>
+</header>
 
 <main class="d-flex justify-around">
   <!--Sidebar-->
@@ -147,146 +149,201 @@
   </div>
   <!-- Content Page -->
   <section class="">
-    <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Category Lists</h4>
-    <a href="admin-add-category.html" class="btn btn-primary">Add New Category</a>
+    <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Books Lists</h4>
+    <a href="admin-add-category.html" class="btn btn-primary">Add New Book</a>
     <div class="">
       <div class="table-wrapper">
         <table class="fl-table">
           <thead>
           <tr>
-            <th style="width: 5%;">No</th>
-            <th style="width: 20%;">Category Name</th>
-            <th style="width: 65%;">Category Description</th>
-            <th style="width: 10%;">Action</th>
+            <th style="width: 3%;">No</th>
+            <th style="width: 12%;">Book Image</th>
+            <th style="width: 15%;">Book Name</th>
+            <th style="width: 15%;">Book Catrgory</th>
+            <th style="width: 15%;">Book Author</th>
+            <th style="width: 18%;">Book Description</th>
+            <th style="width: 7%;">Book Price</th>
+            <th style="width: 7%;">Book pdf</th>
+            <th style="width: 15%;">Action</th>
           </tr>
           </thead>
           <tbody>
           <tr>
             <td>1</td>
+            <td><img class="img-fluid rounded" src="images/browse-books/01.jpg" alt=""></td>
+            <td>Reading on the Worlds</td>
             <td>General Books</td>
+            <td>Jhone Steben</td>
             <td>
-              <p class="mb-0">Book</p>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
             </td>
+            <td>$89</td>
+            <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
             <td>
               <div class="flex align-items-center list-user-action">
-                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
+                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
                 <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
               </div>
             </td>
           </tr>
           <tr>
             <td>2</td>
+            <td><img class="img-fluid rounded" src="images/browse-books/02.jpg" alt=""></td>
+            <td>The Catcher in the Rye</td>
             <td>History Books</td>
+            <td>Fritz Wold</td>
             <td>
-              <p class="mb-0">Book</p>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
             </td>
+            <td>$89</td>
+            <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
             <td>
               <div class="flex align-items-center list-user-action">
-                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
+                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
                 <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
               </div>
             </td>
           </tr>
           <tr>
             <td>3</td>
-            <td>Horror Story</td>
+            <td><img class="img-fluid rounded" src="images/browse-books/03.jpg" alt=""></td>
+            <td>Little Black Book</td>
+            <td>Comic Books</td>
+            <td>John Klok</td>
             <td>
-              <p class="mb-0">Book</p>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
             </td>
+            <td>$129</td>
+            <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
             <td>
               <div class="flex align-items-center list-user-action">
-                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
+                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
                 <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
               </div>
             </td>
           </tr>
           <tr>
             <td>4</td>
-            <td>Arts Books</td>
+            <td><img class="img-fluid rounded" src="images/browse-books/04.jpg" alt=""></td>
+            <td>Take On The Risk</td>
+            <td>General Books</td>
+            <td>George Strong</td>
             <td>
-              <p class="mb-0">Book</p>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
             </td>
+            <td>$89</td>
+            <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
             <td>
               <div class="flex align-items-center list-user-action">
-                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
+                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
                 <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
               </div>
             </td>
           </tr>
           <tr>
             <td>5</td>
+            <td><img class="img-fluid rounded" src="images/browse-books/05.jpg" alt=""></td>
+            <td>Absteact On Background</td>
             <td>Film & Photography</td>
+            <td>Ichae Semos</td>
             <td>
-              <p class="mb-0">Book</p>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
             </td>
+            <td>$99</td>
+            <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
             <td>
               <div class="flex align-items-center list-user-action">
-                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
+                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
                 <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
               </div>
             </td>
           </tr>
           <tr>
             <td>6</td>
-            <td>Business & Economics</td>
+            <td><img class="img-fluid rounded" src="images/browse-books/06.jpg" alt=""></td>
+            <td>Find The Wave Book</td>
+            <td>General Books</td>
+            <td>Fidel Martin</td>
             <td>
-              <p class="mb-0">Book</p>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
             </td>
+            <td>$100</td>
+            <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
             <td>
               <div class="flex align-items-center list-user-action">
-                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
+                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
                 <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
               </div>
             </td>
           </tr>
           <tr>
             <td>7</td>
-            <td>Comics & Mangas</td>
+            <td><img class="img-fluid rounded" src="images/browse-books/07.jpg" alt=""></td>
+            <td>See the More Story</td>
+            <td>Horror Story</td>
+            <td>Jules Boutin</td>
             <td>
-              <p class="mb-0">Book</p>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
             </td>
+            <td>$79</td>
+            <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
             <td>
               <div class="flex align-items-center list-user-action">
-                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
+                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
                 <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
               </div>
             </td>
           </tr>
           <tr>
             <td>8</td>
-            <td>Computers & Internet</td>
+            <td><img class="img-fluid rounded" src="images/browse-books/08.jpg" alt=""></td>
+            <td>The Wikde Book</td>
+            <td> Computers & Internet</td>
+            <td>Kusti Franti</td>
             <td>
-              <p class="mb-0">Book</p>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
             </td>
+            <td>$89</td>
+            <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
             <td>
               <div class="flex align-items-center list-user-action">
-                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
+                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
                 <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
               </div>
             </td>
           </tr>
           <tr>
             <td>9</td>
+            <td><img class="img-fluid rounded" src="images/browse-books/09.jpg" alt=""></td>
+            <td>Conversion Erik Routley</td>
             <td>Sports</td>
+            <td>Argele Intili</td>
             <td>
-              <p class="mb-0">Book</p>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
             </td>
+            <td>$79</td>
+            <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
             <td>
               <div class="flex align-items-center list-user-action">
-                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
+                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
                 <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
               </div>
             </td>
           </tr>
           <tr>
             <td>10</td>
-            <td>Travel & Tourism</td>
+            <td><img class="img-fluid rounded" src="images/browse-books/10.jpg" alt=""></td>
+            <td>The Leo Dominica</td>
+            <td>General Books</td>
+            <td>Henry Jurk</td>
             <td>
-              <p class="mb-0">Book</p>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
             </td>
+            <td>$99</td>
+            <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
             <td>
               <div class="flex align-items-center list-user-action">
-                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
+                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
                 <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
               </div>
             </td>
