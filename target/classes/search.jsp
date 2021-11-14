@@ -102,50 +102,59 @@
 
 <main class="filter-search-container d-flex mx-auto">
     <!-- Search Filter -->
-    <aside class="filter-container d-none visible-in-lg border p-2 flex-grow-1">
-        <form action="#" class="py-1">
-            <input id="hardcopy" type="checkbox" name="hardcopy" value="hardcopy">
-            <label for="hardcopy" class="font-style-1 font-size-s color-2 pl-1">hardcopy</label><br>
-            <input id="softcopy" type="checkbox" name="softcopy" value="softcopy">
-            <label for="softcopy" class="font-style-1 font-size-s color-2 pl-1">softcopy</label><br>
-        </form>
-        <p class="font-style-2 font-size-md color-3 py-half border-bottom-2">Type</p>
-        <form action="#" class="py-1">
-            <input id="paperback" type="checkbox" name="paperback" value="paperback">
-            <label for="paperback" class="font-style-1 font-size-s color-2 pl-1">paperback</label><br>
-            <input id="hardback" type="checkbox" name="hardback" value="hardback">
-            <label for="hardback" class="font-style-1 font-size-s color-2 pl-1">hardback</label><br>
-            <input id="kindle" type="checkbox" name="kindle" value="kindle">
-            <label for="kindle" class="font-style-1 font-size-s color-2 pl-1">kindle</label><br>
-            <input id="economy" type="checkbox" name="economy" value="economy">
-            <label for="economy" class="font-style-1 font-size-s color-2 pl-1">economy</label>
-        </form>
-        <p class="font-style-2 font-size-md color-3 py-half border-bottom-2">Publications</p>
-        <form action="#" class="py-1">
-            <input id="Penguin" type="checkbox" name="Penguin" value="Penguin">
-            <label for="Penguin" class="font-style-1 font-size-s color-2 pl-1">Penguin</label><br>
-            <input id="FingerprintClassics" type="checkbox" name="Fingerprint! Classics" value="Fingerprint! Classics">
-            <label for="FingerprintClassics" class="font-style-1 font-size-s color-2 pl-1">Fingerprint!
-                Classics</label><br>
-            <input id="MacmillanPublishers" type="checkbox" name="Macmillan Publishers" value="Macmillan Publishers">
-            <label for="MacmillanPublishers" class="font-style-1 font-size-s color-2 pl-1">Macmillan
-                Publishers</label><br>
-            <input id="McGraw-HillEducation" type="checkbox" name="McGraw-Hill Education" value="McGraw-Hill Education">
-            <label for="McGraw-HillEducation" class="font-style-1 font-size-s color-2 pl-1">McGraw-Hill
-                Education</label>
-        </form>
-        <p class="font-style-2 font-size-md color-3 py-half border-bottom-2">Price Range</p>
-        <form action="#" class="py-1">
-            <input id="$0-$10" type="checkbox" name="$0 - $10" value="$0 - $10">
-            <label for="$0-$10" class="font-style-1 font-size-s color-2 pl-1">$0 - $10</label><br>
-            <input id="$10-$20" type="checkbox" name="$10 - $20" value="$10 - $20">
-            <label for="$10-$20" class="font-style-1 font-size-s color-2 pl-1">$10 - $20</label><br>
-            <input id="$20-$30" type="checkbox" name="$20 - $30" value="$20 - $30">
-            <label for="$20-$30" class="font-style-1 font-size-s color-2 pl-1">$20 - $30</label><br>
-            <input id="$30+" type="checkbox" name="$30+" value="$30+">
-            <label for="$30+" class="font-style-1 font-size-s color-2 pl-1">$30+</label>
-        </form>
-    </aside>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <div class="iq-sidebar">
+            <div class="iq-sidebar-logo d-flex justify-content-between">
+                <a href="homepage.jsp" class="header-logo">
+                    <img src="./assets/images/book.svg" class="img-fluid rounded-normal" alt="bookshop-logo">
+                    <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
+                </a>
+                <div class="iq-menu-bt-sidebar">
+                    <div class="iq-menu-bt align-self-center">
+                        <div class="wrapper-menu">
+                            <div class="main-circle"><i class="las la-bars"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar-scrollbar">
+                <nav class="iq-sidebar-menu">
+                    <ul id="iq-sidebar-toggle" class="iq-menu">
+                        <li class="active active-menu">
+                            <a href="#dashboard" class="iq-waves-effect" data-toggle="collapse" aria-expanded="true"><span class="ripple rippleEffect"></span><i class="las la-home iq-arrow-left"></i><span>Shop</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <ul id="dashboard" class="iq-submenu collapse show" data-parent="#iq-sidebar-toggle">
+                                <li><a href="#"><i class="#"></i>Home Page</a></li>
+                                <li class="active"><a href="#"><i class="ri-function-line"></i>Category Page</a></li>
+                                <li><a href="#"><i class="#"></i>Book Page</a></li>
+                                <li><a href="#"><i class="#"></i>Book PDF</a></li>
+                                <li><a href="#"><i class="#"></i>Checkout</a></li>
+                                <li><a href="#"><i class="#"></i>wishlist</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#admin" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <ul id="admin" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                                <li><a href="#"><i class="#"></i>Dashboard</a></li>
+                                <li><a href="#"><i class="#"></i>Category Lists</a></li>
+                                <li><a href="#"><i class="#"></i>Author</a></li>
+                                <li><a href="#"><i class="#"></i>Books</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#userinfo" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <ul id="userinfo" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
+                                <li><a href="#"><i class="#"></i>User Profile</a></li>
+                                <li><a href="#"><i class="#"></i>User Edit</a></li>
+                                <li><a href="#"><i class="#"></i>User Add</a></li>
+                                <li><a href="#"><i class="#"></i>User List</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
     <!-- Search Results -->
     <section class="border">
         <h3 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">119 search results for 'life' Search at

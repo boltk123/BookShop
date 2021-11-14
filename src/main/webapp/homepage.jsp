@@ -22,13 +22,13 @@
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
-                <a href="index.jsp">
+                <a href="homepage.jsp">
                     <img src="./assets/images/home-run.svg" alt="home-logo" class="navbar-icon">
                     <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
-                <a href="#">
+                <a href="collection.jsp">
                     <img src="./assets/images/bookshelf.svg" alt="collection-logo" class="navbar-icon">
                     <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight">COLLECTIONS</span>
                 </a>
@@ -36,9 +36,7 @@
             <li class="pl-2">
                 <a href="#">
                     <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
-                    <span
-                            class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">PURCHASE
-                            LIST</span>
+                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">CART</span>
                 </a>
             </li>
             <li class="pl-2">
