@@ -1,22 +1,13 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Bui Duc Nhan
-  Date: 11/9/2021
-  Time: 9:15 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search results</title>
+    <title>Admin dashboard</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/table.css">
 </head>
-
 <body>
 <header>
     <nav class="bg-color-3 d-flex justify-around p-1">
@@ -73,7 +64,7 @@
                 </a>
             </li>
             <li class="pl-1">
-                <a href="search.html" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">Search</a>
+                <a href="search.jsp" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">Search</a>
             </li>
         </ul>
     </nav>
@@ -101,7 +92,7 @@
 </header>
 
 <main class="d-flex justify-around">
-    <!-- Sidebar  -->
+    <!--Sidebar-->
     <div class="bg-color-3">
         <div class="color-white">
             <div class="bg-color-3 d-flex">
@@ -123,7 +114,7 @@
                 <nav class="bg-color-4">
                     <ul id="iq-sidebar-toggle" class="list-style-none">
                         <li class="bg-color-4">
-                            <a href="#dashboard" class="bg-color-1 font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="las la-home iq-arrow-left"></i><span>Shop</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <a href="#dashboard" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="las la-home iq-arrow-left"></i><span>Shop</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="dashboard" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
                                 <li><a href="homepage.jsp"><i class="#"></i>Home Page</a></li>
                                 <li><a href="collection.jsp"><i class="#"></i>Category Page</a></li>
@@ -134,7 +125,7 @@
                             </ul>
                         </li>
                         <li class="bg-color-4">
-                            <a href="#admin" class="bg-color-1 font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <a href="#admin" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
                                 <li><a href="admin-dashboard.jsp"><i class="#"></i>Dashboard</a></li>
                                 <li><a href="admin-category.jsp"><i class="#"></i>Category Lists</a></li>
@@ -143,7 +134,7 @@
                             </ul>
                         </li>
                         <li class="bg-color-4">
-                            <a href="#userinfo" class="bg-color-1 font-style-3 p-1" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <a href="#userinfo" class="bg-color-1 m-left font-style-3 p-1" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="userinfo" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
                                 <li><a href="#"><i class="#"></i>User Profile</a></li>
                                 <li><a href="#"><i class="#"></i>User Edit</a></li>
@@ -156,141 +147,111 @@
             </div>
         </div>
     </div>
-    <!-- Search Results -->
-    <section class="border">
-        <h3 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">119 search results for 'life' Search at 'philosophy' at Category 'fiction'</h3>
-        <section class="p-1 d-flex flex-column align-center">
-            <h2 class="d-none">This is hidden</h2>
-            <article class="d-flex justify-between p-1">
-                <img src="assets/images/fiction-img-1.jpg" alt="siddhartha" class="d-block search-images">
-                <div class="ml-1 d-flex flex-column justify-around">
-                    <h4 class="font-style-2 font-size-md color-1 pointer black-highlight">The Great Gatsby: A Novel
-                        <span class="font-style-1 font-size-md color-2 black-highlight">by F. Scott
-                                Fitzgerald</span>
-                    </h4>
-                    <p class="font-style-1 font-size-s color-3 py-1 d-none visible-in-sm gray-highlight pointer">
-                        The Great Gatsby, F. Scott Fitzgerald's third book, stands as the supreme achievement of his
-                        career. This exemplary novel of the Jazz Age has been acclaimed by generations of readers.
-                        The story is of the fabulously wealthy Jay Gatsby and his new love for the beautiful Daisy
-                        Buchanan</p>
-                    <p class="font-size-md font-style-2 color-3 gray-highlight pointer">Rating: 3.92/5</p>
-                    <div class="d-flex flex-column purchase-details-container">
-                        <a href="#"
-                           class="default-btn font-size-md font-style-2 bg-color-1 mr-half my-half">$10.78</a>
-                        <a href="#" class="default-btn font-size-sm font-style-2 bg-color-1 mr-half my-half"><img
-                                src="./assets/images/supermarket-white.svg" alt="cart-logo-2"><span
-                                class="pl-1">Purchase
-                                    Details</span></a>
-                    </div>
-                </div>
-            </article>
+    <!-- Content Page -->
+    <section class="">
+        <div class="rounded-circle">
+            <h2 class="mb-0"><span class="counter">5000</span></h2>
+            <h5 class="">Users</h5>
+        </div>
+        <div class="rounded-circle">
+            <div class="rounded-circle mx-auto">
+                <h2 class="mb-0"><span class="counter">4.8</span>k</h2>
+                <h5 class="">Books</h5>
+            </div>
+        </div>
+        <div class="rounded-circle">
+            <div class="rounded-circle mx-auto">
+                <h2 class="mb-0"><span class="counter">1.2</span>k</h2>
+                <h5 class="">Sale</h5>
+            </div>
+        </div>
+        <div class="rounded-circle">
+            <div class="rounded-circle mx-auto">
+                <h2 class="mb-0"><span class="counter">690</span></h2>
+                <h5 class="">Orders</h5>
+            </div>
+        </div>
+        <div class="rounded-circle">
+            <div class="rounded-circle mx-auto">
+                <h4 class="card-title mb-0">Summary</h4>
+            </div>
+        </div>
+        <div class="rounded-circle">
+            <div class="rounded-circle mx-auto">
+                <h4 class="card-title mb-0">Income</h4>
+                <h5 class="">95%</h5>
+            </div>
+        </div>
+        <div class="rounded-circle">
+            <div class="rounded-circle mx-auto">
+                <h4 class="card-title mb-0">Profit</h4>
+                <h5 class="">72%</h5>
+            </div>
+        </div>
+        <div class="rounded-circle">
+            <div class="rounded-circle mx-auto">
+                <h4 class="card-title mb-0">Expenses</h4>
+                <h5 class="">75%</h5>
+            </div>
+        </div>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <th scope="col">Client</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Invoice</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">atatus</th>
+                    <th scope="col">Action</th>
 
-            <article class="d-flex justify-between p-1">
-                <img src="assets/images/fiction-img-4.jpg" alt="siddhartha" class="d-block search-images">
-                <div class="ml-1 d-flex flex-column justify-around">
-                    <h4 class="font-style-2 font-size-md color-1 pointer black-highlight">The Alchemist: A Novel
-                        <span class="font-style-1 font-size-md color-2 black-highlight">by Paulo Coelho, Alan R.
-                                Clarke
-                                (Translator)</span>
-                    </h4>
-                    <p class="font-style-1 font-size-s color-3 py-1 d-none visible-in-sm gray-highlight pointer">
-                        Paulo Coelho's enchanting novel has inspired a devoted following around the world. This
-                        story, dazzling in its powerful simplicity and soul-stirring wisdom, is about an Andalusian
-                        shepherd boy named Santiago who travels from his homeland in Spain to the Egyptian desert
-                    </p>
-                    <p class="font-size-md font-style-2 color-3 gray-highlight pointer">Rating: 3.87/5</p>
-                    <div class="d-flex flex-column purchase-details-container">
-                        <a href="#"
-                           class="default-btn font-size-md font-style-2 bg-color-1 mr-half my-half">$16.93</a>
-                        <a href="#" class="default-btn font-size-sm font-style-2 bg-color-1 mr-half my-half"><img
-                                src="./assets/images/supermarket-white.svg" alt="cart-logo-2"><span
-                                class="pl-1">Purchase
-                                    Details</span></a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="d-flex justify-between p-1">
-                <img src="assets/images/siddhartha.jpg" alt="siddhartha" class="d-block search-images">
-                <div class="ml-1 d-flex flex-column justify-around">
-                    <h4 class="font-style-2 font-size-md color-1 pointer black-highlight">Siddhartha: A Novel
-                        <span class="font-style-1 font-size-md color-2 black-highlight">by Hermann Hesse, Hilda
-                                Rosner
-                                (Translator)</span>
-                    </h4>
-                    <p class="font-style-1 font-size-s color-3 py-1 d-none visible-in-sm gray-highlight pointer">
-                        Herman Hesse's classic novel
-                        has delighted, inspired, and influenced generations of readers,
-                        writers, and thinkers. In this story of a wealthy Indian Brahmin who casts off a life of
-                        privilege to seek spiritual fulfillment.</p>
-                    <p class="font-size-md font-style-2 color-3 gray-highlight pointer">Rating: 4/5</p>
-                    <div class="d-flex flex-column purchase-details-container">
-                        <a href="#"
-                           class="default-btn font-size-md font-style-2 bg-color-1 mr-half my-half">$5.49</a>
-                        <a href="#" class="default-btn font-size-sm font-style-2 bg-color-1 mr-half my-half"><img
-                                src="./assets/images/supermarket-white.svg" alt="cart-logo-2"><span
-                                class="pl-1">Purchase
-                                    Details</span></a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="d-flex justify-between p-1">
-                <img src="assets/images/fiction-img-3.jpg" alt="siddhartha" class="d-block search-images">
-                <div class="ml-1  d-flex flex-column justify-around">
-                    <h4 class="font-style-2 font-size-md color-1 pointer black-highlight">1984: A Novel
-                        <span class="font-style-1 font-size-md color-2 black-highlight">by George Orwell, Peter
-                                Hobley
-                                Davison (Foreword)</span>
-                    </h4>
-                    <p class="font-style-1 font-size-s color-3 py-1 d-none visible-in-sm gray-highlight pointer">
-                        Among the seminal texts of the 20th century, Nineteen Eighty-Four is a rare work that grows
-                        more haunting as its futuristic purgatory becomes more real. Published in 1949, the book
-                        offers political satirist George Orwell's nightmarish vision of a totalitarian</p>
-                    <p class="font-size-md font-style-2 color-3 gray-highlight pointer">Rating: 4.18/5</p>
-                    <div class="d-flex flex-column purchase-details-container">
-                        <a href="#"
-                           class="default-btn font-size-md font-style-2 bg-color-1 mr-half my-half">$19.99</a>
-                        <a href="#" class="default-btn font-size-sm font-style-2 bg-color-1 mr-half my-half"><img
-                                src="./assets/images/supermarket-white.svg" alt="cart-logo-2"><span
-                                class="pl-1">Purchase
-                                    Details</span></a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="d-flex justify-between p-1">
-                <img src="assets/images/non-fiction-img-1.jpg" alt="siddhartha" class="d-block search-images">
-                <div class="ml-1  d-flex flex-column justify-around">
-                    <h4 class="font-style-2 font-size-md color-1 pointer black-highlight">"Surely You're Joking, Mr.
-                        Feynman!": Adventures of a Curious Character
-                        <span class="font-style-1 font-size-md color-2 black-highlight">by Richard P. Feynman</span>
-                    </h4>
-                    <p class="font-style-1 font-size-s color-3 py-1 d-none visible-in-sm gray-highlight pointer">
-                        A New York Times bestseller—the outrageous exploits of one of this century's greatest
-                        scientific minds and a legendary American original.</p>
-                    <p class="font-size-md font-style-2 color-3 gray-highlight pointer">Rating: 4.6/5</p>
-                    <div class="d-flex flex-column purchase-details-container">
-                        <a href="#"
-                           class="default-btn font-size-md font-style-2 bg-color-1 mr-half my-half">$10.89</a>
-                        <a href="#" class="default-btn font-size-sm font-style-2 bg-color-1 mr-half my-half"><img
-                                src="./assets/images/supermarket-white.svg" alt="cart-logo-2"><span
-                                class="pl-1">Purchase
-                                    Details</span></a>
-                    </div>
-                </div>
-            </article>
-            <ul class="list-style-none d-flex my-1">
-                <li class="border bg-color-1 p-1 color-white font-style-1 font-size-sm gray-highlight pointer">1</li>
-                <li class="border p-1 color-3 font-style-1 font-size-sm ml-half gray-highlight pointer">2</li>
-                <li class="border p-1 color-3 font-style-1 font-size-sm ml-half gray-highlight pointer">3</li>
-                <li class="border p-1 color-3 font-style-1 font-size-sm ml-half gray-highlight pointer">4</li>
-                <li class="p-1 color-3 font-style-1 font-size-sm ml-half gray-highlight pointer">....</li>
-                <li class="border p-1 color-3 font-style-1 font-size-sm ml-half gray-highlight pointer">7</li>
-            </ul>
-        </section>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Ira Membrit</td>
+                    <td>18/10/2019</td>
+                    <td>20156</td>
+                    <td>$1500</td>
+                    <td><div class="badge badge-pill badge-success">Paid</div></td>
+                    <td>Copy</td>
+                </tr>
+                <tr>
+                    <td>Pete Sariya</td>
+                    <td>26/10/2019</td>
+                    <td>7859</td>
+                    <td>$2000</td>
+                    <td><div class="badge badge-pill badge-success">Paid</div></td>
+                    <td>Send Email</td>
+                </tr>
+                <tr>
+                    <td>Cliff Hanger</td>
+                    <td>18/11/2019</td>
+                    <td>6396</td>
+                    <td>$2500</td>
+                    <td><div class="badge badge-pill badge-danger">Past Due</div></td>
+                    <td>Before Due</td>
+                </tr>
+                <tr>
+                    <td>Terry Aki</td>
+                    <td>14/12/2019</td>
+                    <td>7854</td>
+                    <td>$5000</td>
+                    <td><div class="badge badge-pill badge-success">Paid</div></td>
+                    <td>Copy</td>
+                </tr>
+                <tr>
+                    <td>Anna Mull</td>
+                    <td>24/12/2019</td>
+                    <td>568569</td>
+                    <td>$10000</td>
+                    <td><div class="badge badge-pill badge-success">Paid</div></td>
+                    <td>Send Email</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
-
 </main>
 
 <footer class="bg-white border">
@@ -358,6 +319,6 @@
         </div>
     </section>
 </footer>
-</body>
 
+</body>
 </html>

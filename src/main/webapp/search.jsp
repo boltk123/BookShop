@@ -22,19 +22,19 @@
     <nav class="bg-color-3 d-flex justify-around p-1">
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
-                <a href="/index.jsp" class="image-highlight">
+                <a href="homepage.jsp" class="image-highlight">
                     <img src="./assets/images/book.svg" alt="bookshop-logo">
                     <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
-                <a href="/index.jsp">
+                <a href="homepage.jsp">
                     <img src="./assets/images/home-run.svg" alt="home-logo" class="navbar-icon">
                     <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
-                <a href="#">
+                <a href="collection.jsp">
                     <img src="./assets/images/bookshelf.svg" alt="collection-logo" class="navbar-icon">
                     <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight">COLLECTIONS</span>
                 </a>
@@ -94,56 +94,57 @@
                        class="p-1 border-0 font-style-1 font-size-sm border-right flex-grow-1 pointer">
                 <input type="text" value="life" placeholder="Search..."
                        class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer">
-                <a href="search.html" class="default-btn font-size-sm font-style-2 bg-color-3 ml-1">Search</a>
+                <a href="search.jsp" class="default-btn font-size-sm font-style-2 bg-color-3 ml-1">Search</a>
             </form>
         </div>
     </section>
 </header>
 
-<main class="filter-search-container d-flex mx-auto">
-    <!-- Search Filter -->
-    <div class="wrapper">
-        <!-- Sidebar  -->
-        <div class="iq-sidebar">
-            <div class="iq-sidebar-logo d-flex justify-content-between">
-                <a href="homepage.jsp" class="header-logo">
-                    <img src="./assets/images/book.svg" class="img-fluid rounded-normal" alt="bookshop-logo">
+<main class="d-flex justify-around">
+    <!-- Sidebar  -->
+    <div class="bg-color-3">
+        <div class="color-white">
+            <div class="bg-color-3 d-flex">
+                <a href="homepage.jsp" class="image-highlight">
+                    <img src="./assets/images/book.svg" alt="bookshop-logo">
                     <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
                 </a>
-                <div class="iq-menu-bt-sidebar">
+                <div class="bg-color-3">
                     <div class="iq-menu-bt align-self-center">
                         <div class="wrapper-menu">
-                            <div class="main-circle"><i class="las la-bars"></i></div>
+                            <div class="main-circle">
+                                <i class="las la-bars"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="sidebar-scrollbar">
-                <nav class="iq-sidebar-menu">
-                    <ul id="iq-sidebar-toggle" class="iq-menu">
-                        <li class="active active-menu">
-                            <a href="#dashboard" class="iq-waves-effect" data-toggle="collapse" aria-expanded="true"><span class="ripple rippleEffect"></span><i class="las la-home iq-arrow-left"></i><span>Shop</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                            <ul id="dashboard" class="iq-submenu collapse show" data-parent="#iq-sidebar-toggle">
-                                <li><a href="#"><i class="#"></i>Home Page</a></li>
-                                <li class="active"><a href="#"><i class="ri-function-line"></i>Category Page</a></li>
+                <nav class="bg-color-4">
+                    <ul id="iq-sidebar-toggle" class="list-style-none">
+                        <li class="bg-color-4">
+                            <a href="#dashboard" class="bg-color-1 font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="las la-home iq-arrow-left"></i><span>Shop</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <ul id="dashboard" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
+                                <li><a href="homepage.jsp"><i class="#"></i>Home Page</a></li>
+                                <li><a href="collection.jsp"><i class="#"></i>Category Page</a></li>
                                 <li><a href="#"><i class="#"></i>Book Page</a></li>
                                 <li><a href="#"><i class="#"></i>Book PDF</a></li>
                                 <li><a href="#"><i class="#"></i>Checkout</a></li>
                                 <li><a href="#"><i class="#"></i>wishlist</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#admin" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                            <ul id="admin" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                                <li><a href="#"><i class="#"></i>Dashboard</a></li>
-                                <li><a href="#"><i class="#"></i>Category Lists</a></li>
-                                <li><a href="#"><i class="#"></i>Author</a></li>
-                                <li><a href="#"><i class="#"></i>Books</a></li>
+                        <li class="bg-color-4">
+                            <a href="#admin" class="bg-color-1 font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
+                                <li><a href="admin-dashboard.jsp"><i class="#"></i>Dashboard</a></li>
+                                <li><a href="admin-category.jsp"><i class="#"></i>Category Lists</a></li>
+                                <li><a href="admin-author.jsp"><i class="#"></i>Author</a></li>
+                                <li><a href="admin-books.jsp"><i class="#"></i>Books</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#userinfo" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                            <ul id="userinfo" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
+                        <li class="bg-color-4">
+                            <a href="#userinfo" class="bg-color-1 font-style-3 p-1" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <ul id="userinfo" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
                                 <li><a href="#"><i class="#"></i>User Profile</a></li>
                                 <li><a href="#"><i class="#"></i>User Edit</a></li>
                                 <li><a href="#"><i class="#"></i>User Add</a></li>
@@ -157,9 +158,7 @@
     </div>
     <!-- Search Results -->
     <section class="border">
-        <h3 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">119 search results for 'life' Search at
-            'philosophy' at
-            Category 'fiction'</h3>
+        <h3 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">119 search results for 'life' Search at 'philosophy' at Category 'fiction'</h3>
         <section class="p-1 d-flex flex-column align-center">
             <h2 class="d-none">This is hidden</h2>
             <article class="d-flex justify-between p-1">
