@@ -74,8 +74,7 @@ public class FileUploadServlet extends HttpServlet {
             double rating = Double.parseDouble(request.getParameter("rating"));
             double cost = Double.parseDouble(request.getParameter("cost"));
             String description = request.getParameter("description");
-            Books book = new Books(book_id, title, total_pages, rating, cost, published_date, published_id, description, bFile);
-            BooksDB.insertBook(book);
+            BooksDB.insertBook(book_id, title, total_pages, rating, cost, published_date, published_id, description, bFile);
             RequestDispatcher rd = request.getRequestDispatcher("ImageServlet");
             rd.forward(request,response);
         } catch (ParseException e) {

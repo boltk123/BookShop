@@ -34,9 +34,9 @@
                 </a>
             </li>
             <li class="pl-2">
-                <a href="#">
+                <a href="ShoppingCart">
                     <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
-                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">CART</span>
+                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">Shopping List</span>
                 </a>
             </li>
             <li class="pl-2">
@@ -136,7 +136,9 @@
                         <p class="font-size-sm font-style-2 color-3 gray-highlight">by Richard P. Feynman</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.6/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            <a href="AddCart?book_id=${non_fiction_book1.book_id}">
+                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            </a>
                             <span class="font-size-md color-1 font-style-2 gray-highlight">$10.89</span>
                         </p>
                     </div>
@@ -152,7 +154,10 @@
                         <p class="font-size-sm font-style-2 color-3 gray-highlight">by Tara Westover</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.47/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            <a href="AddCart">
+                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            </a>
+
                             <span class="font-size-md color-1 font-style-2 gray-highlight">$19.60</span>
                         </p>
                     </div>
@@ -168,7 +173,10 @@
                         <p class="font-size-sm font-style-2 color-3 gray-highlight">by Daniel Kahneman</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.5/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            <a href="AddCart?">
+                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            </a>
+
                             <span class="font-size-md color-1 font-style-2 gray-highlight">$8.99</span>
                         </p>
                     </div>
@@ -185,7 +193,10 @@
                         <p class="font-size-sm font-style-2 color-3 gray-highlight">by John Carreyrou</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.44/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            <a href="AddCart">
+                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            </a>
+
                             <span class="font-size-md color-1 font-style-2 gray-highlight">$15.33</span>
                         </p>
                     </div>
@@ -210,7 +221,11 @@
                         <p class="font-size-sm font-style-2 color-3 gray-highlight">by F. Scott Fitzgerald</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 3.92/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            <a href="AddCart">
+                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            </a>
+
+
                             <span class="font-size-md color-1 font-style-2 gray-highlight">$10.78</span>
                         </p>
                     </div>
@@ -226,7 +241,10 @@
                             Nugrahani (Translator)</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.3/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            <a href="AddCart">
+                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            </a>
+
                             <span class="font-size-md color-1 font-style-2 gray-highlight">$15.99</span>
                         </p>
                     </div>
@@ -242,7 +260,10 @@
                             Davison (Foreword)</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.18/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            <a href="AddCart">
+                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            </a>
+
                             <span class="font-size-md color-1 font-style-2 gray-highlight">$19.99</span>
                         </p>
                     </div>
@@ -258,7 +279,10 @@
                             (Translator)</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 3.87/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            <a href="AddCart">
+                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            </a>
+
                             <span class="font-size-md color-1 font-style-2 gray-highlight">$16.93</span>
                         </p>
                     </div>
@@ -284,7 +308,11 @@
                         </p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 3.57/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            <a href="AddCart">
+                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            </a>
+
+
                             <span class="font-size-md color-1 font-style-2 gray-highlight">$6.89</span>
                         </p>
                     </div>
@@ -299,7 +327,11 @@
                         <p class="font-size-sm font-style-2 color-3 gray-highlight">by Plato</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 3.94/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            <a href="AddCart">
+                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            </a>
+
+
                             <span class="font-size-md color-1 font-style-2 gray-highlight">$14.25</span>
                         </p>
                     </div>
@@ -315,7 +347,10 @@
                             White</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.19/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            <a href="AddCart">
+                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            </a>
+
                             <span class="font-size-md color-1 font-style-2 gray-highlight">$11.99</span>
                         </p>
                     </div>
@@ -332,7 +367,10 @@
                             Sheridan-Smith (Translator)</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.22/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            <a href="AddCart">
+                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                            </a>
+
                             <span class="font-size-md color-1 font-style-2 gray-highlight">$22</span>
                         </p>
                     </div>
