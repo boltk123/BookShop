@@ -36,7 +36,7 @@
             <li class="pl-2">
                 <a href="ShoppingCart">
                     <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
-                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">Shopping List</span>
+                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">SHOPPING LIST</span>
                 </a>
             </li>
             <li class="pl-2">

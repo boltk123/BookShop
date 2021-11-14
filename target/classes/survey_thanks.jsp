@@ -39,7 +39,7 @@
             <form action="index.jsp">
                 <div class="centered"><input class="button" type="submit"  value="Back To Home Page"></div>
             </form><br>
-            <%@ include file="/includes/footer.jsp" %>
+            <%@ include file="/includes/exercise_footer.jsp" %>
         </div>
     </div>
 </body>

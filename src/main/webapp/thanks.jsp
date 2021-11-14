@@ -14,7 +14,7 @@
 <body>
     <div class="backgr"> 
         <div class="box" id="thanks">
-            <%@ include file="/includes/header.html" %>
+            <%@ include file="/includes/exercise_header.html" %>
             <h1>Thanks for joining our email list</h1>
 
             <p>Here is the information that you entered:</p><br>
@@ -41,7 +41,7 @@
             <form action="index.jsp">
                 <div class="centered"><input type="submit"  value="Back To Home Page"  class="button"></div>
             </form>
-            <%@ include file="/includes/footer.jsp" %>
+            <%@ include file="/includes/exercise_footer.jsp" %>
         </div>
     </div>
 </body>

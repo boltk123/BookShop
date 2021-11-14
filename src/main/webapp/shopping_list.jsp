@@ -9,7 +9,9 @@
     <title>Shopping Cart</title>
 </head>
 <body>
+<%@ include file="/includes/header.jsp" %>
 <div class="container">
+
     <div class="column-left">
         <div class="sub-container">
             <div id="shopping-cart">
@@ -18,16 +20,17 @@
                 <div class="shopping-cart-item">
                     <div class="message">(3) Items from Barnes & Noble</div>
                     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+                    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
                     <c:forEach var="book_item" items="${book_items}">
                         <div class="item">
                             <div class="item-name">
-                                <a href="">The Man Who Died Twice (B&N Exclusive Edition) (Thursday Murder Club Series #2)</a>
+                                <a href="">${book_item.title}</a>
                             </div>
                             <div class="director">By: Richard Osman</div>
 
                             <div class="item-details">
                                 <div class="book-detail">
-                                    <a class="book-img" src="#"><img src="image/first-book.jpg" alt=""></a>
+                                    <a class="book-img" src="#"><img src="data:image/jpg;base64,${book_item.base64Image}" width="200" height="280" alt=""></a>
                                     <p class="book-format">Hardcover</p>
                                 </div>
                                 <div class="shipping-detail">
@@ -58,20 +61,16 @@
                                 </div>
                                 <div class="price-detail">
                                     <div class="retail-discounted-price">
-                                        <p class="retail-price">$26.00</p>
-                                        <p class="discounted-price">$19.99</p>
+                                        <p class="retail-price">$${book_item.cost}</p>
+                                        <p class="discounted-price">10%</p>
                                     </div>
                                     <div class="quantity"><input type="text" value="1"></div>
                                     <div class="total-price">
-                                        <p>$19.99</p>
+                                        <!--<p>${(book_item.cost) - ((book_item.cost * 10)/100) }
+
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="expedited-shipping">
-                                <i>Choose Expedited Shipping at checkout for delivery by Wednesday, November 10</i>
-                            </div>
-
                             <div class="horizontal-line"></div>
                         </div>
                     </c:forEach>
@@ -125,13 +124,9 @@
             </div>
             <button id="apply-btn">Apply</button>
         </div>
-
-        <div id="have-membership">
-            <p class="title">Have a BN Membership?</p>
-            <p><a href="#" class="sign-in">Sign In</a> and add your member number to your account to start enjoying free Shipping today!</p>
-        </div>
     </div>
     <div class="clear"></div>
 </div>
 </body>
+<%@ include file="/includes/footer.jsp" %>
 </html>
