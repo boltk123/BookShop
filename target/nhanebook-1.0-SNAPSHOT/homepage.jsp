@@ -118,29 +118,50 @@
             </article>
         </section>
     </div>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
     <!-- Non Fiction Books -->
     <section class="book-genre-container mx-auto p-1">
         <h4 class="font-style-2 font-size-md color-2  border-bottom my-1 py-1 black-highlight pointer"><img
-                src="assets/images/ai.svg" alt="non-fiction" class="category-heading-icons mr-half">Non Fiction
-            Books</h4>
+                src="assets/images/ai.svg" alt="non-fiction" class="category-heading-icons mr-half">Non Fiction Books</h4>
         <section class="book-cards-container d-flex flex-wrap justify-between">
             <h2 class="d-none">This is hidden</h2>
+            <c:forEach begin="1" end="4" var="book" items="${non_fiction_books}">
+                <article class="book-card bg-white my-1">
+                    <h2 class="d-none">This is hidden</h2>
+                    <img class="book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="non-fiction-img-1"/>
+                    <div class="p-half pointer d-flex flex-column justify-between h-200">
+                        <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${book.title}</p>
+                        <div>
+                            <c:forEach var="author" items="${non_fiction_book_authors}#{book.book_id}">
+                                <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${author.name}</p>
+                            </c:forEach>
+                            <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating:${book.rating}/5</p>
+                            <p class="py-1 d-flex justify-between align-center">
+                                <a href="AddCart?book_id=${book.book_id}">
+                                    <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                                </a>
+                                <span class="font-size-md color-1 font-style-2 gray-highlight">$${book.cost}</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </c:forEach>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
                 <img class="book-card-img d-block" src="data:image/jpg;base64,${non_fiction_book1.base64Image}" alt="non-fiction-img-1"/>
-                     class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
-                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">"Surely You're Joking, Mr.
-                        Feynman!": Adventures of a Curious Character</p>
+                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${non_fiction_book1.title}</p>
                     <div>
-                        <p class="font-size-sm font-style-2 color-3 gray-highlight">by Richard P. Feynman</p>
-                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.6/5</p>
+                        <c:forEach var="author" items="${non_fiction_book_authors1}">
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${author.name}</p>
+                        </c:forEach>
+                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating:${non_fiction_book1.rating}/5</p>
                         <p class="py-1 d-flex justify-between align-center">
                             <a href="AddCart?book_id=${non_fiction_book1.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
-                            <span class="font-size-md color-1 font-style-2 gray-highlight">$10.89</span>
+                            <span class="font-size-md color-1 font-style-2 gray-highlight">$${non_fiction_book1.cost}</span>
                         </p>
                     </div>
                 </div>
@@ -148,18 +169,18 @@
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
                 <img class="book-card-img d-block" src="data:image/jpg;base64,${non_fiction_book2.base64Image}" alt="non-fiction-img-1"/>
-                     class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
-                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">Educated</p>
+                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${non_fiction_book2.title}</p>
                     <div>
-                        <p class="font-size-sm font-style-2 color-3 gray-highlight">by Tara Westover</p>
-                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.47/5</p>
+                        <c:forEach var="author" items="${non_fiction_book_authors2}">
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by${author.name}</p>
+                        </c:forEach>
+                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating:${non_fiction_book2.rating}/5</p>
                         <p class="py-1 d-flex justify-between align-center">
                             <a href="AddCart?book_id=${non_fiction_book2.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
-
-                            <span class="font-size-md color-1 font-style-2 gray-highlight">$19.60</span>
+                            <span class="font-size-md color-1 font-style-2 gray-highlight">$${non_fiction_book2.cost}</span>
                         </p>
                     </div>
                 </div>
@@ -167,18 +188,18 @@
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
                 <img class="book-card-img d-block" src="data:image/jpg;base64,${non_fiction_book3.base64Image}" alt="non-fiction-img-1"/>
-                     class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
-                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">Thinking, Fast and Slow</p>
+                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${non_fiction_book3.title}</p>
                     <div>
-                        <p class="font-size-sm font-style-2 color-3 gray-highlight">by Daniel Kahneman</p>
-                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.5/5</p>
+                        <c:forEach var="author" items="${non_fiction_book_authors3}">
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by${author.name}</p>
+                        </c:forEach>
+                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating:${non_fiction_book3.rating}/5</p>
                         <p class="py-1 d-flex justify-between align-center">
                             <a href="AddCart?book_id=${non_fiction_book3.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
-
-                            <span class="font-size-md color-1 font-style-2 gray-highlight">$8.99</span>
+                            <span class="font-size-md color-1 font-style-2 gray-highlight">$${non_fiction_book3.cost}</span>
                         </p>
                     </div>
                 </div>
@@ -186,19 +207,19 @@
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
                 <img class="book-card-img d-block" src="data:image/jpg;base64,${non_fiction_book4.base64Image}" alt="non-fiction-img-1"/>
-                     class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
-                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">Bad Blood: Secrets and Lies in
-                        a Silicon Valley Startup</p>
+                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${non_fiction_book4.title}</p>
                     <div>
-                        <p class="font-size-sm font-style-2 color-3 gray-highlight">by John Carreyrou</p>
-                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.44/5</p>
+                        <c:forEach var="author" items="${non_fiction_book_authors4}">
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by  ${author.name}</p>
+                        </c:forEach>
+                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating:${non_fiction_book4.rating}/5</p>
                         <p class="py-1 d-flex justify-between align-center">
                             <a href="AddCart?book_id=${non_fiction_book4.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
-                            <span class="font-size-md color-1 font-style-2 gray-highlight">$15.33</span>
+                            <span class="font-size-md color-1 font-style-2 gray-highlight">$${non_fiction_book4.cost}</span>
                         </p>
                     </div>
                 </div>
@@ -209,25 +230,26 @@
     <!-- Fiction Books-->
     <section class="book-genre-container mx-auto p-1">
         <h1 class="font-style-2 font-size-md color-2  border-bottom my-1 py-1 black-highlight pointer"><img
-                src="assets/images/fiction.svg" alt="fiction" class="category-heading-icons mr-half">Fiction
-            Books</h1>
+                src="assets/images/fiction.svg" alt="fiction" class="category-heading-icons mr-half">Fiction Books</h1>
         <section class="book-cards-container d-flex flex-wrap justify-between">
             <h2 class="d-none">This is hidden</h2>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
                 <img src="data:image/jpg;base64,${fiction_book1.base64Image}" alt="fiction-img-1" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
-                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">The Great Gatsby</p>
+                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${fiction_book1.title}</p>
                     <div>
-                        <p class="font-size-sm font-style-2 color-3 gray-highlight">by F. Scott Fitzgerald</p>
-                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 3.92/5</p>
+                        <c:forEach var="author" items="${fiction_book_authors1}">
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${author.name}</p>
+                        </c:forEach>
+                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: ${fiction_book1.rating}/5</p>
                         <p class="py-1 d-flex justify-between align-center">
                             <a href="AddCart?book_id=${fiction_book1.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
 
-                            <span class="font-size-md color-1 font-style-2 gray-highlight">$10.78</span>
+                            <span class="font-size-md color-1 font-style-2 gray-highlight">$${fiction_book1.cost}</span>
                         </p>
                     </div>
                 </div>
@@ -236,17 +258,18 @@
                 <h2 class="d-none">This is hidden</h2>
                 <img src="data:image/jpg;base64,${fiction_book2.base64Image}" alt="fiction-img-2" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
-                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">The Kite Runner</p>
+                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${fiction_book2.title}</p>
                     <div>
-                        <p class="font-size-sm font-style-2 color-3 gray-highlight">by Khaled Hosseini, Berliani M.
-                            Nugrahani (Translator)</p>
-                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.3/5</p>
+                        <c:forEach var="author" items="${fiction_book_authors2}">
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${author.name}</p>
+                        </c:forEach>
+                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: ${fiction_book2.rating}/5</p>
                         <p class="py-1 d-flex justify-between align-center">
                             <a href="AddCart?book_id=${fiction_book2.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
-                            <span class="font-size-md color-1 font-style-2 gray-highlight">$15.99</span>
+                            <span class="font-size-md color-1 font-style-2 gray-highlight">$${fiction_book2.cost}</span>
                         </p>
                     </div>
                 </div>
@@ -255,17 +278,18 @@
                 <h2 class="d-none">This is hidden</h2>
                 <img src="data:image/jpg;base64,${fiction_book3.base64Image}" alt="fiction-img-3" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
-                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">1984</p>
+                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${fiction_book3.title}</p>
                     <div>
-                        <p class="font-size-sm font-style-2 color-3 gray-highlight">by George Orwell, Peter Hobley
-                            Davison (Foreword)</p>
-                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.18/5</p>
+                        <c:forEach var="author" items="${fiction_book_authors3}">
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${author.name}</p>
+                        </c:forEach>
+                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: ${fiction_book3.rating}/5</p>
                         <p class="py-1 d-flex justify-between align-center">
                             <a href="AddCart?book_id=${fiction_book3.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
-                            <span class="font-size-md color-1 font-style-2 gray-highlight">$19.99</span>
+                            <span class="font-size-md color-1 font-style-2 gray-highlight">$${fiction_book3.cost}</span>
                         </p>
                     </div>
                 </div>
@@ -274,17 +298,18 @@
                 <h2 class="d-none">This is hidden</h2>
                 <img src="data:image/jpg;base64,${fiction_book4.base64Image}" alt="fiction-img-4" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
-                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">The Alchemist</p>
+                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${fiction_book4.title}</p>
                     <div>
-                        <p class="font-size-sm font-style-2 color-3 gray-highlight">by Paulo Coelho, Alan R. Clarke
-                            (Translator)</p>
-                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 3.87/5</p>
+                        <c:forEach var="author" items="${fiction_book_authors4}">
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${author.name}</p>
+                        </c:forEach>
+                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: ${fiction_book4.rating}/5</p>
                         <p class="py-1 d-flex justify-between align-center">
                             <a href="AddCart?book_id=${fiction_book4.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
-                            <span class="font-size-md color-1 font-style-2 gray-highlight">$16.93</span>
+                            <span class="font-size-md color-1 font-style-2 gray-highlight">$${fiction_book4.cost}</span>
                         </p>
                     </div>
                 </div>
@@ -303,18 +328,19 @@
                 <h2 class="d-none">This is hidden</h2>
                 <img src="data:image/jpg;base64,${academic_book1.base64Image}" alt="academic-img-1" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
-                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">The Communist Manifesto</p>
+                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${academic_book1.title}</p>
                     <div>
-                        <p class="font-size-sm font-style-2 color-3 gray-highlight">by Karl Marx, Friedrich Engels
-                        </p>
-                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 3.57/5</p>
+                        <c:forEach var="author" items="${academic_book_authors1}">
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${author.name}</p>
+                        </c:forEach>
+                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: ${academic_book1.rating}/5</p>
                         <p class="py-1 d-flex justify-between align-center">
                             <a href="AddCart?book_id=${fiction_book1.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
 
-                            <span class="font-size-md color-1 font-style-2 gray-highlight">$6.89</span>
+                            <span class="font-size-md color-1 font-style-2 gray-highlight">$${academic_book1.cost}</span>
                         </p>
                     </div>
                 </div>
@@ -323,17 +349,19 @@
                 <h2 class="d-none">This is hidden</h2>
                 <img src="data:image/jpg;base64,${academic_book2.base64Image}" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
-                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">The Republic</p>
+                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${academic_book2.title}</p>
                     <div>
-                        <p class="font-size-sm font-style-2 color-3 gray-highlight">by Plato</p>
-                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 3.94/5</p>
+                        <c:forEach var="author" items="${academic_book_authors2}">
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${author.name}</p>
+                        </c:forEach>
+                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: ${academic_book2.rating}/5</p>
                         <p class="py-1 d-flex justify-between align-center">
                             <a href="AddCart?book_id=${fiction_book2.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
 
-                            <span class="font-size-md color-1 font-style-2 gray-highlight">$14.25</span>
+                            <span class="font-size-md color-1 font-style-2 gray-highlight">$${academic_book2.cost}</span>
                         </p>
                     </div>
                 </div>
@@ -342,17 +370,18 @@
                 <h2 class="d-none">This is hidden</h2>
                 <img src="data:image/jpg;base64,${academic_book3.base64Image}" alt="academic-img-3" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
-                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">The Elements of Style</p>
+                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${academic_book3.title}</p>
                     <div>
-                        <p class="font-size-sm font-style-2 color-3 gray-highlight">by William Strunk Jr., E.B.
-                            White</p>
-                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.19/5</p>
+                        <c:forEach var="author" items="${academic_book_authors3}">
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${author.name}</p>
+                        </c:forEach>
+                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: ${academic_book3.rating}/5</p>
                         <p class="py-1 d-flex justify-between align-center">
                             <a href="AddCart?book_id=${fiction_book3.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
-                            <span class="font-size-md color-1 font-style-2 gray-highlight">$11.99</span>
+                            <span class="font-size-md color-1 font-style-2 gray-highlight">$${academic_book3.cost}</span>
                         </p>
                     </div>
                 </div>
@@ -361,18 +390,18 @@
                 <h2 class="d-none">This is hidden</h2>
                 <img src="data:image/jpg;base64,${academic_book4.base64Image}" alt="academic-img-4" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
-                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">Discipline and Punish: The
-                        Birth of the Prison</p>
+                    <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${academic_book4.title}</p>
                     <div>
-                        <p class="font-size-sm font-style-2 color-3 gray-highlight">by Michel Foucault, A.M.
-                            Sheridan-Smith (Translator)</p>
-                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.22/5</p>
+                        <c:forEach var="author" items="${academic_book_authors4}">
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${author.name}</p>
+                        </c:forEach>
+                        <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: ${academic_book4.rating}/5</p>
                         <p class="py-1 d-flex justify-between align-center">
                             <a href="AddCart?book_id=${fiction_book4.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
-                            <span class="font-size-md color-1 font-style-2 gray-highlight">$22</span>
+                            <span class="font-size-md color-1 font-style-2 gray-highlight">$${academic_book4.cost}</span>
                         </p>
                     </div>
                 </div>

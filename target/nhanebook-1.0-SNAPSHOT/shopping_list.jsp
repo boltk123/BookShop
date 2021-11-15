@@ -61,13 +61,12 @@
                                 </div>
                                 <div class="price-detail">
                                     <div class="retail-discounted-price">
-                                        <p class="retail-price">$${book_item.cost}</p>
-                                        <p class="discounted-price">10%</p>
+                                        <p class="retail-price">$${book_item.costCurrencyFormat} </p>
+                                        <p class="discounted-price">$10</p>
                                     </div>
                                     <div class="quantity"><input type="text" value="1"></div>
                                     <div class="total-price">
-                                        <!--<p>${(book_item.cost) - ((book_item.cost * 10)/100) }
-
+                                        ${(book_item.costCurrencyFormat)}
                                     </div>
                                 </div>
                             </div>

@@ -1,5 +1,6 @@
 package business;
 
+import database.AuthorsDB;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
@@ -7,6 +8,7 @@ import java.io.Serializable;
 import java.text.NumberFormat;
 import java.util.Base64;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Books implements Serializable {
@@ -16,6 +18,7 @@ public class Books implements Serializable {
     private int total_pages;
     private double rating;
     private double cost;
+    private int authors;
     @Temporal(TemporalType.DATE)
     private Date published_date;
     private int publisher_id;
@@ -27,18 +30,18 @@ public class Books implements Serializable {
     public Books() {
     }
 
-    public Books(int book_id, String title, int total_pages, double rating, double cost, Date published_date, int publisher_id, String description, byte[] book_cover) {
+    public Books(int book_id, String title, int total_pages, double rating, double cost, int authors, Date published_date, int publisher_id, String description, byte[] book_cover) {
         this.book_id = book_id;
         this.title = title;
         this.total_pages = total_pages;
         this.rating = rating;
         this.cost = cost;
+        this.authors = authors;
         this.published_date = published_date;
         this.publisher_id = publisher_id;
         this.description = description;
         this.book_cover = book_cover;
     }
-
 
     public byte[] getBook_cover() {
         return book_cover;
@@ -111,6 +114,14 @@ public class Books implements Serializable {
         this.description = description;
     }
 
+    public int getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(int authors) {
+        this.authors = authors;
+    }
+
     @Transient
     public String getBase64Image() {
         base64Image = Base64.getEncoder().encodeToString(this.book_cover);
@@ -118,10 +129,6 @@ public class Books implements Serializable {
     }
     public void setBase64Image(String base64Image) {
         this.base64Image = base64Image;
-    }
-    public String getCostCurrencyFormat() {
-        NumberFormat currency = NumberFormat.getCurrencyInstance();
-        return currency.format(cost);
     }
 
 }
