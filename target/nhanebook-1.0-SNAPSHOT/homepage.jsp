@@ -41,8 +41,9 @@
             </li>
             <li class="pl-2">
                 <button type="button"
-                        class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">REQUEST
-                    FOR STOCK</button>
+                        class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">
+                    <a href="admin-author.jsp" class="image-highlight">ADMIN</a>
+                </button>
             </li>
         </ul>
 
@@ -127,7 +128,7 @@
             <h2 class="d-none">This is hidden</h2>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="data:image/jpg;base64,${non_fiction_book1.base64Image}" alt="non-fiction-img-1"
+                <img class="book-card-img d-block" src="data:image/jpg;base64,${non_fiction_book1.base64Image}" alt="non-fiction-img-1"/>
                      class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">"Surely You're Joking, Mr.
@@ -146,7 +147,7 @@
             </article>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="./assets/images/non-fiction-img-2.jpg" alt="non-fiction-img-1"
+                <img class="book-card-img d-block" src="data:image/jpg;base64,${non_fiction_book2.base64Image}" alt="non-fiction-img-1"/>
                      class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">Educated</p>
@@ -154,7 +155,7 @@
                         <p class="font-size-sm font-style-2 color-3 gray-highlight">by Tara Westover</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.47/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <a href="AddCart">
+                            <a href="AddCart?book_id=${non_fiction_book2.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
@@ -165,7 +166,7 @@
             </article>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="./assets/images/non-fiction-img-3.jpg" alt="non-fiction-img-1"
+                <img class="book-card-img d-block" src="data:image/jpg;base64,${non_fiction_book3.base64Image}" alt="non-fiction-img-1"/>
                      class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">Thinking, Fast and Slow</p>
@@ -173,7 +174,7 @@
                         <p class="font-size-sm font-style-2 color-3 gray-highlight">by Daniel Kahneman</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.5/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <a href="AddCart?">
+                            <a href="AddCart?book_id=${non_fiction_book3.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
@@ -184,7 +185,7 @@
             </article>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="./assets/images/non-fiction-img-4.jpg" alt="non-fiction-img-1"
+                <img class="book-card-img d-block" src="data:image/jpg;base64,${non_fiction_book4.base64Image}" alt="non-fiction-img-1"/>
                      class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">Bad Blood: Secrets and Lies in
@@ -193,7 +194,7 @@
                         <p class="font-size-sm font-style-2 color-3 gray-highlight">by John Carreyrou</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.44/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <a href="AddCart">
+                            <a href="AddCart?book_id=${non_fiction_book4.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
@@ -214,14 +215,14 @@
             <h2 class="d-none">This is hidden</h2>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="./assets/images/fiction-img-1.jpg" alt="fiction-img-1" class="book-card-img d-block">
+                <img src="data:image/jpg;base64,${fiction_book1.base64Image}" alt="fiction-img-1" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">The Great Gatsby</p>
                     <div>
                         <p class="font-size-sm font-style-2 color-3 gray-highlight">by F. Scott Fitzgerald</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 3.92/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <a href="AddCart">
+                            <a href="AddCart?book_id=${fiction_book1.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
@@ -233,7 +234,7 @@
             </article>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="./assets/images/fiction-img-2.jpg" alt="fiction-img-2" class="book-card-img d-block">
+                <img src="data:image/jpg;base64,${fiction_book2.base64Image}" alt="fiction-img-2" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">The Kite Runner</p>
                     <div>
@@ -241,7 +242,7 @@
                             Nugrahani (Translator)</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.3/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <a href="AddCart">
+                            <a href="AddCart?book_id=${fiction_book2.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
@@ -252,7 +253,7 @@
             </article>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="./assets/images/fiction-img-3.jpg" alt="fiction-img-3" class="book-card-img d-block">
+                <img src="data:image/jpg;base64,${fiction_book3.base64Image}" alt="fiction-img-3" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">1984</p>
                     <div>
@@ -260,7 +261,7 @@
                             Davison (Foreword)</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.18/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <a href="AddCart">
+                            <a href="AddCart?book_id=${fiction_book3.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
@@ -271,7 +272,7 @@
             </article>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="./assets/images/fiction-img-4.jpg" alt="fiction-img-4" class="book-card-img d-block">
+                <img src="data:image/jpg;base64,${fiction_book4.base64Image}" alt="fiction-img-4" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">The Alchemist</p>
                     <div>
@@ -279,7 +280,7 @@
                             (Translator)</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 3.87/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <a href="AddCart">
+                            <a href="AddCart?book_id=${fiction_book4.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
@@ -300,7 +301,7 @@
             <h2 class="d-none">This is hidden</h2>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="./assets/images/academic-img-1.jpg" alt="academic-img-1" class="book-card-img d-block">
+                <img src="data:image/jpg;base64,${academic_book1.base64Image}" alt="academic-img-1" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">The Communist Manifesto</p>
                     <div>
@@ -308,7 +309,7 @@
                         </p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 3.57/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <a href="AddCart">
+                            <a href="AddCart?book_id=${fiction_book1.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
@@ -320,14 +321,14 @@
             </article>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="./assets/images/academic-img-2.jpg" alt="academic-img-2" class="book-card-img d-block">
+                <img src="data:image/jpg;base64,${academic_book2.base64Image}" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">The Republic</p>
                     <div>
                         <p class="font-size-sm font-style-2 color-3 gray-highlight">by Plato</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 3.94/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <a href="AddCart">
+                            <a href="AddCart?book_id=${fiction_book2.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
@@ -339,7 +340,7 @@
             </article>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="./assets/images/academic-img-3.jpg" alt="academic-img-3" class="book-card-img d-block">
+                <img src="data:image/jpg;base64,${academic_book3.base64Image}" alt="academic-img-3" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">The Elements of Style</p>
                     <div>
@@ -347,7 +348,7 @@
                             White</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.19/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <a href="AddCart">
+                            <a href="AddCart?book_id=${fiction_book3.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 
@@ -358,7 +359,7 @@
             </article>
             <article class="book-card bg-white my-1">
                 <h2 class="d-none">This is hidden</h2>
-                <img src="./assets/images/academic-img-4.jpg" alt="academic-img-4" class="book-card-img d-block">
+                <img src="data:image/jpg;base64,${academic_book4.base64Image}" alt="academic-img-4" class="book-card-img d-block">
                 <div class="p-half pointer d-flex flex-column justify-between h-200">
                     <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">Discipline and Punish: The
                         Birth of the Prison</p>
@@ -367,7 +368,7 @@
                             Sheridan-Smith (Translator)</p>
                         <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: 4.22/5</p>
                         <p class="py-1 d-flex justify-between align-center">
-                            <a href="AddCart">
+                            <a href="AddCart?book_id=${fiction_book4.book_id}">
                                 <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                             </a>
 

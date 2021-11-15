@@ -154,13 +154,13 @@
             <h5 class="">Users</h5>
         </div>
         <div class="round">
-            <div class="rounded-circle mx-auto">
+            <div class="round mx-auto">
                 <h2 class="">4.8k</h2>
                 <h5 class="">Books</h5>
             </div>
         </div>
         <div class="round">
-            <div class="rounded-circle mx-auto">
+            <div class="round mx-auto">
                 <h2 class="">1.2k</h2>
                 <h5 class="">Sale</h5>
             </div>

@@ -66,8 +66,7 @@
     <section class="border">
         <h1 class="d-none">This is hidden</h1>
         <div class="copyright-section p-1 mx-auto d-flex justify-between align-center">
-            <p class="font-size-sm font-style-1 color-2">Copyright&copy; 2020 bookshop.com. All rights reserved.
-                Created by Ershadul Hakim Rayhan. Design idea by Mohammed Awad.</p>
+            <p class="font-size-sm font-style-1 color-2">Copyright&copy; 2020 bookshop.com. All rights reserved.</p>
             <ul class="list-style-none d-flex">
                 <li><img src="./assets/images/twitter.svg" alt="twitter-logo"
                          class="d-block category-heading-icons pointer ml-half"></li>
