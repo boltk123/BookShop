@@ -20,7 +20,7 @@ import javax.swing.*;
 public class ImageServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Books> books = BooksDB.selectBooks();
+        List<Books> books = BooksDB.selectAllBooks();
         String url = "/imagetest.jsp";
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();

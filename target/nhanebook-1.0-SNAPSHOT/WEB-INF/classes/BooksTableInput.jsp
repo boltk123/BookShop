@@ -11,14 +11,14 @@
         <input type="text" name="book_id"/><br>
         <p1>Input Book Title</p1>
         <input type="text" name="title"/><br>
-        <p1>Input Book Published Date</p1>
-        <input type="date" name="published_date"/><br>
-        <p1>Input Book Published ID</p1>
-        <input type="text" name="published_id"/><br>
         <p1>Input Book Total Page</p1>
         <input type="text" name="total_pages"/><br>
         <p1>Input Book Initial Rating</p1>
         <input type="text" name="rating"/><br>
+        <p1>Input Book Book Author</p1>
+        <input type="text" name="author"/><br>
+        <p1>Input Book Book's genre</p1>
+        <input type="text" name="genre"/><br>
         <p1>Input Book Price</p1>
         <input type="text" name="cost" min="1" step="any" /><p>$</p><br>
         <p1>Input Book Description</p1>

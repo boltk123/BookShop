@@ -66,21 +66,15 @@ public class FileUploadServlet extends HttpServlet {
         // insert into database
         int book_id = Integer.parseInt((request.getParameter("book_id")));
         String title = request.getParameter("title");
-        String date = request.getParameter("published_date");
-        try {
-            Date published_date = new SimpleDateFormat("yyyy-mm-dd").parse(date);
-            int published_id = Integer.parseInt(request.getParameter("published_id"));
-            int total_pages = Integer.parseInt(request.getParameter("total_pages"));
-            double rating = Double.parseDouble(request.getParameter("rating"));
-            double cost = Double.parseDouble(request.getParameter("cost"));
-            String description = request.getParameter("description");
-            BooksDB.insertBook(book_id, title, total_pages, rating, cost, published_date, published_id, description, bFile);
-            RequestDispatcher rd = request.getRequestDispatcher("ImageServlet");
-            rd.forward(request,response);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
+        int total_pages = Integer.parseInt(request.getParameter("total_pages"));
+        double rating = Double.parseDouble(request.getParameter("rating"));
+        double cost = Double.parseDouble(request.getParameter("cost"));
+        String author = request.getParameter("author");
+        String genre = request.getParameter("genre");
+        String description = request.getParameter("description");
+        BooksDB.insertBook(book_id, title, total_pages, rating, cost, author, genre, description, bFile);
+        RequestDispatcher rd = request.getRequestDispatcher("ImageServlet");
+        rd.forward(request,response);
         //session.save(bookContents);
         /*
         //Get image from database

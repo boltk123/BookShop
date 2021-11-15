@@ -1,14 +1,11 @@
 package business;
 
-import database.AuthorsDB;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.text.NumberFormat;
 import java.util.Base64;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 public class Books implements Serializable {
@@ -18,10 +15,8 @@ public class Books implements Serializable {
     private int total_pages;
     private double rating;
     private double cost;
-    private int authors;
-    @Temporal(TemporalType.DATE)
-    private Date published_date;
-    private int publisher_id;
+    private String author;
+    private String genre;
     private String description;
     private String base64Image;
     @Type(type="org.hibernate.type.BinaryType")
@@ -30,15 +25,14 @@ public class Books implements Serializable {
     public Books() {
     }
 
-    public Books(int book_id, String title, int total_pages, double rating, double cost, int authors, Date published_date, int publisher_id, String description, byte[] book_cover) {
+    public Books(int book_id, String title, int total_pages, double rating, double cost, String author, String genre,String description, byte[] book_cover) {
         this.book_id = book_id;
         this.title = title;
         this.total_pages = total_pages;
         this.rating = rating;
         this.cost = cost;
-        this.authors = authors;
-        this.published_date = published_date;
-        this.publisher_id = publisher_id;
+        this.author = author;
+        this.genre = genre;
         this.description = description;
         this.book_cover = book_cover;
     }
@@ -83,22 +77,6 @@ public class Books implements Serializable {
         this.rating = rating;
     }
 
-    public Date getPublished_date() {
-        return published_date;
-    }
-
-    public void setPublished_date(Date published_date) {
-        this.published_date = published_date;
-    }
-
-    public int getPublisher_id() {
-        return publisher_id;
-    }
-
-    public void setPublisher_id(int publisher_id) {
-        this.publisher_id = publisher_id;
-    }
-
     public double getCost() {
         return cost;
     }
@@ -114,12 +92,20 @@ public class Books implements Serializable {
         this.description = description;
     }
 
-    public int getAuthors() {
-        return authors;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAuthors(int authors) {
-        this.authors = authors;
+    public void setAuthor(String authors) {
+        this.author = authors;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     @Transient
