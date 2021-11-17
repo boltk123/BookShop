@@ -19,8 +19,10 @@ public class Books implements Serializable {
     private String genre;
     private String description;
     private String base64Image;
+
     @Type(type="org.hibernate.type.BinaryType")
     private byte[] book_cover;
+
     //default constructor
     public Books() {
     }
@@ -36,21 +38,12 @@ public class Books implements Serializable {
         this.description = description;
         this.book_cover = book_cover;
     }
-
-    public byte[] getBook_cover() {
-        return book_cover;
-    }
-
-    public void setBook_cover(byte[] book_cover) {
-        this.book_cover = book_cover;
+    public int getBook_id() {
+        return book_id;
     }
 
     public void setBook_id(int book_id) {
         this.book_id = book_id;
-    }
-
-    public int getBook_id() {
-        return book_id;
     }
 
     public String getTitle() {
@@ -84,20 +77,13 @@ public class Books implements Serializable {
     public void setCost(double cost) {
         this.cost = cost;
     }
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String authors) {
-        this.author = authors;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getGenre() {
@@ -107,6 +93,23 @@ public class Books implements Serializable {
     public void setGenre(String genre) {
         this.genre = genre;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public byte[] getBook_cover() {
+        return book_cover;
+    }
+
+    public void setBook_cover(byte[] book_cover) {
+        this.book_cover = book_cover;
+    }
+
 
     @Transient
     public String getBase64Image() {

@@ -126,15 +126,15 @@
                 src="assets/images/ai.svg" alt="non-fiction" class="category-heading-icons mr-half">Non Fiction Books</h4>
         <section class="book-cards-container d-flex flex-wrap justify-between">
             <h2 class="d-none">This is hidden</h2>
-            <c:forEach var="book" items="${non_fiction_books}">
+            <c:forEach begin="0" end="4" var="book" items="${non_fiction_books}">
                 <article class="book-card bg-white my-1">
                     <h2 class="d-none">This is hidden</h2>
-                    <img class="book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="non-fiction-img-1"/>
+                    <img class= "book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="non-fiction-img-1">
                     <div class="p-half pointer d-flex flex-column justify-between h-200">
                         <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${book.title}</p>
                         <div>
-                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${book.name}</p>
-                            <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating:${book.rating}/5</p>
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${book.author}</p>
+                            <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: ${book.rating}/5</p>
                             <p class="py-1 d-flex justify-between align-center">
                                 <a href="AddCart?book_id=${book.book_id}">
                                     <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
@@ -147,21 +147,21 @@
             </c:forEach>
         </section>
     </section>
-    <!-- Fiction Books -->
+    <!-- Fiction Books-->
     <section class="book-genre-container mx-auto p-1">
-        <h1 class="font-style-2 font-size-md color-2  border-bottom my-1 py-1 black-highlight pointer"><img
-                src="assets/images/fiction.svg" alt="fiction" class="category-heading-icons mr-half">Fiction Books</h1>
+        <h4 class="font-style-2 font-size-md color-2  border-bottom my-1 py-1 black-highlight pointer"><img
+                src="assets/images/fiction.svg" alt="non-fiction" class="category-heading-icons mr-half">Fiction Books</h4>
         <section class="book-cards-container d-flex flex-wrap justify-between">
             <h2 class="d-none">This is hidden</h2>
-            <c:forEach var="book" items="${fiction_books}">
+            <c:forEach begin="0" end="4" var="book" items="${fiction_books}">
                 <article class="book-card bg-white my-1">
                     <h2 class="d-none">This is hidden</h2>
-                    <img class="book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="non-fiction-img-1"/>
+                    <img class= "book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="non-fiction-img-1">
                     <div class="p-half pointer d-flex flex-column justify-between h-200">
                         <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${book.title}</p>
                         <div>
-                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${book.name}</p>
-                            <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating:${book.rating}/5</p>
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${book.author}</p>
+                            <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: ${book.rating}/5</p>
                             <p class="py-1 d-flex justify-between align-center">
                                 <a href="AddCart?book_id=${book.book_id}">
                                     <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
@@ -176,20 +176,19 @@
     </section>
     <!-- Academic Books -->
     <section class="book-genre-container mx-auto p-1">
-        <h1 class="font-style-2 font-size-md color-2  border-bottom my-1 py-1 black-highlight pointer"><img
-                src="assets/images/opportunity.svg" alt="academic" class="category-heading-icons mr-half">Academic
-            Books</h1>
+        <h4 class="font-style-2 font-size-md color-2  border-bottom my-1 py-1 black-highlight pointer"><img
+                src="assets/images/opportunity.svg" alt="non-fiction" class="category-heading-icons mr-half">Academic Books</h4>
         <section class="book-cards-container d-flex flex-wrap justify-between">
             <h2 class="d-none">This is hidden</h2>
-            <c:forEach var="book" items="${academic_books}">
+            <c:forEach begin="0" end="4" var="book" items="${academic_books}">
                 <article class="book-card bg-white my-1">
                     <h2 class="d-none">This is hidden</h2>
-                    <img class="book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="non-fiction-img-1"/>
+                    <img class= "book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="non-fiction-img-1">
                     <div class="p-half pointer d-flex flex-column justify-between h-200">
                         <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${book.title}</p>
                         <div>
-                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${book.name}</p>
-                            <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating:${book.rating}/5</p>
+                            <p class="font-size-sm font-style-2 color-3 gray-highlight">by ${book.author}</p>
+                            <p class="font-size-s font-style-2 color-3  py-1 gray-highlight">Rating: ${book.rating}/5</p>
                             <p class="py-1 d-flex justify-between align-center">
                                 <a href="AddCart?book_id=${book.book_id}">
                                     <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
