@@ -16,7 +16,11 @@ public class Products implements Serializable {
     @Id
     private int product_id;
     private int quantity;
-
+    private String productName;
+    private double subtotal;
+    private double shipping;
+    private double tax;
+    private double total;
     public Products() {
     }
 
@@ -48,6 +52,22 @@ public class Products implements Serializable {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public String getSubtotal() {
+        return String.format("%.2f", subtotal * this.quantity);
+    }
+
+    public void setSubtotal(double subtotal) {
+        this.subtotal = subtotal;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
 }

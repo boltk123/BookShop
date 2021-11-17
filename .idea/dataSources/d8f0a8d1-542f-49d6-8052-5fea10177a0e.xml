@@ -812,7 +812,7 @@ false Zulu
 13158||-9223372036854775808|U|G
 13158||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>948</IntrospectionStateNumber>
+      <IntrospectionStateNumber>976</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="4" parent="1" name="pg_execute_server_program">
@@ -877,7 +877,7 @@ false Zulu
       <Comment>standard public schema</Comment>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>949</IntrospectionStateNumber>
+      <IntrospectionStateNumber>977</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="3" name="plpgsql">
@@ -1001,7 +1001,7 @@ false Zulu
     <table id="34" parent="17" name="products">
       <ObjectId>16683</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>817</StateNumber>
+      <StateNumber>971</StateNumber>
     </table>
     <table id="35" parent="17" name="user_jpa">
       <ObjectId>16421</ObjectId>
@@ -1204,7 +1204,37 @@ false Zulu
       <StateNumber>817</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="65" parent="34" name="products_pkey">
+    <column id="65" parent="34" name="productName">
+      <Position>4</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>967</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="66" parent="34" name="subtotal">
+      <Position>5</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>968</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="67" parent="34" name="shipping">
+      <Position>6</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>969</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="68" parent="34" name="tax">
+      <Position>7</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>970</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="69" parent="34" name="total">
+      <Position>8</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>971</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <index id="70" parent="34" name="products_pkey">
       <ObjectId>16686</ObjectId>
       <StateNumber>817</StateNumber>
       <ColNames>user_id
@@ -1215,7 +1245,7 @@ product_id</ColNames>
       <CollationIds>0,0</CollationIds>
       <ClassIds>1978,1978</ClassIds>
     </index>
-    <key id="66" parent="34" name="products_pkey">
+    <key id="71" parent="34" name="products_pkey">
       <ObjectId>16687</ObjectId>
       <StateNumber>817</StateNumber>
       <ColNames>user_id
@@ -1223,32 +1253,32 @@ product_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>products_pkey</UnderlyingIndexName>
     </key>
-    <column id="67" parent="35" name="userid">
+    <column id="72" parent="35" name="userid">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>519</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="68" parent="35" name="email">
+    <column id="73" parent="35" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="69" parent="35" name="firstname">
+    <column id="74" parent="35" name="firstname">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="70" parent="35" name="lastname">
+    <column id="75" parent="35" name="lastname">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="71" parent="35" name="user_jpa_pkey">
+    <index id="76" parent="35" name="user_jpa_pkey">
       <ObjectId>16427</ObjectId>
       <StateNumber>519</StateNumber>
       <ColNames>userid</ColNames>
@@ -1258,39 +1288,39 @@ product_id</ColNames>
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="72" parent="35" name="user_jpa_pkey">
+    <key id="77" parent="35" name="user_jpa_pkey">
       <ObjectId>16428</ObjectId>
       <StateNumber>519</StateNumber>
       <ColNames>userid</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>user_jpa_pkey</UnderlyingIndexName>
     </key>
-    <column id="73" parent="36" name="userid">
+    <column id="78" parent="36" name="userid">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>502</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="74" parent="36" name="firstname">
+    <column id="79" parent="36" name="firstname">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>502</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="75" parent="36" name="lastname">
+    <column id="80" parent="36" name="lastname">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>502</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="76" parent="36" name="emailaddress">
+    <column id="81" parent="36" name="emailaddress">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>502</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="77" parent="36" name="usertest_pkey">
+    <index id="82" parent="36" name="usertest_pkey">
       <ObjectId>16409</ObjectId>
       <StateNumber>502</StateNumber>
       <ColNames>userid</ColNames>
@@ -1300,7 +1330,7 @@ product_id</ColNames>
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="78" parent="36" name="usertest_pkey">
+    <key id="83" parent="36" name="usertest_pkey">
       <ObjectId>16410</ObjectId>
       <StateNumber>502</StateNumber>
       <ColNames>userid</ColNames>

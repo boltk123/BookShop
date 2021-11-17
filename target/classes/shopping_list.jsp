@@ -33,42 +33,39 @@
                                     <a class="book-img" src="#"><img src="data:image/jpg;base64,${book_item.base64Image}" width="200" height="280" alt=""></a>
                                     <p class="book-format">Hardcover</p>
                                 </div>
+
                                 <div class="shipping-detail">
                                     <div class="ship-to-home">
                                         <label class="radio-label-container" for="ship-this">
-                                            <input type="radio" class="ship-this" checked>
+                                            <input type="radio" class="ship-this" name="purchase-type" checked>
                                             <span class="radio-circle"></span>
-                                            <p>Ship this item</p>
+                                                <p>Ship this item</p>
                                         </label>
                                     </div>
-
-                                    <p class="make-at-gift"><a href="">Make It a Gift</a> (optional)</p>
-
                                     <div class="pick-in-store">
                                         <label class="radio-label-container" for="buy-online">
-                                            <input type="radio" class="buy-online" disabled>
+                                            <input  type="radio" class="buy-online" name="purchase-type">
                                             <span class="radio-circle"></span>
-                                            <p>Buy Online, Pick up in Store</p>
+                                            <p>Buy Online Edition</p>
                                         </label>
                                     </div>
-
-                                    <a href="" class="find-my-store">Find My Store</a>
-
                                     <div class="remove-save">
-                                        <a href="" class="remove">Remove</a>
-                                        <a href="" class="save-for-later">Save for Later</a>
+                                        <a href="RemoveCart?book_id=${book_item.book_id}" class="remove">Remove</a>
                                     </div>
                                 </div>
                                 <div class="price-detail">
                                     <div class="retail-discounted-price">
-                                        <p class="retail-price">$${book_item.costCurrencyFormat} </p>
+                                        <p class="retail-price">$${book_item.cost} </p>
                                         <p class="discounted-price">$10</p>
                                     </div>
                                     <div class="quantity"><input type="text" value="1"></div>
                                     <div class="total-price">
-                                        ${(book_item.costCurrencyFormat)}
+                                        $${(book_item.cost) - 10}
                                     </div>
                                 </div>
+                            </div>
+                            <div class="expedited-shipping">
+                                <i>Choose Expedited Shipping at checkout for delivery by Wednesday, November 10</i>
                             </div>
                             <div class="horizontal-line"></div>
                         </div>
@@ -108,6 +105,8 @@
             </div>
 
             <div class="checkout">
+                <button class="checkout-btn">Update Cart</button>
+                <br>
                 <button class="checkout-btn">Checkout</button>
                 <div class="checkout-with">
                     <p class="title">Or Checkout With</p>
