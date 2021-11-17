@@ -360,7 +360,7 @@ body {
 .make-at-gift,
 .find-my-store,
 .remove-save {
-    margin-left: 25px;
+    margin-right: 100px;
 }
 
 .make-at-gift a,
@@ -379,7 +379,7 @@ body {
 }
 
 .remove-save .remove {
-    margin-right: 4px;
+    margin-right: 100px;
 }
 
 .remove-save .save-for-later {
@@ -388,7 +388,6 @@ body {
 
 .price-detail {
     display: flex;
-    margin-left: 41px;
 }
 
 .price-detail .retail-discounted-price .retail-price {
@@ -479,12 +478,10 @@ body {
     font-size: 20px;
     transition: 0.4s ease;
 }
-
 #order-summary .checkout .checkout-btn:hover {
     background-color: #2b483d;
     cursor: pointer;
 }
-
 .checkout-with {
     text-align: center;
 }
