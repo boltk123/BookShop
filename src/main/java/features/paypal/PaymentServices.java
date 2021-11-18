@@ -2,6 +2,7 @@
  * PaymentServices class - encapsulates PayPal payment integration functions.
  * @author Nam Ha Minh
  * @copyright https://codeJava.net
+ */
 package features.paypal;
 
 import java.util.ArrayList;
@@ -51,7 +52,6 @@ public class PaymentServices {
 	}
 	
 	private Payer getPayerInformation() {
-
 		Payer payer = new Payer();
 		payer.setPaymentMethod("paypal");
 		
@@ -138,4 +138,3 @@ public class PaymentServices {
 		return Payment.get(apiContext, paymentId);
 	}
 }
-*/

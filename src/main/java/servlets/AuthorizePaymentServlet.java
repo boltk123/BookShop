@@ -2,7 +2,7 @@
  * AuthorizePaymentServlet class - requests PayPal for payment.
  * @author Nam Ha Minh
  * @copyright https://codeJava.net
-
+ */
 package servlets;
 
 import java.io.IOException;
@@ -45,4 +45,3 @@ public class AuthorizePaymentServlet extends HttpServlet {
 	}
 
 }
- */

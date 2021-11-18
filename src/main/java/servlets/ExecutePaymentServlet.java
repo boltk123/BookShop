@@ -2,6 +2,7 @@
  * ExecutePaymentServlet class - execute payment via PayPal.
  * @author Nam Ha Minh
  * @copyright https://codeJava.net
+ */
 package servlets;
 
 import java.io.IOException;
@@ -45,4 +46,3 @@ public class ExecutePaymentServlet extends HttpServlet {
 	}
 
 }
- */

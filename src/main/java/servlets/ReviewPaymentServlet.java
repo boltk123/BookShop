@@ -2,7 +2,7 @@
  * ReviewPaymentServlet class - show review payment page.
  * @author Nam Ha Minh
  * @copyright https://codeJava.net
-
+ */
 package servlets;
 
 import java.io.IOException;
@@ -50,4 +50,3 @@ public class ReviewPaymentServlet extends HttpServlet {
 	}
 
 }
- */
