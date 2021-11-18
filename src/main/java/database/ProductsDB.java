@@ -33,6 +33,7 @@ public class ProductsDB {
         em.remove(em.merge(product));
         trans.commit();
     }
+
     public static int getProductQuantity(int user_id, int product_id){
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
