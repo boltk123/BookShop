@@ -16,7 +16,7 @@ public class Products implements Serializable {
     @Id
     private int product_id;
     private int quantity;
-    private String productName;
+    private String product_name;
     private double subtotal;
     private double shipping;
     private double tax;
@@ -63,11 +63,11 @@ public class Products implements Serializable {
     }
 
     public String getProductName() {
-        return productName;
+        return product_name;
     }
 
     public void setProductName(String productName) {
-        this.productName = productName;
+        this.product_name = productName;
     }
 
 }

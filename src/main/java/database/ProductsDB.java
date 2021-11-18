@@ -22,24 +22,22 @@ public class ProductsDB {
     public static void removeProduct(int user_id, int product_id){
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
-        String qString = "SELECT p FROM Accounts a, Products p"
-                + " WHERE p.user_id = a.user_id"
-                + " AND p.user_id = :user_id AND p.product_id = :product_id";
+        String qString = "SELECT p FROM Products as p"
+                + " WHERE p.user_id = :user_id AND p.product_id = :product_id";
         trans.begin();
         TypedQuery<Products> q = em.createQuery(qString, Products.class);
         q.setParameter("user_id", user_id);
         q.setParameter("product_id", product_id);
-        Products product = q.getSingleResult();
-        em.remove(em.merge(product));
+        Products products = q.getSingleResult();
+        em.remove(products);
         trans.commit();
     }
 
     public static int getProductQuantity(int user_id, int product_id){
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
-        String qString = "SELECT p FROM Accounts a, Products p"
-                + " WHERE p.user_id = a.user_id"
-                + " AND p.user_id = :user_id AND p.product_id = :product_id";
+        String qString = "SELECT p FROM Products p"
+                + " WHERE p.user_id = :user_id AND p.product_id = :product_id";
         TypedQuery<Products> q = em.createQuery(qString, Products.class);
         q.setParameter("user_id", user_id);
         q.setParameter("product_id", product_id);
@@ -47,6 +45,7 @@ public class ProductsDB {
         int quantity = product.getQuantity();
         return quantity;
     }
+    /*
     public static void getProductName(int product_id){
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
@@ -54,4 +53,5 @@ public class ProductsDB {
                 + " WHERE p.user_id = a.user_id"
                 + " AND p.user_id = :user_id AND p.product_id = :product_id";
     }
+     */
 }

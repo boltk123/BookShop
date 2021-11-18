@@ -812,7 +812,7 @@ false Zulu
 13158||-9223372036854775808|U|G
 13158||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>976</IntrospectionStateNumber>
+      <IntrospectionStateNumber>984</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="4" parent="1" name="pg_execute_server_program">
@@ -877,7 +877,7 @@ false Zulu
       <Comment>standard public schema</Comment>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>977</IntrospectionStateNumber>
+      <IntrospectionStateNumber>985</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="3" name="plpgsql">
@@ -1204,10 +1204,10 @@ false Zulu
       <StateNumber>817</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="65" parent="34" name="productName">
+    <column id="65" parent="34" name="product_name">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>967</StateNumber>
+      <StateNumber>983</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="66" parent="34" name="subtotal">
