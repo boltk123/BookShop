@@ -18,9 +18,12 @@ public class AddCartServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
+
         //int user_id = Integer.parseInt(request.getParameter("user_id"));
         int book_id  = Integer.parseInt(request.getParameter("book_id"));
-        ProductsDB.insertProduct(1, book_id);
+        if(ProductsDB.productExists(1, book_id) == false){
+            ProductsDB.insertProduct(1, book_id);
+        }
         String url = "/homepage.jsp";
         sc.getRequestDispatcher(url).
                 forward(request, response);

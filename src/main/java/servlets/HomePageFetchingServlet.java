@@ -22,7 +22,6 @@ public class HomePageFetchingServlet extends HttpServlet {
         List<Books> academic_books = BooksDB.selectBooksByGenre("Academic");
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
-        //ProductsDB.getProductQuantity(1, 1);
         String url = "/homepage.jsp";
         session.setAttribute("non_fiction_books", non_fiction_books);
         session.setAttribute("fiction_books", fiction_books);

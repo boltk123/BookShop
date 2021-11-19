@@ -22,15 +22,18 @@ import com.paypal.api.payments.Transaction;
 import com.paypal.base.rest.APIContext;
 import com.paypal.base.rest.PayPalRESTException;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
+
 public class PaymentServices {
 	private static final String CLIENT_ID = "AeWpNhJLY_mioNSgx3ui7MWuVC6EMB9Qdt3zHH0T5s6EUC9xRn-cYG1PHsvDjY6WPqPtCYCpzgkj_EE7";
 	private static final String CLIENT_SECRET = "EC0FUhda46ekpTd865QRvYr17zG60iTH6ycr1K8n1K_DFbrfUrkqLg4SVuvKZI2SdVol1u9rpdXtkQdz";
 	private static final String MODE = "sandbox";
 
-	public String authorizePayment(OrderDetail orderDetail)
+	public String authorizePayment(OrderDetail orderDetail, String user_firstname, String user_lastname, String email)
 			throws PayPalRESTException {		
 
-		Payer payer = getPayerInformation();
+		Payer payer = getPayerInformation(user_firstname, user_lastname, email);
 		RedirectUrls redirectUrls = getRedirectURLs();
 		List<Transaction> listTransaction = getTransactionInformation(orderDetail);
 		
@@ -51,14 +54,13 @@ public class PaymentServices {
 
 	}
 	
-	private Payer getPayerInformation() {
+	private Payer getPayerInformation(String firstname, String lastname, String email) {
 		Payer payer = new Payer();
 		payer.setPaymentMethod("paypal");
-		
 		PayerInfo payerInfo = new PayerInfo();
-		payerInfo.setFirstName("William")
-				 .setLastName("Peterson")
-				 .setEmail("william.peterson@company.com");
+		payerInfo.setFirstName(firstname)
+				 .setLastName(lastname)
+				 .setEmail(email);
 		
 		payer.setPayerInfo(payerInfo);
 		
@@ -67,8 +69,8 @@ public class PaymentServices {
 	
 	private RedirectUrls getRedirectURLs() {
 		RedirectUrls redirectUrls = new RedirectUrls();
-		redirectUrls.setCancelUrl("http://localhost:8080/PaypalTest/cancel.jsp");
-		redirectUrls.setReturnUrl("http://localhost:8080/PaypalTest/review_payment");
+		redirectUrls.setCancelUrl("http://localhost:8080/Heroku_war_exploded/cancel.jsp");
+		redirectUrls.setReturnUrl("http://localhost:8080/Heroku_war_exploded/review_payment");
 		
 		return redirectUrls;
 	}

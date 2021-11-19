@@ -28,12 +28,14 @@ public class AuthorizePaymentServlet extends HttpServlet {
 		String shipping = request.getParameter("shipping");
 		String tax = request.getParameter("tax");
 		String total = request.getParameter("total");
-		
+		String firstname = "Nhan";
+		String lastname = "Duc Bui";
+		String email = "123@gmail.com";
 		OrderDetail orderDetail = new OrderDetail(product, subtotal, shipping, tax, total);
 
 		try {
 			PaymentServices paymentServices = new PaymentServices();
-			String approvalLink = paymentServices.authorizePayment(orderDetail);
+			String approvalLink = paymentServices.authorizePayment(orderDetail, firstname, lastname, email);
 
 			response.sendRedirect(approvalLink);
 			

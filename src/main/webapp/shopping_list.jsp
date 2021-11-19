@@ -1,3 +1,6 @@
+<%@ page import="business.Products" %>
+<%@ page import="database.ProductsDB" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,15 +21,16 @@
                 <div class="shopping-cart-title">My Shopping Cart</div>
 
                 <div class="shopping-cart-item">
-                    <div class="message">(3) Items from Barnes & Noble</div>
+                    <div class="message">${product_count} Items from Barnes & Noble</div>
                     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
                     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+                    <form action="UpdateCart" method="post">
                     <c:forEach var="book_item" items="${book_items}">
                         <div class="item">
                             <div class="item-name">
                                 <a href="">${book_item.title}</a>
                             </div>
-                            <div class="director">By: Richard Osman</div>
+                            <div class="director">By: ${book_item.author}</div>
 
                             <div class="item-details">
                                 <div class="book-detail">
@@ -55,12 +59,22 @@
                                 </div>
                                 <div class="price-detail">
                                     <div class="retail-discounted-price">
-                                        <p class="retail-price">$${book_item.cost} </p>
+                                        <p class="retail-price">
+                                            $<fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${book_item.cost + 10}"/>
+                                        </p>
                                         <p class="discounted-price">$10</p>
                                     </div>
-                                    <div class="quantity"><input type="text" value="1"></div>
+                                    <c:forEach var="product" items="${products}">
+                                        <c:if test = "${product.product_id eq book_item.book_id}">
+                                            <div class="quantity">
+                                                <input type="text" name="quantity" value="${product.quantity} ">
+
+                                            </div>
+                                        </c:if>
+                                    </c:forEach>
+
                                     <div class="total-price">
-                                        $${(book_item.cost) - 10}
+                                        $<fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${book_item.cost}"/>
                                     </div>
                                 </div>
                             </div>
@@ -70,9 +84,11 @@
                             <div class="horizontal-line"></div>
                         </div>
                     </c:forEach>
-                </div>
-            </div>
 
+                    </form>
+                </div>
+
+            </div>
             <div class="recent-view">
 
             </div>
@@ -84,16 +100,16 @@
             <p class="head-title">Oder Summary</p>
             <div class="order-infos">
                 <div class="order-info">
-                    <p class="item">Subtotal (2 items)</p>
-                    <p class="price">$42.94</p>
+                    <p class="item">Subtotal (${product_count}items)</p>
+                    <p class="price">$<fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${subtotal}"/></p>
                 </div>
                 <div class="order-info">
                     <p class="item">Estimated Shipping</p>
-                    <p class="price">Free</p>
+                    <p class="price">$<fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${shipping}"/></p>
                 </div>
                 <div class="order-info">
                     <p class="item">Estimated Tax</p>
-                    <p class="price">$0.00</p>
+                    <p class="price">$<fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${tax}"/></p>
                 </div>
             </div>
 
@@ -101,16 +117,27 @@
 
             <div class="order-total">
                 Order Total:
-                <div class="order-total-price">$42.94</div>
+                <div class="order-total-price">
+                    $<fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${total}"/>
+                </div>
+
             </div>
 
             <div class="checkout">
-                <button class="checkout-btn">Update Cart</button>
-                <br>
-                <button class="checkout-btn">Checkout</button>
+                <form action="UpdateCart" method="post">
+                    <button type="submit" class="checkout-btn">Update Cart</button>
+                    <br>
+                </form>
+                <form action="authorize_payment" method="post">
+                    <button class="checkout-btn" type="submit" >Checkout</button>
+                </form>
                 <div class="checkout-with">
                     <p class="title">Or Checkout With</p>
-                    <div id="paypal-checkout"><img src="image/paypal-checkout.png" alt="Paypal"></div>
+                    <div id="paypal-checkout">
+                        <a href="">
+                            <img src="image/paypal-checkout.png"  alt="Paypal">
+                        </a>
+                    </div>
                     <div id="other-checkout"><img src="image/other-checkout.png" alt="Other cards"></div>
                 </div>
             </div>
@@ -125,6 +152,7 @@
     </div>
     <div class="clear"></div>
 </div>
+</form>
 </body>
 <%@ include file="/includes/footer.jsp" %>
 </html>

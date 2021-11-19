@@ -1,5 +1,6 @@
 package business;
 
+import database.ProductsDB;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.Entity;
@@ -24,10 +25,15 @@ public class Products implements Serializable {
     public Products() {
     }
 
-    public Products(int user_id, int product_id, int quantity) {
+    public Products(int user_id, int product_id, int quantity, double shipping, double tax) {
         this.user_id = user_id;
         this.product_id = product_id;
         this.quantity = quantity;
+        this.product_name = ProductsDB.getProductName(this.product_id);
+        this.subtotal = ProductsDB.getProductSubtotal(this.product_id);
+        this.shipping = shipping;
+        this.tax = tax;
+        this.total = subtotal * quantity;
     }
 
     public int getUser_id() {
@@ -54,20 +60,45 @@ public class Products implements Serializable {
         this.quantity = quantity;
     }
 
-    public String getSubtotal() {
-        return String.format("%.2f", subtotal * this.quantity);
+
+    public String getProduct_name() {
+        return product_name;
+    }
+
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
+    }
+
+
+    public double getShipping() {
+        return shipping;
+    }
+
+    public void setShipping(double shipping) {
+        this.shipping = shipping;
+    }
+
+    public double getTax() {
+        return tax;
+    }
+
+    public void setTax(double tax) {
+        this.tax = tax;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+    public double getSubtotal() {
+        return subtotal;
     }
 
     public void setSubtotal(double subtotal) {
         this.subtotal = subtotal;
     }
-
-    public String getProductName() {
-        return product_name;
-    }
-
-    public void setProductName(String productName) {
-        this.product_name = productName;
-    }
-
 }
