@@ -23,7 +23,8 @@ public class AuthorizePaymentServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String product = request.getParameter("product");
+		//String product = request.getParameter("product");
+		String product = "Sách";
 		String subtotal = request.getParameter("subtotal");
 		String shipping = request.getParameter("shipping");
 		String tax = request.getParameter("tax");
@@ -45,5 +46,8 @@ public class AuthorizePaymentServlet extends HttpServlet {
 			request.getRequestDispatcher("error.jsp").forward(request, response);
 		}
 	}
-
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doPost(request, response);
+	}
 }

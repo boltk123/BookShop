@@ -39,20 +39,6 @@
                                 </div>
 
                                 <div class="shipping-detail">
-                                    <div class="ship-to-home">
-                                        <label class="radio-label-container" for="ship-this">
-                                            <input type="radio" class="ship-this" name="purchase-type" checked>
-                                            <span class="radio-circle"></span>
-                                                <p>Ship this item</p>
-                                        </label>
-                                    </div>
-                                    <div class="pick-in-store">
-                                        <label class="radio-label-container" for="buy-online">
-                                            <input  type="radio" class="buy-online" name="purchase-type">
-                                            <span class="radio-circle"></span>
-                                            <p>Buy Online Edition</p>
-                                        </label>
-                                    </div>
                                     <div class="remove-save">
                                         <a href="RemoveCart?book_id=${book_item.book_id}" class="remove">Remove</a>
                                     </div>
@@ -125,14 +111,16 @@
 
             <div class="checkout">
                 <form action="UpdateCart" method="post">
+                    <input type="hidden" name="action" value="update">
                     <button type="submit" class="checkout-btn">Update Cart</button>
                     <br>
                 </form>
-                <form action="authorize_payment" method="post">
+                <form action="ShoppingCart" method="post">
+                    <input type="hidden" name="action" value="checkout">
                     <button class="checkout-btn" type="submit" >Checkout</button>
                 </form>
                 <div class="checkout-with">
-                    <p class="title">Or Checkout With</p>
+                    <p class="title">Available Methods:</p>
                     <div id="paypal-checkout">
                         <a href="">
                             <img src="image/paypal-checkout.png"  alt="Paypal">
