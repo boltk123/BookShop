@@ -812,7 +812,7 @@ false Zulu
 13158||-9223372036854775808|U|G
 13158||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>984</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1057</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="4" parent="1" name="pg_execute_server_program">
@@ -877,7 +877,7 @@ false Zulu
       <Comment>standard public schema</Comment>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>985</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1058</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="3" name="plpgsql">
@@ -996,7 +996,7 @@ false Zulu
     <table id="33" parent="17" name="books">
       <ObjectId>16654</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>883</StateNumber>
+      <StateNumber>1049</StateNumber>
     </table>
     <table id="34" parent="17" name="products">
       <ObjectId>16683</ObjectId>
@@ -1166,7 +1166,19 @@ false Zulu
       <StateNumber>883</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="60" parent="33" name="books_pkey">
+    <column id="60" parent="33" name="content">
+      <Position>13</Position>
+      <DataType>bytea|0s</DataType>
+      <StateNumber>1048</StateNumber>
+      <TypeId>17</TypeId>
+    </column>
+    <column id="61" parent="33" name="base64content">
+      <Position>14</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1049</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="62" parent="33" name="books_pkey">
       <ObjectId>16660</ObjectId>
       <StateNumber>757</StateNumber>
       <ColNames>book_id</ColNames>
@@ -1176,65 +1188,65 @@ false Zulu
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="61" parent="33" name="books_pkey">
+    <key id="63" parent="33" name="books_pkey">
       <ObjectId>16661</ObjectId>
       <StateNumber>757</StateNumber>
       <ColNames>book_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>books_pkey</UnderlyingIndexName>
     </key>
-    <column id="62" parent="34" name="user_id">
+    <column id="64" parent="34" name="user_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>817</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="63" parent="34" name="product_id">
+    <column id="65" parent="34" name="product_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>817</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="64" parent="34" name="quantity">
+    <column id="66" parent="34" name="quantity">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>817</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="65" parent="34" name="product_name">
+    <column id="67" parent="34" name="product_name">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>983</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="66" parent="34" name="subtotal">
+    <column id="68" parent="34" name="subtotal">
       <Position>5</Position>
       <DataType>double precision|0s</DataType>
       <StateNumber>968</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="67" parent="34" name="shipping">
+    <column id="69" parent="34" name="shipping">
       <Position>6</Position>
       <DataType>double precision|0s</DataType>
       <StateNumber>969</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="68" parent="34" name="tax">
+    <column id="70" parent="34" name="tax">
       <Position>7</Position>
       <DataType>double precision|0s</DataType>
       <StateNumber>970</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="69" parent="34" name="total">
+    <column id="71" parent="34" name="total">
       <Position>8</Position>
       <DataType>double precision|0s</DataType>
       <StateNumber>971</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <index id="70" parent="34" name="products_pkey">
+    <index id="72" parent="34" name="products_pkey">
       <ObjectId>16686</ObjectId>
       <StateNumber>817</StateNumber>
       <ColNames>user_id
@@ -1245,7 +1257,7 @@ product_id</ColNames>
       <CollationIds>0,0</CollationIds>
       <ClassIds>1978,1978</ClassIds>
     </index>
-    <key id="71" parent="34" name="products_pkey">
+    <key id="73" parent="34" name="products_pkey">
       <ObjectId>16687</ObjectId>
       <StateNumber>817</StateNumber>
       <ColNames>user_id
@@ -1253,32 +1265,32 @@ product_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>products_pkey</UnderlyingIndexName>
     </key>
-    <column id="72" parent="35" name="userid">
+    <column id="74" parent="35" name="userid">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>519</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="73" parent="35" name="email">
+    <column id="75" parent="35" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="74" parent="35" name="firstname">
+    <column id="76" parent="35" name="firstname">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="75" parent="35" name="lastname">
+    <column id="77" parent="35" name="lastname">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="76" parent="35" name="user_jpa_pkey">
+    <index id="78" parent="35" name="user_jpa_pkey">
       <ObjectId>16427</ObjectId>
       <StateNumber>519</StateNumber>
       <ColNames>userid</ColNames>
@@ -1288,39 +1300,39 @@ product_id</ColNames>
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="77" parent="35" name="user_jpa_pkey">
+    <key id="79" parent="35" name="user_jpa_pkey">
       <ObjectId>16428</ObjectId>
       <StateNumber>519</StateNumber>
       <ColNames>userid</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>user_jpa_pkey</UnderlyingIndexName>
     </key>
-    <column id="78" parent="36" name="userid">
+    <column id="80" parent="36" name="userid">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>502</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="79" parent="36" name="firstname">
+    <column id="81" parent="36" name="firstname">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>502</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="80" parent="36" name="lastname">
+    <column id="82" parent="36" name="lastname">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>502</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="81" parent="36" name="emailaddress">
+    <column id="83" parent="36" name="emailaddress">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>502</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="82" parent="36" name="usertest_pkey">
+    <index id="84" parent="36" name="usertest_pkey">
       <ObjectId>16409</ObjectId>
       <StateNumber>502</StateNumber>
       <ColNames>userid</ColNames>
@@ -1330,7 +1342,7 @@ product_id</ColNames>
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="83" parent="36" name="usertest_pkey">
+    <key id="85" parent="36" name="usertest_pkey">
       <ObjectId>16410</ObjectId>
       <StateNumber>502</StateNumber>
       <ColNames>userid</ColNames>

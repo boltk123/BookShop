@@ -38,7 +38,7 @@ public class ReviewPaymentServlet extends HttpServlet {
 			request.setAttribute("transaction", transaction);
 			request.setAttribute("shippingAddress", shippingAddress);
 			
-			String url = "review.jsp?paymentId=" + paymentId + "&PayerID=" + payerId;
+			String url = "/review.jsp" + paymentId + "&PayerID=" + payerId;
 			
 			request.getRequestDispatcher(url).forward(request, response);
 			

@@ -115,7 +115,7 @@
                     <button type="submit" class="checkout-btn">Update Cart</button>
                     <br>
                 </form>
-                <form action="ShoppingCart" method="post">
+                <form action="authorize_payment" method="post">
                     <input type="hidden" name="action" value="checkout">
                     <button class="checkout-btn" type="submit" >Checkout</button>
                 </form>

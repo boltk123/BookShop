@@ -5,10 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Payment Receipt</title>
-<style type="text/css">
-	table { border: 0; }
-	table td { padding: 5px; }
-</style>
+	<link rel="stylesheet" href="css/receipt.css" type="text/css"/>
 </head>
 <body>
 <div align="center">

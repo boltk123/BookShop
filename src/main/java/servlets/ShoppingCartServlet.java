@@ -20,7 +20,7 @@ public class ShoppingCartServlet extends HttpServlet {
         String url = "/shopping_list.jsp";
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
-        String action = request.getParameter("action");
+        String action = String.valueOf(request.getParameter("action"));
         List<Books> books = BooksDB.selectBooksByUserID(1);
         List<Products> products = ProductsDB.getProductList(1);
         int product_count = products.size();
@@ -40,14 +40,6 @@ public class ShoppingCartServlet extends HttpServlet {
         session.setAttribute("total", String.valueOf(total));
         if(action == "checkout"){
             url = "/authorize_payment";
-            request.setAttribute("tax", String.valueOf(tax));
-            request.setAttribute("shipping", String.valueOf(shipping));
-            // subtotal of all products, not one product
-            request.setAttribute("subtotal", String.valueOf(subtotal));
-            // total of all products
-            request.setAttribute("total", String.valueOf(total));
-            RequestDispatcher rd = request.getRequestDispatcher(url);
-            rd.forward(request,response);
         }
         else {
             url = "/shopping_list.jsp";
