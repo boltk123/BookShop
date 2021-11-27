@@ -129,7 +129,7 @@
             <c:forEach begin="0" end="4" var="book" items="${non_fiction_books}">
                 <article class="book-card bg-white my-1">
                     <h2 class="d-none">This is hidden</h2>
-                    <a >
+                    <a href="Detail?book_id=${book.book_id}">
                         <img class= "book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="non-fiction-img-1">
                     </a>
 

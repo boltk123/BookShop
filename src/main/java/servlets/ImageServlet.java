@@ -24,15 +24,6 @@ public class ImageServlet extends HttpServlet {
         String url = "/imagetest.jsp";
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
-        int book_max = 5;
-        int book_count = 0;
-        /*
-        for (Books book : books) {
-            String book_name = "book" + Integer.toString(book_count);
-            session.setAttribute(book_name, book);
-            book_count += 1;
-        }
-        */
         session.setAttribute("books", books);
         sc.getRequestDispatcher(url).
                 forward(request, response);

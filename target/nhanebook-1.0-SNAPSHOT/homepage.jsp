@@ -129,7 +129,10 @@
             <c:forEach begin="0" end="4" var="book" items="${non_fiction_books}">
                 <article class="book-card bg-white my-1">
                     <h2 class="d-none">This is hidden</h2>
-                    <img class= "book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="non-fiction-img-1">
+                    <a href="Detail?book_id=${book.book_id}">
+                        <img class= "book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="non-fiction-img-1">
+                    </a>
+
                     <div class="p-half pointer d-flex flex-column justify-between h-200">
                         <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${book.title}</p>
                         <div>

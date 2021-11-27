@@ -11,13 +11,13 @@
     <div id="container">
         <div class="left-contain">
             <div class="main-img">
-                <img class="main-img-item" src="img/detail/image1.jpg" alt="">
+                <img class="main-img-item" src="image/image1.jpg" alt="">
             </div>
             <div class="list-img">
-                <img class="book-img" src="img/detail/image1.jpg" alt="">
-                <img class="book-img" src="img/detail/image2.jpg" alt="">
-                <img class="book-img" src="img/detail/image3.jpg" alt="">
-                <img class="book-img" src="img/detail/image4.jpg" alt="">
+                <img class="book-img" src="image/image1.jpg" alt="">
+                <img class="book-img" src="image/image2.jpg" alt="">
+                <img class="book-img" src="image/image3.jpg" alt="">
+                <img class="book-img" src="image/image4.jpg" alt="">
             </div>
         </div>
         <div class="right-contain">

@@ -1,11 +1,14 @@
 package servlets;
 
+import business.Samples;
 import database.ProductsDB;
+import database.SamplesDB;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "DetailServlet", value = "/Detail")
 public class DetailServlet extends HttpServlet {
@@ -20,7 +23,9 @@ public class DetailServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         //int user_id = Integer.parseInt(request.getParameter("user_id"));
-        int book_id  = Integer.parseInt(request.getParameter("book_id"));
+        int book_id = Integer.parseInt((request.getParameter("book_id")));
+        List<Samples> samplesList = SamplesDB.selectAllSamples(book_id);
+
         String url = "/detail.jsp";
         sc.getRequestDispatcher(url).
                 forward(request, response);

@@ -2,6 +2,7 @@ package servlets;
 
 import business.Books;
 import database.BooksDB;
+import database.SamplesDB;
 import org.apache.commons.io.IOUtils;
 
 import javax.servlet.*;
@@ -29,41 +30,11 @@ public class FileUploadServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        /*
-        for (Part part : request.getParts()) {
-            String fileName = extractFileName(part);
-            // refines the fileName in case it is an absolute path
-            fileName = new File(fileName).getName();
-            part.write(this.getFolderUpload().getAbsolutePath() + File.separator + fileName);
-        }
-        */
         response.setContentType("text/html;charset=UTF-8");
         final Part filePart = request.getPart("book_cover"); // Retrieves <input type="file" name="file">
-        String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
         InputStream fileContent = filePart.getInputStream();
-
-        System.out.println("Hibernate save image into database");
-        //Session session = HibernateUtil.getSessionFactory().openSession();
-        //session.beginTransaction();
-        //final File file = File.createTempFile(PREFIX, SUFFIX);
-        //File file = new File("C://");
-        //save image into database
-        //FileUtils.copyInputStreamToFile(fileContent, file);
-        // Book cover in binary format
         byte[] bFile = IOUtils.toByteArray(fileContent);
-        /*
-        try {
-            //FileInputStream fileInputStream = new FileInputStream(file);
-            FileInputStream fileInputStream = new FileInputStream(String.valueOf(fileContent));
-            //convert file into array of bytes
-            fileInputStream.read(bFile);
-            fileInputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        */
 
-        // insert into database
         int book_id = Integer.parseInt((request.getParameter("book_id")));
         String title = request.getParameter("title");
         int total_pages = Integer.parseInt(request.getParameter("total_pages"));
@@ -72,23 +43,24 @@ public class FileUploadServlet extends HttpServlet {
         String author = request.getParameter("author");
         String genre = request.getParameter("genre");
         String description = request.getParameter("description");
+
+        final Part sample_part1 = request.getPart("book_sample1"); // Retrieves <input type="file" name="book_sample1">
+        InputStream sample_stream1 = sample_part1.getInputStream();
+        byte[] sample1 = IOUtils.toByteArray(sample_stream1);
+        final Part sample_part2 = request.getPart("book_sample2"); // Retrieves <input type="file" name="book_sample2">
+        InputStream sample_stream2 = sample_part2.getInputStream();
+        byte[] sample2 = IOUtils.toByteArray(sample_stream2);
+        final Part sample_part3 = request.getPart("book_sample3"); // Retrieves <input type="file" name="book_sample3">
+        InputStream sample_stream3 = sample_part3.getInputStream();
+        byte[] sample3 = IOUtils.toByteArray(sample_stream3);
+
         BooksDB.insertBook(book_id, title, total_pages, rating, cost, author, genre, description, bFile);
+        SamplesDB.insertSample(book_id, bFile);
+        SamplesDB.insertSample(book_id, sample1);
+        SamplesDB.insertSample(book_id, sample2);
+        SamplesDB.insertSample(book_id, sample3);
         RequestDispatcher rd = request.getRequestDispatcher("ImageServlet");
         rd.forward(request,response);
-        //session.save(bookContents);
-        /*
-        //Get image from database
-        Book_contents avatar2 = (Book_contents)session.get(Book_contents.class, bookContents.getBook_id());
-        byte[] bAvatar = avatar2.getBook_cover();
 
-        try{
-            FileOutputStream fos = new FileOutputStream("C:\\test2.png");
-            fos.write(bAvatar);
-            fos.close();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        */
-        //session.getTransaction().commit();
     }
 }
