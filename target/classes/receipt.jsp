@@ -5,10 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Payment Receipt</title>
-<style type="text/css">
-	table { border: 0; }
-	table td { padding: 5px; }
-</style>
+	<link rel="stylesheet" href="css/receipt.css" type="text/css"/>
 </head>
 <body>
 <div align="center">
@@ -43,7 +40,11 @@
 		<tr>
 			<td><b>Total:</b></td>
 			<td>${transaction.amount.total} USD</td>
-		</tr>						
+		</tr>
+		<form action="HomePage" method="post">
+			<input type="hidden" name="action" value="homepage">
+			<div class="centered"><input class="button" type="submit"  value="Back To Home Page"></div>
+		</form><br>
 	</table>
 </div>
 </body>

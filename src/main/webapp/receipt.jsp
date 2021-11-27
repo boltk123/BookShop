@@ -40,7 +40,11 @@
 		<tr>
 			<td><b>Total:</b></td>
 			<td>${transaction.amount.total} USD</td>
-		</tr>						
+		</tr>
+		<form action="HomePage" method="post">
+			<input type="hidden" name="action" value="homepage">
+			<div class="centered"><input class="button" type="submit"  value="Back To Home Page"></div>
+		</form><br>
 	</table>
 </div>
 </body>
