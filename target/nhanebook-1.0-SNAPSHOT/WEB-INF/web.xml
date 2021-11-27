@@ -110,4 +110,6 @@
         <servlet-name>SqlGateway</servlet-name>
         <url-pattern>/sqlGateway</url-pattern>
     </servlet-mapping>
+
+
 </web-app>

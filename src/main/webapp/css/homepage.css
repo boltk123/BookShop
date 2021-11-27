@@ -505,3 +505,28 @@ img[alt="cart-logo-2"] {
 }
 
 
+
+.Login-form {
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    margin: 100px auto;
+}
+.Login-form label{
+    float: left;
+    font-size: 14px;
+}
+.Login-form input{
+    margin-bottom: 4px;
+    width: 150px;
+    font-size: 14px;
+}
+
+
+.centered-box {
+    align-items: center;
+    text-align: center;
+    margin: 100px auto;
+    font-size: 14px;
+}
+

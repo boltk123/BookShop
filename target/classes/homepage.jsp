@@ -56,8 +56,8 @@
                 </a>
             </li>
             <li class="d-none visible-in-lg">
-                <a href="BooksTableInput.jsp">
-                    <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight">User Name</span>
+                <a href="Account">
+                    <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight">${indexmessage}</span>
                 </a>
             </li>
             <li>

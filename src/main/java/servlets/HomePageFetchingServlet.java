@@ -23,9 +23,11 @@ public class HomePageFetchingServlet extends HttpServlet {
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
         String url = "/homepage.jsp";
+        String indexmessage = "Log In";
         session.setAttribute("non_fiction_books", non_fiction_books);
         session.setAttribute("fiction_books", fiction_books);
         session.setAttribute("academic_books", academic_books);
+        request.setAttribute("indexmessage",indexmessage);
         sc.getRequestDispatcher(url).
                 forward(request, response);
     }
