@@ -34,7 +34,7 @@
 
                             <div class="item-details">
                                 <div class="book-detail">
-                                    <a class="book-img" src="#"><img src="data:image/jpg;base64,${book_item.base64Image}" width="200" height="280" alt=""></a>
+                                    <a class="book-img" href="Detail?book_id=${book_item.book_id}"><img src="data:image/jpg;base64,${book_item.base64Image}" width="200" height="280" alt=""></a>
                                     <p class="book-format">Hardcover</p>
                                 </div>
 
