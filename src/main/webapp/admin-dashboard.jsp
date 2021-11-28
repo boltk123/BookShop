@@ -93,26 +93,17 @@
 
 <main class="d-flex justify-around">
     <!--Sidebar-->
-    <div class="bg-color-3">
+    <div class="iq-sidebar">
+        <div class="iq-sidebar-head">
+            <a href="homepage.jsp" class="image-highlight">
+                <img src="./assets/images/book.svg" alt="bookshop-logo">
+                <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
+            </a>
+        </div>
         <div class="color-white">
-            <div class="bg-color-3 d-flex">
-                <a href="homepage.jsp" class="image-highlight">
-                    <img src="./assets/images/book.svg" alt="bookshop-logo">
-                    <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
-                </a>
-                <div class="bg-color-3">
-                    <div class="iq-menu-bt align-self-center">
-                        <div class="wrapper-menu">
-                            <div class="main-circle">
-                                <i class="las la-bars"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="sidebar-scrollbar">
-                <nav class="bg-color-4">
-                    <ul id="iq-sidebar-toggle" class="list-style-none">
+            <div class="scroll-content">
+                <nav class="iq-sidebar-menu">
+                    <ul class="iq-menu">
                         <li class="bg-color-4">
                             <a href="#dashboard" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="las la-home iq-arrow-left"></i><span>Shop</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="dashboard" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
@@ -148,110 +139,122 @@
         </div>
     </div>
     <!-- Content Page -->
-    <section class="">
-        <div class="round">
-            <h2 class="">5000</h2>
-            <h5 class="">Users</h5>
-        </div>
-        <div class="round">
-            <div class="round mx-auto">
-                <h2 class="">4.8k</h2>
-                <h5 class="">Books</h5>
+    <div id="content-page" class="content-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="iq-head">
+                        <div class="iq-body">
+                            <div class="d-flex align-center">
+                                <h2 class="mb-0">
+                                    <span class="color-3 font-style-3 font-size-md pl-1" >5000</span>
+                                </h2>
+                                <h5>Users</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="iq-head">
+                        <div class="iq-body">
+                            <div class="d-flex align-center">
+                                <h2 class="mb-0">
+                                    <span class="color-3 font-style-3 font-size-md pl-1">4.8k</span>
+                                </h2>
+                                <h5>Books</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="iq-head">
+                        <div class="iq-body">
+                            <div class="d-flex align-center">
+                                <h2 class="mb-0">
+                                    <span class="color-3 font-style-3 font-size-md pl-1" >1.2k</span>
+                                </h2>
+                                <h5>Sale</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="iq-head">
+                        <div class="iq-body">
+                            <div class="d-flex align-center">
+                                <h2 class="mb-0">
+                                    <span class="color-3 font-style-3 font-size-md pl-1" >690</span>
+                                </h2>
+                                <h5>Orders</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="iq-head">
+                        <div class="iq-body">
+                            <div class="table-wrapper">
+                                <table class="fl-table">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Client</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Invoice</th>
+                                        <th scope="col">Amount</th>
+                                        <th scope="col">atatus</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Ira Membrit</td>
+                                        <td>18/10/2019</td>
+                                        <td>20156</td>
+                                        <td>$1500</td>
+                                        <td><div class="badge badge-pill badge-success">Paid</div></td>
+                                        <td>Copy</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pete Sariya</td>
+                                        <td>26/10/2019</td>
+                                        <td>7859</td>
+                                        <td>$2000</td>
+                                        <td><div class="badge badge-pill badge-success">Paid</div></td>
+                                        <td>Send Email</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cliff Hanger</td>
+                                        <td>18/11/2019</td>
+                                        <td>6396</td>
+                                        <td>$2500</td>
+                                        <td><div class="badge badge-pill badge-danger">Past Due</div></td>
+                                        <td>Before Due</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Terry Aki</td>
+                                        <td>14/12/2019</td>
+                                        <td>7854</td>
+                                        <td>$5000</td>
+                                        <td><div class="badge badge-pill badge-success">Paid</div></td>
+                                        <td>Copy</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anna Mull</td>
+                                        <td>24/12/2019</td>
+                                        <td>568569</td>
+                                        <td>$10000</td>
+                                        <td><div class="badge badge-pill badge-success">Paid</div></td>
+                                        <td>Send Email</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="round">
-            <div class="round mx-auto">
-                <h2 class="">1.2k</h2>
-                <h5 class="">Sale</h5>
-            </div>
-        </div>
-        <div class="round">
-            <div class="rounded-circle mx-auto">
-                <h2 class="">690</h2>
-                <h5 class="">Orders</h5>
-            </div>
-        </div>
-        <div class="round">
-            <div class="rounded-circle mx-auto">
-                <h4 class="card-title mb-0">Summary</h4>
-            </div>
-        </div>
-        <div class="round">
-            <div class="rounded-circle mx-auto">
-                <h4 class="card-title mb-0">Income</h4>
-                <h5 class="">95%</h5>
-            </div>
-        </div>
-        <div class="round">
-            <div class="rounded-circle mx-auto">
-                <h4 class="card-title mb-0">Profit</h4>
-                <h5 class="">72%</h5>
-            </div>
-        </div>
-        <div class="round">
-            <div class="rounded-circle mx-auto">
-                <h4 class="card-title mb-0">Expenses</h4>
-                <h5 class="">75%</h5>
-            </div>
-        </div>
-        <div class="table-wrapper">
-            <table class="fl-table">
-                <thead>
-                <tr>
-                    <th scope="col">Client</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Invoice</th>
-                    <th scope="col">Amount</th>
-                    <th scope="col">atatus</th>
-                    <th scope="col">Action</th>
-
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Ira Membrit</td>
-                    <td>18/10/2019</td>
-                    <td>20156</td>
-                    <td>$1500</td>
-                    <td><div class="badge badge-pill badge-success">Paid</div></td>
-                    <td>Copy</td>
-                </tr>
-                <tr>
-                    <td>Pete Sariya</td>
-                    <td>26/10/2019</td>
-                    <td>7859</td>
-                    <td>$2000</td>
-                    <td><div class="badge badge-pill badge-success">Paid</div></td>
-                    <td>Send Email</td>
-                </tr>
-                <tr>
-                    <td>Cliff Hanger</td>
-                    <td>18/11/2019</td>
-                    <td>6396</td>
-                    <td>$2500</td>
-                    <td><div class="badge badge-pill badge-danger">Past Due</div></td>
-                    <td>Before Due</td>
-                </tr>
-                <tr>
-                    <td>Terry Aki</td>
-                    <td>14/12/2019</td>
-                    <td>7854</td>
-                    <td>$5000</td>
-                    <td><div class="badge badge-pill badge-success">Paid</div></td>
-                    <td>Copy</td>
-                </tr>
-                <tr>
-                    <td>Anna Mull</td>
-                    <td>24/12/2019</td>
-                    <td>568569</td>
-                    <td>$10000</td>
-                    <td><div class="badge badge-pill badge-success">Paid</div></td>
-                    <td>Send Email</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+    </div>
 </main>
 
 <footer class="bg-white border">

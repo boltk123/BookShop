@@ -14,7 +14,7 @@
                 <img class="main-img-item" src="image/image1.jpg" alt="">
             </div>
             <div class="list-img">
-                <img class="book-img" src="image/image1.jpg" alt="">
+                <img class="book-img" src="data:image/jpg;base64,${book.base64Image}" alt="">
                 <img class="book-img" src="image/image2.jpg" alt="">
                 <img class="book-img" src="image/image3.jpg" alt="">
                 <img class="book-img" src="image/image4.jpg" alt="">
