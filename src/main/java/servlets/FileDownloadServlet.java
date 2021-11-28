@@ -18,6 +18,7 @@ public class FileDownloadServlet extends HttpServlet {
         // Tên của file
         Object requestObject = request.getParameter("filename");
         String directory = (String) request.getParameter("directory");
+        String name = (String) request.getParameter("name");
         if(requestObject != null){
             String fileName = (String) requestObject;
             String contentType = getContentType(fileName.split("\\.")[1]);
@@ -25,7 +26,7 @@ public class FileDownloadServlet extends HttpServlet {
             //File file = new File(file_location + "/" + fileName);
             File file = new File(path);
             response.setContentType(contentType);
-            response.addHeader("Content-Disposition", "attachment; filename=" + fileName);
+            response.addHeader("Content-Disposition", "attachment; filename=" + name);
             response.setContentLength((int)file.length());
             ServletOutputStream servletOutputStream = response.getOutputStream();
             BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(file));

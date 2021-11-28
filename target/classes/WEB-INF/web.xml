@@ -47,16 +47,7 @@
     <session-config>
         <session-timeout>-1</session-timeout>
     </session-config>
-
-    <servlet>
-        <servlet-name>DownloadFileSupportServlet</servlet-name>
-        <servlet-class>servlets.FileDownloadServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DownloadFileSupportServlet</servlet-name>
-        <url-pattern>/DownloadFileSupportServlet</url-pattern>
-    </servlet-mapping>
-        <jsp-config>
+    <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>
             <scripting-invalid>false</scripting-invalid>

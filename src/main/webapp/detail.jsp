@@ -61,7 +61,7 @@
             </div>
             <div class="add-download">
                 <button class="add-to-cart">Add to cart</button>
-                <a href="DownloadFileSupportServlet?filename=${book.book_id}.pdf&amp;directory=/pdf/">
+                <a href="FileDownload?filename=${book.book_id}.pdf&amp;name=${book.title}.pdf&amp;directory=/pdf/">
                     <button class="download">Download</button>
                 </a>
             </div>
