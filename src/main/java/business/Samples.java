@@ -14,7 +14,7 @@ public class Samples implements Serializable {
 
     @Id
     private int book_id;
-
+    @Id
     @Type(type = "org.hibernate.type.BinaryType")
     private byte[] sample;
     private String base64Sample;

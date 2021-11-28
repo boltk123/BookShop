@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
@@ -41,10 +42,12 @@
             </a>
         </li>
         <li class="pl-2">
-            <button type="button"
-                    class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">
-                <a href="admin-author.jsp" class="image-highlight">ADMIN</a>
-            </button>
+            <c:if test = "${sessionScope.account.role == 'admin'}">
+                <button type="button"
+                        class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">
+                    <a href="BooksTableInput.jsp" class="image-highlight">ADMIN</a>
+                </button>
+            </c:if>
         </li>
     </ul>
 

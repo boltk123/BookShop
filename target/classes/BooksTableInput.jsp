@@ -23,9 +23,15 @@
         <input type="text" name="cost" min="1" step="any" /><p>$</p><br>
         <p1>Input Book Description</p1>
         <input type="text" name="description"/><br>
-        <p1>Input Book Cover Picture</p1>
-        <input type="file" name="book_cover" accept="image/*"/>
-        <input type="submit" value="Upload" />
+        <p1>Input Book Cover</p1>
+        <input type="file" name="book_cover" accept="image/*"/><br>
+        <p1>Input Book First Sample</p1>
+        <input type="file" name="book_sample1" accept="image/*"/><br>
+        <p1>Input Book Second Sample</p1>
+        <input type="file" name="book_sample2" accept="image/*"/><br>
+        <p1>Input Book Third Sample</p1>
+        <input type="file" name="book_sample3" accept="image/*"/><br>
+        <input type="submit" value="Upload" /><br>
     </form>
 </body>
 </html>

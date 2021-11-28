@@ -1,5 +1,6 @@
 package servlets;
 
+import business.Accounts;
 import database.ProductsDB;
 
 import javax.servlet.*;
@@ -18,13 +19,19 @@ public class AddCartServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
-
-        //int user_id = Integer.parseInt(request.getParameter("user_id"));
-        int book_id  = Integer.parseInt(request.getParameter("book_id"));
-        if(ProductsDB.productExists(1, book_id) == false){
-            ProductsDB.insertProduct(1, book_id);
-        }
         String url = "/homepage.jsp";
+        try{
+            Accounts current_account = (Accounts) session.getAttribute("account");
+            int user_id = current_account.getUser_id();
+            int book_id  = Integer.parseInt(request.getParameter("book_id"));
+            if(ProductsDB.productExists(book_id, user_id) == false){
+                ProductsDB.insertProduct(user_id, book_id);
+            }
+        }
+        catch(Exception e){
+            url = "/login.jsp";
+        }
+
         sc.getRequestDispatcher(url).
                 forward(request, response);
     }

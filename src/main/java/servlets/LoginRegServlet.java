@@ -51,6 +51,7 @@ public class LoginRegServlet extends HttpServlet {
             account.setEmail(email);
             account.setUsername(username);
             account.setPassword(password);
+            account.setRole("user");
             if (!AccountsDB.emailExists(account.getEmail()) && !AccountsDB.usernameExists(account.getUsername())) {
                 url = "/thanks_final.jsp";
                 session.setAttribute("account", account);

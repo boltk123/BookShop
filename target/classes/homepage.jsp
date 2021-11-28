@@ -13,6 +13,7 @@
 
 <body>
 <header>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <nav class="bg-color-3 d-flex justify-around p-1">
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
@@ -39,11 +40,13 @@
                     <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">SHOPPING LIST</span>
                 </a>
             </li>
-            <li class="pl-2">
+            <li class="pl-2"><c:if test = "${sessionScope.account.role == 'admin'}">
                 <button type="button"
                         class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">
-                    <a href="admin-author.jsp" class="image-highlight">ADMIN</a>
+                    <a href="BooksTableInput.jsp" class="image-highlight">ADMIN</a>
                 </button>
+            </c:if>
+
             </li>
         </ul>
 
@@ -118,7 +121,6 @@
             </article>
         </section>
     </div>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
     <!-- Non Fiction Books -->
     <section class="book-genre-container mx-auto p-1">
@@ -159,7 +161,9 @@
             <c:forEach begin="0" end="4" var="book" items="${fiction_books}">
                 <article class="book-card bg-white my-1">
                     <h2 class="d-none">This is hidden</h2>
-                    <img class= "book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="non-fiction-img-1">
+                    <a href="Detail?book_id=${book.book_id}">
+                        <img class= "book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="fiction-img-1">
+                    </a>
                     <div class="p-half pointer d-flex flex-column justify-between h-200">
                         <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${book.title}</p>
                         <div>
@@ -186,7 +190,10 @@
             <c:forEach begin="0" end="4" var="book" items="${academic_books}">
                 <article class="book-card bg-white my-1">
                     <h2 class="d-none">This is hidden</h2>
-                    <img class= "book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="non-fiction-img-1">
+                    <a href="Detail?book_id=${book.book_id}">
+                        <img class= "book-card-img d-block" src="data:image/jpg;base64,${book.base64Image}" alt="academic-img">
+                    </a>
+
                     <div class="p-half pointer d-flex flex-column justify-between h-200">
                         <p class="font-style-1 font-size-md color-3 py-1 gray-highlight">${book.title}</p>
                         <div>
