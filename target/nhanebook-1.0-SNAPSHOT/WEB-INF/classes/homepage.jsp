@@ -60,7 +60,7 @@
             </li>
             <li class="d-none visible-in-lg">
                 <a href="Account">
-                    <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight">${indexmessage}</span>
+                    <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight user-status">${indexmessage}</span>
                 </a>
             </li>
             <li>
@@ -69,7 +69,7 @@
                 </a>
             </li>
             <li class="pl-1">
-                <a href="#" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">Search</a>
+                <a href="#" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">SEARCH</a>
             </li>
         </ul>
     </nav>

@@ -41,3 +41,19 @@ body {
     padding: 0 111px;
     margin-bottom: 15px;
 }
+.back-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 51px;
+    margin-bottom: -10px;
+}
+.back-btn input{
+    padding: 20px 150px;
+    border: none;
+    background-color: #254d3e;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
