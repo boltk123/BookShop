@@ -41,27 +41,29 @@
                 <table id="details-table">
                     <tbody>
                         <tr>
-                            <th>:</th>
-                            <td>9781338312911</td>
+                            <th>Rating:</th>
+                            <td>${book.rating}</td>
                         </tr>
                         <tr>
-                            <th>Publisher:</th>
-                            <td>Scholastic, Inc.</td>
+                            <th>Total Pages:</th>
+                            <td>${book.total_pages}</td>
                         </tr>
                         <tr>
-                            <th>Publication date:</th>
-                            <td>09/25/2018</td>
+                            <th>Genre:</th>
+                            <td>${book.genre}</td>
                         </tr>
                         <tr>
-                            <th>Age Range:</th>
-                            <td>8 - 18 Years</td>
+                            <th>Description:</th>
+                            <td>${book.description}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="add-download">
                 <button class="add-to-cart">Add to cart</button>
-                <button class="download">Download</button>
+                <a href="DownloadFileSupportServlet?filename=${book.book_id}.pdf&amp;directory=/pdf/">
+                    <button class="download">Download</button>
+                </a>
             </div>
         </div>
     </div>

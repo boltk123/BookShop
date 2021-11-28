@@ -37,11 +37,12 @@ public class FileDownloadServlet extends HttpServlet {
             if( servletOutputStream != null) servletOutputStream.close();
             if( bufferedInputStream != null) bufferedInputStream.close();
         }
+
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        doGet(request, response);
     }
     private String getContentType(String fileType){
         String returnType = null;

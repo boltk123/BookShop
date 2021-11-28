@@ -45,13 +45,7 @@ public class LoginRegServlet extends HttpServlet {
 
             String emailmessage = " ";
             String usernamemessage = " ";
-            Accounts account = new Accounts();
-            account.setFirstName(firstname);
-            account.setLastName(lastname);
-            account.setEmail(email);
-            account.setUsername(username);
-            account.setPassword(password);
-            account.setRole("user");
+            Accounts account = new Accounts(username, password, firstname, lastname, "user", email, null);
             if (!AccountsDB.emailExists(account.getEmail()) && !AccountsDB.usernameExists(account.getUsername())) {
                 url = "/thanks_final.jsp";
                 session.setAttribute("account", account);
