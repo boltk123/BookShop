@@ -7,7 +7,6 @@ package features.vnpay;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -25,13 +24,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author xonv
  */
-@WebServlet(name = "ajaxServlet", value = "/vnpayajax")
+@WebServlet(name = "ajaxServlet", value = "/ajaxServlet")
 public class ajaxServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -48,12 +46,10 @@ public class ajaxServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String vnp_Version = "2.0.0";
+        String vnp_Version = "2.0.1";
         String vnp_Command = "pay";
-        HttpSession session = req.getSession();
         String vnp_OrderInfo = req.getParameter("vnp_OrderInfo");
-        //String orderType = req.getParameter("ordertype");
-        String orderType = "topup";
+        String orderType = req.getParameter("ordertype");
         String vnp_TxnRef = Config.getRandomNumber(8);
         String vnp_IpAddr = Config.getIpAddress(req);
 
@@ -62,16 +58,13 @@ public class ajaxServlet extends HttpServlet {
         String vnp_TransactionNo = vnp_TxnRef;
         String vnp_hashSecret = Config.vnp_HashSecret;
 
-        //int amount = Integer.parseInt(req.getParameter("amount")) * 100;
-        //double amount = Double.parseDouble(String.valueOf(session.getAttribute("total")));
-        int amount = 100;
+        int amount = Integer.parseInt(req.getParameter("amount")) * 100;
         Map<String, String> vnp_Params = new HashMap<>();
         vnp_Params.put("vnp_Version", vnp_Version);
         vnp_Params.put("vnp_Command", vnp_Command);
         vnp_Params.put("vnp_TmnCode", vnp_TmnCode);
         vnp_Params.put("vnp_Amount", String.valueOf(amount));
-        //vnp_Params.put("vnp_CurrCode", "VND");
-        vnp_Params.put("vnp_CurrCode", "USD");
+        vnp_Params.put("vnp_CurrCode", "VND");
         String bank_code = req.getParameter("bankcode");
         if (bank_code != null && bank_code.isEmpty()) {
             vnp_Params.put("vnp_BankCode", bank_code);
@@ -133,7 +126,5 @@ public class ajaxServlet extends HttpServlet {
         Gson gson = new Gson();
         resp.getWriter().write(gson.toJson(job));
     }
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doPost(req, resp);
-    }
+
 }
