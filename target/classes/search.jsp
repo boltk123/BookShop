@@ -15,15 +15,14 @@
             <h4 class="font-style-1 color-white font-size-md py-1">Search for your desired book</h4>
             <form action="#" class="hero-form d-flex align-center py-1">
                 <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
-                    <option value="all" class="genre-selector">All genre</option>
+                    <option value="all" class="genre-selector" selected>All genre</option>
                     <option value="non-fiction" class="genre-selector">Non Fiction</option>
-                    <option value="fiction" class="genre-selector" selected>Fiction</option>
+                    <option value="fiction" class="genre-selector" >Fiction</option>
                     <option value="academic" class="genre-selector">Academic</option>
                 </select>
-                <input type="text" placeholder="What do you search for ?" value="philosophy"
-                       class="p-1 border-0 font-style-1 font-size-sm border-right flex-grow-1 pointer">
-                <input type="text" value="life" placeholder="Search..."
-                       class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer">
+                <input class="p-1 border-0 font-style-1 font-size-sm border-right flex-grow-1 pointer"
+                       type="text" placeholder="What do you search for ?" value="" >
+
                 <a href="search.jsp" class="default-btn font-size-sm font-style-2 bg-color-3 ml-1">Search</a>
             </form>
         </div>

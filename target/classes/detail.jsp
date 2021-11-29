@@ -8,56 +8,62 @@
     <link rel="stylesheet" href="css/detail.css">
 </head>
 <body>
+    <%@ include file="/includes/header.jsp" %>
     <div id="container">
         <div class="left-contain">
             <div class="main-img">
-                <img class="main-img-item" src="image/image1.jpg" alt="">
+                <img class="main-img-item" src="data:image/jpg;base64,${book.base64Image}" alt="">
             </div>
             <div class="list-img">
-                <img class="book-img" src="data:image/jpg;base64,${book.base64Image}" alt="">
-                <img class="book-img" src="image/image2.jpg" alt="">
-                <img class="book-img" src="image/image3.jpg" alt="">
-                <img class="book-img" src="image/image4.jpg" alt="">
+                <c:forEach var="sample" items="${samplesList}">
+                    <c:if test="${sample != null}">
+                        <img class="book-img" src="data:image/jpg;base64,${sample.base64Sample}" alt="">
+                    </c:if>
+
+                </c:forEach>
             </div>
         </div>
         <div class="right-contain">
             <div class="title-author">
-                <h2 class="book-title">Harry Potter: The Illustrated Collection (Books 1-3 Boxed Set)</h2>
-                <p class="book-author">by Jim Kay (Illustrator), J. K. Rowling</p>
+                <h2 class="book-title">${book.title}</h2>
+                <p class="book-author">${book.author}</p>
             </div>
             <div class="price">
                 <span class="cur-price">
                     <sup>$</sup>
-                    108.00
+                    ${book.cost}
                 </span>
-                <s class="old-price">$120.00</s>
+                <s class="old-price">$<fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${book.cost + 10}"/></s>
+
             </div>
             <div class="details">
                 <p class="details-title">Product Details</p>
                 <table id="details-table">
                     <tbody>
                         <tr>
-                            <th>ISBN-13:</th>
-                            <td>9781338312911</td>
+                            <th>Rating:</th>
+                            <td>${book.rating}</td>
                         </tr>
                         <tr>
-                            <th>Publisher:</th>
-                            <td>Scholastic, Inc.</td>
+                            <th>Total Pages:</th>
+                            <td>${book.total_pages}</td>
                         </tr>
                         <tr>
-                            <th>Publication date:</th>
-                            <td>09/25/2018</td>
+                            <th>Genre:</th>
+                            <td>${book.genre}</td>
                         </tr>
                         <tr>
-                            <th>Age Range:</th>
-                            <td>8 - 18 Years</td>
+                            <th>Description:</th>
+                            <td>${book.description}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="add-download">
                 <button class="add-to-cart">Add to cart</button>
-                <button class="download">Download</button>
+                <a href="FileDownload?filename=${book.book_id}.pdf&amp;name=${book.title}.pdf&amp;directory=/pdf/">
+                    <button class="download">Download</button>
+                </a>
             </div>
         </div>
     </div>

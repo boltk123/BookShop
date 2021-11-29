@@ -22,7 +22,6 @@
 
                 <div class="shopping-cart-item">
                     <div class="message">${product_count} Items from Barnes & Noble</div>
-                    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
                     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
                     <form action="UpdateCart" method="post">
                     <c:forEach var="book_item" items="${book_items}">
@@ -34,7 +33,9 @@
 
                             <div class="item-details">
                                 <div class="book-detail">
-                                    <a class="book-img" href="Detail?book_id=${book_item.book_id}"><img src="data:image/jpg;base64,${book_item.base64Image}" width="200" height="280" alt=""></a>
+                                    <a class="book-img" href="Detail?book_id=${book_item.book_id}">
+                                        <img src="data:image/jpg;base64,${book_item.base64Image}" width="200" height="280" alt="">
+                                    </a>
                                     <p class="book-format">Hardcover</p>
                                 </div>
 

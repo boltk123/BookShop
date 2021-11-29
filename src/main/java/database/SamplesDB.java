@@ -22,7 +22,7 @@ public class SamplesDB {
     public static List<Samples> selectAllSamples(int book_id){
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
-        String qString = "SELECT s FROM Books s WHERE s.book_id = :book_id";
+        String qString = "SELECT s FROM Samples s WHERE s.book_id = :book_id";
         trans.begin();
 
         TypedQuery<Samples> q = em.createQuery(qString, Samples.class);

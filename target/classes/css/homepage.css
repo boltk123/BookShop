@@ -4,7 +4,9 @@
     --color-3: #383838;
     --color-4: #d67e89;
 }
-
+.user-status{
+    text-transform: uppercase;
+}
 /* Fonts */
 @font-face {
     font-family: 'light';

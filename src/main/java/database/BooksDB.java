@@ -76,4 +76,23 @@ public class BooksDB {
         trans.commit();
         return books;
     }
+    public static Books selectBooksByBookID(int book_id){
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT b FROM Books b WHERE b.book_id = :book_id";
+        trans.begin();
+        TypedQuery<Books> q = em.createQuery(qString, Books.class);
+        q.setParameter("book_id", book_id);
+        Books book = null;
+        try{
+            book = q.getSingleResult();
+            if(book == null)
+                book = null;
+        }
+        finally {
+            em.close();
+        }
+        trans.commit();
+        return book;
+    }
 }

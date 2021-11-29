@@ -22,8 +22,7 @@ public class Accounts {
     @Type(type="org.hibernate.type.BinaryType")
     private byte[] profile_picture;
 
-    public Accounts(int user_id, String username, String password, String firstname,String lastname, String role, String email, byte[] profile_picture) {
-        this.user_id = user_id;
+    public Accounts(String username, String password, String firstname,String lastname, String role, String email, byte[] profile_picture) {
         this.username = username;
         this.password = password;
         this.firstname = firstname;
@@ -31,7 +30,7 @@ public class Accounts {
         this.role = role;
         this.email = email;
         this.profile_picture = profile_picture;
-        this.fullname = firstname + lastname;
+        this.fullname = firstname + " " + lastname;
     }
 
     public Accounts() {
