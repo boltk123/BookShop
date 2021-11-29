@@ -93,26 +93,17 @@
 
 <main class="d-flex justify-around">
     <!--Sidebar-->
-    <div class="bg-color-3">
+    <div class="iq-sidebar">
+        <div class="iq-sidebar-head">
+            <a href="homepage.jsp" class="image-highlight">
+                <img src="./assets/images/book.svg" alt="bookshop-logo">
+                <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
+            </a>
+        </div>
         <div class="color-white">
-            <div class="bg-color-3 d-flex">
-                <a href="homepage.jsp" class="image-highlight">
-                    <img src="./assets/images/book.svg" alt="bookshop-logo">
-                    <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
-                </a>
-                <div class="bg-color-3">
-                    <div class="iq-menu-bt align-self-center">
-                        <div class="wrapper-menu">
-                            <div class="main-circle">
-                                <i class="las la-bars"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="sidebar-scrollbar">
-                <nav class="bg-color-4">
-                    <ul id="iq-sidebar-toggle" class="list-style-none">
+            <div class="scroll-content">
+                <nav class="iq-sidebar-menu">
+                    <ul class="iq-menu">
                         <li class="bg-color-4">
                             <a href="#dashboard" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="las la-home iq-arrow-left"></i><span>Shop</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="dashboard" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
