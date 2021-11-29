@@ -111,23 +111,24 @@
             </div>
 
             <div class="checkout">
-                <form action="UpdateCart" method="post">
-                    <input type="hidden" name="action" value="update">
-                    <button type="submit" class="checkout-btn">Update Cart</button>
-                    <br>
-                </form>
                 <form action="authorize_payment" method="post">
                     <input type="hidden" name="action" value="checkout">
                     <button class="checkout-btn" type="submit" >Checkout</button>
                 </form>
+
                 <div class="checkout-with">
                     <p class="title">Available Methods:</p>
-                    <div id="paypal-checkout">
-                        <a href="">
+                        <a href="authorize_payment">
                             <img src="image/paypal-checkout.png"  alt="Paypal">
                         </a>
+                    <div id="other-checkout">
+                        <a href="authorize_payment">
+                            <img src="image/other-checkout.png" alt="Other cards">
+                        </a>
+                        <a href="vnpay_main.jsp" methods="post">
+                            <img src="image/vnpay-logo.png" alt="Other cards">
+                        </a>
                     </div>
-                    <div id="other-checkout"><img src="image/other-checkout.png" alt="Other cards"></div>
                 </div>
             </div>
         </div>
