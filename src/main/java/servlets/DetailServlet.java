@@ -1,5 +1,6 @@
 package servlets;
 
+import business.Accounts;
 import business.Books;
 import business.Samples;
 import database.BooksDB;
@@ -24,7 +25,7 @@ public class DetailServlet extends HttpServlet {
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
 
-        //int user_id = Integer.parseInt(request.getParameter("user_id"));
+        Accounts current_account = (Accounts)session.getAttribute("account");
         int book_id = Integer.parseInt((request.getParameter("book_id")));
         Books book = BooksDB.selectBooksByBookID(book_id);
         List<Samples> samplesList = SamplesDB.selectAllSamples(book_id);

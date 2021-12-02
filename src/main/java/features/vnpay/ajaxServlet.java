@@ -12,6 +12,7 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.Enumeration;
@@ -19,8 +20,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.TimeZone;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,35 +30,20 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author xonv
  */
-@WebServlet(name = "ajaxServlet", value = "/ajaxServlet")
 public class ajaxServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ajaxServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-    /**
-     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String vnp_Version = "2.0.1";
+        String vnp_Version = "2.1.0";
         String vnp_Command = "pay";
+        //String vnp_Command = "genqr";
         String vnp_OrderInfo = req.getParameter("vnp_OrderInfo");
         String orderType = req.getParameter("ordertype");
         String vnp_TxnRef = Config.getRandomNumber(8);
+        int mcId = Integer.parseInt(Config.getRandomNumber(8));
+        int amountmc = Integer.parseInt(req.getParameter("amount"));
         String vnp_IpAddr = Config.getIpAddress(req);
-
         String vnp_TmnCode = Config.vnp_TmnCode;
-
-        String vnp_TransactionNo = vnp_TxnRef;
-        String vnp_hashSecret = Config.vnp_HashSecret;
-
         int amount = Integer.parseInt(req.getParameter("amount")) * 100;
         Map<String, String> vnp_Params = new HashMap<>();
         vnp_Params.put("vnp_Version", vnp_Version);
@@ -66,7 +52,7 @@ public class ajaxServlet extends HttpServlet {
         vnp_Params.put("vnp_Amount", String.valueOf(amount));
         vnp_Params.put("vnp_CurrCode", "VND");
         String bank_code = req.getParameter("bankcode");
-        if (bank_code != null && bank_code.isEmpty()) {
+        if (bank_code != null && !bank_code.isEmpty()) {
             vnp_Params.put("vnp_BankCode", bank_code);
         }
         vnp_Params.put("vnp_TxnRef", vnp_TxnRef);
@@ -84,12 +70,16 @@ public class ajaxServlet extends HttpServlet {
 
         Date dt = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-        String dateString = formatter.format(dt);
-        String vnp_CreateDate = dateString;
-        String vnp_TransDate = vnp_CreateDate;
+        String vnp_CreateDate = formatter.format(dt);
         vnp_Params.put("vnp_CreateDate", vnp_CreateDate);
 
-        //Build data to hash and querystring
+        Calendar cldvnp_ExpireDate = Calendar.getInstance();
+        cldvnp_ExpireDate.add(Calendar.SECOND, 30);
+        Date vnp_ExpireDateD = cldvnp_ExpireDate.getTime();
+        String vnp_ExpireDate = formatter.format(vnp_ExpireDateD);
+
+        vnp_Params.put("vnp_ExpireDate", vnp_ExpireDate);
+
         List fieldNames = new ArrayList(vnp_Params.keySet());
         Collections.sort(fieldNames);
         StringBuilder hashData = new StringBuilder();
@@ -102,12 +92,12 @@ public class ajaxServlet extends HttpServlet {
                 //Build hash data
                 hashData.append(fieldName);
                 hashData.append('=');
-                hashData.append(fieldValue);
+                //hashData.append(fieldValue); //sử dụng và 2.0.0 và 2.0.1 checksum sha256
+                hashData.append(URLEncoder.encode(fieldValue, StandardCharsets.US_ASCII.toString())); //sử dụng v2.1.0  check sum sha512
                 //Build query
                 query.append(URLEncoder.encode(fieldName, StandardCharsets.US_ASCII.toString()));
                 query.append('=');
                 query.append(URLEncoder.encode(fieldValue, StandardCharsets.US_ASCII.toString()));
-
                 if (itr.hasNext()) {
                     query.append('&');
                     hashData.append('&');
@@ -115,9 +105,9 @@ public class ajaxServlet extends HttpServlet {
             }
         }
         String queryUrl = query.toString();
-        String vnp_SecureHash = Config.Sha256(Config.vnp_HashSecret + hashData.toString());
-        //System.out.println("HashData=" + hashData.toString());
-        queryUrl += "&vnp_SecureHashType=SHA256&vnp_SecureHash=" + vnp_SecureHash;
+        //String vnp_SecureHash = Config.Sha256(Config.vnp_HashSecret + hashData.toString());
+        String vnp_SecureHash = Config.hmacSHA512(Config.vnp_HashSecret, hashData.toString());
+        queryUrl += "&vnp_SecureHash=" + vnp_SecureHash;
         String paymentUrl = Config.vnp_PayUrl + "?" + queryUrl;
         com.google.gson.JsonObject job = new JsonObject();
         job.addProperty("code", "00");

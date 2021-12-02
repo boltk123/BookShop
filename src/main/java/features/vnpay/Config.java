@@ -6,7 +6,7 @@
 package features.vnpay;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
@@ -15,6 +15,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -24,10 +26,10 @@ import javax.servlet.http.HttpServletRequest;
 public class Config {
 
     public static String vnp_PayUrl = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-    public static String vnp_Returnurl = "http://localhost:8080/Heroku_war_exploded/vnpay_return.jsp";
+    public static String vnp_Returnurl = "http://localhost:8087/vnpay_jsp/vnpay_return.jsp";
     public static String vnp_TmnCode = "7UOS6AGL";
     public static String vnp_HashSecret = "SVLGKLBYIXQWBLKQTYXUKQMCXUAILFBN";
-    public static String vnp_apiUrl = "http://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
+    public static String vnp_apiUrl = "https://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
 
     public static String md5(String message) {
         String digest = null;
@@ -79,13 +81,13 @@ public class Config {
     }
 
     //Util for VNPAY
-    public static String hashAllFields(Map fields) throws UnsupportedEncodingException {
+    public static String hashAllFields(Map fields) {
         // create a list and sort it
         List fieldNames = new ArrayList(fields.keySet());
         Collections.sort(fieldNames);
         // create a buffer for the md5 input and add the secure secret first
         StringBuilder sb = new StringBuilder();
-        sb.append(Config.vnp_HashSecret);
+        //sb.append(com.vnpay.common.Config.vnp_HashSecret);
         Iterator itr = fieldNames.iterator();
         while (itr.hasNext()) {
             String fieldName = (String) itr.next();
@@ -93,13 +95,37 @@ public class Config {
             if ((fieldValue != null) && (fieldValue.length() > 0)) {
                 sb.append(fieldName);
                 sb.append("=");
-                sb.append(URLDecoder.decode(fieldValue,"UTF-8"));
+                sb.append(fieldValue);
             }
             if (itr.hasNext()) {
                 sb.append("&");
             }
         }
-        return Sha256(sb.toString());
+        //return Sha256(sb.toString());
+        return hmacSHA512(vnp_HashSecret,sb.toString());
+    }
+
+    public static String hmacSHA512(final String key, final String data) {
+        try {
+
+            if (key == null || data == null) {
+                throw new NullPointerException();
+            }
+            final Mac hmac512 = Mac.getInstance("HmacSHA512");
+            byte[] hmacKeyBytes = key.getBytes();
+            final SecretKeySpec secretKey = new SecretKeySpec(hmacKeyBytes, "HmacSHA512");
+            hmac512.init(secretKey);
+            byte[] dataBytes = data.getBytes(StandardCharsets.UTF_8);
+            byte[] result = hmac512.doFinal(dataBytes);
+            StringBuilder sb = new StringBuilder(2 * result.length);
+            for (byte b : result) {
+                sb.append(String.format("%02x", b & 0xff));
+            }
+            return sb.toString();
+
+        } catch (Exception ex) {
+            return "";
+        }
     }
 
     public static String getIpAddress(HttpServletRequest request) {

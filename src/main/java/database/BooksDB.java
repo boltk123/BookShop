@@ -95,4 +95,22 @@ public class BooksDB {
         trans.commit();
         return book;
     }
+    public static List<Books> SearchBooks(String qString){
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        trans.begin();
+        TypedQuery<Books> q = em.createQuery(qString, Books.class);
+        List<Books> book = null;
+        try{
+            book = q.getResultList();
+            if(book == null)
+                book = null;
+        }
+        finally {
+            em.close();
+        }
+        trans.commit();
+        return book;
+
+    }
 }

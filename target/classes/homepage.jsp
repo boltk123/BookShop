@@ -77,17 +77,15 @@
     <section class="hero-section d-none flex-column align-center justify-center p-3">
         <h1 class="hero-title font-style-2 color-white p-1">BOOKSHOP</h1>
         <h4 class="font-style-1 color-white font-size-md">An online market place for all kinds of books</h4>
-        <form action="#" class="hero-form p-1 d-flex align-center">
+        <form action="Search" class="hero-form p-1 d-flex align-center">
             <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
                 <option value="all" class="genre-selector">All genre</option>
-                <option value="non-fiction" class="genre-selector">Non Fiction</option>
-                <option value="fiction" class="genre-selector">Fiction</option>
-                <option value="academic" class="genre-selector">Academic</option>
+                <option value="Non-Fiction" class="genre-selector">Non Fiction</option>
+                <option value="Fiction" class="genre-selector">Fiction</option>
+                <option value="Academic" class="genre-selector">Academic</option>
             </select>
-            <input type="text" placeholder="What do you search for ?"
-                   class="p-1 border-0 font-style-1 font-size-sm border-right flex-grow-1 pointer">
-            <input type="text" placeholder="Search..." class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer">
-            <a href="search.jsp" class="default-btn font-size-sm font-style-2 bg-color-3 ml-1">Search</a>
+            <input type="text" placeholder="Search..." class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer" name="key_word">
+            <input class="default-btn font-size-sm font-style-2 bg-color-3 ml-1" type="submit" value="SEARCH">
         </form>
     </section>
 </header>
@@ -128,7 +126,7 @@
                 src="assets/images/ai.svg" alt="non-fiction" class="category-heading-icons mr-half">Non Fiction Books</h4>
         <section class="book-cards-container d-flex flex-wrap justify-between">
             <h2 class="d-none">This is hidden</h2>
-            <c:forEach begin="0" end="4" var="book" items="${non_fiction_books}">
+            <c:forEach var="book" items="${non_fiction_books}">
                 <article class="book-card bg-white my-1">
                     <h2 class="d-none">This is hidden</h2>
                     <a href="Detail?book_id=${book.book_id}">
@@ -158,7 +156,7 @@
                 src="assets/images/fiction.svg" alt="non-fiction" class="category-heading-icons mr-half">Fiction Books</h4>
         <section class="book-cards-container d-flex flex-wrap justify-between">
             <h2 class="d-none">This is hidden</h2>
-            <c:forEach begin="0" end="4" var="book" items="${fiction_books}">
+            <c:forEach var="book" items="${fiction_books}">
                 <article class="book-card bg-white my-1">
                     <h2 class="d-none">This is hidden</h2>
                     <a href="Detail?book_id=${book.book_id}">
@@ -187,7 +185,7 @@
                 src="assets/images/opportunity.svg" alt="non-fiction" class="category-heading-icons mr-half">Academic Books</h4>
         <section class="book-cards-container d-flex flex-wrap justify-between">
             <h2 class="d-none">This is hidden</h2>
-            <c:forEach begin="0" end="4" var="book" items="${academic_books}">
+            <c:forEach var="book" items="${academic_books}">
                 <article class="book-card bg-white my-1">
                     <h2 class="d-none">This is hidden</h2>
                     <a href="Detail?book_id=${book.book_id}">

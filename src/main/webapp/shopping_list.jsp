@@ -125,6 +125,9 @@
                         <a href="authorize_payment">
                             <img src="image/other-checkout.png" alt="Other cards">
                         </a>
+                        <a href="vnpay_main.jsp">
+                            <img src="image/other-checkout.png" alt="Other cards">
+                        </a>
                     </div>
                 </div>
             </div>
