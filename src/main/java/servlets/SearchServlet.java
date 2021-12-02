@@ -27,20 +27,23 @@ public class SearchServlet extends HttpServlet {
         String p1020 = String.valueOf(request.getParameter("p1020"));
         String p2030 = String.valueOf(request.getParameter("p2030"));
         String p30 = String.valueOf(request.getParameter("p30"));
-        sqlQuery += " WHERE";
-        if(genre != "all"){
+        if(genre.contentEquals("all") == false || key_word.isEmpty() == false){
+            sqlQuery += " WHERE";
+        }
+
+        if(genre.contentEquals("all") == false){
             if(genre != null){
                 sqlQuery += " b.genre = '" + genre +"'";
             }
         }
-        if(key_word != null && key_word != ""){
-            if(genre != "all"){
+
+        if(key_word.isEmpty() == false ){
+            if (!genre.contentEquals("all")) {
                 sqlQuery += " AND";
-                sqlQuery += " b.title LIKE '%" + key_word + "%' OR b.genre LIKE '%" + key_word + "%'";
             }
-            else{
-                sqlQuery += " b.title LIKE '%" + key_word + "%' OR b.genre LIKE '%" + key_word + "%'";
-            }
+            //sqlQuery += " b.title LIKE '%" + key_word + "%' OR b.genre LIKE '%" + key_word + "%'" + " OR b.author LIKE '%" + key_word + "%'";
+            sqlQuery += " UPPER(b.title) LIKE UPPER('%" + key_word + "%') OR UPPER(b.genre) LIKE UPPER('%" + key_word + "%')" + " OR UPPER(b.author) LIKE UPPER('%" + key_word + "%')";
+            sqlQuery += " OR LOWER(b.title) LIKE LOWER('%" + key_word + "%') OR LOWER(b.genre) LIKE LOWER('%" + key_word + "%')" + " OR LOWER(b.author) LIKE LOWER('%" + key_word + "%')";
         }
         List<Books> booksList = BooksDB.SearchBooks(sqlQuery);
         request.setAttribute("book_items", booksList);
