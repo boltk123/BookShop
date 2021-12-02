@@ -260,7 +260,7 @@
     <section class="border">
         <h2 class="d-none">This is hidden</h2>
         <div class="copyright-section p-1 mx-auto d-flex justify-between align-center">
-            <p class="font-size-sm font-style-1 color-2">Copyright&copy; 2020 bookshop.com.</p>
+            <p class="font-size-sm font-style-1 color-2">Copyright&copy; 2021 bookshop.com.</p>
             <ul class="list-style-none d-flex">
                 <li><img src="./assets/images/twitter.svg" alt="twitter-logo" class="d-block category-heading-icons pointer ml-half"></li>
                 <li><img src="./assets/images/google.svg" alt="google-logo" class="d-block category-heading-icons pointer ml-half"></li>

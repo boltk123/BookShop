@@ -89,11 +89,12 @@
             <label >Thời gian thanh toán:</label>
             <label><%=request.getParameter("vnp_PayDate")%></label>
         </div>
+        <!--
         <div class="form-group">
             <label >Kết quả:</label>
             <label>
                 <%
-                    if (signValue.equals(vnp_SecureHash)) {
+                    /*if (signValue.equals(vnp_SecureHash)) {
                         if ("00".equals(request.getParameter("vnp_ResponseCode"))) {
                             out.print("GD Thanh cong");
                         } else {
@@ -102,15 +103,16 @@
 
                     } else {
                         out.print("Chu ky khong hop le");
-                    }
+                    }*/
                 %></label>
         </div>
+        -->
     </div>
     <p>
         &nbsp;
     </p>
     <footer class="footer">
-        <p>&copy; VNPAY 2015</p>
+        <p>&copy; VNPAY 2021</p>
     </footer>
 </div>
 </body>

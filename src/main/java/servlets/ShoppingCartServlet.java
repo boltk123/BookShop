@@ -33,6 +33,7 @@ public class ShoppingCartServlet extends HttpServlet {
                 subtotal += product.getTotal();
             }
             double total = subtotal + tax + shipping;
+            int vnd_total = (int) Math.round(total * 23000);
             session.setAttribute("products", products);
             session.setAttribute("book_items", books);
             session.setAttribute("product_count", product_count);
@@ -42,6 +43,7 @@ public class ShoppingCartServlet extends HttpServlet {
             session.setAttribute("subtotal", String.valueOf(subtotal));
             // total of all products
             session.setAttribute("total", String.valueOf(total));
+            session.setAttribute("vnd_total", vnd_total);
             if(action == "checkout"){
                 url = "/authorize_payment";
             }

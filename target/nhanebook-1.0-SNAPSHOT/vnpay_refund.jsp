@@ -59,7 +59,7 @@
             &nbsp;
         </p>
         <footer class="footer">
-            <p>&copy; VNPAY 2017</p>
+            <p>&copy; VNPAY 2021</p>
         </footer>
     </div>
 </div>

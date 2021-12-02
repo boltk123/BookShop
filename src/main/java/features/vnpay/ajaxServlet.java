@@ -37,14 +37,16 @@ public class ajaxServlet extends HttpServlet {
         String vnp_Version = "2.1.0";
         String vnp_Command = "pay";
         //String vnp_Command = "genqr";
-        String vnp_OrderInfo = req.getParameter("vnp_OrderInfo");
-        String orderType = req.getParameter("ordertype");
+        //String vnp_OrderInfo = req.getParameter("vnp_OrderInfo");
+        String vnp_OrderInfo = "Thanks for ordering";
+        //String orderType = req.getParameter("ordertype");
+        String orderType = "topup";
         String vnp_TxnRef = Config.getRandomNumber(8);
         int mcId = Integer.parseInt(Config.getRandomNumber(8));
         int amountmc = Integer.parseInt(req.getParameter("amount"));
         String vnp_IpAddr = Config.getIpAddress(req);
         String vnp_TmnCode = Config.vnp_TmnCode;
-        int amount = Integer.parseInt(req.getParameter("amount")) * 100;
+        int amount = Integer.parseInt(req.getParameter("amount"));
         Map<String, String> vnp_Params = new HashMap<>();
         vnp_Params.put("vnp_Version", vnp_Version);
         vnp_Params.put("vnp_Command", vnp_Command);
@@ -57,7 +59,7 @@ public class ajaxServlet extends HttpServlet {
         }
         vnp_Params.put("vnp_TxnRef", vnp_TxnRef);
         vnp_Params.put("vnp_OrderInfo", vnp_OrderInfo);
-        vnp_Params.put("vnp_OrderType", orderType);
+        //vnp_Params.put("vnp_OrderType", orderType);
 
         String locate = req.getParameter("language");
         if (locate != null && !locate.isEmpty()) {
