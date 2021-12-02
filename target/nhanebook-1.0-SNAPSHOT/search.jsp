@@ -97,7 +97,7 @@
 <main class="filter-search-container d-flex mx-auto">
     <!-- Search Filter -->
     <aside class="filter-container d-none visible-in-lg border p-2 flex-grow-1">
-
+        <!--
         <div class="py-1">
             <input id="hardcopy" type="checkbox" name="hardcopy" value="hardcopy">
             <label for="hardcopy" class="font-style-1 font-size-s color-2 pl-1">hardcopy</label><br>
@@ -129,7 +129,7 @@
             <label for="McGraw-HillEducation" class="font-style-1 font-size-s color-2 pl-1">McGraw-Hill
                 Education</label>
         </div>
-
+        -->
         <p class="font-style-2 font-size-md color-3 py-half border-bottom-2">Price Range</p>
         <div class="py-1">
             <input id="$0-$10" type="checkbox" name="p010" value="0-10">
@@ -156,6 +156,7 @@
                         <h4 class="font-style-2 font-size-md color-1 pointer black-highlight">${book.title}
                             <span class="font-style-1 font-size-md color-2 black-highlight"> by ${book.author}</span>
                         </h4>
+                        <p class="font-size-md font-style-2 color-3 gray-highlight pointer">Genre: ${book.genre}</p>
                         <p class="font-style-1 font-size-s color-3 py-1 d-none visible-in-sm gray-highlight pointer">
                                 ${book.description}</p>
                         <p class="font-size-md font-style-2 color-3 gray-highlight pointer">Rating: ${book.rating}</p>
