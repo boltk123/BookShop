@@ -10,6 +10,7 @@
 </head>
 <body>
 <header>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <nav class="bg-color-3 d-flex justify-around p-1">
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
@@ -141,6 +142,7 @@
     <!-- Content Page -->
     <div class="">
         <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Authors Lists</h4>
+        <c:forEach var="author" items="${products}">
         <a href="admin-add-category.html" class="btn btn-primary">Add New Author</a>
         <div class="">
             <div class="table-wrapper">
@@ -156,157 +158,13 @@
                     </thead>
                 <tbody>
                 <tr>
-                    <td>1</td>
+                    <td>${author.author_id}</td>
                     <td>
                         <img src="images/user/01.jpg" class="img-fluid avatar-50 rounded" alt="author-profile">
                     </td>
-                    <td>Jhone Steben</td>
+                    <td>${author.name}</td>
                     <td>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                    </td>
-                    <td>
-                        <div class="flex align-items-center list-user-action">
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>
-                        <img src="images/user/02.jpg" class="img-fluid avatar-50 rounded" alt="author-profile">
-                    </td>
-                    <td>John Klok</td>
-                    <td>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                    </td>
-                    <td>
-                        <div class="flex align-items-center list-user-action">
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>
-                        <img src="images/user/03.jpg" class="img-fluid avatar-50 rounded" alt="author-profile">
-                    </td>
-                    <td>Ichae Semos</td>
-                    <td>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                    </td>
-                    <td>
-                        <div class="flex align-items-center list-user-action">
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>
-                        <img src="images/user/04.jpg" class="img-fluid avatar-50 rounded" alt="author-profile">
-                    </td>
-                    <td>Jules Boutin</td>
-                    <td>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                    </td>
-                    <td>
-                        <div class="flex align-items-center list-user-action">
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>
-                        <img src="images/user/05.jpg" class="img-fluid avatar-50 rounded" alt="author-profile">
-                    </td>
-                    <td>Kusti Franti</td>
-                    <td>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                    </td>
-                    <td>
-                        <div class="flex align-items-center list-user-action">
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>
-                        <img src="images/user/06.jpg" class="img-fluid avatar-50 rounded" alt="author-profile">
-                    </td>
-                    <td>David King</td>
-                    <td>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                    </td>
-                    <td>
-                        <div class="flex align-items-center list-user-action">
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>
-                        <img src="images/user/07.jpg" class="img-fluid avatar-50 rounded" alt="author-profile">
-                    </td>
-                    <td>Henry Jurk</td>
-                    <td>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                    </td>
-                    <td>
-                        <div class="flex align-items-center list-user-action">
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>
-                        <img src="images/user/08.jpg" class="img-fluid avatar-50 rounded" alt="author-profile">
-                    </td>
-                    <td>Attilio Marzi</td>
-                    <td>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                    </td>
-                    <td>
-                        <div class="flex align-items-center list-user-action">
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>
-                        <img src="images/user/09.jpg" class="img-fluid avatar-50 rounded" alt="author-profile">
-                    </td>
-                    <td>Argele Intili</td>
-                    <td>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                    </td>
-                    <td>
-                        <div class="flex align-items-center list-user-action">
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>
-                        <img src="images/user/10.jpg" class="img-fluid avatar-50 rounded" alt="author-profile">
-                    </td>
-                    <td>Attilio Marzi</td>
-                    <td>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
+                        <p class="mb-0">${author.description}</p>
                     </td>
                     <td>
                         <div class="flex align-items-center list-user-action">
@@ -317,8 +175,10 @@
                 </tr>
                 </tbody>
                 </table>
+
             </div>
         </div>
+        </c:forEach>
     </div>
 </main>
 

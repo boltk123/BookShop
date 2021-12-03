@@ -10,6 +10,7 @@
 </head>
 <body>
 <header>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <nav class="bg-color-3 d-flex justify-around p-1">
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
@@ -141,6 +142,7 @@
     <!-- Content Page -->
     <section class="">
         <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Books Lists</h4>
+
         <a href="admin-add-category.html" class="btn btn-primary">Add New Book</a>
         <div class="">
             <div class="table-wrapper">
@@ -159,16 +161,17 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <c:forEach var="book" items="${academic_books}">
                     <tr>
-                        <td>1</td>
+                        <td>${book.book_id}</td>
                         <td><img class="img-fluid rounded" src="images/browse-books/01.jpg" alt=""></td>
-                        <td>Reading on the Worlds</td>
-                        <td>General Books</td>
-                        <td>Jhone Steben</td>
+                        <td>${book.title}</td>
+                        <td>${book.genre}</td>
+                        <td>${book.author}</td>
                         <td>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
+                            <p class="mb-0">${book.description}</p>
                         </td>
-                        <td>$89</td>
+                        <td>${book.cost}</td>
                         <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
                         <td>
                             <div class="flex align-items-center list-user-action">
@@ -177,172 +180,12 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td><img class="img-fluid rounded" src="images/browse-books/02.jpg" alt=""></td>
-                        <td>The Catcher in the Rye</td>
-                        <td>History Books</td>
-                        <td>Fritz Wold</td>
-                        <td>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                        </td>
-                        <td>$89</td>
-                        <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
-                        <td>
-                            <div class="flex align-items-center list-user-action">
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td><img class="img-fluid rounded" src="images/browse-books/03.jpg" alt=""></td>
-                        <td>Little Black Book</td>
-                        <td>Comic Books</td>
-                        <td>John Klok</td>
-                        <td>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                        </td>
-                        <td>$129</td>
-                        <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
-                        <td>
-                            <div class="flex align-items-center list-user-action">
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td><img class="img-fluid rounded" src="images/browse-books/04.jpg" alt=""></td>
-                        <td>Take On The Risk</td>
-                        <td>General Books</td>
-                        <td>George Strong</td>
-                        <td>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                        </td>
-                        <td>$89</td>
-                        <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
-                        <td>
-                            <div class="flex align-items-center list-user-action">
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td><img class="img-fluid rounded" src="images/browse-books/05.jpg" alt=""></td>
-                        <td>Absteact On Background</td>
-                        <td>Film & Photography</td>
-                        <td>Ichae Semos</td>
-                        <td>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                        </td>
-                        <td>$99</td>
-                        <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
-                        <td>
-                            <div class="flex align-items-center list-user-action">
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td><img class="img-fluid rounded" src="images/browse-books/06.jpg" alt=""></td>
-                        <td>Find The Wave Book</td>
-                        <td>General Books</td>
-                        <td>Fidel Martin</td>
-                        <td>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                        </td>
-                        <td>$100</td>
-                        <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
-                        <td>
-                            <div class="flex align-items-center list-user-action">
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td><img class="img-fluid rounded" src="images/browse-books/07.jpg" alt=""></td>
-                        <td>See the More Story</td>
-                        <td>Horror Story</td>
-                        <td>Jules Boutin</td>
-                        <td>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                        </td>
-                        <td>$79</td>
-                        <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
-                        <td>
-                            <div class="flex align-items-center list-user-action">
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td><img class="img-fluid rounded" src="images/browse-books/08.jpg" alt=""></td>
-                        <td>The Wikde Book</td>
-                        <td> Computers & Internet</td>
-                        <td>Kusti Franti</td>
-                        <td>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                        </td>
-                        <td>$89</td>
-                        <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
-                        <td>
-                            <div class="flex align-items-center list-user-action">
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td><img class="img-fluid rounded" src="images/browse-books/09.jpg" alt=""></td>
-                        <td>Conversion Erik Routley</td>
-                        <td>Sports</td>
-                        <td>Argele Intili</td>
-                        <td>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                        </td>
-                        <td>$79</td>
-                        <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
-                        <td>
-                            <div class="flex align-items-center list-user-action">
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td><img class="img-fluid rounded" src="images/browse-books/10.jpg" alt=""></td>
-                        <td>The Leo Dominica</td>
-                        <td>General Books</td>
-                        <td>Henry Jurk</td>
-                        <td>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit a scelerisque. Etiam feugiat luctus est, vel commodo odio rhoncus sit amet</p>
-                        </td>
-                        <td>$99</td>
-                        <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
-                        <td>
-                            <div class="flex align-items-center list-user-action">
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                            </div>
-                        </td>
-                    </tr>
+                    </c:forEach>
                 </tbody>
             </table>
         </div>
     </div>
+
     </section>
 </main>
 
