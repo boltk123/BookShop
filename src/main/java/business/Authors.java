@@ -9,17 +9,19 @@ import java.io.Serializable;
 @Entity
 public class Authors implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int author_id;
     private String name;
+    private String description;
+
 
     public Authors() {
 
     }
 
-    public Authors(int author_id, String name) {
+    public Authors(int author_id, String name, String description) {
         this.author_id = author_id;
         this.name = name;
+        this.description = description;
     }
 
     public int getAuthor_id() {
@@ -37,4 +39,8 @@ public class Authors implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getDescription() { return description; }
+
+    public void setDescription(String description) { this.description = description; }
 }

@@ -22,7 +22,7 @@ public class Admin_authorServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String url = "/admin-author.jsp";
         String indexmessage = "Log In";
-        session.setAttribute("books", authors);
+        session.setAttribute("authors", authors);
         request.setAttribute("indexmessage",indexmessage);
         sc.getRequestDispatcher(url).
                 forward(request, response);
