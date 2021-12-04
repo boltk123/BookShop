@@ -142,7 +142,7 @@
     <!-- Content Page -->
     <div class="">
         <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Authors Lists</h4>
-        <c:forEach var="author" items="${products}">
+        <c:forEach var="author" items="${authors}">
         <a href="admin-add-category.html" class="btn btn-primary">Add New Author</a>
         <div class="">
             <div class="table-wrapper">
