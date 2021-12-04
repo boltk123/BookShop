@@ -19,10 +19,9 @@ public class Admin_bookServlet extends HttpServlet {
 
         List<Books> books = BooksDB.selectAllBooks();
         ServletContext sc = getServletContext();
-        HttpSession session = request.getSession();
         String url = "/admin-books.jsp";
         String indexmessage = "Log In";
-        session.setAttribute("books", books);
+        request.setAttribute("books", books);
         request.setAttribute("indexmessage",indexmessage);
         sc.getRequestDispatcher(url).
                 forward(request, response);

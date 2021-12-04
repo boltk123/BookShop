@@ -121,8 +121,8 @@
                             <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
                                 <li><a href="admin-dashboard.jsp"><i class="#"></i>Dashboard</a></li>
                                 <li><a href="admin-category.jsp"><i class="#"></i>Category Lists</a></li>
-                                <li><a href="admin-author.jsp"><i class="#"></i>Author</a></li>
-                                <li><a href="admin-books.jsp"><i class="#"></i>Books</a></li>
+                                <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
+                                <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
                             </ul>
                         </li>
                         <li class="bg-color-4">
@@ -142,7 +142,7 @@
     <!-- Content Page -->
     <div class="">
         <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Authors Lists</h4>
-        <c:forEach var="author" items="${authors}">
+
             <button type="button" class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">Add a new authors</button>
         <div class="">
             <div class="table-wrapper">
@@ -157,6 +157,7 @@
                     </tr>
                     </thead>
                 <tbody>
+                <c:forEach var="author" items="${authors}">
                 <tr>
                     <td>${author.author_id}</td>
                     <td>
@@ -174,11 +175,11 @@
                     </td>
                 </tr>
                 </tbody>
+                    </c:forEach>
                 </table>
-
             </div>
         </div>
-        </c:forEach>
+
     </div>
 </main>
 

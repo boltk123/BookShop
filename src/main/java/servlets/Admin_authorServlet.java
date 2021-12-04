@@ -19,10 +19,9 @@ public class Admin_authorServlet extends HttpServlet {
 
         List<Authors> authors = AuthorsDB.selectAllAuthors();
         ServletContext sc = getServletContext();
-        HttpSession session = request.getSession();
         String url = "/admin-author.jsp";
         String indexmessage = "Log In";
-        session.setAttribute("authors", authors);
+        request.setAttribute("authors", authors);
         request.setAttribute("indexmessage",indexmessage);
         sc.getRequestDispatcher(url).
                 forward(request, response);
