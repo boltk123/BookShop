@@ -4,9 +4,7 @@
     --color-3: #383838;
     --color-4: #d67e89;
 }
-.user-status{
-    text-transform: uppercase;
-}
+
 /* Fonts */
 @font-face {
     font-family: 'light';
@@ -149,7 +147,6 @@ a {
     align-items: center;
 }
 
-
 /* paddings */
 .p-0 {
     padding: 0;
@@ -202,138 +199,7 @@ a {
 .pb-4 {
     padding-bottom: 4rem;
 }
-/* Sidebar */
-.iq-sidebar {
-    position: relative;
-    z-index: 1000;
-    top: 0;
-    width: 300px;
-    height: 100%;
-    background: var(--color-3);
-}
-.iq-sidebar-head {
-    padding-top: 15px;
-    padding-left: 20px;
-    position: relative;
-    justify-content: space-between!important;
-    display: flex!important;
-}
 
-
-
-.scroll-content {
-    transform: translate3d(0, 0, 0);
-}
-.iq-sidebar-menu {
-    position: relative;
-}
-
-.iq-menu {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.iq-sidebar-body {
-    overflow: hidden;
-    outline: none;
-    margin-top: 15px;
-    height: 100vh;
-}
-
-/* content-page */
-.content-page {
-    overflow: hidden;
-    padding: 125px 25px 0;
-    margin-left: 100px;
-    min-height: 100vh;
-}
-
-.container-fluid {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.mb-0 {
-    margin-bottom: 0!important;
-}
-
-.col-lg-3 {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    flex: 0 0 25%;
-    max-width: 25%;
-    display: block;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    color: #000000;
-}
-
-.col-md-4 {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-    display: block;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #000000;
-}
-
-.col-ms-12 {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    flex: 0 0 100%;
-    max-width: 100%;
-    display: block;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #000000;
-}
-.iq-head {
-    height: calc(100% - 30px);
-    -webkit-box-align: stretch;
-    align-items: stretch;
-    display: flex;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-.iq-body {
-    padding: 20px;
-}
 /* margins */
 
 .my-half {
@@ -578,6 +444,13 @@ img[alt="cart-logo-2"] {
     align-items: center;
 }
 
+/* Shape */
+#round {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: gold;
+}
 
 
 /* Media queries */
@@ -631,24 +504,67 @@ img[alt="cart-logo-2"] {
     }
 }
 
-
-
+/*=====CSS for login.jsp start here=====*/
 .Login-form {
-    width: 300px;
-    text-align: center;
-    align-items: center;
-    margin: 100px auto;
-}
-.Login-form label{
-    float: left;
-    font-size: 14px;
-}
-.Login-form input{
-    margin-bottom: 4px;
-    width: 150px;
-    font-size: 14px;
+    margin: 50px 592px;
+    border: 1px solid #383838;
+    border-radius: 7px;
+    padding: 20px;
+    background: #c75062;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 
+.login-field {
+    font-size: 16px;
+}
+
+.login-field input {
+    display: block;
+    margin: 5px 0 10px;
+    width: 311px;
+    height: 30px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #383838;
+    border-radius: 3px;
+}
+
+.Login-form .new-account {
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+}
+
+.Login-form .login-submit {
+    padding: 10px 122px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #383838;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.Login-form .register-submit {
+    padding: 10px 126px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #383838;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.Login-form .login-submit:hover,
+.Login-form .register-submit:hover {
+    background-color: #535050;
+    cursor: pointer;
+}
+/*=====CSS for login.jsp end here=====*/
 
 .centered-box {
     align-items: center;
