@@ -18,7 +18,7 @@ public class PurchasesDB {
         EntityTransaction trans = em.getTransaction();
         trans.begin();
         for(Products product: productsList) {
-            Purchases invoice = new Purchases(user_id, product.getProduct_id());
+            Purchases invoice = new Purchases(user_id, product.getProduct_id(), product.getQuantity());
             em.persist(invoice);
         }
         trans.commit();
