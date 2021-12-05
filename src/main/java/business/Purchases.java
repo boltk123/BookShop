@@ -2,7 +2,10 @@ package business;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 public class Purchases implements Serializable {
@@ -12,7 +15,8 @@ public class Purchases implements Serializable {
     @Id
     private int product_id;
     private boolean purchased;
-
+    @Temporal(TemporalType.DATE)
+    private Date purchase_date;
     public Purchases() {
     }
 
@@ -43,6 +47,14 @@ public class Purchases implements Serializable {
 
     public void setPurchased(boolean purchased) {
         this.purchased = purchased;
+    }
+
+    private java.sql.Date parseDate(String date) {
+        try {
+            return new Date(DATE_FORMAT.parse(date).getTime());
+        } catch (ParseException e) {
+            throw new IllegalArgumentException(e);
+        }
     }
 
 }
