@@ -4,6 +4,7 @@ import business.Books;
 import utility.DBUtil;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.io.IOException;
 import java.util.List;
@@ -111,5 +112,25 @@ public class BooksDB {
         trans.commit();
         return book;
 
+    }
+
+    public static int countBooks(){
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT b FROM Books b";
+        trans.begin();
+        TypedQuery<Books> q = em.createQuery(qString, Books.class);
+        List<Books> books;
+        try{
+            books = q.getResultList();
+            if(books == null)
+                books = null;
+        }
+        finally {
+            em.close();
+        }
+        trans.commit();
+        int count = books.size();
+        return count;
     }
 }

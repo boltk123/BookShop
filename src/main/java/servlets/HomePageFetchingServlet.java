@@ -20,6 +20,7 @@ public class HomePageFetchingServlet extends HttpServlet {
         List<Books> non_fiction_books = BooksDB.selectBooksByGenre("Non-Fiction");
         List<Books> fiction_books = BooksDB.selectBooksByGenre("Fiction");
         List<Books> academic_books = BooksDB.selectBooksByGenre("Academic");
+
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
         String url = "/homepage.jsp";
