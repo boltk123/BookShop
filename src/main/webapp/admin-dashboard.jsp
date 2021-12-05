@@ -10,6 +10,7 @@
 </head>
 <body>
 <header>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <nav class="bg-color-3 d-flex justify-around p-1">
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
@@ -118,7 +119,7 @@
                         <li class="bg-color-4">
                             <a href="admin-dashboard.jsp" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
-                                <li><a href="admin-dashboard.jsp"><i class="#"></i>Dashboard</a></li>
+                                <li><a href="AdminDashboard"><i class="#"></i>Dashboard</a></li>
                                 <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
                                 <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
                             </ul>
@@ -158,21 +159,9 @@
                         <div class="iq-body">
                             <div class="d-flex align-center">
                                 <h2 class="mb-0">
-                                    <span class="color-3 font-style-3 font-size-md pl-1">4.8k</span>
+                                    <span class="color-3 font-style-3 font-size-md pl-1">${totalBooks}</span>
                                 </h2>
                                 <h5>Books</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="iq-head">
-                        <div class="iq-body">
-                            <div class="d-flex align-center">
-                                <h2 class="mb-0">
-                                    <span class="color-3 font-style-3 font-size-md pl-1" >1.2k</span>
-                                </h2>
-                                <h5>Sale</h5>
                             </div>
                         </div>
                     </div>
