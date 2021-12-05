@@ -39,11 +39,6 @@
                             LIST</span>
                 </a>
             </li>
-            <li class="pl-2">
-                <button type="button"
-                        class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">REQUEST
-                    FOR STOCK</button>
-            </li>
         </ul>
 
         <ul class="list-style-none d-flex justify-around align-center user-info">

@@ -69,6 +69,7 @@ public class AccountsDB {
             em.close();
         }
     }
+
     public static Accounts selectAccountByUsername(String username) {
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         String qString = "SELECT a FROM Accounts a " +
@@ -112,6 +113,4 @@ public class AccountsDB {
         Accounts a = selectAccount(username,password);
         return a != null;
     }
-
-
 }

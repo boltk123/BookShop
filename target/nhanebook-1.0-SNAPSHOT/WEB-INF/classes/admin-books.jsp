@@ -119,7 +119,7 @@
                         <li class="bg-color-4">
                             <a href="admin-dashboard.jsp" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
-                                <li><a href="AdminDashboard"><i class="#"></i>Dashboard</a></li>
+                                <li><a href="admin-dashboard.jsp"><i class="#"></i>Dashboard</a></li>
                                 <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
                                 <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
                             </ul>

@@ -1,7 +1,7 @@
 package servlets;
 
 import business.Accounts;
-import business.Purchase;
+import business.Purchases;
 import com.paypal.api.payments.CarrierAccountToken;
 import database.AccountsDB;
 import exercise.nhanebook.UserDB_JDBC;
