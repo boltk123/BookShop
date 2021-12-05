@@ -10,6 +10,7 @@ import javax.persistence.TypedQuery;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.io.IOException;
+import java.util.List;
 
 public class AccountsDB {
     public static void insert(Accounts account) {
@@ -69,6 +70,7 @@ public class AccountsDB {
             em.close();
         }
     }
+
     public static Accounts selectAccountByUsername(String username) {
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         String qString = "SELECT a FROM Accounts a " +
@@ -100,6 +102,7 @@ public class AccountsDB {
             em.close();
         }
     }
+
     public static boolean usernameExists(String username) {
         Accounts a = selectAccountByUsername(username);
         return a != null;
@@ -113,5 +116,23 @@ public class AccountsDB {
         return a != null;
     }
 
-
+    public static int countAccount(){
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT b FROM Accounts b";
+        trans.begin();
+        TypedQuery<Accounts> q = em.createQuery(qString, Accounts.class);
+        List<Accounts> accounts;
+        try{
+            accounts = q.getResultList();
+            if(accounts == null)
+                accounts = null;
+        }
+        finally {
+            em.close();
+        }
+        trans.commit();
+        int count = accounts.size();
+        return count;
+    }
 }

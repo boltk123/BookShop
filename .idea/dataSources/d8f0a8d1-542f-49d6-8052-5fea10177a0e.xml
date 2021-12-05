@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="test@localhost">
+<dataSource name="PostgreSQL - test@localhost">
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.21">
     <root id="1">
       <ServerVersion>13.4</ServerVersion>
@@ -990,6 +990,7 @@ false Zulu
     </table>
     <table id="32" parent="17" name="authors">
       <ObjectId>16429</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>1211</StateNumber>
     </table>
@@ -1015,11 +1016,13 @@ false Zulu
     </table>
     <table id="37" parent="17" name="user_jpa">
       <ObjectId>16421</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>519</StateNumber>
     </table>
     <table id="38" parent="17" name="usertest">
       <ObjectId>16406</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>502</StateNumber>
     </table>

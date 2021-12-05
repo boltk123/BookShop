@@ -14,13 +14,13 @@
     <nav class="bg-color-3 d-flex justify-around p-1">
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
-                <a href="/index.jsp" class="image-highlight">
+                <a href="HomePage" class="image-highlight">
                     <img src="./assets/images/book.svg" alt="bookshop-logo">
                     <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
-                <a href="/index.jsp">
+                <a href="HomePage">
                     <img src="./assets/images/home-run.svg" alt="home-logo" class="navbar-icon">
                     <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
                 </a>
@@ -38,11 +38,6 @@
                             class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">PURCHASE
                             LIST</span>
                 </a>
-            </li>
-            <li class="pl-2">
-                <button type="button"
-                        class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">REQUEST
-                    FOR STOCK</button>
             </li>
         </ul>
 
@@ -144,7 +139,7 @@
             <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Books Lists</h4>
         </div>
         <div>
-            <a href="admin-add-authors.jsp" class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">Add a new books</a>
+            <a href="BooksTableInput.jsp" class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">Add a new books</a>
         </div>
         <div class="">
             <div class="table-wrapper">

@@ -14,13 +14,13 @@
     <nav class="bg-color-3 d-flex justify-around p-1">
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
-                <a href="homepage.jsp" class="image-highlight">
+                <a href="HomePage" class="image-highlight">
                     <img src="./assets/images/book.svg" alt="bookshop-logo">
                     <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
-                <a href="homepage.jsp">
+                <a href="HomePage">
                     <img src="./assets/images/home-run.svg" alt="home-logo" class="navbar-icon">
                     <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
                 </a>
@@ -38,11 +38,6 @@
                             class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">PURCHASE
                             LIST</span>
                 </a>
-            </li>
-            <li class="pl-2">
-                <button type="button"
-                        class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">REQUEST
-                    FOR STOCK</button>
             </li>
         </ul>
 
@@ -147,7 +142,7 @@
                         <div class="iq-body">
                             <div class="d-flex align-center">
                                 <h2 class="mb-0">
-                                    <span class="color-3 font-style-3 font-size-md pl-1" >5000</span>
+                                    <span class="color-3 font-style-3 font-size-md pl-1" >${totalAccount}</span>
                                 </h2>
                                 <h5>Users</h5>
                             </div>
@@ -171,7 +166,7 @@
                         <div class="iq-body">
                             <div class="d-flex align-center">
                                 <h2 class="mb-0">
-                                    <span class="color-3 font-style-3 font-size-md pl-1" >690</span>
+                                    <span class="color-3 font-style-3 font-size-md pl-1" >${totalPurchases}</span>
                                 </h2>
                                 <h5>Orders</h5>
                             </div>
