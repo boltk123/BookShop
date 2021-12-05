@@ -506,7 +506,7 @@ img[alt="cart-logo-2"] {
 
 /*=====CSS for login.jsp start here=====*/
 .Login-form {
-    margin: 50px 592px;
+    margin: 100px auto;
     border: 1px solid #383838;
     border-radius: 7px;
     padding: 20px;
