@@ -141,8 +141,12 @@
     </div>
     <!-- Content Page -->
     <section class="">
-        <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Books Lists</h4>
-        <button type="button" class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">Add a new books</button>
+        <div>
+            <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Books Lists</h4>
+        </div>
+        <div>
+            <a href="admin-add-books.jsp" class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">Add a new books</a>
+        </div>
         <div class="">
             <div class="table-wrapper">
                 <table class="fl-table">
@@ -168,7 +172,7 @@
                         <td>${book.genre}</td>
                         <td>${book.author}</td>
                         <td>
-                            <p class="mb-0">${book.description}</p>
+                            <p>${book.description}</p>
                         </td>
                         <td>${book.cost}</td>
                         <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>

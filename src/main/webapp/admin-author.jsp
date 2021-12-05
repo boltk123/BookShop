@@ -120,7 +120,7 @@
                             <a href="#admin" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
                                 <li><a href="admin-dashboard.jsp"><i class="#"></i>Dashboard</a></li>
-                                <li><a href="admin-category.jsp"><i class="#"></i>Category Lists</a></li>
+                                <li><a href="AdminCategory"><i class="#"></i>Category Lists</a></li>
                                 <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
                                 <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
                             </ul>
@@ -142,8 +142,7 @@
     <!-- Content Page -->
     <div class="">
         <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Authors Lists</h4>
-
-            <button type="button" class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">Add a new authors</button>
+        <button type="button" class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">Add a new authors</button>
         <div class="">
             <div class="table-wrapper">
                 <table class="fl-table">
@@ -169,8 +168,8 @@
                     </td>
                     <td>
                         <div class="flex align-items-center list-user-action">
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
-                            <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
+                            <a class="bg-color-1" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-category.html"><i class="ri-pencil-line"></i></a>
+                            <a class="bg-color-1" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
                         </div>
                     </td>
                 </tr>

@@ -1,30 +1,34 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Collection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin books</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/table.css">
 </head>
 <body>
 <header>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <nav class="bg-color-3 d-flex justify-around p-1">
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
-                <a href="homepage.jsp" class="image-highlight">
+                <a href="/HomePage" class="image-highlight">
                     <img src="./assets/images/book.svg" alt="bookshop-logo">
                     <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
-                <a href="homepage.jsp">
+                <a href="/HomePage">
                     <img src="./assets/images/home-run.svg" alt="home-logo" class="navbar-icon">
-                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
+                    <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
-                <a href="collection.jsp">
+                <a href="#">
                     <img src="./assets/images/bookshelf.svg" alt="collection-logo" class="navbar-icon">
-                    <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">COLLECTIONS</span>
+                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight">COLLECTIONS</span>
                 </a>
             </li>
             <li class="pl-2">
@@ -51,7 +55,7 @@
                 </a>
             </li>
             <li class="d-none visible-in-lg">
-                <a href="uploader.jsp">
+                <a href="#">
                     <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight">User Name</span>
                 </a>
             </li>
@@ -61,30 +65,35 @@
                 </a>
             </li>
             <li class="pl-1">
-                <a href="#" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">Search</a>
+                <a href="search.html" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">Search</a>
             </li>
         </ul>
     </nav>
 
-    <section class="hero-section d-none flex-column align-center justify-center p-3">
-        <h1 class="hero-title font-style-2 color-white p-1">BOOKSHOP</h1>
-        <h4 class="font-style-1 color-white font-size-md">An online market place for all kinds of books</h4>
-        <form action="#" class="hero-form p-1 d-flex align-center">
-            <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
-                <option value="all" class="genre-selector">All genre</option>
-                <option value="non-fiction" class="genre-selector">Non Fiction</option>
-                <option value="fiction" class="genre-selector">Fiction</option>
-                <option value="academic" class="genre-selector">Academic</option>
-            </select>
-            <input type="text" placeholder="What do you search for ?"
-                   class="p-1 border-0 font-style-1 font-size-sm border-right flex-grow-1 pointer">
-            <input type="text" placeholder="Search..." class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer">
-            <a href="search.jsp" class="default-btn font-size-sm font-style-2 bg-color-3 ml-1">Search</a>
-        </form>
+    <section class="hero-section d-none flex-column p-1">
+        <h2 class="d-none">This is added to remove validators errors.</h2>
+        <div class="mx-auto">
+            <h1 class="hero-title font-style-2 color-white">BOOKSHOP</h1>
+            <h4 class="font-style-1 color-white font-size-md py-1">Search for your desired book</h4>
+            <form action="#" class="hero-form d-flex align-center py-1">
+                <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
+                    <option value="all" class="genre-selector">All genre</option>
+                    <option value="non-fiction" class="genre-selector">Non Fiction</option>
+                    <option value="fiction" class="genre-selector" selected>Fiction</option>
+                    <option value="academic" class="genre-selector">Academic</option>
+                </select>
+                <input type="text" placeholder="What do you search for ?" value="philosophy"
+                       class="p-1 border-0 font-style-1 font-size-sm border-right flex-grow-1 pointer">
+                <input type="text" value="life" placeholder="Search..."
+                       class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer">
+                <a href="search.html" class="default-btn font-size-sm font-style-2 bg-color-3 ml-1">Search</a>
+            </form>
+        </div>
     </section>
 </header>
 
-<main class="pb-4">
+<main class="d-flex justify-around">
+    <!--Sidebar-->
     <div class="iq-sidebar">
         <div class="iq-sidebar-head">
             <a href="homepage.jsp" class="image-highlight">
@@ -108,10 +117,10 @@
                             </ul>
                         </li>
                         <li class="bg-color-4">
-                            <a href="#admin" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <a href="admin-dashboard.jsp" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
-                                <li><a href="admin-dashboard"><i class="#"></i>Dashboard</a></li>
-                                <li><a href="AdminCategory"><i class="#"></i>Category Lists</a></li>
+                                <li><a href="admin-dashboard.jsp"><i class="#"></i>Dashboard</a></li>
+                                <li><a href="admin-category.jsp"><i class="#"></i>Category Lists</a></li>
                                 <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
                                 <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
                             </ul>
@@ -130,6 +139,49 @@
             </div>
         </div>
     </div>
+    <!-- Content Page -->
+    <section class="">
+        <div id="content-page" class="content-page">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="iq-card">
+                            <div class="iq-card-header d-flex justify-content-between">
+                                <div class="iq-header-title">
+                                    <h4 class="card-title">Add Author</h4>
+                                </div>
+                            </div>
+                            <div class="iq-card-body">
+                                <form action="admin-author.html">
+                                    <div class="form-group">
+                                        <label>Author Name:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Author Profile:</label>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Author Email:</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Author Description:</label>
+                                        <textarea class="form-control" rows="4"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="reset" class="btn btn-danger">Reset</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer class="bg-white border">
@@ -197,5 +249,6 @@
         </div>
     </section>
 </footer>
+
 </body>
 </html>

@@ -117,12 +117,12 @@
                             </ul>
                         </li>
                         <li class="bg-color-4">
-                            <a href="#admin" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <a href="admin-dashboard.jsp" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
                                 <li><a href="admin-dashboard.jsp"><i class="#"></i>Dashboard</a></li>
                                 <li><a href="admin-category.jsp"><i class="#"></i>Category Lists</a></li>
-                                <li><a href="admin-author.jsp"><i class="#"></i>Author</a></li>
-                                <li><a href="admin-books.jsp"><i class="#"></i>Books</a></li>
+                                <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
+                                <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
                             </ul>
                         </li>
                         <li class="bg-color-4">
@@ -141,9 +141,12 @@
     </div>
     <!-- Content Page -->
     <section class="">
-        <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Books Lists</h4>
-
-        <a href="admin-add-category.html" class="btn btn-primary">Add New Book</a>
+        <div>
+            <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Books Lists</h4>
+        </div>
+        <div>
+            <a href="admin-add-books.jsp" class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">Add a new books</a>
+        </div>
         <div class="">
             <div class="table-wrapper">
                 <table class="fl-table">
@@ -169,7 +172,7 @@
                         <td>${book.genre}</td>
                         <td>${book.author}</td>
                         <td>
-                            <p class="mb-0">${book.description}</p>
+                            <p>${book.description}</p>
                         </td>
                         <td>${book.cost}</td>
                         <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>

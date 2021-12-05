@@ -1,13 +1,11 @@
 package database;
 
-import business.Authors;
 import business.Books;
 import utility.DBUtil;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 
 public class BooksDB {
@@ -57,6 +55,7 @@ public class BooksDB {
         trans.commit();
         return books;
     }
+
     public static List<Books> selectBooksByUserID(int user_id){
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
