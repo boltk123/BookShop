@@ -2,7 +2,10 @@ package business;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.io.Serializable;
+import java.time.LocalDate;
 
 @Entity
 public class Purchases implements Serializable {
@@ -12,7 +15,8 @@ public class Purchases implements Serializable {
     @Id
     private int product_id;
     private boolean purchased;
-
+    @Temporal(TemporalType.DATE)
+    private LocalDate purchase_date;
     public Purchases() {
     }
 
@@ -20,6 +24,7 @@ public class Purchases implements Serializable {
         this.user_id = user_id;
         this.product_id = product_id;
         this.purchased = true;
+        this.purchase_date = LocalDate.now();
     }
     public int getUser_id() {
         return user_id;
@@ -44,5 +49,6 @@ public class Purchases implements Serializable {
     public void setPurchased(boolean purchased) {
         this.purchased = purchased;
     }
+
 
 }

@@ -43,7 +43,7 @@
             <li class="pl-2"><c:if test = "${sessionScope.account.role == 'admin'}">
                 <button type="button"
                         class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">
-                    <a href="BooksTableInput.jsp" class="image-highlight">ADMIN</a>
+                    <a href="AdminDashboard" class="image-highlight">ADMIN</a>
                 </button>
             </c:if>
 
