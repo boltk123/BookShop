@@ -1,5 +1,6 @@
 package servlets;
 
+import business.Accounts;
 import database.ProductsDB;
 
 import javax.servlet.*;
@@ -18,9 +19,9 @@ public class RemoveCartServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
-        //int user_id = Integer.parseInt(request.getParameter("user_id"));
+        Accounts current_account = (Accounts)session.getAttribute("account");
         int book_id  = Integer.parseInt(request.getParameter("book_id"));
-        ProductsDB.removeProduct(1, book_id);
+        ProductsDB.removeProduct(current_account.getUser_id(), book_id);
         String url = "/ShoppingCart";
         sc.getRequestDispatcher(url).
                 forward(request, response);

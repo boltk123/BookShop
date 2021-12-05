@@ -17,10 +17,10 @@ public class AccountUpdateServlet extends HttpServlet {
         if (action.equals("update")){
             HttpSession session = request.getSession();
 
-            String first_name = request.getParameter("firstName");
-            String last_name = request.getParameter("lastName");
+            String first_name = request.getParameter("firstname");
+            String last_name = request.getParameter("lastname");
 
-            Accounts account = new Accounts();
+            Accounts account = (Accounts) session.getAttribute("account");
 
             account.setFirstName(first_name);
             account.setLastName(last_name);

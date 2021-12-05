@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 public class Purchases implements Serializable {
@@ -16,7 +16,7 @@ public class Purchases implements Serializable {
     private int product_id;
     private boolean purchased;
     @Temporal(TemporalType.DATE)
-    private Date purchase_date;
+    private LocalDate purchase_date;
     public Purchases() {
     }
 
@@ -24,6 +24,7 @@ public class Purchases implements Serializable {
         this.user_id = user_id;
         this.product_id = product_id;
         this.purchased = true;
+        this.purchase_date = LocalDate.now();
     }
     public int getUser_id() {
         return user_id;
@@ -49,12 +50,5 @@ public class Purchases implements Serializable {
         this.purchased = purchased;
     }
 
-    private java.sql.Date parseDate(String date) {
-        try {
-            return new Date(DATE_FORMAT.parse(date).getTime());
-        } catch (ParseException e) {
-            throw new IllegalArgumentException(e);
-        }
-    }
 
 }
