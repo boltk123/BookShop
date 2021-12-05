@@ -145,7 +145,7 @@
             <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Books Lists</h4>
         </div>
         <div>
-            <a href="admin-add-books.jsp" class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">Add a new books</a>
+            <a href="admin-add-authors.jsp" class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">Add a new books</a>
         </div>
         <div class="">
             <div class="table-wrapper">
