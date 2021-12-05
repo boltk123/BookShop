@@ -1,5 +1,5 @@
 package features.email;
-/*
+
 import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.*;
@@ -37,9 +37,8 @@ public class MailUtilGmail {
 
         // 4 - send the message
         Transport transport = session.getTransport();
-        transport.connect("johnsmith@gmail.com", "sesame");
+        transport.connect("nhanbuiduc.work@gmail.com", "TtTb2392001");
         transport.sendMessage(message, message.getAllRecipients());
         transport.close();
     }
 }
-*/

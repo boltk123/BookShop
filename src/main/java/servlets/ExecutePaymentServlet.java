@@ -46,8 +46,8 @@ public class ExecutePaymentServlet extends HttpServlet {
 			Accounts current_account = (Accounts)session.getAttribute("account");
 			PurchasesDB.insertInvoice(current_account.getUser_id(), productsList);
 			// Store information to database
-			request.getRequestDispatcher("receipt.jsp").forward(request, response);
-			
+			request.getRequestDispatcher("Email").forward(request, response);
+
 		} catch (PayPalRESTException ex) {
 			request.setAttribute("errorMessage", ex.getMessage());
 			ex.printStackTrace();
