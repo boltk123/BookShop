@@ -1,5 +1,6 @@
 package database;
 
+import business.Accounts;
 import business.Books;
 import business.Products;
 import business.Purchases;
@@ -40,5 +41,25 @@ public class PurchasesDB {
             return false;
         }
 
+    }
+
+    public static int countPurchases(){
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT b FROM Purchases b";
+        trans.begin();
+        TypedQuery<Purchases> q = em.createQuery(qString, Purchases.class);
+        List<Purchases> purchases;
+        try{
+            purchases = q.getResultList();
+            if(purchases == null)
+                purchases = null;
+        }
+        finally {
+            em.close();
+        }
+        trans.commit();
+        int count = purchases.size();
+        return count;
     }
 }

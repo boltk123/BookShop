@@ -32,12 +32,19 @@
                 </a>
             </li>
             <li class="pl-2">
-                <a href="#">
+                <a href="ShoppingCart">
                     <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
-                    <span
-                            class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">PURCHASE
-                            LIST</span>
+                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">SHOPPING LIST</span>
                 </a>
+            </li>
+            <li class="pl-2">
+                <c:if test = "${sessionScope.account.role == 'admin'}">
+                    <button type="button"
+                            class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">
+                        <a href="AdminDashboard" class="image-highlight">ADMIN</a>
+                    </button>
+                </c:if>
+
             </li>
         </ul>
 
@@ -50,8 +57,8 @@
                 </a>
             </li>
             <li class="d-none visible-in-lg">
-                <a href="#">
-                    <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight">User Name</span>
+                <a href="Account">
+                    <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight user-status">${indexmessage}</span>
                 </a>
             </li>
             <li>
@@ -60,30 +67,24 @@
                 </a>
             </li>
             <li class="pl-1">
-                <a href="search.jsp" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">Search</a>
+                <a href="#" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">SEARCH</a>
             </li>
         </ul>
     </nav>
 
-    <section class="hero-section d-none flex-column p-1">
-        <h2 class="d-none">This is added to remove validators errors.</h2>
-        <div class="mx-auto">
-            <h1 class="hero-title font-style-2 color-white">BOOKSHOP</h1>
-            <h4 class="font-style-1 color-white font-size-md py-1">Search for your desired book</h4>
-            <form action="#" class="hero-form d-flex align-center py-1">
-                <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
-                    <option value="all" class="genre-selector">All genre</option>
-                    <option value="non-fiction" class="genre-selector">Non Fiction</option>
-                    <option value="fiction" class="genre-selector" selected>Fiction</option>
-                    <option value="academic" class="genre-selector">Academic</option>
-                </select>
-                <input type="text" placeholder="What do you search for ?" value="philosophy"
-                       class="p-1 border-0 font-style-1 font-size-sm border-right flex-grow-1 pointer">
-                <input type="text" value="life" placeholder="Search..."
-                       class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer">
-                <a href="search.jsp" class="default-btn font-size-sm font-style-2 bg-color-3 ml-1">Search</a>
-            </form>
-        </div>
+    <section class="hero-section d-none flex-column align-center justify-center p-3">
+        <h1 class="hero-title font-style-2 color-white p-1">BOOKSHOP</h1>
+        <h4 class="font-style-1 color-white font-size-md">An online market place for all kinds of books</h4>
+        <form action="Search" class="hero-form p-1 d-flex align-center">
+            <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
+                <option value="all" class="genre-selector">All genre</option>
+                <option value="Non-Fiction" class="genre-selector">Non Fiction</option>
+                <option value="Fiction" class="genre-selector">Fiction</option>
+                <option value="Academic" class="genre-selector">Academic</option>
+            </select>
+            <input type="text" placeholder="Search..." class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer" name="key_word">
+            <input class="default-btn font-size-sm font-style-2 bg-color-3 ml-1" type="submit" value="SEARCH">
+        </form>
     </section>
 </header>
 
@@ -91,7 +92,7 @@
     <!--Sidebar-->
     <div class="iq-sidebar">
         <div class="iq-sidebar-head">
-            <a href="homepage.jsp" class="image-highlight">
+            <a href="HomePage" class="image-highlight">
                 <img src="./assets/images/book.svg" alt="bookshop-logo">
                 <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
             </a>
@@ -100,25 +101,16 @@
             <div class="scroll-content">
                 <nav class="iq-sidebar-menu">
                     <ul class="iq-menu">
-                        <li class="bg-color-4">
-                            <a href="#dashboard" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="las la-home iq-arrow-left"></i><span>Shop</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                            <ul id="dashboard" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
-                                <li><a href="homepage.jsp"><i class="#"></i>Home Page</a></li>
-                                <li><a href="collection.jsp"><i class="#"></i>Category Page</a></li>
-                                <li><a href="#"><i class="#"></i>Book Page</a></li>
-                                <li><a href="#"><i class="#"></i>Book PDF</a></li>
-                                <li><a href="#"><i class="#"></i>Checkout</a></li>
-                                <li><a href="#"><i class="#"></i>wishlist</a></li>
-                            </ul>
-                        </li>
-                        <li class="bg-color-4">
-                            <a href="admin-dashboard.jsp" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                            <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
-                                <li><a href="AdminDashboard"><i class="#"></i>Dashboard</a></li>
-                                <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
-                                <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
-                            </ul>
-                        </li>
+                        <c:if test = "${sessionScope.account.role == 'admin'}">
+                            <li class="bg-color-4">
+                                <a href="#admin" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                                <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
+                                    <li><a href="AdminDashboard"><i class="#"></i>Dashboard</a></li>
+                                    <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
+                                    <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
+                                </ul>
+                            </li>
+                        </c:if>
                         <li class="bg-color-4">
                             <a href="#userinfo" class="bg-color-1 m-left font-style-3 p-1" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="userinfo" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">

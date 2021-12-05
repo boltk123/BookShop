@@ -32,12 +32,19 @@
                 </a>
             </li>
             <li class="pl-2">
-                <a href="#">
+                <a href="ShoppingCart">
                     <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
-                    <span
-                            class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">PURCHASE
-                            LIST</span>
+                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">SHOPPING LIST</span>
                 </a>
+            </li>
+            <li class="pl-2">
+                <c:if test = "${sessionScope.account.role == 'admin'}">
+                    <button type="button"
+                            class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">
+                        <a href="AdminDashboard" class="image-highlight">ADMIN</a>
+                    </button>
+                </c:if>
+
             </li>
         </ul>
 
@@ -91,7 +98,7 @@
     <!--Sidebar-->
     <div class="iq-sidebar">
         <div class="iq-sidebar-head">
-            <a href="homepage.jsp" class="image-highlight">
+            <a href="HomePage" class="image-highlight">
                 <img src="./assets/images/book.svg" alt="bookshop-logo">
                 <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
             </a>
@@ -100,25 +107,16 @@
             <div class="scroll-content">
                 <nav class="iq-sidebar-menu">
                     <ul class="iq-menu">
-                        <li class="bg-color-4">
-                            <a href="#dashboard" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="las la-home iq-arrow-left"></i><span>Shop</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                            <ul id="dashboard" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
-                                <li><a href="homepage.jsp"><i class="#"></i>Home Page</a></li>
-                                <li><a href="collection.jsp"><i class="#"></i>Category Page</a></li>
-                                <li><a href="#"><i class="#"></i>Book Page</a></li>
-                                <li><a href="#"><i class="#"></i>Book PDF</a></li>
-                                <li><a href="#"><i class="#"></i>Checkout</a></li>
-                                <li><a href="#"><i class="#"></i>wishlist</a></li>
-                            </ul>
-                        </li>
-                        <li class="bg-color-4">
-                            <a href="admin-dashboard.jsp" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                            <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
-                                <li><a href="AdminDashboard"><i class="#"></i>Dashboard</a></li>
-                                <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
-                                <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
-                            </ul>
-                        </li>
+                        <c:if test = "${sessionScope.account.role == 'admin'}">
+                            <li class="bg-color-4">
+                                <a href="#admin" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                                <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
+                                    <li><a href="AdminDashboard"><i class="#"></i>Dashboard</a></li>
+                                    <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
+                                    <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
+                                </ul>
+                            </li>
+                        </c:if>
                         <li class="bg-color-4">
                             <a href="#userinfo" class="bg-color-1 m-left font-style-3 p-1" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="userinfo" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">

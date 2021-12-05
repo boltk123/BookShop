@@ -985,6 +985,7 @@ false Zulu
     </sequence>
     <table id="31" parent="17" name="accounts">
       <ObjectId>16675</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>1088</StateNumber>
     </table>
@@ -1001,11 +1002,13 @@ false Zulu
     </table>
     <table id="34" parent="17" name="products">
       <ObjectId>16683</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>971</StateNumber>
     </table>
     <table id="35" parent="17" name="purchases">
       <ObjectId>24930</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>1214</StateNumber>
     </table>
