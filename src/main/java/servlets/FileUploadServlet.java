@@ -59,7 +59,7 @@ public class FileUploadServlet extends HttpServlet {
         SamplesDB.insertSample(book_id, sample1);
         SamplesDB.insertSample(book_id, sample2);
         SamplesDB.insertSample(book_id, sample3);
-        RequestDispatcher rd = request.getRequestDispatcher("ImageServlet");
+        RequestDispatcher rd = request.getRequestDispatcher("HomePage");
         rd.forward(request,response);
 
     }
