@@ -41,7 +41,7 @@
 				<td>${transaction.amount.total} USD</td>
 			</tr>
 		</table>
-		<form action="HomePage" method="post">
+		<form action="ConfirmPayment" method="post">
 			<input type="hidden" name="action" value="homepage">
 			<div class="back-btn">
 				<input class="button" type="submit"  value="HomePage">
