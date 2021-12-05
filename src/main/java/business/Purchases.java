@@ -15,14 +15,15 @@ public class Purchases implements Serializable {
     @Id
     private int product_id;
     private boolean purchased;
-
+    private int quantity;
     private LocalDate purchase_date;
     public Purchases() {
     }
 
-    public Purchases(int user_id, int product_id) {
+    public Purchases(int user_id, int product_id, int quantity) {
         this.user_id = user_id;
         this.product_id = product_id;
+        this.quantity = quantity;
         this.purchased = true;
         this.purchase_date = LocalDate.now();
     }

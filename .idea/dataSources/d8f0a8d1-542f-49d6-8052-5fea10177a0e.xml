@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="PostgreSQL - test@localhost">
+<dataSource name="test@localhost">
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.21">
     <root id="1">
       <ServerVersion>13.4</ServerVersion>
@@ -792,7 +792,7 @@ false YEKT
 false Z
 false Zulu
 </TimeZones>
-      <StartupTime>1638363464</StartupTime>
+      <StartupTime>1638683520</StartupTime>
     </root>
     <database id="2" parent="1" name="postgres">
       <ObjectId>13442</ObjectId>
@@ -812,7 +812,7 @@ false Zulu
 13158||-9223372036854775808|U|G
 13158||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1217</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1227</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="4" parent="1" name="pg_execute_server_program">
@@ -877,7 +877,7 @@ false Zulu
       <Comment>standard public schema</Comment>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1218</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1228</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="3" name="plpgsql">
@@ -990,7 +990,6 @@ false Zulu
     </table>
     <table id="32" parent="17" name="authors">
       <ObjectId>16429</ObjectId>
-      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>1211</StateNumber>
     </table>
@@ -1007,7 +1006,7 @@ false Zulu
     <table id="35" parent="17" name="purchases">
       <ObjectId>24930</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1214</StateNumber>
+      <StateNumber>1226</StateNumber>
     </table>
     <table id="36" parent="17" name="samples">
       <ObjectId>16758</ObjectId>
@@ -1016,13 +1015,11 @@ false Zulu
     </table>
     <table id="37" parent="17" name="user_jpa">
       <ObjectId>16421</ObjectId>
-      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>519</StateNumber>
     </table>
     <table id="38" parent="17" name="usertest">
       <ObjectId>16406</ObjectId>
-      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>502</StateNumber>
     </table>
@@ -1314,50 +1311,56 @@ product_id</ColNames>
       <StateNumber>1214</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="82" parent="36" name="book_id">
+    <column id="82" parent="35" name="quantity">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1226</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="83" parent="36" name="book_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1129</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="83" parent="36" name="sample">
+    <column id="84" parent="36" name="sample">
       <Position>2</Position>
       <DataType>bytea|0s</DataType>
       <StateNumber>1129</StateNumber>
       <TypeId>17</TypeId>
     </column>
-    <column id="84" parent="36" name="base64sample">
+    <column id="85" parent="36" name="base64sample">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1129</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="85" parent="37" name="userid">
+    <column id="86" parent="37" name="userid">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>519</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="86" parent="37" name="email">
+    <column id="87" parent="37" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="87" parent="37" name="firstname">
+    <column id="88" parent="37" name="firstname">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="88" parent="37" name="lastname">
+    <column id="89" parent="37" name="lastname">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>519</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="89" parent="37" name="user_jpa_pkey">
+    <index id="90" parent="37" name="user_jpa_pkey">
       <ObjectId>16427</ObjectId>
       <StateNumber>519</StateNumber>
       <ColNames>userid</ColNames>
@@ -1367,39 +1370,39 @@ product_id</ColNames>
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="90" parent="37" name="user_jpa_pkey">
+    <key id="91" parent="37" name="user_jpa_pkey">
       <ObjectId>16428</ObjectId>
       <StateNumber>519</StateNumber>
       <ColNames>userid</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>user_jpa_pkey</UnderlyingIndexName>
     </key>
-    <column id="91" parent="38" name="userid">
+    <column id="92" parent="38" name="userid">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>502</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="92" parent="38" name="firstname">
+    <column id="93" parent="38" name="firstname">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>502</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="93" parent="38" name="lastname">
+    <column id="94" parent="38" name="lastname">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>502</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="94" parent="38" name="emailaddress">
+    <column id="95" parent="38" name="emailaddress">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>502</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="95" parent="38" name="usertest_pkey">
+    <index id="96" parent="38" name="usertest_pkey">
       <ObjectId>16409</ObjectId>
       <StateNumber>502</StateNumber>
       <ColNames>userid</ColNames>
@@ -1409,7 +1412,7 @@ product_id</ColNames>
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="96" parent="38" name="usertest_pkey">
+    <key id="97" parent="38" name="usertest_pkey">
       <ObjectId>16410</ObjectId>
       <StateNumber>502</StateNumber>
       <ColNames>userid</ColNames>
