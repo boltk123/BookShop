@@ -3,13 +3,10 @@ package servlets;
 import business.Accounts;
 import business.Purchases;
 import com.paypal.api.payments.CarrierAccountToken;
-import database.AccountsDB;
+import database.*;
 import exercise.nhanebook.UserDB_JDBC;
 import business.Authors;
 import business.Books;
-import database.AuthorsDB;
-import database.BooksDB;
-import database.ProductsDB;
 import utility.DBUtil;
 
 import javax.persistence.EntityManager;
@@ -27,9 +24,13 @@ public class AdminServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         int totalBooks = BooksDB.countBooks();
+        int totalAccount = AccountsDB.countAccount();
+        int totalPurchases = PurchasesDB.countPurchases();
         String url = "/admin-dashboard.jsp";
         ServletContext sc = getServletContext();
         request.setAttribute("totalBooks", totalBooks);
+        request.setAttribute("totalAccount", totalAccount);
+        request.setAttribute("totalPurchases", totalPurchases);
         sc.getRequestDispatcher(url).
                 forward(request, response);
     }
