@@ -7,6 +7,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto:wght@300;400;500;700&family=Source+Serif+Pro:wght@400;600;700&display=swap');
 
 html {
     line-height: 1.15; /* 1 */
@@ -346,4 +347,47 @@ template {
 
 [hidden] {
     display: none;
+}
+
+/*========CSS for accountinfo.jsp start here=======*/
+.account-infos {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 0 450px;
+    margin-top: 50px;
+    padding: 22px;
+    border: 2px solid #383838;
+    border-radius: 7px;
+}
+
+.account-infos .account-infos-title {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.account-infos .account-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.account-infos .account-info p:nth-child(2) {
+    margin-right: 270px;
+}
+
+.account-infos .account-update-btn {
+    color: #fff;
+    height: 40px;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 22px;
+    border-radius: 3px;
+    background-color: #383838;
+}
+
+.account-infos .account-update-btn:hover {
+    background-color: #484743;
 }

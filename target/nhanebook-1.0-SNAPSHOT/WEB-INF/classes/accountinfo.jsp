@@ -77,13 +77,30 @@
 <br>
 
 <div class="account-infos">
-    <p>Account ID : <i>${account.user_id}</i></p><br>
-    <p>Username : <i>${account.username}</i></p><br>
-    <p>First Name : <i>${account.firstName}</i></p><br>
-    <p>Last Name : <i>${account.lastName}</i></p><br>
-    <p>Email : <i>${account.email}</i></p><br>
+    <p class="account-infos-title">Account Info</p>
 
-    <a href="update_account.jsp">Update infos?</a>
+    <div class="account-info">
+        <p>Account ID:</p>
+        <p>${account.user_id}</p>
+    </div>
+    <div class="account-info">
+        <p>Username:</p>
+        <p>${account.username}</p>
+    </div>
+    <div class="account-info">
+        <p>First Name:</p>
+        <p>${account.firstName}</p>
+    </div>
+    <div class="account-info">
+        <p>Last Name:</p>
+        <p>${account.lastName}</p>
+    </div>
+    <div class="account-info">
+        <p>Email:</p>
+        <p>${account.email}</p>
+    </div>
+
+    <a class="account-update-btn" href="update_account.jsp">Update</a>
 
 </div>
 
