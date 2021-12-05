@@ -15,7 +15,7 @@ public class Purchases implements Serializable {
     @Id
     private int product_id;
     private boolean purchased;
-    @Temporal(TemporalType.DATE)
+
     private LocalDate purchase_date;
     public Purchases() {
     }

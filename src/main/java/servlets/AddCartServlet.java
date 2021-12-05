@@ -19,7 +19,7 @@ public class AddCartServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
-        String url = "/homepage.jsp";
+        String url = "/shopping_list.jsp";
         try{
             Accounts current_account = (Accounts) session.getAttribute("account");
             int user_id = current_account.getUser_id();

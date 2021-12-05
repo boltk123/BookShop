@@ -5,6 +5,7 @@ import business.Books;
 import business.Samples;
 import database.BooksDB;
 import database.ProductsDB;
+import database.PurchasesDB;
 import database.SamplesDB;
 
 import javax.servlet.*;
@@ -24,15 +25,23 @@ public class DetailServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
+        try{
 
-        Accounts current_account = (Accounts)session.getAttribute("account");
-        int book_id = Integer.parseInt((request.getParameter("book_id")));
-        Books book = BooksDB.selectBooksByBookID(book_id);
-        List<Samples> samplesList = SamplesDB.selectAllSamples(book_id);
-        request.setAttribute("samplesList", samplesList);
-        request.setAttribute("book", book);
-        String url = "/detail.jsp";
-        sc.getRequestDispatcher(url).
-                forward(request, response);
+            int book_id = Integer.parseInt((request.getParameter("book_id")));
+
+            Books book = BooksDB.selectBooksByBookID(book_id);
+            List<Samples> samplesList = SamplesDB.selectAllSamples(book_id);
+            request.setAttribute("samplesList", samplesList);
+            request.setAttribute("book", book);
+            String url = "/detail.jsp";
+            sc.getRequestDispatcher(url).
+                    forward(request, response);
+        }
+        catch (Exception e){
+            String url = "/login.jsp";
+            sc.getRequestDispatcher(url).
+                    forward(request, response);
+        }
+
     }
 }

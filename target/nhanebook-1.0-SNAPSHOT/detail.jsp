@@ -60,8 +60,8 @@
                 </table>
             </div>
             <div class="add-download">
-                <button class="add-to-cart">Add to cart</button>
-                <a href="FileDownload?filename=${book.book_id}.pdf&amp;name=${book.title}.pdf&amp;directory=/pdf/">
+                <button href="AddCart?book_id=${book.book_id}" class="add-to-cart">Add to cart</button>
+                <a href="Purchased?filename=${book.book_id}.pdf&amp;name=${book.title}.pdf&amp;directory=/pdf/&amp;book_id=${book.book_id}">
                     <button class="download">Download</button>
                 </a>
             </div>
