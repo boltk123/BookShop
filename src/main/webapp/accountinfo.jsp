@@ -61,7 +61,7 @@
         </li>
         <li class="d-none visible-in-lg">
             <a href="BooksTableInput.jsp">
-                <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight">User Name</span>
+                <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight">${indexmessage}</span>
             </a>
         </li>
         <li>
@@ -80,24 +80,19 @@
     <p class="account-infos-title">Account Info</p>
 
     <div class="account-info">
-        <p>Account ID:</p>
-        <p>${account.user_id}</p>
+        <p>Account ID: ${account.user_id}</p>
     </div>
     <div class="account-info">
-        <p>Username:</p>
-        <p>${account.username}</p>
+        <p>Username: ${account.username}</p>
     </div>
     <div class="account-info">
-        <p>First Name:</p>
-        <p>${account.firstName}</p>
+        <p>First Name: ${account.firstName}</p>
     </div>
     <div class="account-info">
-        <p>Last Name:</p>
-        <p>${account.lastName}</p>
+        <p>Last Name: ${account.lastName}</p>
     </div>
     <div class="account-info">
-        <p>Email:</p>
-        <p>${account.email}</p>
+        <p>Email: ${account.email}</p>
     </div>
 
     <a class="account-update-btn" href="update_account.jsp">Update</a>
