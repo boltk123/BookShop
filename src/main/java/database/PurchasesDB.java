@@ -1,12 +1,15 @@
 package database;
 
+import business.Authors;
 import business.Products;
 import business.Purchases;
 import utility.DBUtil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
 import java.io.IOException;
+import java.util.List;
 
 public class PurchasesDB {
     public static void insertInvoice(int user_id, List<Products> productsList) throws IOException {
