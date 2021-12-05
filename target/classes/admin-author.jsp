@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
-                <a href="#">
+                <a href="collection.jsp">
                     <img src="./assets/images/bookshelf.svg" alt="collection-logo" class="navbar-icon">
                     <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight">COLLECTIONS</span>
                 </a>
@@ -57,8 +57,8 @@
                 </a>
             </li>
             <li class="d-none visible-in-lg">
-                <a href="#">
-                    <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight">User Name</span>
+                <a href="Account">
+                    <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight user-status">${indexmessage}</span>
                 </a>
             </li>
             <li>
@@ -67,30 +67,24 @@
                 </a>
             </li>
             <li class="pl-1">
-                <a href="search.html" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">Search</a>
+                <a href="#" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">SEARCH</a>
             </li>
         </ul>
     </nav>
 
-    <section class="hero-section d-none flex-column p-1">
-        <h2 class="d-none">This is added to remove validators errors.</h2>
-        <div class="mx-auto">
-            <h1 class="hero-title font-style-2 color-white">BOOKSHOP</h1>
-            <h4 class="font-style-1 color-white font-size-md py-1">Search for your desired book</h4>
-            <form action="#" class="hero-form d-flex align-center py-1">
-                <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
-                    <option value="all" class="genre-selector">All genre</option>
-                    <option value="non-fiction" class="genre-selector">Non Fiction</option>
-                    <option value="fiction" class="genre-selector" selected>Fiction</option>
-                    <option value="academic" class="genre-selector">Academic</option>
-                </select>
-                <input type="text" placeholder="What do you search for ?" value="philosophy"
-                       class="p-1 border-0 font-style-1 font-size-sm border-right flex-grow-1 pointer">
-                <input type="text" value="life" placeholder="Search..."
-                       class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer">
-                <a href="search.html" class="default-btn font-size-sm font-style-2 bg-color-3 ml-1">Search</a>
-            </form>
-        </div>
+    <section class="hero-section d-none flex-column align-center justify-center p-3">
+        <h1 class="hero-title font-style-2 color-white p-1">BOOKSHOP</h1>
+        <h4 class="font-style-1 color-white font-size-md">An online market place for all kinds of books</h4>
+        <form action="Search" class="hero-form p-1 d-flex align-center">
+            <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
+                <option value="all" class="genre-selector">All genre</option>
+                <option value="Non-Fiction" class="genre-selector">Non Fiction</option>
+                <option value="Fiction" class="genre-selector">Fiction</option>
+                <option value="Academic" class="genre-selector">Academic</option>
+            </select>
+            <input type="text" placeholder="Search..." class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer" name="key_word">
+            <input class="default-btn font-size-sm font-style-2 bg-color-3 ml-1" type="submit" value="SEARCH">
+        </form>
     </section>
 </header>
 
@@ -134,7 +128,7 @@
     <!-- Content Page -->
     <div class="">
         <div>
-            <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Books Lists</h4>
+            <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Authors Lists</h4>
         </div>
         <div>
             <a href="admin-add-authors.jsp" class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">Add a new author</a>

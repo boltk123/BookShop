@@ -27,10 +27,12 @@ public class AdminServlet extends HttpServlet {
         int totalAccount = AccountsDB.countAccount();
         int totalPurchases = PurchasesDB.countPurchases();
         String url = "/admin-dashboard.jsp";
+        String indexmessage = "Log In";
         ServletContext sc = getServletContext();
         request.setAttribute("totalBooks", totalBooks);
         request.setAttribute("totalAccount", totalAccount);
         request.setAttribute("totalPurchases", totalPurchases);
+        request.setAttribute("indexmessage",indexmessage);
         sc.getRequestDispatcher(url).
                 forward(request, response);
     }
