@@ -64,6 +64,13 @@
                     <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight user-status">${indexmessage}</span>
                 </a>
             </li>
+            <li class="d-none visible-in-lg">
+                <c:if test = "${sessionScope.account != null}">
+                    <a href="LogOut">
+                        <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight user-status">LOG OUT</span>
+                    </a>
+                </c:if>
+            </li>
             <li>
                 <a href="#">
                     <img src="./assets/images/person.svg" alt="user-img" class="image-highlight pl-1">
