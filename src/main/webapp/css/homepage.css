@@ -713,6 +713,14 @@ img[alt="cart-logo-2"] {
     padding: 20px;
 }
 
+.iq-box-1 {
+    border-radius: 2px solid var(--color-1);
+}
+
+.iq-box-2 {
+    border-radius: 2px solid var(--color-4);
+}
+
 .iq-card {
     border-radius: 5px;
     margin-bottom: 30px;

@@ -150,9 +150,9 @@
         <section class="p-1 d-flex flex-column align-center">
             <h2 class="d-none">This is hidden</h2>
             <c:forEach var="book" items="${book_items}">
-                <article class="d-flex justify-between p-1">
+                <article class="d-flex p-1">
                     <img src="data:image/jpg;base64,${book.base64Image}" alt="siddhartha" class="d-block search-images">
-                    <div class="ml-1 d-flex flex-column justify-around">
+                    <div class="ml-1 d-flex flex-column">
                         <h4 class="font-style-2 font-size-md color-1 pointer black-highlight">${book.title}
                             <span class="font-style-1 font-size-md color-2 black-highlight"> by ${book.author}</span>
                         </h4>

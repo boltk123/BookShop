@@ -65,21 +65,6 @@
             </li>
         </ul>
     </nav>
-
-    <section class="hero-section d-none flex-column align-center justify-center p-3">
-        <h1 class="hero-title font-style-2 color-white p-1">BOOKSHOP</h1>
-        <h4 class="font-style-1 color-white font-size-md">An online market place for all kinds of books</h4>
-        <form action="Search" class="hero-form p-1 d-flex align-center">
-            <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
-                <option value="all" class="genre-selector">All genre</option>
-                <option value="Non-Fiction" class="genre-selector">Non Fiction</option>
-                <option value="Fiction" class="genre-selector">Fiction</option>
-                <option value="Academic" class="genre-selector">Academic</option>
-            </select>
-            <input type="text" placeholder="Search..." class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer" name="key_word">
-            <input class="default-btn font-size-sm font-style-2 bg-color-3 ml-1" type="submit" value="SEARCH">
-        </form>
-    </section>
 </header>
 
 <main class="d-flex">
@@ -108,7 +93,7 @@
                         <li class="bg-color-4">
                             <a href="#userinfo" class="bg-color-1 m-left font-style-3 p-1 font-size-lg justify-start" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="userinfo" class="bg-color-4 list-style-none m-left-1 font-size-md" data-parent="#iq-sidebar-toggle">
-                                <li><a href="#"><i class="#"></i>User Profile</a></li>
+                                <li><a href="Account"><i class="#"></i>User Profile</a></li>
                                 <li><a href="#"><i class="#"></i>User Edit</a></li>
                                 <li><a href="#"><i class="#"></i>User Add</a></li>
                                 <li><a href="#"><i class="#"></i>User List</a></li>
