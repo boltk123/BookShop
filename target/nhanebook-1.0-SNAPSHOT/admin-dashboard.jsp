@@ -108,7 +108,7 @@
                         <li class="bg-color-4">
                             <a href="#userinfo" class="bg-color-1 m-left font-style-3 p-1 font-size-lg justify-start" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="userinfo" class="bg-color-4 list-style-none m-left-1 font-size-md justify-start" data-parent="#iq-sidebar-toggle">
-                                <li><a href="#"><i class="#"></i>User Profile</a></li>
+                                <li><a href="Account"><i class="#"></i>User Profile</a></li>
                                 <li><a href="#"><i class="#"></i>User Edit</a></li>
                                 <li><a href="#"><i class="#"></i>User Add</a></li>
                                 <li><a href="#"><i class="#"></i>User List</a></li>
@@ -126,7 +126,7 @@
                 <div class="col-lg-3">
                     <div class="iq-head">
                         <div class="iq-body">
-                            <div class="d-flex align-center">
+                            <div class="d-flex align-center iq-box-2">
                                 <h2 class="mb-0">
                                     <span class="color-3 font-style-3 font-size-md pl-1" >${totalAccount}</span>
                                 </h2>
@@ -138,7 +138,7 @@
                 <div class="col-lg-3">
                     <div class="iq-head">
                         <div class="iq-body">
-                            <div class="d-flex align-center">
+                            <div class="d-flex align-center iq-box-1">
                                 <h2 class="mb-0">
                                     <span class="color-3 font-style-3 font-size-md pl-1">${totalBooks}</span>
                                 </h2>
@@ -150,7 +150,7 @@
                 <div class="col-lg-3">
                     <div class="iq-head">
                         <div class="iq-body">
-                            <div class="d-flex align-center">
+                            <div class="d-flex align-center iq-box-2">
                                 <h2 class="mb-0">
                                     <span class="color-3 font-style-3 font-size-md pl-1" >${totalPurchases}</span>
                                 </h2>

@@ -108,7 +108,7 @@
                         <li class="bg-color-4">
                             <a href="#userinfo" class="bg-color-1 m-left font-style-3 p-1 font-size-lg justify-start" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                             <ul id="userinfo" class="bg-color-4 list-style-none m-left-1 font-size-md" data-parent="#iq-sidebar-toggle">
-                                <li><a href="#"><i class="#"></i>User Profile</a></li>
+                                <li><a href="Account"><i class="#"></i>User Profile</a></li>
                                 <li><a href="#"><i class="#"></i>User Edit</a></li>
                                 <li><a href="#"><i class="#"></i>User Add</a></li>
                                 <li><a href="#"><i class="#"></i>User List</a></li>
