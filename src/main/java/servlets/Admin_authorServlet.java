@@ -25,7 +25,7 @@ public class Admin_authorServlet extends HttpServlet {
         HttpSession session = request.getSession();
         try{
             Accounts current_account = (Accounts) session.getAttribute("account");
-            index_message = "Hello " + current_account.getFull_name();
+            index_message = "Hello " + current_account.getFullname();
         }
         catch(Exception e){
             index_message = "LOG IN";

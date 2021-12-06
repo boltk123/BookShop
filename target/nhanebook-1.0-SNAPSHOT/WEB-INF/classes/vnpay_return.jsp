@@ -67,7 +67,7 @@
         </div>
         <div class="form-group">
             <label >Số tiền:</label>
-            <label><%=request.getParameter("vnp_Amount")%></label>
+            <label><%=Integer.parseInt(request.getParameter("vnp_Amount")) / 100%></label>
         </div>
         <div class="form-group">
             <label >Nội dung thanh toán:</label>
@@ -108,6 +108,10 @@
         </div>
         -->
     </div>
+    <a href="HomePage">
+        <button  class="btn btn-default">BACK TO HOME PAGE</button>
+    </a>
+
     <p>
         &nbsp;
     </p>

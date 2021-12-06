@@ -21,7 +21,7 @@ public class ConfirmPaymentServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String url = "/HomePage";
+        String url = "/vnpay_return.jsp";
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
         List<Products> productsList = (List<Products>) session.getAttribute("products");

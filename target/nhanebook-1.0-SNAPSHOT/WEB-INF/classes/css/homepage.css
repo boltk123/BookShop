@@ -414,7 +414,9 @@ img[alt="cart-logo-2"] {
     width: 2rem;
     height: 1.8rem;
 }
-
+a.new-account {
+    position: absolute;
+}
 .book-card {
     width: 48%;
     border: 1px solid #ddd;
@@ -711,6 +713,14 @@ img[alt="cart-logo-2"] {
 
 .iq-body {
     padding: 20px;
+}
+
+.iq-box-1 {
+    border-radius: 2px solid var(--color-1);
+}
+
+.iq-box-2 {
+    border-radius: 2px solid var(--color-4);
 }
 
 .iq-card {

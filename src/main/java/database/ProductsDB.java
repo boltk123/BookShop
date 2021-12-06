@@ -92,9 +92,11 @@ public class ProductsDB {
         q.setParameter("user_id", user_id);
         q.setParameter("product_id", product_id);
         Products product = q.getSingleResult();
-        product.setQuantity(product_id);
-        trans.begin();
-        em.persist(product);
-        trans.commit();
+        if(quantity > 0){
+            product.setQuantity(quantity);
+            trans.begin();
+            em.persist(product);
+            trans.commit();
+        }
     }
 }

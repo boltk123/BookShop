@@ -414,7 +414,9 @@ img[alt="cart-logo-2"] {
     width: 2rem;
     height: 1.8rem;
 }
-
+a.new-account {
+    position: absolute;
+}
 .book-card {
     width: 48%;
     border: 1px solid #ddd;

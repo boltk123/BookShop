@@ -87,7 +87,7 @@ public class Products implements Serializable {
     }
 
     public double getTotal() {
-        return total;
+        return subtotal * quantity;
     }
 
     public void setTotal(double total) {

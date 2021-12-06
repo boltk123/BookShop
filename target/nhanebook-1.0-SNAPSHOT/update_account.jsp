@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <html>
@@ -28,6 +29,15 @@
                     <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
                     <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">SHOPPING LIST</span>
                 </a>
+            </li>
+            <li class="pl-2">
+                <c:if test = "${sessionScope.account.role == 'admin'}">
+                    <button type="button"
+                            class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">
+                        <a href="AdminDashboard" class="image-highlight">ADMIN</a>
+                    </button>
+                </c:if>
+
             </li>
         </ul>
 

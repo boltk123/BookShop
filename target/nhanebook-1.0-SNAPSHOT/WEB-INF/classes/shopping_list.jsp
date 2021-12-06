@@ -13,8 +13,8 @@
 </head>
 <body>
 <%@ include file="/includes/header.jsp" %>
-<div class="container">
 
+<div class="container">
     <div class="column-left">
         <div class="sub-container">
             <div id="shopping-cart">
@@ -23,7 +23,7 @@
                 <div class="shopping-cart-item">
                     <div class="message">${product_count} Items from Barnes & Noble</div>
                     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-                    <form action="UpdateCart" method="post">
+
                     <c:forEach var="book_item" items="${book_items}">
                         <div class="item">
                             <div class="item-name">
@@ -44,6 +44,7 @@
                                         <a href="RemoveCart?book_id=${book_item.book_id}" class="remove">Remove</a>
                                     </div>
                                 </div>
+
                                 <div class="price-detail">
                                     <div class="retail-discounted-price">
                                         <p class="retail-price">
@@ -59,7 +60,16 @@
                                             </div>
                                         </c:if>
                                     </c:forEach>
-
+                                    <c:forEach var="product" items="${products}">
+                                        <c:if test = "${product.product_id eq book_item.book_id}">
+                                            <a href="UpdateCart?book_id=${book_item.book_id}&amp;quantity=${product.quantity}&amp;action=minus">
+                                                <span class="add-to-cart font-size-lg px-half  gray-highlight">-</span>
+                                            </a>
+                                            <a href="UpdateCart?book_id=${book_item.book_id}&amp;quantity=${product.quantity}&amp;action=plus">
+                                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                                            </a>
+                                        </c:if>
+                                    </c:forEach>
                                     <div class="total-price">
                                         $<fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${book_item.cost}"/>
                                     </div>
@@ -72,7 +82,6 @@
                         </div>
                     </c:forEach>
 
-                    </form>
                 </div>
 
             </div>
@@ -87,7 +96,7 @@
             <p class="head-title">Oder Summary</p>
             <div class="order-infos">
                 <div class="order-info">
-                    <p class="item">Subtotal (${product_count}items)</p>
+                    <p class="item">Subtotal (${product_count} Items)</p>
                     <p class="price">$<fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${subtotal}"/></p>
                 </div>
                 <div class="order-info">
@@ -130,17 +139,17 @@
                 </div>
             </div>
         </div>
-
+        <!--
         <div id="apply-coupon">
             <div class="input-field">
                 <input type="text" id="input-coupon" placeholder="Apply Coupon Code">
             </div>
             <button id="apply-btn">Apply</button>
         </div>
+        -->
     </div>
     <div class="clear"></div>
 </div>
-</form>
 </body>
 <%@ include file="/includes/footer.jsp" %>
 </html>

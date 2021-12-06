@@ -147,7 +147,7 @@
         <h3 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">119 search results for 'life' Search at
             'philosophy' at
             Category 'fiction'</h3>
-        <section class="p-1 d-flex flex-column align-center">
+        <section class="p-1 d-flex flex-column">
             <h2 class="d-none">This is hidden</h2>
             <c:forEach var="book" items="${book_items}">
                 <article class="d-flex p-1">

@@ -50,6 +50,7 @@
     </ul>
 
     <ul class="list-style-none d-flex justify-around align-center user-info">
+        <!--
         <li class="d-none visible-in-lg">
             <a href="#" class="image-highlight">
                 <img src="./assets/images/mail.svg" alt="mail-icon" class="navbar-icon">
@@ -57,6 +58,7 @@
                         class="d-inline-block bg-color-1 mail-notification font-size-sm font-style-2 color-white">12</span>
             </a>
         </li>
+        -->
         <li class="d-none visible-in-lg">
             <a href="Account">
                 <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight user-status">${indexmessage}</span>
@@ -71,7 +73,7 @@
         </li>
 
         <li>
-            <a href="#">
+            <a href="Account">
                 <img src="./assets/images/person.svg" alt="user-img" class="image-highlight pl-1">
             </a>
         </li>

@@ -1,6 +1,8 @@
 package servlets;
 
+import business.Accounts;
 import business.Products;
+import database.ProductsDB;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -19,10 +21,19 @@ public class UpdateCartServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String url = "/shopping_list.jsp";
+        String url = "/ShoppingCart";
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
-        List<Products> productsList = (List) session.getAttribute("productsList");
+        Accounts current_account = (Accounts) session.getAttribute("account");
+        String action = request.getParameter("action");
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
+        int product_id = Integer.parseInt(request.getParameter("book_id"));
+        if(action.contentEquals("plus")){
+            ProductsDB.setQuantity(quantity + 1, current_account.getUser_id(), product_id);
+        }
+        else{
+            ProductsDB.setQuantity(quantity - 1 , current_account.getUser_id(), product_id);
+        }
         sc.getRequestDispatcher(url).
                 forward(request, response);
     }

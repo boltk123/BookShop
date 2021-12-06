@@ -27,7 +27,7 @@ public class EmailServlet extends HttpServlet {
         String to = email;
         String from = "nhanbuiduc.work@gmail.com";
         String subject = "Transaction Completed";
-        String body = "Dear " + current_account.getFull_name() + ",\n\n" +
+        String body = "Dear " + current_account.getFullname() + ",\n\n" +
                 "You have successfully purchased your products \n " +
                 "Thanks for ordering our ebook service. We'll make sure to send " +
                 "your products in no time\n" +
