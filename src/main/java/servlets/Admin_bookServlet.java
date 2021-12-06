@@ -1,5 +1,6 @@
 package servlets;
 
+import business.Accounts;
 import business.Authors;
 import business.Books;
 import database.AuthorsDB;
@@ -20,9 +21,17 @@ public class Admin_bookServlet extends HttpServlet {
         List<Books> books = BooksDB.selectAllBooks();
         ServletContext sc = getServletContext();
         String url = "/admin-books.jsp";
-        String indexmessage = "Log In";
+        String index_message = "LOG IN";
+        HttpSession session = request.getSession();
+        try{
+            Accounts current_account = (Accounts) session.getAttribute("account");
+            index_message = "Hello " + current_account.getFirstName();
+        }
+        catch(Exception e){
+            index_message = "LOG IN";
+        }
         request.setAttribute("books", books);
-        request.setAttribute("indexmessage",indexmessage);
+        request.setAttribute("indexmessage",index_message);
         sc.getRequestDispatcher(url).
                 forward(request, response);
     }
