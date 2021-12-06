@@ -33,7 +33,16 @@
         <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
         <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">SHOPPING LIST</span>
       </a>
+    <li class="pl-2">
+      <c:if test = "${sessionScope.account.role == 'admin'}">
+        <button type="button"
+                class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">
+          <a href="AdminDashboard" class="image-highlight">ADMIN</a>
+        </button>
+      </c:if>
+
     </li>
+
   </ul>
 
   <ul class="list-style-none d-flex justify-around align-center user-info">
