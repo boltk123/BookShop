@@ -573,6 +573,7 @@ img[alt="cart-logo-2"] {
 }
 /*=====CSS for login.jsp end here=====*/
 
+/*=====CSS for main here=====*/
 .centered-box {
     align-items: center;
     text-align: center;
@@ -585,7 +586,7 @@ img[alt="cart-logo-2"] {
     z-index: 1000;
     top: 0;
     width: 300px;
-    height: 100%;
+    height: 50vh;
     background: var(--color-3);
 }
 .iq-sidebar-head {
@@ -623,7 +624,7 @@ img[alt="cart-logo-2"] {
     overflow: hidden;
     padding: 125px 25px 0;
     margin-left: 100px;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 .container-fluid {
@@ -676,7 +677,7 @@ img[alt="cart-logo-2"] {
     color: #000000;
 }
 
-.col-ms-12 {
+.col-sm-12 {
     position: relative;
     width: 100%;
     padding-right: 15px;
@@ -735,7 +736,7 @@ img[alt="cart-logo-2"] {
 }
 
 .iq-card-body {
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 .form-group {

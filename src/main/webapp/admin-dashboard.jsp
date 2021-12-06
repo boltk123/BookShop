@@ -25,12 +25,6 @@
                     <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
                 </a>
             </li>
-            <li class="pl-2 d-none visible-in-md">
-                <a href="collection.jsp">
-                    <img src="./assets/images/bookshelf.svg" alt="collection-logo" class="navbar-icon">
-                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight">COLLECTIONS</span>
-                </a>
-            </li>
             <li class="pl-2">
                 <a href="ShoppingCart">
                     <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
@@ -88,7 +82,7 @@
     </section>
 </header>
 
-<main class="d-flex justify-around">
+<main class="d-flex">
     <!--Sidebar-->
     <div class="iq-sidebar">
         <div class="iq-sidebar-head">
@@ -188,38 +182,6 @@
                                         <td>$1500</td>
                                         <td><div class="badge badge-pill badge-success">Paid</div></td>
                                         <td>Copy</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pete Sariya</td>
-                                        <td>26/10/2019</td>
-                                        <td>7859</td>
-                                        <td>$2000</td>
-                                        <td><div class="badge badge-pill badge-success">Paid</div></td>
-                                        <td>Send Email</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cliff Hanger</td>
-                                        <td>18/11/2019</td>
-                                        <td>6396</td>
-                                        <td>$2500</td>
-                                        <td><div class="badge badge-pill badge-danger">Past Due</div></td>
-                                        <td>Before Due</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Terry Aki</td>
-                                        <td>14/12/2019</td>
-                                        <td>7854</td>
-                                        <td>$5000</td>
-                                        <td><div class="badge badge-pill badge-success">Paid</div></td>
-                                        <td>Copy</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Anna Mull</td>
-                                        <td>24/12/2019</td>
-                                        <td>568569</td>
-                                        <td>$10000</td>
-                                        <td><div class="badge badge-pill badge-success">Paid</div></td>
-                                        <td>Send Email</td>
                                     </tr>
                                     </tbody>
                                 </table>

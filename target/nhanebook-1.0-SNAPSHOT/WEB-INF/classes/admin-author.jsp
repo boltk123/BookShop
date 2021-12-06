@@ -25,12 +25,6 @@
                     <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
                 </a>
             </li>
-            <li class="pl-2 d-none visible-in-md">
-                <a href="collection.jsp">
-                    <img src="./assets/images/bookshelf.svg" alt="collection-logo" class="navbar-icon">
-                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight">COLLECTIONS</span>
-                </a>
-            </li>
             <li class="pl-2">
                 <a href="ShoppingCart">
                     <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
@@ -88,7 +82,7 @@
     </section>
 </header>
 
-<main class="d-flex justify-around">
+<main class="d-flex">
     <!--Sidebar-->
     <div class="iq-sidebar">
         <div class="iq-sidebar-head">
