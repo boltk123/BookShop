@@ -127,6 +127,10 @@
     justify-content: flex-end;
 }
 
+.justify-start {
+    justify-content: start;
+}
+
 .align-center {
     align-items: center;
 }
@@ -139,6 +143,7 @@
     flex-grow: 1;
 }
 
+
 a {
     text-decoration: none;
     color: inherit;
@@ -146,6 +151,8 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+
 
 /* paddings */
 .p-0 {
@@ -231,11 +238,11 @@ a {
 }
 
 .m-left {
-    margin: 20px 60px 20px 0;
+    margin: 1.25rem 0 1.25rem 0;
 }
 
 .m-left-1 {
-    margin: 20px 50px 20px 10px;
+    margin: 1.25rem 0 1.25rem 1rem;
 }
 
 /* borders */
@@ -621,8 +628,8 @@ img[alt="cart-logo-2"] {
 
 .container-fluid {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 1rem;
+    padding-left: 1rem;
     margin-right: auto;
     margin-left: auto;
 }
@@ -705,3 +712,32 @@ img[alt="cart-logo-2"] {
     padding: 20px;
 }
 
+.iq-card {
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.iq-card-header {
+    padding: 20px;
+    margin-bottom: 0;
+    align-items: center !important;
+    border-bottom: 1px solid;
+    justify-content: space-between!important;
+    display: flex!important;
+}
+
+.iq-header-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.8;
+}
+
+.iq-card-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}

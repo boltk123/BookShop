@@ -103,8 +103,8 @@
                     <ul class="iq-menu">
                         <c:if test = "${sessionScope.account.role == 'admin'}">
                             <li class="bg-color-4">
-                                <a href="#admin" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                                <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
+                                <a href="#admin" class="bg-color-1 m-left font-style-3 p-1 font-size-lg justify-start"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                                <ul id="admin" class="bg-color-4 list-style-none m-left-1 font-size-md justify-start" data-parent="#iq-sidebar-toggle">
                                     <li><a href="AdminDashboard"><i class="#"></i>Dashboard</a></li>
                                     <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
                                     <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
@@ -112,8 +112,8 @@
                             </li>
                         </c:if>
                         <li class="bg-color-4">
-                            <a href="#userinfo" class="bg-color-1 m-left font-style-3 p-1" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                            <ul id="userinfo" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
+                            <a href="#userinfo" class="bg-color-1 m-left font-style-3 p-1 font-size-lg justify-start" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <ul id="userinfo" class="bg-color-4 list-style-none m-left-1 font-size-md justify-start" data-parent="#iq-sidebar-toggle">
                                 <li><a href="#"><i class="#"></i>User Profile</a></li>
                                 <li><a href="#"><i class="#"></i>User Edit</a></li>
                                 <li><a href="#"><i class="#"></i>User Add</a></li>
@@ -125,7 +125,7 @@
             </div>
         </div>
     </div>
-    <!-- Content Page -->
+    <!--Content Page-->
     <div id="content-page" class="content-page">
         <div class="container-fluid">
             <div class="row">
