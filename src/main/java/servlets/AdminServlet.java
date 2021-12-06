@@ -31,7 +31,7 @@ public class AdminServlet extends HttpServlet {
         HttpSession session = request.getSession();
         try{
             Accounts current_account = (Accounts) session.getAttribute("account");
-            index_message = "Hello " + current_account.getFirstName();
+            index_message = "Hello " + current_account.getFull_name();
         }
         catch(Exception e){
             index_message = "LOG IN";
