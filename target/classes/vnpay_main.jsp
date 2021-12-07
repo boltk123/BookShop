@@ -86,22 +86,22 @@
             <div class="form-group">
                 <label >Họ tên (*)</label>
                 <input class="form-control" id="txt_billing_fullname"
-                       name="txt_billing_fullname" type="text" value="NGUYEN VAN XO"/>
+                       name="txt_billing_fullname" type="text" value="${sessionScope.account.fullname}"/>
             </div>
             <div class="form-group">
                 <label >Email (*)</label>
                 <input class="form-control" id="txt_billing_email"
-                       name="txt_billing_email" type="text" value="xonv@vnpay.vn"/>
+                       name="txt_billing_email" type="text" value="${sessionScope.account.email}"/>
             </div>
             <div class="form-group">
-                <label >Số điện thoại (*)</label>
+                <label >Xin hãy nhập số điện thoại (*)</label>
                 <input class="form-control" id="txt_billing_mobile"
-                       name="txt_billing_mobile" type="text" value="0934998386"/>
+                       name="txt_billing_mobile" type="text" value=""/>
             </div>
             <div class="form-group">
-                <label >Địa chỉ (*)</label>
+                <label >Xin hãy nhập địa chỉ (*)</label>
                 <input class="form-control" id="txt_billing_addr1"
-                       name="txt_billing_addr1" type="text" value="22 Lang Ha Dong Da Ha Noi"/>
+                       name="txt_billing_addr1" type="text" value=""/>
             </div>
             <!--
            <div class="form-group">

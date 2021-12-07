@@ -28,7 +28,7 @@ public class EmailServlet extends HttpServlet {
         String from = "nhanbuiduc.work@gmail.com";
         String subject = "Transaction Completed";
         String body = "Dear " + current_account.getFullname() + ",\n\n" +
-                "You have successfully purchased your products \n " +
+                "You have successfully purchased your products\n " +
                 "Thanks for ordering our ebook service. We'll make sure to send " +
                 "your products in no time\n" +
                 "Your packet will be arrive in " + purchase_date + " \n" +
@@ -57,7 +57,12 @@ public class EmailServlet extends HttpServlet {
                             "\n" +
                             body + "\n\n");
         }
+        String action = String.valueOf(request.getParameter("action"));
         String url = "/receipt.jsp";
+        if(!action.equals("null")){
+            url = "/ConfirmPayment";
+        }
+
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
