@@ -1,6 +1,7 @@
 <%@ page import="business.Products" %>
 <%@ page import="database.ProductsDB" %>
 <%@ page import="java.util.List" %>
+<%@ include file="/includes/header.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
     <title>Shopping Cart</title>
 </head>
 <body>
-<%@ include file="/includes/header.jsp" %>
+
 
 <div class="container">
     <div class="column-left">
@@ -54,6 +55,16 @@
                                     </div>
                                     <c:forEach var="product" items="${products}">
                                         <c:if test = "${product.product_id eq book_item.book_id}">
+                                            <div class="minus-button">
+                                                <a href="UpdateCart?book_id=${book_item.book_id}&amp;quantity=${product.quantity}&amp;action=minus">
+                                                    <span class="add-to-cart font-size-lg px-half  gray-highlight">-</span>
+                                                </a>
+                                            </div>
+
+                                        </c:if>
+                                    </c:forEach>
+                                    <c:forEach var="product" items="${products}">
+                                        <c:if test = "${product.product_id eq book_item.book_id}">
                                             <div class="quantity">
                                                 <input type="text" name="quantity" value="${product.quantity} ">
 
@@ -62,12 +73,11 @@
                                     </c:forEach>
                                     <c:forEach var="product" items="${products}">
                                         <c:if test = "${product.product_id eq book_item.book_id}">
-                                            <a href="UpdateCart?book_id=${book_item.book_id}&amp;quantity=${product.quantity}&amp;action=minus">
-                                                <span class="add-to-cart font-size-lg px-half  gray-highlight">-</span>
-                                            </a>
-                                            <a href="UpdateCart?book_id=${book_item.book_id}&amp;quantity=${product.quantity}&amp;action=plus">
-                                                <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
-                                            </a>
+                                            <div class="plus-button">
+                                                    <a href="UpdateCart?book_id=${book_item.book_id}&amp;quantity=${product.quantity}&amp;action=plus">
+                                                        <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
+                                                </a>
+                                            </div>
                                         </c:if>
                                     </c:forEach>
                                     <div class="total-price">
@@ -152,4 +162,5 @@
 </div>
 </body>
 <%@ include file="/includes/footer.jsp" %>
+
 </html>
