@@ -513,6 +513,9 @@ img[alt="cart-logo-2"] {
     background: #c75062;
     color: #fff;
     font-family: 'Roboto', sans-serif;
+    align-items: center;
+    text-align: center;
+    width: 550px;
 }
 
 .login-field {
@@ -521,7 +524,7 @@ img[alt="cart-logo-2"] {
 
 .login-field input {
     display: block;
-    margin: 5px 0 10px;
+    margin: 10px auto;
     width: 311px;
     height: 30px;
     padding: 10px;
