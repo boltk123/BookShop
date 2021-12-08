@@ -1,33 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="PostgreSQL - test@localhost" uuid="d8f0a8d1-542f-49d6-8052-5fea10177a0e">
+    <data-source source="LOCAL" name="test@localhost" uuid="d8f0a8d1-542f-49d6-8052-5fea10177a0e">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/test</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="jdbc/test" uuid="528faac9-ea33-405e-8a1a-7b136fa15ad6">
+    <data-source source="LOCAL" name="d8rl6dl4jsi9m8@ec2-54-167-168-52.compute-1.amazonaws.com" uuid="0d911044-f5d4-47e3-8ae5-36c09eab66ec">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>Tomcat.Resource
-
-D:/Heroku/src/main/webapp/META-INF/context.xml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/test</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="afa4e635-ea6d-484c-b5b5-aab75a885d33">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>Hibernate
-
-D:/Heroku/src/main/resources/hibernate.cfg.xml</remarks>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/test</jdbc-url>
+      <jdbc-url>jdbc:postgresql://ec2-54-167-168-52.compute-1.amazonaws.com:5432/d8rl6dl4jsi9m8</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

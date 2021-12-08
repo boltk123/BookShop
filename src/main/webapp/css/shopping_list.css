@@ -388,7 +388,7 @@ body {
 }
 
 .price-detail {
-    display: block ruby;
+    display: flex;
 }
 
 .price-detail .retail-discounted-price .retail-price {
