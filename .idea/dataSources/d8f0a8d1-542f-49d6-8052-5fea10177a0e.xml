@@ -812,7 +812,7 @@ false Zulu
 13158||-9223372036854775808|U|G
 13158||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1296</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1548</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="4" parent="1" name="pg_execute_server_program">
@@ -877,7 +877,7 @@ false Zulu
       <Comment>standard public schema</Comment>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1297</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1549</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="3" name="plpgsql">
@@ -1009,9 +1009,9 @@ false Zulu
       <StateNumber>1226</StateNumber>
     </table>
     <table id="36" parent="17" name="samples">
-      <ObjectId>16758</ObjectId>
+      <ObjectId>24945</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1129</StateNumber>
+      <StateNumber>1547</StateNumber>
     </table>
     <table id="37" parent="17" name="user_jpa">
       <ObjectId>16421</ObjectId>
@@ -1146,8 +1146,8 @@ false Zulu
     </column>
     <column id="57" parent="33" name="base64image">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>757</StateNumber>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1489</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="58" parent="33" name="book_cover">
@@ -1184,8 +1184,8 @@ false Zulu
     </column>
     <column id="63" parent="33" name="description">
       <Position>10</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>777</StateNumber>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>1495</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="64" parent="33" name="author">
@@ -1320,19 +1320,19 @@ product_id</ColNames>
     <column id="83" parent="36" name="book_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1129</StateNumber>
+      <StateNumber>1547</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="84" parent="36" name="sample">
       <Position>2</Position>
       <DataType>bytea|0s</DataType>
-      <StateNumber>1129</StateNumber>
+      <StateNumber>1547</StateNumber>
       <TypeId>17</TypeId>
     </column>
     <column id="85" parent="36" name="base64sample">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1129</StateNumber>
+      <StateNumber>1547</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="86" parent="37" name="userid">

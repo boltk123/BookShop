@@ -1,6 +1,7 @@
 package database;
 
 import business.Books;
+import business.Products;
 import utility.DBUtil;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -14,11 +15,58 @@ public class BooksDB {
                                   String author, String genre, String description, byte[] bFile) throws IOException {
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
-        Books book = new Books(book_id, title, total_pages, rating, cost, author, genre, description, bFile);
+        Books book = new Books();
+        if(BookExists(book_id)){
+            book = selectBooksByBookID(book_id);
+            if(!title.isEmpty()){
+                book.setTitle(title);
+            }
+            if(total_pages != 0){
+                book.setTotal_pages(total_pages);
+            }
+            if(rating != 0){
+                book.setRating(rating);
+            }
+            if(cost != 0){
+                book.setCost(cost);
+            }
+            if(!author.isEmpty()){
+                book.setAuthor(author);
+            }
+            if(!genre.isEmpty()){
+                book.setGenre(genre);
+            }
+            if(!description.isEmpty()){
+                book.setDescription(description);
+            }
+            if(bFile != null){
+                book.setBook_cover(bFile);
+            }
+        }
+        else {
+            book = new Books(book_id, title, total_pages, rating, cost, author, genre, description, bFile);
+        }
+
         trans.begin();
         em.persist(book);
         trans.commit();
     }
+    public static boolean BookExists(int book_id){
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT b FROM Books b"
+                + " WHERE b.book_id = :book_id";
+        TypedQuery<Books> q = em.createQuery(qString, Books.class);
+        q.setParameter("book_id", book_id);
+        List<Books> books = q.getResultList();
+        if(books.size() > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     public static List<Books> selectBooksByGenre(String genre_name){
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
