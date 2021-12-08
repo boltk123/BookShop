@@ -120,6 +120,8 @@
             <p>Email: ${account.email}</p>
         </div>
 
+        <a class="account-update-btn" href="PurchaseHistory"><input type="hidden" name="action"
+            value="invoice">Purchase History</a>
         <a class="account-update-btn" href="update_account.jsp">Update</a>
 
     </div>

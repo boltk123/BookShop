@@ -8,6 +8,7 @@ import utility.DBUtil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import java.io.IOException;
 import java.util.List;
@@ -61,5 +62,26 @@ public class PurchasesDB {
         trans.commit();
         int count = purchases.size();
         return count;
+    }
+    public static List<Purchases> selectProcessedInvoices(int user_id) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT p from Purchases p " +
+                "WHERE p.user_id = :user_id";
+        trans.begin();
+        TypedQuery<Purchases> q = em.createQuery(qString, Purchases.class);
+        q.setParameter("user_id", user_id);
+        List<Purchases> results = null;
+        try {
+            results = q.getResultList();
+            if(results == null)
+                results = null;
+        } catch (NoResultException ex) {
+            return null;
+        } finally {
+            em.close();
+        }
+        trans.commit();
+        return results;
     }
 }

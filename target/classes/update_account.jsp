@@ -68,19 +68,15 @@
 
     <form class="Login-form " action="AccountUpdate" method="post">
         <input type="hidden" name="action" value="update">
-        <div class="login-field">
-            <label>First Name:</label>
-            <input type="text" name="firstname" value=${account.firstName}
+        <label>First Name:</label>
+        <input type="text" name="firstname" value=${account.firstName}
                required><br>
-        </div>
-        <div class="login-field">
-            <label>Last Name:</label>
-            <input type="text" name="lastname" value=${account.lastName}
-                   required><br>
-        </div>
+        <label>Last Name:</label>
+        <input type="text" name="lastname" value=${account.lastName}
+               required><br>
         <br>
         <label>&nbsp;</label>
-        <input type="submit" value="Update" class="login-submit">
+        <input type="submit" value="Update" class="margin_left">
     </form>
 
 </body>

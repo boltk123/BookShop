@@ -57,6 +57,9 @@
             </li>
             <li class="d-none visible-in-lg">
                 <a href="Account">
+                    <c:if test="${sessionScope.account != null}">
+                        <input type="hidden" name="action" value="">
+                    </c:if>
                     <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight user-status">${indexmessage}</span>
                 </a>
             </li>

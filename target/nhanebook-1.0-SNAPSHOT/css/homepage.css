@@ -522,9 +522,9 @@ a.new-account {
     background: #c75062;
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    align-items: center;
-    text-align: center;
     width: 550px;
+    text-align: center;
+    align-items: center;
 }
 
 .login-field {

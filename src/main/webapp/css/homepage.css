@@ -522,6 +522,9 @@ a.new-account {
     background: #c75062;
     color: #fff;
     font-family: 'Roboto', sans-serif;
+    width: 550px;
+    text-align: center;
+    align-items: center;
 }
 
 .login-field {
@@ -530,7 +533,7 @@ a.new-account {
 
 .login-field input {
     display: block;
-    margin: 5px 0 10px;
+    margin: 10px auto;
     width: 311px;
     height: 30px;
     padding: 10px;

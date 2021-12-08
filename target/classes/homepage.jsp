@@ -57,6 +57,9 @@
             </li>
             <li class="d-none visible-in-lg">
                 <a href="Account">
+                    <c:if test="${sessionScope.account != null}">
+                        <input type="hidden" name="action" value="">
+                    </c:if>
                     <span class="color-white font-style-3 font-size-sm pl-1 gray-highlight user-status">${indexmessage}</span>
                 </a>
             </li>
@@ -113,8 +116,8 @@
                         privilege to seek spiritual fulfillment.</p>
                     <p class="font-size-md font-style-2 color-3 gray-highlight pointer">Rating: 4/5</p>
                     <div class="d-flex flex-column purchase-details-container">
-                        <a href="#" class="default-btn font-size-md font-style-2 bg-color-1 mr-half my-half">$5.49</a>
-                        <a href="#" class="default-btn font-size-sm font-style-2 bg-color-1 mr-half my-half"><img
+                        <a href="AddCart?book_id=1" class="default-btn font-size-md font-style-2 bg-color-1 mr-half my-half">$5.49</a>
+                        <a href="Detail?book_id=1" class="default-btn font-size-sm font-style-2 bg-color-1 mr-half my-half"><img
                                 src="./assets/images/supermarket-white.svg" alt="cart-logo-2"><span
                                 class="pl-1">Purchase
                                     Details</span></a>
