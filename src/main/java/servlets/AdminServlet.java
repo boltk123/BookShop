@@ -27,12 +27,20 @@ public class AdminServlet extends HttpServlet {
         int totalAccount = AccountsDB.countAccount();
         int totalPurchases = PurchasesDB.countPurchases();
         String url = "/admin-dashboard.jsp";
-        String indexmessage = "Log In";
+        String index_message = "LOG IN";
+        HttpSession session = request.getSession();
+        try{
+            Accounts current_account = (Accounts) session.getAttribute("account");
+            index_message = "Hello " + current_account.getFullname();
+        }
+        catch(Exception e){
+            index_message = "LOG IN";
+        }
         ServletContext sc = getServletContext();
         request.setAttribute("totalBooks", totalBooks);
         request.setAttribute("totalAccount", totalAccount);
         request.setAttribute("totalPurchases", totalPurchases);
-        request.setAttribute("indexmessage",indexmessage);
+        request.setAttribute("indexmessage",index_message);
         sc.getRequestDispatcher(url).
                 forward(request, response);
     }

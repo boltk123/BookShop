@@ -67,8 +67,13 @@ public class Accounts {
     public String getLastName() { return lastname; }
 
     public void setLastName(String lastName) { this.lastname = lastName; }
+    public String getFullname() {
+        return firstname + " " + lastname;
+    }
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
 
-    public String getFull_name() { return fullname; }
 
     public String getRole() {
         return role;

@@ -25,12 +25,6 @@
                     <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
                 </a>
             </li>
-            <li class="pl-2 d-none visible-in-md">
-                <a href="collection.jsp">
-                    <img src="./assets/images/bookshelf.svg" alt="collection-logo" class="navbar-icon">
-                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight">COLLECTIONS</span>
-                </a>
-            </li>
             <li class="pl-2">
                 <a href="ShoppingCart">
                     <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
@@ -71,24 +65,9 @@
             </li>
         </ul>
     </nav>
-
-    <section class="hero-section d-none flex-column align-center justify-center p-3">
-        <h1 class="hero-title font-style-2 color-white p-1">BOOKSHOP</h1>
-        <h4 class="font-style-1 color-white font-size-md">An online market place for all kinds of books</h4>
-        <form action="Search" class="hero-form p-1 d-flex align-center">
-            <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
-                <option value="all" class="genre-selector">All genre</option>
-                <option value="Non-Fiction" class="genre-selector">Non Fiction</option>
-                <option value="Fiction" class="genre-selector">Fiction</option>
-                <option value="Academic" class="genre-selector">Academic</option>
-            </select>
-            <input type="text" placeholder="Search..." class="p-1 border-0 font-style-1 font-size-sm flex-grow-1 pointer" name="key_word">
-            <input class="default-btn font-size-sm font-style-2 bg-color-3 ml-1" type="submit" value="SEARCH">
-        </form>
-    </section>
 </header>
 
-<main class="d-flex justify-around">
+<main class="d-flex">
     <!--Sidebar-->
     <div class="iq-sidebar">
         <div class="iq-sidebar-head">
@@ -103,8 +82,8 @@
                     <ul class="iq-menu">
                         <c:if test = "${sessionScope.account.role == 'admin'}">
                             <li class="bg-color-4">
-                                <a href="#admin" class="bg-color-1 m-left font-style-3 p-1"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                                <ul id="admin" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
+                                <a href="#admin" class="bg-color-1 m-left font-style-3 p-1 font-size-lg justify-start"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                                <ul id="admin" class="bg-color-4 list-style-none m-left-1 font-size-md justify-start" data-parent="#iq-sidebar-toggle">
                                     <li><a href="AdminDashboard"><i class="#"></i>Dashboard</a></li>
                                     <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
                                     <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
@@ -112,9 +91,9 @@
                             </li>
                         </c:if>
                         <li class="bg-color-4">
-                            <a href="#userinfo" class="bg-color-1 m-left font-style-3 p-1" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                            <ul id="userinfo" class="bg-color-4 list-style-none m-left-1" data-parent="#iq-sidebar-toggle">
-                                <li><a href="#"><i class="#"></i>User Profile</a></li>
+                            <a href="#userinfo" class="bg-color-1 m-left font-style-3 p-1 font-size-lg justify-start" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                            <ul id="userinfo" class="bg-color-4 list-style-none m-left-1 font-size-md justify-start" data-parent="#iq-sidebar-toggle">
+                                <li><a href="Account"><i class="#"></i>User Profile</a></li>
                                 <li><a href="#"><i class="#"></i>User Edit</a></li>
                                 <li><a href="#"><i class="#"></i>User Add</a></li>
                                 <li><a href="#"><i class="#"></i>User List</a></li>
@@ -125,14 +104,14 @@
             </div>
         </div>
     </div>
-    <!-- Content Page -->
+    <!--Content Page-->
     <div id="content-page" class="content-page">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="iq-head">
                         <div class="iq-body">
-                            <div class="d-flex align-center">
+                            <div class="d-flex align-center iq-box-2">
                                 <h2 class="mb-0">
                                     <span class="color-3 font-style-3 font-size-md pl-1" >${totalAccount}</span>
                                 </h2>
@@ -144,7 +123,7 @@
                 <div class="col-lg-3">
                     <div class="iq-head">
                         <div class="iq-body">
-                            <div class="d-flex align-center">
+                            <div class="d-flex align-center iq-box-1">
                                 <h2 class="mb-0">
                                     <span class="color-3 font-style-3 font-size-md pl-1">${totalBooks}</span>
                                 </h2>
@@ -156,7 +135,7 @@
                 <div class="col-lg-3">
                     <div class="iq-head">
                         <div class="iq-body">
-                            <div class="d-flex align-center">
+                            <div class="d-flex align-center iq-box-2">
                                 <h2 class="mb-0">
                                     <span class="color-3 font-style-3 font-size-md pl-1" >${totalPurchases}</span>
                                 </h2>
@@ -188,38 +167,6 @@
                                         <td>$1500</td>
                                         <td><div class="badge badge-pill badge-success">Paid</div></td>
                                         <td>Copy</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pete Sariya</td>
-                                        <td>26/10/2019</td>
-                                        <td>7859</td>
-                                        <td>$2000</td>
-                                        <td><div class="badge badge-pill badge-success">Paid</div></td>
-                                        <td>Send Email</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cliff Hanger</td>
-                                        <td>18/11/2019</td>
-                                        <td>6396</td>
-                                        <td>$2500</td>
-                                        <td><div class="badge badge-pill badge-danger">Past Due</div></td>
-                                        <td>Before Due</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Terry Aki</td>
-                                        <td>14/12/2019</td>
-                                        <td>7854</td>
-                                        <td>$5000</td>
-                                        <td><div class="badge badge-pill badge-success">Paid</div></td>
-                                        <td>Copy</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Anna Mull</td>
-                                        <td>24/12/2019</td>
-                                        <td>568569</td>
-                                        <td>$10000</td>
-                                        <td><div class="badge badge-pill badge-success">Paid</div></td>
-                                        <td>Send Email</td>
                                     </tr>
                                     </tbody>
                                 </table>

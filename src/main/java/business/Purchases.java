@@ -16,6 +16,7 @@ public class Purchases implements Serializable {
     private int product_id;
     private boolean purchased;
     private int quantity;
+
     private LocalDate purchase_date;
     public Purchases() {
     }
@@ -49,6 +50,21 @@ public class Purchases implements Serializable {
 
     public void setPurchased(boolean purchased) {
         this.purchased = purchased;
+    }
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public LocalDate getPurchase_date() {
+        return purchase_date;
+    }
+
+    public void setPurchase_date(LocalDate purchase_date) {
+        this.purchase_date = purchase_date;
     }
 
 

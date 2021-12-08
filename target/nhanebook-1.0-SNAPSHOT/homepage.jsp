@@ -28,12 +28,6 @@
                     <span class="color-1 font-style-1 font-size-sm pl-1 white-highlight">HOME</span>
                 </a>
             </li>
-            <li class="pl-2 d-none visible-in-md">
-                <a href="collection.jsp">
-                    <img src="./assets/images/bookshelf.svg" alt="collection-logo" class="navbar-icon">
-                    <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight">COLLECTIONS</span>
-                </a>
-            </li>
             <li class="pl-2">
                 <a href="ShoppingCart">
                     <img src="./assets/images/supermarket.svg" alt="cart-logo" class="navbar-icon">
@@ -42,10 +36,10 @@
             </li>
             <li class="pl-2">
                 <c:if test = "${sessionScope.account.role == 'admin'}">
-                <button type="button"
-                        class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">
-                    <a href="AdminDashboard" class="image-highlight">ADMIN</a>
-                </button>
+                    <button type="button"
+                            class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">
+                        <a href="AdminDashboard" class="image-highlight">ADMIN</a>
+                    </button>
                 </c:if>
 
             </li>
@@ -53,11 +47,13 @@
 
         <ul class="list-style-none d-flex justify-around align-center user-info">
             <li class="d-none visible-in-lg">
+                <!--
                 <a href="#" class="image-highlight">
                     <img src="./assets/images/mail.svg" alt="mail-icon" class="navbar-icon">
                     <span
                             class="d-inline-block bg-color-1 mail-notification font-size-sm font-style-2 color-white">12</span>
                 </a>
+                -->
             </li>
             <li class="d-none visible-in-lg">
                 <a href="Account">
@@ -72,7 +68,7 @@
                 </c:if>
             </li>
             <li>
-                <a href="#">
+                <a href="Account">
                     <img src="./assets/images/person.svg" alt="user-img" class="image-highlight pl-1">
                 </a>
             </li>

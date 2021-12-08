@@ -56,7 +56,7 @@ public class SearchServlet extends HttpServlet {
         }
         if(!p1020.contentEquals("null")){
             if(!genre.contentEquals("all") || key_word.isEmpty() == false || !p010.contentEquals("null")){
-                sqlQuery += " AND b.cost >= 10 AND b.cost <= 20";
+                sqlQuery += " OR b.cost >= 10 AND b.cost <= 20";
             }
             else{
                 sqlQuery += " b.cost >= 10 AND b.cost <= 20";
@@ -64,7 +64,7 @@ public class SearchServlet extends HttpServlet {
         }
         if(!p2030.contentEquals("null")){
             if(!genre.contentEquals("all") || key_word.isEmpty() == false || !p010.contentEquals("null") || !p1020.contentEquals("null")){
-                sqlQuery += " AND b.cost >= 20 AND b.cost <= 30";
+                sqlQuery += " OR b.cost >= 20 AND b.cost <= 30";
             }
             else{
                 sqlQuery += " b.cost >= 20 AND b.cost <= 30";
@@ -72,7 +72,7 @@ public class SearchServlet extends HttpServlet {
         }
         if(!p30.contentEquals("null")){
             if(!genre.contentEquals("all") || key_word.isEmpty() == false || !p010.contentEquals("null") || !p1020.contentEquals("null")|| !p2030.contentEquals("null")){
-                sqlQuery += " AND b.cost >= 30";
+                sqlQuery += " OR b.cost >= 30";
             }
             else{
                 sqlQuery += " b.cost >= 30";

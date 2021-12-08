@@ -30,7 +30,7 @@ public class LoginRegServlet extends HttpServlet {
                 account = AccountsDB.selectAccount(username, password);
                 session.setAttribute("account", account);
                 url = "/homepage.jsp";
-                index_message = "Hello " + account.getFull_name();
+                index_message = "Hello " + account.getFullname();
             }
             request.setAttribute("loginmessage", login_message);
             session.setAttribute("indexmessage", index_message);
