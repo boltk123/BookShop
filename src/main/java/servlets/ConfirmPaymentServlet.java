@@ -4,6 +4,7 @@ import business.Accounts;
 import business.Books;
 import business.Products;
 import business.Purchases;
+import database.ProductsDB;
 import database.PurchasesDB;
 
 import javax.servlet.*;
@@ -27,6 +28,8 @@ public class ConfirmPaymentServlet extends HttpServlet {
         List<Products> productsList = (List<Products>) session.getAttribute("products");
         Accounts current_account = (Accounts)session.getAttribute("account");
         PurchasesDB.insertInvoice(current_account.getUser_id(), productsList);
+        // remove purchased items
+        ProductsDB.removeAllProducts(current_account.getUser_id());
         sc.getRequestDispatcher(url).
                 forward(request, response);
     }

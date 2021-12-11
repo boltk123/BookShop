@@ -23,6 +23,7 @@ public class FileUploadServlet extends HttpServlet {
     public static final String PREFIX = "stream2file";
     public static final String SUFFIX = ".tmp";
     private static final long serialVersionUID = 1L;
+    public static final String SAVE_DIRECTORY = "pdf";
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
@@ -62,5 +63,71 @@ public class FileUploadServlet extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("HomePage");
         rd.forward(request,response);
 
+    }
+    void pdfInput(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try {
+            String description = request.getParameter("description");
+            System.out.println("Description: " + description);
+
+
+            //
+            String appPath = request.getServletContext().getRealPath("");
+            appPath = appPath.replace('\\', '/');
+
+
+            //
+            String fullSavePath = null;
+            if (appPath.endsWith("/")) {
+                fullSavePath = appPath + SAVE_DIRECTORY;
+            } else {
+                fullSavePath = appPath + "/" + SAVE_DIRECTORY;
+            }
+
+
+            //
+            File fileSaveDir = new File(fullSavePath);
+            if (!fileSaveDir.exists()) {
+                fileSaveDir.mkdir();
+            }
+
+            //
+            for (Part part : request.getParts()) {
+                String fileName = extractFileName(part);
+                if (fileName != null && fileName.length() > 0) {
+                    String filePath = fullSavePath + File.separator + fileName;
+                    System.out.println("Write attachment to file: " + filePath);
+
+                    //
+                    part.write(filePath);
+                }
+            }
+
+            //
+            response.sendRedirect(request.getContextPath() + "/uploadFileResults");
+        } catch (Exception e) {
+            e.printStackTrace();
+            request.setAttribute("errorMessage", "Error: " + e.getMessage());
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/uploadFile.jsp");
+            dispatcher.forward(request, response);
+        }
+    }
+    private String extractFileName(Part part) {
+        // form-data; name="file"; filename="C:\file1.zip"
+        // form-data; name="file"; filename="C:\Note\file2.zip"
+        String contentDisp = part.getHeader("content-disposition");
+        String[] items = contentDisp.split(";");
+        for (String s : items) {
+            if (s.trim().startsWith("filename")) {
+                // C:\file1.zip
+                // C:\Note\file2.zip
+                String clientFileName = s.substring(s.indexOf("=") + 2, s.length() - 1);
+                clientFileName = clientFileName.replace("\\", "/");
+                int i = clientFileName.lastIndexOf('/');
+                // file1.zip
+                // file2.zip
+                return clientFileName.substring(i + 1);
+            }
+        }
+        return null;
     }
 }

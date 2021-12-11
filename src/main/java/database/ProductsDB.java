@@ -99,4 +99,18 @@ public class ProductsDB {
             trans.commit();
         }
     }
+    public static void removeAllProducts(int user_id){
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT p FROM Products p"
+                + " WHERE p.user_id = :user_id";
+        TypedQuery<Products> q = em.createQuery(qString, Products.class);
+        q.setParameter("user_id", user_id);
+        List<Products> products = q.getResultList();
+        trans.begin();
+        for(Products product: products){
+            em.remove(product);
+        }
+        trans.commit();
+    }
 }

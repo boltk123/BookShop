@@ -71,7 +71,12 @@
                 </c:if>
             </li>
             <li>
+                <!--
                 <a href="Account">
+                    <img src="./assets/images/person.svg" alt="user-img" class="image-highlight pl-1">
+                </a>
+                -->
+                <a href="uploadFile.jsp">
                     <img src="./assets/images/person.svg" alt="user-img" class="image-highlight pl-1">
                 </a>
             </li>

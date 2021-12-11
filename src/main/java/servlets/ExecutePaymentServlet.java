@@ -16,6 +16,7 @@ import business.Accounts;
 import business.Products;
 import com.paypal.api.payments.*;
 import com.paypal.base.rest.PayPalRESTException;
+import database.ProductsDB;
 import database.PurchasesDB;
 import features.paypal.PaymentServices;
 
@@ -44,8 +45,10 @@ public class ExecutePaymentServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			List<Products> productsList = (List<Products>) session.getAttribute("products");
 			Accounts current_account = (Accounts)session.getAttribute("account");
-			PurchasesDB.insertInvoice(current_account.getUser_id(), productsList);
 			// Store information to database
+			PurchasesDB.insertInvoice(current_account.getUser_id(), productsList);
+			// remove purchased items
+			ProductsDB.removeAllProducts(current_account.getUser_id());
 			request.getRequestDispatcher("Email").forward(request, response);
 
 		} catch (PayPalRESTException ex) {
