@@ -2,11 +2,9 @@ package servlets;
 
 import business.Accounts;
 import business.Books;
-import business.Samples;
 import database.BooksDB;
 import database.ProductsDB;
 import database.PurchasesDB;
-import database.SamplesDB;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -30,8 +28,6 @@ public class DetailServlet extends HttpServlet {
             int book_id = Integer.parseInt((request.getParameter("book_id")));
 
             Books book = BooksDB.selectBooksByBookID(book_id);
-            List<Samples> samplesList = SamplesDB.selectAllSamples(book_id);
-            request.setAttribute("samplesList", samplesList);
             request.setAttribute("book", book);
             String url = "/detail.jsp";
             sc.getRequestDispatcher(url).

@@ -13,38 +13,38 @@
             <div class="col-left">
                 <div class="input-field">
                     <label class="input-label" for="">Book ID</label>
-                    <input type="text" name="book_id">
+                    <input type="text" name="book_id" value="${book.book_id}" required>
                 </div>
                 <div class="input-field">
                     <label class="input-label" for="">Book Title</label>
-                    <input type="text" name="title">
+                    <input type="text" name="title" value="${book.title}" required>
                 </div>
                 <div class="input-field">
                     <label class="input-label" for="">Book Total Page</label>
-                    <input type="text" name="total_pages">
+                    <input required type="text" name="total_pages" value="${book.total_pages}">
                 </div>
                 <div class="input-field">
                     <label class="input-label" for="">Book Initial Rating</label>
-                    <input type="text" name="rating">
+                    <input required type="text" name="rating" value="${book.rating}" required>
                 </div>
                 <div class="input-field">
                     <label class="input-label" for="">Book Author</label>
-                    <input type="text" name="author">
+                    <input required type="text" name="author" value="${book.author}"required>
                 </div>
                 <div class="input-field">
                     <label class="input-label" for="">Book's genre</label>
-                    <input type="text" name="genre">
+                    <input required type="text" name="genre" value="${book.genre}">
                 </div>
                 <div class="input-field">
                     <label class="input-label" for="">Book Price ($)</label>
-                    <input type="text" name="cost" min="1" step="any">
+                    <input required type="text" name="cost" min="1" value="${book.cost}">
                 </div>
             </div>
             <div class="col-right">
                 <div class="description">
                     <label class="input-label" for="">Book Description</label>
                     <!-- <input type="text" name="description"> -->
-                    <textarea name="description" cols="40" rows="2"></textarea>
+                    <textarea name="description" cols="40" rows="2" >${book.description}</textarea>
                 </div>
                 <div class="input-images">
                     <div class="input-image">
@@ -52,21 +52,14 @@
                         <input type="file" name="book_cover" id="">
                     </div>
                     <div class="input-image">
-                        <label class="input-label" for="">Book First Sample</label>
-                        <input type="file" name="book_sample1" id="">
-                    </div>
-                    <div class="input-image">
-                        <label class="input-label" for="">Book Second Sample</label>
-                        <input type="file" name="book_sample2" id="">
-                    </div>
-                    <div class="input-image">
-                        <label class="input-label" for="">Book Third Sample</label>
-                        <input type="file" name="book_sample3" id="">
+                        <label class="input-label" for="">Book PDF File</label>
+                        <input type="file" name="book_pdf" id="file">
                     </div>
                 </div>
             </div>
 
-            <input type="submit" value="Upload" class="upload-btn">
+            <input type="submit" value="Upload" name="action" class="upload-btn">
+            <input type="submit" value="Edit" name="action" class="edit-btn">
         </form>
     </div>
 </div>

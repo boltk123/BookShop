@@ -15,18 +15,22 @@ public class Purchases implements Serializable {
     @Id
     private int product_id;
     private boolean purchased;
+    private boolean delivered;
     private int quantity;
-
+    private float total;
     private LocalDate purchase_date;
+    private LocalDate delivery_date;
     public Purchases() {
     }
 
-    public Purchases(int user_id, int product_id, int quantity) {
+    public Purchases(int user_id, int product_id, int quantity, float total) {
         this.user_id = user_id;
         this.product_id = product_id;
         this.quantity = quantity;
         this.purchased = true;
+        this.total = total;
         this.purchase_date = LocalDate.now();
+        this.delivery_date = purchase_date.plusDays(7);
     }
     public int getUser_id() {
         return user_id;
@@ -66,6 +70,33 @@ public class Purchases implements Serializable {
     public void setPurchase_date(LocalDate purchase_date) {
         this.purchase_date = purchase_date;
     }
+    public float getTotal() {
+        return total;
+    }
 
+    public void setTotal(float total) {
+        this.total = total;
+    }
+
+    public LocalDate getDelivery_date() {
+        return delivery_date;
+    }
+
+    public void setDelivery_date(LocalDate delivery_date) {
+        this.delivery_date = delivery_date;
+    }
+    public boolean isDelivered() {
+        if(LocalDate.now().equals(delivery_date) ){
+            delivered = true;
+        }
+        else {
+            delivered = false;
+        }
+        return delivered;
+    }
+
+    public void setDelivered(boolean delivered) {
+        this.delivered = delivered;
+    }
 
 }

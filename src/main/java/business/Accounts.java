@@ -19,10 +19,12 @@ public class Accounts {
     private String role;
     private String email;
     private String base64Image;
+    private String phone;
+    private String address;
     @Type(type="org.hibernate.type.BinaryType")
     private byte[] profile_picture;
 
-    public Accounts(String username, String password, String firstname,String lastname, String role, String email, byte[] profile_picture) {
+    public Accounts(String username, String password, String firstname,String lastname, String role, String email, byte[] profile_picture, String phone, String address) {
         this.username = username;
         this.password = password;
         this.firstname = firstname;
@@ -31,6 +33,8 @@ public class Accounts {
         this.email = email;
         this.profile_picture = profile_picture;
         this.fullname = firstname + " " + lastname;
+        this.phone = phone;
+        this.address = address;
     }
 
     public Accounts() {
@@ -98,7 +102,21 @@ public class Accounts {
     public void setProfile_picture(byte[] profile_picture) {
         this.profile_picture = profile_picture;
     }
+    public String getPhone() {
+        return phone;
+    }
 
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
     @Transient
     public String getBase64Image() {
         base64Image = Base64.getEncoder().encodeToString(this.profile_picture);

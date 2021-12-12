@@ -96,12 +96,12 @@
             <div class="form-group">
                 <label >Xin hãy nhập số điện thoại (*)</label>
                 <input class="form-control" id="txt_billing_mobile"
-                       name="txt_billing_mobile" type="text" value=""/>
+                       name="txt_billing_mobile" type="text" value="${sessionScope.account.phone}"/>
             </div>
             <div class="form-group">
                 <label >Xin hãy nhập địa chỉ (*)</label>
                 <input class="form-control" id="txt_billing_addr1"
-                       name="txt_billing_addr1" type="text" value=""/>
+                       name="txt_billing_addr1" type="text" value="${sessionScope.account.address}"/>
             </div>
             <!--
            <div class="form-group">

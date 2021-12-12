@@ -92,9 +92,25 @@ body {
 }
 
 input.upload-btn {
+     position: absolute;
+     bottom: 98px;
+     left: 654px;
+     padding: 10px 75px;
+     border: none;
+     border-radius: 6px;
+     background-color: #346250;
+     color: #fff;
+     font-size: 17px;
+ }
+
+input.upload-btn:hover {
+    background-color: #24483a;
+    cursor: pointer;
+}
+input.edit-btn {
     position: absolute;
     bottom: 98px;
-    left: 654px;
+    left: 800px;
     padding: 10px 75px;
     border: none;
     border-radius: 6px;
@@ -103,7 +119,7 @@ input.upload-btn {
     font-size: 17px;
 }
 
-input.upload-btn:hover {
+input.edit-btn:hover {
     background-color: #24483a;
     cursor: pointer;
 }

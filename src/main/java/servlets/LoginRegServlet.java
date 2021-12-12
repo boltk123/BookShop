@@ -42,10 +42,11 @@ public class LoginRegServlet extends HttpServlet {
             String email = request.getParameter("email");
             String username = request.getParameter("username");
             String password = request.getParameter("password");
-
+            String phone = request.getParameter("phone");
+            String address = request.getParameter("address");
             String emailmessage = " ";
             String usernamemessage = " ";
-            Accounts account = new Accounts(username, password, firstname, lastname, "user", email, null);
+            Accounts account = new Accounts(username, password, firstname, lastname, "user", email, null, phone, address);
             if (!AccountsDB.emailExists(account.getEmail()) && !AccountsDB.usernameExists(account.getUsername())) {
                 url = "/thanks_final.jsp";
                 session.setAttribute("account", account);

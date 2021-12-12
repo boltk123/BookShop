@@ -19,7 +19,7 @@ public class PurchasesDB {
         EntityTransaction trans = em.getTransaction();
         trans.begin();
         for(Products product: productsList) {
-            Purchases invoice = new Purchases(user_id, product.getProduct_id(), product.getQuantity());
+            Purchases invoice = new Purchases(user_id, product.getProduct_id(), product.getQuantity(), (float) product.getTotal());
             em.persist(invoice);
         }
         trans.commit();
@@ -63,7 +63,7 @@ public class PurchasesDB {
         int count = purchases.size();
         return count;
     }
-    public static List<Purchases> selectProcessedInvoices(int user_id) {
+    public static List<Purchases> selectAllInvoices(int user_id) {
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         String qString = "SELECT p from Purchases p " +

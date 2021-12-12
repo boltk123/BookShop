@@ -36,8 +36,8 @@ public class PaymentServices {
 			throws PayPalRESTException {
 
 		Payer payer = getPayerInformation(user_firstname, user_lastname, email);
-		RedirectUrls redirectUrls = getRedirectURLs(cancel_url, return_url);
-		//RedirectUrls redirectUrls = getRedirectURLs();
+		//RedirectUrls redirectUrls = getRedirectURLs(cancel_url, return_url);
+		RedirectUrls redirectUrls = getRedirectURLs();
 		List<Transaction> listTransaction = getTransactionInformation(orderDetail);
 
 		Payment requestPayment = new Payment();

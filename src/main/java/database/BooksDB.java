@@ -12,7 +12,7 @@ import java.util.List;
 
 public class BooksDB {
     public static void insertBook(int book_id, String title, int total_pages, double rating, double cost,
-                                  String author, String genre, String description, byte[] bFile) throws IOException {
+                                  String author, String genre, String description, byte[] bFile, byte[] book_pdf) throws IOException {
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         Books book = new Books();
@@ -44,7 +44,7 @@ public class BooksDB {
             }
         }
         else {
-            book = new Books(book_id, title, total_pages, rating, cost, author, genre, description, bFile);
+            book = new Books(book_id, title, total_pages, rating, cost, author, genre, description, bFile, book_pdf);
         }
 
         trans.begin();
@@ -66,7 +66,20 @@ public class BooksDB {
             return false;
         }
     }
-
+    public static void UpdateBook(Books book){
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        trans.begin();
+        try {
+            em.merge(book);
+            trans.commit();
+        } catch (Exception e) {
+            System.out.println(e);
+            trans.rollback();
+        } finally {
+            em.close();
+        }
+    }
     public static List<Books> selectBooksByGenre(String genre_name){
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();

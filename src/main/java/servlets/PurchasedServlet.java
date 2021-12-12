@@ -30,8 +30,9 @@ public class PurchasedServlet extends HttpServlet {
 
         }
         request.getRequestDispatcher(url).forward(request, response);*/
-        String url = "/FileDownload";
-        HttpSession session = request.getSession();
+        String url = "/AddCart";
+        try {
+            HttpSession session = request.getSession();
             Accounts current_account = (Accounts)session.getAttribute("account");
             int book_id = Integer.parseInt(request.getParameter("book_id"));
             boolean purchased = PurchasesDB.purchased(current_account.getUser_id(), book_id);
@@ -39,8 +40,14 @@ public class PurchasedServlet extends HttpServlet {
                 url = "/AddCart";
             }
             else{
-                url = "/FileDownload";
+                url = "/PdfDownload";
             }
+            request.getRequestDispatcher(url).forward(request, response);
+        }
+        catch (Exception e){
+            url = "login.jsp";
+
+        }
         request.getRequestDispatcher(url).forward(request, response);
     }
 

@@ -24,6 +24,10 @@
     <input type="text" name="firstName" value="<c:out value='${user.firstName}'/>"><br>
     <label class="pad_top">Last Name:</label>
     <input type="text" name="lastName" value="<c:out value='${user.lastName}'/>"><br>
+    <label class="pad_top">Phone</label>
+    <input type="text" name="phone" value="<c:out value='${user.phone}'/>"><br>
+    <label class="pad_top">Address</label>
+    <input type="text" name="address" value="<c:out value='${user.address}'/>"><br>
     <label>&nbsp;</label>
     <br>
     <div class="centered"><input class="button" type="submit" value="Register" class="margin_left"></div>

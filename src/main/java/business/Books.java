@@ -23,11 +23,14 @@ public class Books implements Serializable {
     @Type(type="org.hibernate.type.BinaryType")
     private byte[] book_cover;
 
+    @Type(type="org.hibernate.type.BinaryType")
+    private byte[] book_pdf;
+
     //default constructor
     public Books() {
     }
 
-    public Books(int book_id, String title, int total_pages, double rating, double cost, String author, String genre,String description, byte[] book_cover) {
+    public Books(int book_id, String title, int total_pages, double rating, double cost, String author, String genre,String description, byte[] book_cover, byte[] book_pdf) {
         this.book_id = book_id;
         this.title = title;
         this.total_pages = total_pages;
@@ -37,6 +40,7 @@ public class Books implements Serializable {
         this.genre = genre;
         this.description = description;
         this.book_cover = book_cover;
+        this.book_pdf = book_pdf;
     }
     public int getBook_id() {
         return book_id;
@@ -118,6 +122,14 @@ public class Books implements Serializable {
     }
     public void setBase64Image(String base64Image) {
         this.base64Image = base64Image;
+    }
+
+    public byte[] getBook_pdf() {
+        return book_pdf;
+    }
+
+    public void setBook_pdf(byte[] book_pdf) {
+        this.book_pdf = book_pdf;
     }
 
 }
