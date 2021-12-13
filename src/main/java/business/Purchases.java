@@ -18,7 +18,7 @@ public class Purchases implements Serializable {
     private boolean delivered;
     private int quantity;
     private float total;
-    private LocalDate purchase_date;
+    private LocalDate purchase_date ;
     private LocalDate delivery_date;
     public Purchases() {
     }
@@ -92,6 +92,7 @@ public class Purchases implements Serializable {
         else {
             delivered = false;
         }
+        this.setDelivered(delivered);
         return delivered;
     }
 

@@ -64,6 +64,15 @@
 <form class="Login-form " action="LoginReg" method="post">
     <input type="hidden" name="action" value="register">
     <div class="login-field">
+        <p><i>${usernamemessage}</i></p>
+        <label>Username:</label>
+        <input type="text" name="username" value="${account.username}" required>
+    </div>
+    <div class="login-field">
+        <label>Password:</label>
+        <input type="password" name="password" value="${account.password}" required>
+    </div>
+    <div class="login-field">
         <label>First Name:</label>
         <input type="text" name="firstname" value="${account.firstname}" required>
     </div>
@@ -77,15 +86,13 @@
         <input type="email" name="email" value="${account.email}" required>
     </div>
     <div class="login-field">
-        <p><i>${usernamemessage}</i></p>
-        <label>Username:</label>
-        <input type="text" name="username" value="${account.username}" required>
+        <label>Phone:</label>
+        <input type="text" name="phone" value="${account.phone}" required>
     </div>
     <div class="login-field">
-        <label>Password:</label>
-        <input type="password" name="password" value="${account.password}" required>
+        <label>Address:</label>
+        <input type="text" name="address" value="${account.address}" required>
     </div>
-
     <input type="submit" value="Register" class="register-submit">
 </form>
 

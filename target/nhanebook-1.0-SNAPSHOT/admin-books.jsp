@@ -105,57 +105,42 @@
             </div>
         </div>
     </div>
-    <!-- Content Page -->
-    <section class="">
-        <div>
-            <h4 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">Books Lists</h4>
-        </div>
-        <div>
-            <a href="BooksTableInput.jsp" class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">Add a new books</a>
-        </div>
-        <div class="">
-            <div class="table-wrapper">
-                <table class="fl-table">
-                    <thead>
-                    <tr>
-                        <th style="width: 3%;">No</th>
-                        <th style="width: 12%;">Book Image</th>
-                        <th style="width: 15%;">Book Name</th>
-                        <th style="width: 15%;">Book Catrgory</th>
-                        <th style="width: 15%;">Book Author</th>
-                        <th style="width: 18%;">Book Description</th>
-                        <th style="width: 7%;">Book Price</th>
-                        <th style="width: 7%;">Book pdf</th>
-                        <th style="width: 15%;">Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <c:forEach var="book" items="${books}">
-                    <tr>
-                        <td>${book.book_id}</td>
-                        <td><img class="img-fluid rounded" src="images/browse-books/01.jpg" alt=""></td>
-                        <td>${book.title}</td>
-                        <td>${book.genre}</td>
-                        <td>${book.author}</td>
-                        <td>
-                            <p>${book.description}</p>
-                        </td>
-                        <td>${book.cost}</td>
-                        <td><a href="book-pdf.html"><i class="ri-file-fill text-secondary font-size-18"></i></a></td>
-                        <td>
-                            <div class="flex align-items-center list-user-action">
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="admin-add-book.html"><i class="ri-pencil-line"></i></a>
-                                <a class="bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    </c:forEach>
-                </tbody>
-            </table>
-        </div>
+    <div class="book-table-contain">
+        <table class="book-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Rating</th>
+                <th>Price</th>
+                <th>Genre</th>
+                <th>Author</th>
+                <th>Edit/Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach var="book" items="${books}">
+                <tr>
+                    <td>${book.book_id}</td>
+                    <td>${book.title}</td>
+                    <td>${book.rating}</td>
+                    <td>${book.cost}</td>
+                    <td>${book.genre}</td>
+                    <td>${book.author}</td>
+                    <td>
+                        <a href="" class="edit-btn">
+                            Edit
+                        </a>
+                        <a href=" " class="delete-btn">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
     </div>
 
-    </section>
 </main>
 
 <footer class="bg-white border">

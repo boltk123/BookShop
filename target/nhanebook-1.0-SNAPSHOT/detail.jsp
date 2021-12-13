@@ -15,12 +15,6 @@
                 <img class="main-img-item" src="data:image/jpg;base64,${book.base64Image}" alt="">
             </div>
             <div class="list-img">
-                <c:forEach var="sample" items="${samplesList}">
-                    <c:if test="${sample != null}">
-                        <img class="book-img" src="data:image/jpg;base64,${sample.base64Sample}" alt="">
-                    </c:if>
-
-                </c:forEach>
             </div>
         </div>
         <div class="right-contain">
@@ -63,7 +57,12 @@
                 <a href="AddCart?book_id=${book.book_id}">
                     <button  class="add-to-cart">Add to cart</button>
                 </a>
-                <a href="Purchased?filename=${book.book_id}.pdf&amp;name=${book.title}.pdf&amp;directory=/pdf/&amp;book_id=${book.book_id}">
+                <!--
+                <a href="Purchased?filename={book.book_id}.pdf&amp;name={book.title}.pdf&amp;directory=/pdf/&amp;book_id={book.book_id}">
+                    <button class="download">Download</button>
+                </a>
+                -->
+                <a href="Purchased?book_id=${book.book_id}">
                     <button class="download">Download</button>
                 </a>
             </div>
