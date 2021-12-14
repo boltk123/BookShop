@@ -1,0 +1,39 @@
+.input-field {
+    margin-bottom: 15px;
+}
+
+.input-field label {
+    float: left;
+    width: 130px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: initial;
+}
+
+.input-field input {
+    border: 1px solid #383838;
+    border-radius: 5px;
+    outline: none;
+    height: 27px;
+    width: 73%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.update-btn {
+    margin-top: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    /* height: 40px; */
+    /* margin-top: 20px; */
+    /* font-weight: 500; */
+    font-size: 25px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background-color: #383838;
+}
+
+.update-btn:hover {
+    cursor: pointer;
+    background-color: #484743;
+}

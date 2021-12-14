@@ -1,5 +1,7 @@
 package business;
 
+import database.PurchasesDB;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
@@ -86,7 +88,7 @@ public class Purchases implements Serializable {
         this.delivery_date = delivery_date;
     }
     public boolean isDelivered() {
-        if(LocalDate.now().equals(delivery_date) ){
+        if(LocalDate.now().equals(delivery_date) || LocalDate.now().isAfter(delivery_date)){
             delivered = true;
         }
         else {

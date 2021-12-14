@@ -37,8 +37,14 @@ public class ShoppingCartServlet extends HttpServlet {
             session.setAttribute("products", products);
             session.setAttribute("book_items", books);
             session.setAttribute("product_count", product_count);
-            session.setAttribute("tax", String.valueOf(tax));
-            session.setAttribute("shipping", String.valueOf(shipping));
+            if(subtotal > 0){
+                session.setAttribute("tax", String.valueOf(tax));
+                session.setAttribute("shipping", String.valueOf(shipping));
+            }
+            else{
+                session.setAttribute("tax", 0);
+                session.setAttribute("shipping", 0);
+            }
             // subtotal of all products, not one product
             session.setAttribute("subtotal", String.valueOf(subtotal));
             // total of all products

@@ -1,6 +1,8 @@
 package servlets;
 
+import business.Book_contents;
 import business.Books;
+import database.Book_contentsDB;
 import database.BooksDB;
 import org.apache.commons.io.IOUtils;
 
@@ -36,16 +38,6 @@ public class EditBookServlet extends HttpServlet {
             String genre = request.getParameter("genre");
             String description = request.getParameter("description");
 
-            final Part sample_part1 = request.getPart("book_sample1"); // Retrieves <input type="file" name="book_sample1">
-            InputStream sample_stream1 = sample_part1.getInputStream();
-            byte[] sample1 = IOUtils.toByteArray(sample_stream1);
-            final Part sample_part2 = request.getPart("book_sample2"); // Retrieves <input type="file" name="book_sample2">
-            InputStream sample_stream2 = sample_part2.getInputStream();
-            byte[] sample2 = IOUtils.toByteArray(sample_stream2);
-            final Part sample_part3 = request.getPart("book_sample3"); // Retrieves <input type="file" name="book_sample3">
-            InputStream sample_stream3 = sample_part3.getInputStream();
-            byte[] sample3 = IOUtils.toByteArray(sample_stream3);
-
             // pdf input
             final Part pdf_filePart = request.getPart("book_pdf");
             InputStream pdfFileBytes = null;
@@ -53,7 +45,10 @@ public class EditBookServlet extends HttpServlet {
             final byte[] pdf_bytes = new byte[pdfFileBytes.available()];
             pdfFileBytes.read(pdf_bytes);
             Books book = BooksDB.selectBooksByBookID(book_id);
-
+            Book_contents book_content = Book_contentsDB.SelectBookPDF(book_id);
+            if(book_content == null){
+                book_content = new Book_contents(book_id, pdf_bytes);
+            }
             if(!title.isEmpty()){
                 book.setTitle(title);
             }
@@ -80,10 +75,11 @@ public class EditBookServlet extends HttpServlet {
                 book.setBook_cover(bFile);
             }
             if(pdf_bytes.length != 0){
-                book.setBook_pdf(pdf_bytes);
+                book_content.setBook_pdf(pdf_bytes);
             }
             BooksDB.UpdateBook(book);
-            RequestDispatcher rd = request.getRequestDispatcher("HomePage");
+            Book_contentsDB.UpdateBookPDF(book_content);
+            RequestDispatcher rd = request.getRequestDispatcher("AdminBooks");
             rd.forward(request,response);
         }
         catch (FileNotFoundException fnf){

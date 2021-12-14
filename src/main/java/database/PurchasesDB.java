@@ -84,4 +84,29 @@ public class PurchasesDB {
         trans.commit();
         return results;
     }
+    public static List<Purchases> updateDeliveredStatus(int user_id, int product_id, boolean delivered) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT p from Purchases p " +
+                "WHERE p.user_id = :user_id AND p.product_id = :product_id ";
+        trans.begin();
+        TypedQuery<Purchases> q = em.createQuery(qString, Purchases.class);
+        q.setParameter("user_id", user_id);
+        q.setParameter("product_id", product_id);
+        List<Purchases> results = null;
+        try {
+            results = q.getResultList();
+            for(Purchases item: results){
+                item.setDelivered(delivered);
+                em.merge(item);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+            trans.rollback();
+        } finally {
+            em.close();
+        }
+        trans.commit();
+        return results;
+    }
 }

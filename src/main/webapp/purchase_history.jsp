@@ -10,6 +10,7 @@
 </head>
 <body>
 <%@ include file="/includes/header.jsp" %>
+<div class="purchase-title">Purchase History</div>
 <div id="table-contain">
     <table class="purchase-table">
         <thead>
@@ -31,7 +32,7 @@
                         <td>${book.title}</td>
                         <td>${item.quantity}</td>
                         <td>${item.purchase_date}</td>
-                        <td>2021/12/05</td>
+                        <td>${item.delivery_date}</td>
                         <td>${item.total}</td>
                         <c:choose>
                             <c:when test="${item.delivered eq true}">
@@ -53,6 +54,5 @@
         </tbody>
     </table>
 </div>
-<%@ include file="/includes/footer.jsp" %>
 </body>
 </html>

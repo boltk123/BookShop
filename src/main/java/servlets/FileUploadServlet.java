@@ -1,6 +1,8 @@
 package servlets;
 
+import business.Book_contents;
 import business.Books;
+import database.Book_contentsDB;
 import database.BooksDB;
 import org.apache.commons.io.IOUtils;
 
@@ -69,8 +71,14 @@ public class FileUploadServlet extends HttpServlet {
                 pdfFileBytes = pdf_filePart.getInputStream();
                 final byte[] pdf_bytes = new byte[pdfFileBytes.available()];
                 pdfFileBytes.read(pdf_bytes);
-                BooksDB.insertBook(book_id, title, total_pages, rating, cost, author, genre, description, bFile, pdf_bytes);
-                RequestDispatcher rd = request.getRequestDispatcher("HomePage");
+
+                // Insert books
+                BooksDB.insertBook(book_id, title, total_pages, rating, cost, author, genre, description, bFile);
+
+                // Insert PDF
+                Book_contents book_content = new Book_contents(book_id, pdf_bytes);
+                Book_contentsDB.InsertPDF(book_content);
+                RequestDispatcher rd = request.getRequestDispatcher("AdminBooks");
                 rd.forward(request,response);
             }
             catch (FileNotFoundException fnf){

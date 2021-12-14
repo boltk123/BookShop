@@ -28,7 +28,7 @@
                     <c:forEach var="book_item" items="${book_items}">
                         <div class="item">
                             <div class="item-name">
-                                <a href="">${book_item.title}</a>
+                                <a href="Detail?book_id=${book_item.book_id}">${book_item.title}</a>
                             </div>
                             <div class="director">By: ${book_item.author}</div>
 
@@ -138,7 +138,7 @@
                 <div class="checkout-with">
                     <p class="title">Available Methods:</p>
                         <a href="authorize_payment">
-                            <img src="image/paypal-checkout.png"  alt="Paypal">
+                            <img src="image/paypal-checkout.png"  alt="Paypal" style="width: 410px; margin-bottom: 15px;">
                         </a>
                     <div id="other-checkout">
                         <a href="authorize_payment">

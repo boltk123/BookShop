@@ -28,6 +28,15 @@
                     <span class="color-2 font-style-1 font-size-sm pl-1 white-highlight d-none visible-in-md">SHOPPING LIST</span>
                 </a>
             </li>
+            <li class="pl-2">
+                <c:if test = "${sessionScope.account.role == 'admin'}">
+                    <button type="button"
+                            class="d-none stock-btn default-btn font-size-sm font-style-2 bg-color-1">
+                        <a href="AdminDashboard" class="image-highlight">ADMIN</a>
+                    </button>
+                </c:if>
+
+            </li>
         </ul>
 
         <ul class="list-style-none d-flex justify-around align-center user-info">
@@ -63,50 +72,12 @@
 </header>
 
 <main class="d-flex">
-    <!--Sidebar-->
-    <div class="iq-sidebar">
-        <div class="iq-sidebar-head">
-            <a href="HomePage" class="image-highlight">
-                <img src="./assets/images/book.svg" alt="bookshop-logo">
-                <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
-            </a>
-        </div>
-        <div class="color-white">
-            <div class="scroll-content">
-                <nav class="iq-sidebar-menu">
-                    <ul class="iq-menu">
-                        <c:if test = "${sessionScope.account.role == 'admin'}">
-                            <li class="bg-color-4">
-                                <a href="#admin" class="bg-color-1 m-left font-style-3 p-1 font-size-lg justify-start"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                                <ul id="admin" class="bg-color-4 list-style-none m-left-1 font-size-md justify-start" data-parent="#iq-sidebar-toggle">
-                                    <li><a href="AdminDashboard"><i class="#"></i>Dashboard</a></li>
-                                    <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
-                                    <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
-                                </ul>
-                            </li>
-                        </c:if>
-                        <li class="bg-color-4">
-                            <a href="#userinfo" class="bg-color-1 m-left font-style-3 p-1 font-size-lg justify-start" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                            <ul id="userinfo" class="bg-color-4 list-style-none m-left-1 font-size-md justify-start" data-parent="#iq-sidebar-toggle">
-                                <li><a href="Account"><i class="#"></i>User Profile</a></li>
-                                <li><a href="#"><i class="#"></i>User Edit</a></li>
-                                <li><a href="#"><i class="#"></i>User Add</a></li>
-                                <li><a href="#"><i class="#"></i>User List</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
+
     <!--Content Page-->
     <div class="account-infos">
 
         <p class="account-infos-title">Account Info</p>
 
-        <div class="account-info">
-            <p>Account ID: ${account.user_id}</p>
-        </div>
         <div class="account-info">
             <p>Username: ${account.username}</p>
         </div>
@@ -119,7 +90,12 @@
         <div class="account-info">
             <p>Email: ${account.email}</p>
         </div>
-
+        <div class="account-info">
+            <p>Phone: ${account.phone}</p>
+        </div>
+        <div class="account-info">
+            <p>Address: ${account.address}</p>
+        </div>
         <a class="account-update-btn" href="PurchaseHistory"><input type="hidden" name="action"
             value="invoice">Purchase History</a>
         <a class="account-update-btn" href="update_account.jsp">Update</a>

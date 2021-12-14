@@ -32,6 +32,14 @@ public class AdminServlet extends HttpServlet {
         try{
             Accounts current_account = (Accounts) session.getAttribute("account");
             index_message = "Hello " + current_account.getFullname();
+            List<Purchases> invoices = PurchasesDB.selectAllInvoices(current_account.getUser_id());
+            List<Books> booksList = BooksDB.selectAllBooks();
+            request.setAttribute("invoices",invoices);
+            request.setAttribute("booksList",booksList);
+            for(Purchases invoice: invoices){
+                PurchasesDB.updateDeliveredStatus(invoice.getUser_id(), invoice.getProduct_id(), invoice.isDelivered());
+            }
+
         }
         catch(Exception e){
             index_message = "LOG IN";

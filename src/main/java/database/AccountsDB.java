@@ -135,4 +135,17 @@ public class AccountsDB {
         int count = accounts.size();
         return count;
     }
+    public static List<Accounts> selectAllAccount() {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        String qString = "SELECT a FROM Accounts a";
+        TypedQuery<Accounts> q = em.createQuery(qString, Accounts.class);
+        try {
+            List<Accounts> accountsList = q.getResultList();
+            return accountsList;
+        } catch (NoResultException e) {
+            return null;
+        } finally {
+            em.close();
+        }
+    }
 }

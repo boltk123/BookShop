@@ -19,11 +19,17 @@ public class AccountUpdateServlet extends HttpServlet {
 
             String first_name = request.getParameter("firstname");
             String last_name = request.getParameter("lastname");
-
+            String email = request.getParameter("email");
+            String phone = request.getParameter("phone");
+            String address = request.getParameter("address");
             Accounts account = (Accounts) session.getAttribute("account");
 
             account.setFirstName(first_name);
             account.setLastName(last_name);
+            account.setFullname();
+            account.setEmail(email);
+            account.setPhone(phone);
+            account.setAddress(address);
             AccountsDB.update(account);
 
             session.setAttribute("account",account);

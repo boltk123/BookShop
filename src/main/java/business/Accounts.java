@@ -70,12 +70,12 @@ public class Accounts {
 
     public String getLastName() { return lastname; }
 
-    public void setLastName(String lastName) { this.lastname = lastName; }
+    public void setLastName(String lastName) { this.lastname = lastName;}
     public String getFullname() {
         return firstname + " " + lastname;
     }
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFullname() {
+        this.fullname =  this.firstname + " " + this.lastname;
     }
 
 

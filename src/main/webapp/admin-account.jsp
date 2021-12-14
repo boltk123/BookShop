@@ -92,66 +92,28 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="book-table-contain">
-                    <p class="table-title">Overview</p>
-                    <table class="book-table">
-                        <thead>
-                            <tr>
-                                <th>USERS</th>
-                                <th>BOOKS</th>
-                                <th>PURCHASES</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>${totalAccount}</td>
-                                <td>${totalBooks}</td>
-                                <td>${totalPurchases}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="book-table-contain">
-                    <p class="table-title">Order</p>
+                    <p class="table-title">Account List</p>
                     <table class="book-table">
                         <thead>
                         <tr>
                             <th>USER ID</th>
+                            <th>ROLE</th>
                             <th>FULL NAME</th>
-                            <th>PRODUCT ID</th>
-                            <th>PRODUCT NAME</th>
-                            <th>QUANTITY</th>
-                            <th>ORDER DATE</th>
-                            <th>DELIVERY DATE</th>
-                            <th>STATUS</th>
+                            <th>EMAIL</th>
+                            <th>PHONE NUMBER</th>
+                            <th>ADDRESS</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach var="item" items="${invoices}">
-                            <c:forEach var="book" items="${booksList}">
-                                <c:if test = "${item.product_id eq book.book_id}">
-                                    <tr>
-                                        <td>${sessionScope.account.user_id}</td>
-                                        <td>${sessionScope.account.fullname}</td>
-                                        <td>${book.book_id}</td>
-                                        <td>${book.title}</td>
-                                        <td>${item.quantity}</td>
-                                        <td>${item.purchase_date}</td>
-                                        <td>${item.delivery_date}</td>
-                                        <c:choose>
-                                            <c:when test="${item.delivered eq true}">
-                                                <td>
-                                                    Delivered
-                                                </td>
-                                            </c:when>
-                                            <c:otherwise>
-                                                <td>
-                                                    Processing
-                                                </td>
-                                            </c:otherwise>
-                                        </c:choose>
-                                    </tr>
-                                </c:if>
-                            </c:forEach>
+                        <c:forEach var="account" items="${accounts}">
+                            <tr>
+                                <td>${account.user_id}</td>
+                                <td>${account.role}</td>
+                                <td>${account.fullname}</td>
+                                <td>${account.email}</td>
+                                <td>${account.phone}</td>
+                                <td>${account.address}</td>
+                            </tr>
                         </c:forEach>
                         </tbody>
                     </table>

@@ -8,6 +8,7 @@
     <title>Bookshop</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/update-user.css">
 </head>
 <body>
     <nav class="bg-color-3 d-flex justify-around p-1">
@@ -68,15 +69,28 @@
 
     <form class="Login-form " action="AccountUpdate" method="post">
         <input type="hidden" name="action" value="update">
-        <label>First Name:</label>
-        <input type="text" name="firstname" value=${account.firstName}
-               required><br>
-        <label>Last Name:</label>
-        <input type="text" name="lastname" value=${account.lastName}
-               required><br>
-        <br>
-        <label>&nbsp;</label>
-        <input type="submit" value="Update" class="margin_left">
+        <div class="input-field">
+            <label>First Name:</label>
+            <input type="text" name="firstname" value=${account.firstName} required>
+        </div>
+        <div class="input-field">
+            <label>Last Name:</label>
+            <input type="text" name="lastname" value=${account.lastName} required>
+        </div>
+        <div class="input-field">
+            <label>Email:</label>
+            <input type="text" name="email" value=${account.email} required>
+        </div>
+        <div class="input-field">
+            <label>Phone:</label>
+            <input type="text" name="phone" value=${account.phone} required>
+        </div>
+        <div class="input-field">
+            <label>Address:</label>
+            <input type="text" name="address" value=${account.address} required>
+        </div>
+
+        <input type="submit" value="Update" class="update-btn">
     </form>
 
 </body>

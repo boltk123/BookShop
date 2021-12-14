@@ -414,9 +414,7 @@ img[alt="cart-logo-2"] {
     width: 2rem;
     height: 1.8rem;
 }
-a.new-account {
-    position: absolute;
-}
+
 .book-card {
     width: 48%;
     border: 1px solid #ddd;
@@ -429,6 +427,7 @@ a.new-account {
 
 .add-to-cart {
     border: 1px solid #ccc;
+    padding: 4px 15px;
 }
 
 .filter-container {
@@ -547,6 +546,8 @@ a.new-account {
     font-size: 14px;
     font-style: italic;
     text-align: center;
+    text-decoration: underline;
+    margin-top: 25px;
 }
 
 .Login-form .login-submit {
@@ -591,7 +592,7 @@ a.new-account {
     z-index: 1000;
     top: 0;
     width: 300px;
-    height: 50vh;
+    /*height: 50vh;*/
     background: var(--color-3);
 }
 .iq-sidebar-head {
@@ -612,7 +613,8 @@ a.new-account {
 }
 
 .iq-menu {
-    margin: 0;
+    width: 100%;
+    margin-top: -13px;
     padding: 0;
     list-style-type: none;
 }
@@ -624,12 +626,18 @@ a.new-account {
     height: 100vh;
 }
 
+#admin li a {
+    justify-content: start;
+    padding: 15px 20px;
+    font-size: 16px;
+}
+
 /* content-page */
 .content-page {
     overflow: hidden;
-    padding: 125px 25px 0;
-    margin-left: 100px;
-    min-height: 50vh;
+    padding: 65px 25px 0;
+    /*margin-left: 100px;*/
+    min-height: 72vh;
 }
 
 .container-fluid {

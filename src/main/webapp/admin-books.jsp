@@ -71,12 +71,6 @@
 <main class="d-flex">
     <!--Sidebar-->
     <div class="iq-sidebar">
-        <div class="iq-sidebar-head">
-            <a href="HomePage" class="image-highlight">
-                <img src="./assets/images/book.svg" alt="bookshop-logo">
-                <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
-            </a>
-        </div>
         <div class="color-white">
             <div class="scroll-content">
                 <nav class="iq-sidebar-menu">
@@ -86,61 +80,58 @@
                                 <a href="#admin" class="bg-color-1 m-left font-style-3 p-1 font-size-lg justify-start"><span class="ripple rippleEffect"></span><i class="ri-admin-line"></i><span>Admin</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                                 <ul id="admin" class="bg-color-4 list-style-none m-left-1 font-size-md justify-start" data-parent="#iq-sidebar-toggle">
                                     <li><a href="AdminDashboard"><i class="#"></i>Dashboard</a></li>
-                                    <li><a href="AdminAuthors"><i class="#"></i>Author</a></li>
                                     <li><a href="AdminBooks"><i class="#"></i>Books</a></li>
+                                    <li><a href="AdminAccountList"><i class="#"></i>Accounts</a></li>
                                 </ul>
                             </li>
                         </c:if>
-                        <li class="bg-color-4">
-                            <a href="#userinfo" class="bg-color-1 m-left font-style-3 p-1 font-size-lg justify-start" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                            <ul id="userinfo" class="bg-color-4 list-style-none m-left-1 font-size-md justify-start" data-parent="#iq-sidebar-toggle">
-                                <li><a href="Account"><i class="#"></i>User Profile</a></li>
-                                <li><a href="#"><i class="#"></i>User Edit</a></li>
-                                <li><a href="#"><i class="#"></i>User Add</a></li>
-                                <li><a href="#"><i class="#"></i>User List</a></li>
-                            </ul>
-                        </li>
                     </ul>
                 </nav>
             </div>
         </div>
     </div>
-    <div class="book-table-contain">
-        <table class="book-table">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Rating</th>
-                <th>Price</th>
-                <th>Genre</th>
-                <th>Author</th>
-                <th>Edit/Delete</th>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach var="book" items="${books}">
-                <tr>
-                    <td>${book.book_id}</td>
-                    <td>${book.title}</td>
-                    <td>${book.rating}</td>
-                    <td>${book.cost}</td>
-                    <td>${book.genre}</td>
-                    <td>${book.author}</td>
-                    <td>
-                        <a href="" class="edit-btn">
-                            Edit
-                        </a>
-                        <a href=" " class="delete-btn">
-                            Delete
-                        </a>
-                    </td>
-                </tr>
-            </c:forEach>
-            </tbody>
-        </table>
-    </div>
 
+    <div class="sub-container" style="display: block;">
+        <div class="add-book-btn">
+            <a href="BooksTableInput.jsp">Add Book</a>
+        </div>
+
+        <div class="book-table-contain">
+            <table class="book-table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Rating</th>
+                    <th>Price</th>
+                    <th>Genre</th>
+                    <th>Author</th>
+                    <th>Edit/Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="book" items="${books}">
+                    <tr>
+                        <td>${book.book_id}</td>
+                        <td>${book.title}</td>
+                        <td>${book.rating}</td>
+                        <td>${book.cost}</td>
+                        <td>${book.genre}</td>
+                        <td>${book.author}</td>
+                        <td>
+                            <a href="EditFetching?book_id=${book.book_id}" class="edit-btn">
+                                Edit
+                            </a>
+                            <a href="DeleteBook?book_id=${book.book_id}" class="delete-btn">
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </main>
 
 <footer class="bg-white border">

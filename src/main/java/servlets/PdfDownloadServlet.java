@@ -1,6 +1,8 @@
 package servlets;
 
+import business.Book_contents;
 import business.Books;
+import database.Book_contentsDB;
 import database.BooksDB;
 
 import javax.servlet.*;
@@ -22,8 +24,9 @@ public class PdfDownloadServlet extends HttpServlet {
         ServletContext context = getServletContext();
         int book_id = Integer.parseInt(request.getParameter("book_id"));
         Books book = BooksDB.selectBooksByBookID(book_id);
+        Book_contents book_content = Book_contentsDB.SelectBookPDF(book_id);
         String fileName = book.getTitle()+".pdf";
-        byte[] pdf_blob = book.getBook_pdf();
+        byte[] pdf_blob = book_content.getBook_pdf();
         InputStream pdf_inputStream = new ByteArrayInputStream(pdf_blob);
         int fileLength = pdf_inputStream.available();
         System.out.println("fileLength = " + fileLength);

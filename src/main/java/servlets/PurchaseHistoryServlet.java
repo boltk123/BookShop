@@ -24,6 +24,10 @@ public class PurchaseHistoryServlet extends HttpServlet {
 
         request.setAttribute("invoices",invoices);
         request.setAttribute("booksList",booksList);
+        for(Purchases invoice: invoices){
+            PurchasesDB.updateDeliveredStatus(invoice.getUser_id(), invoice.getProduct_id(), invoice.isDelivered());
+        }
+
         ServletContext sc = getServletContext();
         sc.getRequestDispatcher(url).
                 forward(request, response);
