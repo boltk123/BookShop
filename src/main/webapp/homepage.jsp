@@ -80,13 +80,10 @@
                     <img src="./assets/images/person.svg" alt="user-img" class="image-highlight pl-1">
                 </a>
             </li>
-            <li class="pl-1">
-                <a href="Search" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">SEARCH</a>
-            </li>
         </ul>
     </nav>
 
-    <section class="hero-section d-none flex-column align-center justify-center p-3">
+    <section class="hero-section flex-column align-center justify-center p-3">
         <h1 class="hero-title font-style-2 color-white p-1">BOOKSHOP</h1>
         <h4 class="font-style-1 color-white font-size-md">An online market place for all kinds of books</h4>
         <form action="Search" class="hero-form p-1 d-flex align-center">

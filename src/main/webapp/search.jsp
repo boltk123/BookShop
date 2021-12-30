@@ -62,13 +62,11 @@
                     <img src="./assets/images/person.svg" alt="user-img" class="image-highlight pl-1">
                 </a>
             </li>
-            <li class="pl-1">
-                <a href="Search" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">Search</a>
-            </li>
+
 
         </ul>
     </nav>
-    <section class="hero-section d-none flex-column p-1">
+    <section class="hero-section flex-column p-1">
         <h2 class="d-none">This is added to remove validators errors.</h2>
         <div class="mx-auto">
             <h1 class="hero-title font-style-2 color-white">BOOKSHOP</h1>
@@ -138,9 +136,11 @@
     </aside>
     <!-- Search Results -->
     <section class="border">
+        <!--
         <h3 class="font-style-1 font-size-s color-2 p-1 border-bottom-3">119 search results for 'life' Search at
             'philosophy' at
             Category 'fiction'</h3>
+        -->
         <section class="p-1 d-flex flex-column">
             <h2 class="d-none">This is hidden</h2>
             <c:forEach var="book" items="${book_items}">

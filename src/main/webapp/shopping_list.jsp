@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e487c6bc79.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/shopping_list.css">
+    <link rel="stylesheet" href="css/responsive_shop.css">
     <title>Shopping Cart</title>
 </head>
 <body>

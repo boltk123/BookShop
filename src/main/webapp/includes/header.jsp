@@ -77,9 +77,11 @@
                 <img src="./assets/images/person.svg" alt="user-img" class="image-highlight pl-1">
             </a>
         </li>
+        <!--
         <li class="pl-1">
-            <a href="#" class="search-btn default-btn font-size-sm font-style-2 bg-color-1">SEARCH</a>
+            <a href="Search?genre=all&key_word=" class="search-btn d-none default-btn font-size-sm font-style-2 bg-color-1">SEARCH</a>
         </li>
+        -->
     </ul>
 </nav>
 </header>

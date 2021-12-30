@@ -512,6 +512,23 @@ img[alt="cart-logo-2"] {
     }
 }
 
+@media (max-width: 740px) {
+    .hero-section {
+        padding: 1rem !important;
+    }
+
+    .hero-title {
+        margin: 15px 0 !important;
+        font-size: 3rem;
+        padding: 0px 0rem !important;
+    }
+
+    .hero-form {
+        padding: 10px 0;
+        width: 100% !important;
+    }
+}
+
 /*=====CSS for login.jsp start here=====*/
 .Login-form {
     margin: 100px auto;

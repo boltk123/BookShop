@@ -33,7 +33,7 @@
           <factory-entry name="emailListPU" value="d8f0a8d1-542f-49d6-8052-5fea10177a0e" />
         </datasource-mapping>
         <naming-strategy-map />
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/webapp/META-INF/persistence.xml" />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/webapp/META-INF/persistence3.xml" />
       </configuration>
     </facet>
   </component>
