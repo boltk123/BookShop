@@ -15,8 +15,8 @@
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
                 <a href="HomePage" class="image-highlight">
-                    <img src="./assets/images/book.svg" alt="bookshop-logo">
-                    <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
+
+                    <span class="color-white font-style-3 font-size-md pl-1">DANDELION FIELD</span>
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
@@ -72,8 +72,8 @@
     <div class="iq-sidebar">
         <div class="iq-sidebar-head">
             <a href="HomePage" class="image-highlight">
-                <img src="./assets/images/book.svg" alt="bookshop-logo">
-                <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
+
+                <span class="color-white font-style-3 font-size-md pl-1">DANDELION FIELD</span>
             </a>
         </div>
         <div class="color-white">
@@ -156,8 +156,8 @@
         <h1 class="d-none">This is hidden</h1>
         <div class="p-1">
             <div class="d-flex justify-center align-center">
-                <img src="./assets/images/book-gray.svg" alt="bookshop-logo">
-                <span class="color-2 font-style-3 font-size-md pl-1">BOOKSHOP</span>
+
+                <span class="color-2 font-style-3 font-size-md pl-1">DANDELION FIELD</span>
             </div>
             <p class="font-style-2 color-2 font-size-sm py-half">
                 Bookshop is a market place for books. Here you can find<br>

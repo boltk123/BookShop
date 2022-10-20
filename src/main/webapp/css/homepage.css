@@ -1,8 +1,8 @@
 :root {
-    --color-1: #d35266;
+    --color-1: #95d7f5;
     --color-2: #888;
     --color-3: #383838;
-    --color-4: #d67e89;
+    --color-4: #04a3f8;
 }
 
 /* Fonts */
@@ -377,7 +377,7 @@ img[alt="user-img"] {
 /* Hero Section */
 
 .hero-section {
-    background: url("../assets/images/book-bg.svg") no-repeat, linear-gradient(var(--color-4), var(--color-1));
+    background:  linear-gradient(var(--color-4), var(--color-1));
 }
 
 .hero-title {
@@ -457,7 +457,7 @@ img[alt="cart-logo-2"] {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    background: gold;
+    background: darkcyan;
 }
 
 
@@ -535,7 +535,7 @@ img[alt="cart-logo-2"] {
     border: 1px solid #383838;
     border-radius: 7px;
     padding: 20px;
-    background: #c75062;
+    background: #fdbc47;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     width: 550px;

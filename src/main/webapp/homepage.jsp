@@ -18,8 +18,8 @@
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
                 <a href="HomePage" class="image-highlight">
-                    <img src="./assets/images/book.svg" alt="bookshop-logo">
-                    <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
+
+                    <span class="color-white font-style-3 font-size-md pl-1">DANDELION FIELD</span>
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
@@ -84,8 +84,8 @@
     </nav>
 
     <section class="hero-section flex-column align-center justify-center p-3">
-        <h1 class="hero-title font-style-2 color-white p-1">BOOKSHOP</h1>
-        <h4 class="font-style-1 color-white font-size-md">An online market place for all kinds of books</h4>
+        <h1 class="hero-title font-style-2 color-white p-1">DANDELION FIELD</h1>
+        <h4 class="font-style-1 color-white font-size-md">A peaceful place for your soul...</h4>
         <form action="Search" class="hero-form p-1 d-flex align-center">
             <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
                 <option value="all" class="genre-selector">All genre</option>
@@ -225,14 +225,13 @@
         <h2 class="d-none">This is hidden</h2>
         <div class="p-1">
             <div class="d-flex justify-center align-center">
-                <img src="./assets/images/book-gray.svg" alt="bookshop-logo">
-                <span class="color-2 font-style-3 font-size-md pl-1">BOOKSHOP</span>
+
+                <span class="color-2 font-style-3 font-size-md pl-1">DANDELION FIELD</span>
             </div>
             <p class="font-style-2 color-2 font-size-sm py-half">
-                Bookshop is a market place for books. Here you can find<br>
-                a huge collection of books. You can browse through our<br>
-                search box. Our search algorithm will help you find your<br>
-                preferred books. </p>
+                Dandelion field, as the name suggested, warm kindled your heart with books. <br>
+                Here you can find a huge collection of all genres. Set an adventure through our<br>
+                field, find your preferred books and enjoy.</p>
         </div>
 
         <div class="flex-grow-1 p-1">
@@ -269,7 +268,7 @@
     <section class="border">
         <h2 class="d-none">This is hidden</h2>
         <div class="copyright-section p-1 mx-auto d-flex justify-between align-center">
-            <p class="font-size-sm font-style-1 color-2">Copyright&copy; 2021 bookshop.com.</p>
+            <p class="font-size-sm font-style-1 color-2">Copyright&copy; 2021 dandelionfield.com.</p>
             <ul class="list-style-none d-flex">
                 <li><img src="./assets/images/twitter.svg" alt="twitter-logo" class="d-block category-heading-icons pointer ml-half"></li>
                 <li><img src="./assets/images/google.svg" alt="google-logo" class="d-block category-heading-icons pointer ml-half"></li>
