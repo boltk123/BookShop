@@ -17,8 +17,8 @@
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
                 <a href="HomePage" class="image-highlight">
-                    <img src="./assets/images/book.svg" alt="bookshop-logo">
-                    <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
+
+                    <span class="color-white font-style-3 font-size-md pl-1">DANDELION FIELD</span>
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
@@ -69,7 +69,7 @@
     <section class="hero-section flex-column p-1">
         <h2 class="d-none">This is added to remove validators errors.</h2>
         <div class="mx-auto">
-            <h1 class="hero-title font-style-2 color-white">BOOKSHOP</h1>
+            <h1 class="hero-title font-style-2 color-white">DANDELION FIELD</h1>
             <h4 class="font-style-1 color-white font-size-md py-1">Search for your desired book</h4>
             <div class="hero-form d-flex align-center py-1">
                 <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
@@ -282,13 +282,12 @@
         <div class="p-1">
             <div class="d-flex justify-center align-center">
                 <img src="./assets/images/book-gray.svg" alt="bookshop-logo">
-                <span class="color-2 font-style-3 font-size-md pl-1">BOOKSHOP</span>
+                <span class="color-2 font-style-3 font-size-md pl-1">DANDELION FIELD</span>
             </div>
             <p class="font-style-2 color-2 font-size-sm py-half">
-                Bookshop is a market place for books. Here you can find<br>
-                a huge collection of books. You can browse through our<br>
-                search box. Our search algorithm will help you find your<br>
-                preferred books. </p>
+                 Dandelion field, as the name suggested, warm kindled your heart with books. <br>
+                Here you can find a huge collection of all genres. Set an adventure through our<br>
+                field, find your preferred books and enjoy.</p>
         </div>
 
         <div class="flex-grow-1 p-1">

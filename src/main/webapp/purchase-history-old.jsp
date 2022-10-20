@@ -16,8 +16,8 @@
     <ul class="list-style-none d-flex align-center justify-center">
       <li>
         <a href="HomePage" class="image-highlight">
-          <img src="./assets/images/book.svg" alt="bookshop-logo">
-          <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
+
+          <span class="color-white font-style-3 font-size-md pl-1">DANDELION FIELD</span>
         </a>
       </li>
       <li class="pl-2 d-none visible-in-md">

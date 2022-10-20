@@ -160,10 +160,9 @@
                 <span class="color-2 font-style-3 font-size-md pl-1">DANDELION FIELD</span>
             </div>
             <p class="font-style-2 color-2 font-size-sm py-half">
-                Bookshop is a market place for books. Here you can find<br>
-                a huge collection of books. You can browse through our<br>
-                search box. Our search algorithm will help you find your<br>
-                preferred books. </p>
+                 Dandelion field, as the name suggested, warm kindled your heart with books. <br>
+                Here you can find a huge collection of all genres. Set an adventure through our<br>
+                field, find your preferred books and enjoy.</p>
         </div>
 
         <div class="flex-grow-1 p-1">
