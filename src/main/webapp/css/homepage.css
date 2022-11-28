@@ -42,6 +42,9 @@
 .color-3 {
     color: var(--color-3);
 }
+.color-5{
+    color: #ff3270;
+}
 
 .color-white {
     color: #fff;
@@ -280,6 +283,9 @@ a {
 .font-size-md {
     font-size: 1.6rem;
 }
+#font-size-mds{
+    font-size: 2.1rem;
+}
 
 .font-size-s {
     font-size: 1.5rem;
@@ -389,7 +395,7 @@ img[alt="user-img"] {
 }
 
 .genre-selector {
-    font-size: 12px;
+    font-size: 10px;
     padding: 0.8rem;
 }
 
@@ -407,7 +413,7 @@ img[alt="cart-logo-2"] {
 /* Book genre container */
 
 .book-genre-container {
-    max-width: 768px;
+    max-width: 1024px;
 }
 
 .category-heading-icons {

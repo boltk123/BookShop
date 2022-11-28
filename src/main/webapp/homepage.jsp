@@ -7,8 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookshop</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/homepage.css">
+    <link type="text/css" rel="stylesheet" href="css/homepage.css">
+    <link type="text/css" rel="stylesheet" href="css/homepagePlus.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -18,8 +22,8 @@
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
                 <a href="HomePage" class="image-highlight">
-
-                    <span class="color-white font-style-3 font-size-md pl-1">DANDELION FIELD</span>
+                    <img src="image/rsz_120px-vector_book_bluesvg.png" alt="bookshop-logo">
+                    <span class="color-white font-style-3 font-size-md pl-1">BOOKSHOP</span>
                 </a>
             </li>
             <li class="pl-2 d-none visible-in-md">
@@ -84,8 +88,8 @@
     </nav>
 
     <section class="hero-section flex-column align-center justify-center p-3">
-        <h1 class="hero-title font-style-2 color-white p-1">DANDELION FIELD</h1>
-        <h4 class="font-style-1 color-white font-size-md">A peaceful place for your soul...</h4>
+        <h1 class="hero-title font-style-2 color-white p-1">BOOKSHOP</h1>
+        <h4 class="font-style-1 color-white font-size-md">An online market place for all kinds of books</h4>
         <form action="Search" class="hero-form p-1 d-flex align-center">
             <select name="genre" class="genre-selector border-0 bg-white border-right flex-grow-1 pointer">
                 <option value="all" class="genre-selector">All genre</option>
@@ -100,34 +104,67 @@
 </header>
 
 <main class="pb-4">
-    <!-- Featured Book -->
-    <div class="bg-white border">
-        <section class="featured-book mx-auto p-1">
-            <h1 class="font-style-2 font-size-md color-2 black-highlight pointer">FEATURED BOOK</h1>
-            <article class="d-flex justify-between py-1">
-                <img src="assets/images/siddhartha.jpg" alt="siddhartha" class="d-block h-200">
-                <div class="ml-1 d-flex flex-column justify-between">
-                    <h4 class="font-style-2 font-size-md color-1 pointer black-highlight">Siddhartha: A Novel <span
-                            class="font-style-1 font-size-md color-2 black-highlight">by Hermann Hesse, Hilda Rosner
-                                (Translator)</span>
-                    </h4>
-                    <p class="font-style-1 font-size-s color-3 py-1 d-none visible-in-sm gray-highlight pointer">
-                        Herman Hesse's classic novel
-                        has delighted, inspired, and influenced generations of readers,
-                        writers, and thinkers. In this story of a wealthy Indian Brahmin who casts off a life of
-                        privilege to seek spiritual fulfillment.</p>
-                    <p class="font-size-md font-style-2 color-3 gray-highlight pointer">Rating: 4/5</p>
-                    <div class="d-flex flex-column purchase-details-container">
-                        <a href="AddCart?book_id=1" class="default-btn font-size-md font-style-2 bg-color-1 mr-half my-half">$5.49</a>
-                        <a href="Detail?book_id=1" class="default-btn font-size-sm font-style-2 bg-color-1 mr-half my-half"><img
-                                src="./assets/images/supermarket-white.svg" alt="cart-logo-2"><span
-                                class="pl-1">Purchase
-                                    Details</span></a>
-                    </div>
+    <section class="home" id="home">
+
+        <div class="row">
+
+            <div class="content">
+                <h4>Back to school</h4>
+                <h1>Special 50% OFF </h1>
+                <h4>For our student community</h4>
+                <a href="#" class="btn">shop now</a>
+            </div>
+
+            <div class="swipes books-slider">
+                <div class="wrapper">
+                    <a href="#" class="swipe"><img src="image/book-1.png" alt=""></a>
+                    <a href="#" class="swipe"><img src="image/book-2.png" alt=""></a>
+                    <a href="#" class="swipe"><img src="image/book-3.png" alt=""></a>
+                    <a href="#" class="swipe"><img src="image/book-4.png" alt=""></a>
+                    <a href="#" class="swipe"><img src="image/book-5.png" alt=""></a>
+                    <a href="#" class="swipe"><img src="image/book-6.png" alt=""></a>
                 </div>
-            </article>
-        </section>
-    </div>
+                <img src="image/stand.png" class="stand" alt="">
+            </div>
+
+        </div>
+
+    </section>
+    <section class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-shipping-fast" id="moveleft"></i>
+            <div class="content">
+                <h3>free shipping</h3>
+                <p>order over $100</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-lock" id="Moveleftt"></i>
+            <div class="content">
+                <h3>secure payment</h3>
+                <p>100 secure payment</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-redo-alt" id="movelefts"></i>
+            <div class="content">
+                <h3>easy returns</h3>
+                <p>10 days returns</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-headset" id="moveleFtss"></i>
+            <div class="content">
+                <h3>24/7 support</h3>
+                <p>call us anytime</p>
+            </div>
+        </div>
+
+    </section>
 
     <!-- Non Fiction Books -->
     <section class="book-genre-container mx-auto p-1">
@@ -151,7 +188,7 @@
                                 <a href="AddCart?book_id=${book.book_id}">
                                     <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                                 </a>
-                                <span class="font-size-md color-1 font-style-2 gray-highlight">$${book.cost}</span>
+                                <span class="font-size-md color-5 font-style-2 gray-highlight">$${book.cost}</span>
                             </p>
                         </div>
                     </div>
@@ -159,6 +196,28 @@
             </c:forEach>
         </section>
     </section>
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="image/arrival_4.jpg" class="offer-img">
+                </div>
+                <div class="cols-2">
+                    <h1>RED QUEEN</h1>
+                    <p>$15.99</p>
+                    <div class="stars">
+                        <i class="fas fa-star" class="sizeStar"></i>
+                        <i class="fas fa-star" class="sizeStar"></i>
+                        <i class="fas fa-star" class="sizeStar"></i>
+                        <i class="fas fa-star" class="sizeStar"></i>
+                        <i class="fas fa-star" class="sizeStar"></i>
+                        <p>1,368 reviews</p>
+                    </div>
+                    <h2>Author: Victoria Averya</h2>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Fiction Books-->
     <section class="book-genre-container mx-auto p-1">
         <h4 class="font-style-2 font-size-md color-2  border-bottom my-1 py-1 black-highlight pointer"><img
@@ -180,7 +239,7 @@
                                 <a href="AddCart?book_id=${book.book_id}">
                                     <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                                 </a>
-                                <span class="font-size-md color-1 font-style-2 gray-highlight">$${book.cost}</span>
+                                <span class="font-size-md color-5 font-style-2 gray-highlight">$${book.cost}</span>
                             </p>
                         </div>
                     </div>
@@ -188,8 +247,9 @@
             </c:forEach>
         </section>
     </section>
+
     <!-- Academic Books -->
-    <section class="book-genre-container mx-auto p-1">
+    <section class="book-genre-container mx-auto p-1 ">
         <h4 class="font-style-2 font-size-md color-2  border-bottom my-1 py-1 black-highlight pointer"><img
                 src="assets/images/opportunity.svg" alt="non-fiction" class="category-heading-icons mr-half">Academic Books</h4>
         <section class="book-cards-container d-flex flex-wrap justify-between">
@@ -210,7 +270,7 @@
                                 <a href="AddCart?book_id=${book.book_id}">
                                     <span class="add-to-cart font-size-lg px-half  gray-highlight">+</span>
                                 </a>
-                                <span class="font-size-md color-1 font-style-2 gray-highlight">$${book.cost}</span>
+                                <span class="font-size-md color-5 font-style-2 gray-highlight">$${book.cost}</span>
                             </p>
                         </div>
                     </div>
@@ -218,6 +278,23 @@
             </c:forEach>
         </section>
     </section>
+
+    <section class="deal">
+
+        <div class="content">
+            <h3>deal of the day</h3>
+            <h1>upto 50% off</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis in atque dolore tempora quaerat at fuga dolorum natus velit.</p>
+            <a href="#" class="btn">shop now</a>
+        </div>
+
+        <div class="image">
+            <img src="image/deal-img.jpg" alt="">
+        </div>
+
+    </section>
+
+
 </main>
 
 <footer class="bg-white border">
@@ -225,13 +302,14 @@
         <h2 class="d-none">This is hidden</h2>
         <div class="p-1">
             <div class="d-flex justify-center align-center">
-
-                <span class="color-2 font-style-3 font-size-md pl-1">DANDELION FIELD</span>
+                <img src="./assets/images/book-gray.svg" alt="bookshop-logo">
+                <span class="color-2 font-style-3 font-size-md pl-1">BOOKSHOP</span>
             </div>
             <p class="font-style-2 color-2 font-size-sm py-half">
-                Dandelion field, as the name suggested, warm kindled your heart with books. <br>
-                Here you can find a huge collection of all genres. Set an adventure through our<br>
-                field, find your preferred books and enjoy.</p>
+                Bookshop is a market place for books. Here you can find<br>
+                a huge collection of books. You can browse through our<br>
+                search box. Our search algorithm will help you find your<br>
+                preferred books. </p>
         </div>
 
         <div class="flex-grow-1 p-1">
@@ -268,7 +346,7 @@
     <section class="border">
         <h2 class="d-none">This is hidden</h2>
         <div class="copyright-section p-1 mx-auto d-flex justify-between align-center">
-            <p class="font-size-sm font-style-1 color-2">Copyright&copy; 2021 dandelionfield.com.</p>
+            <p class="font-size-sm font-style-1 color-2">Copyright&copy; 2021 bookshop.com.</p>
             <ul class="list-style-none d-flex">
                 <li><img src="./assets/images/twitter.svg" alt="twitter-logo" class="d-block category-heading-icons pointer ml-half"></li>
                 <li><img src="./assets/images/google.svg" alt="google-logo" class="d-block category-heading-icons pointer ml-half"></li>
@@ -278,6 +356,10 @@
         </div>
     </section>
 </footer>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<!-- custom js file link  -->
+<script src="script.js"></script>
 </body>
 
 </html>
