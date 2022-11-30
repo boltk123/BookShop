@@ -10,6 +10,7 @@
     <title>Bookshop</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/loginNew.css">
 </head>
 <body>
 <nav class="bg-color-3 d-flex justify-around p-1">
@@ -61,7 +62,7 @@
 </nav>
 <br>
 
-<form class="Login-form " action="LoginReg" method="post">
+<!--<form class="Login-form " action="LoginReg" method="post">
     <input type="hidden" name="action" value="register">
     <div class="login-field">
         <p><i>${usernamemessage}</i></p>
@@ -95,6 +96,54 @@
     </div>
     <input type="submit" value="Register" class="register-submit">
 </form>
+-->
+<div class="center">
+    <h1>Register</h1>
+    <form action="LoginReg" method="post">
+        <input type="hidden" name="action" value="register">
+        <div class="txt_field">
+            <p><i>${usernamemessage}</i></p>
+            <input type="text" name="username" value="${account.username}" required>
+            <span></span>
+            <label>Username</label>
+        </div>
+        <div class="txt_field">
+            <input type="password" name="password" value="${account.password}" required>
+            <span></span>
+            <label>Password</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" name="firstname" value="${account.firstname}" required>
+            <span></span>
+            <label>First Name</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" name="lastname" value="${account.lastname}" required>
+            <span></span>
+            <label>Last Name</label>
+        </div>
+        <div class="txt_field">
+            <p><i>${emailmessage}</i></p>
+            <input type="email" name="email" value="${account.email}" required>
+            <span></span>
+            <label>Email</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" name="phone" value="${account.phone}" required>
+            <span></span>
+            <label>Phone</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" name="address" value="${account.address}" required>
+            <span></span>
+            <label>Address</label>
+        </div>
 
+        <input type="submit" value="Join Now" >
+        <div class="signup_link">
+
+        </div>
+    </form>
+</div>
 </body>
 </html>

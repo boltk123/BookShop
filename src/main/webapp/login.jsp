@@ -10,6 +10,7 @@
   <title>Bookshop</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/homepage.css">
+  <link rel="stylesheet" href="css/loginNew.css">
 </head>
 
 
@@ -71,7 +72,7 @@
   </ul>
 </nav>
 <br>
-
+<!--
 <form class="Login-form " action="LoginReg" method="post">
   <p><i>${loginmessage}</i></p>
 
@@ -88,5 +89,29 @@
   <a class="new-account" href="register_final.jsp">Create a new account?</a>
   <input type="submit" value="Join Now" class="login-submit">
 </form>
+-->
+<div class="center">
+  <p><i>${loginmessage}</i></p>
+  <h1>Login</h1>
+  <form action="LoginReg" method="post" >
+    <input type="hidden" name="action" value="log_in">
+    <div class="txt_field">
+      <input type="text" name="username" value="${account.username}" required>
+      <span></span>
+      <label>Username</label>
+    </div>
+    <div class="txt_field">
+      <input type="password" name="password" value="${account.password}" required>
+      <span></span>
+      <label>Password</label>
+    </div>
+
+    <input type="submit" value="Join Now" >
+    <div class="signup_link">
+      <a href="register_final.jsp">Create a new account</a>
+    </div>
+  </form>
+</div>
+
 </body>
 </html>
