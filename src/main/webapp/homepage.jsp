@@ -284,7 +284,9 @@
         <div class="content">
             <h3>deal of the day</h3>
             <h1>upto 50% off</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis in atque dolore tempora quaerat at fuga dolorum natus velit.</p>
+            <h2>FREE Shipping & More</h2>
+            <p>
+                When you've found the books you want we'll ship qualifying orders to your door for FREE in 100% recyclable packaging. If there is no demand for a book, we will donate it to charity, or we'll recycle it.</p>
             <a href="#" class="btn">shop now</a>
         </div>
 
@@ -325,7 +327,7 @@
             <p class="font-style-2 color-1 font-size-s  border-bottom-2">Navigation</p>
             <ul class="list-style-none py-half">
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Home</li>
-                <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Sign In</li>
+               <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Sign In</li>
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Sign Up</li>
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Terms & Conditions</li>
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">FAQ</li>
