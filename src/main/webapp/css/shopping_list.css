@@ -16,6 +16,9 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
+#readonly input:read-only{
+    color: purple;
+}
 
 .container {
     padding: 30px 37px;
