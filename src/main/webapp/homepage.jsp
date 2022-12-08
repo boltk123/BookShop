@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookshop</title>
+
     <link type="text/css" rel="stylesheet" href="css/homepage.css">
     <link type="text/css" rel="stylesheet" href="css/homepagePlus.css">
     <link type="text/css" rel="stylesheet" href="css/normalize.css">
@@ -120,9 +121,9 @@
                     <a href="#" class="swipe"><img src="image/book-1.png" alt=""></a>
                     <a href="#" class="swipe"><img src="image/book-2.png" alt=""></a>
                     <a href="#" class="swipe"><img src="image/book-3.png" alt=""></a>
-                   <!-- <a href="#" class="swipe"><img src="image/book-4.png" alt=""></a>
+                    <a href="#" class="swipe"><img src="image/book-4.png" alt=""></a>
                     <a href="#" class="swipe"><img src="image/book-5.png" alt=""></a>
-                    <a href="#" class="swipe"><img src="image/book-6.png" alt=""></a>-->
+                    <a href="#" class="swipe"><img src="image/book-6.png" alt=""></a>
                 </div>
                 <img src="image/stand.png" class="stand" alt="">
             </div>
@@ -144,6 +145,7 @@
             <i class="fas fa-lock" id="Moveleftt"></i>
             <div class="content">
                 <h3>secure payment</h3>
+
                 <p>100 secure payment</p>
             </div>
         </div>
@@ -282,10 +284,12 @@
     <section class="deal">
 
         <div class="content">
-            <h3>deal of the day</h3>
-            <h1>upto 50% off</h1>
-            <p>Buy now to receive a lot of good deal. I believe that, you will pleasure for this services.</p>
-            <a href="#" class="btn">shop now</a>
+            <h3>Evaluate Experience</h3>
+            <h1>Please Feedback for my store</h1>
+            <h2>Raise up the customer quality is my pleasure</h2>
+            <p>
+                When you've found the books you want we'll ship qualifying orders to your door for FREE in 100% recyclable packaging. If there is no demand for a book, we will donate it to charity, or we'll recycle it.</p>
+            <a href="https://formsubmit.co/el/xiwewu" class="btn" target="_blank">Contact us</a>
         </div>
 
         <div class="image">
@@ -325,7 +329,7 @@
             <p class="font-style-2 color-1 font-size-s  border-bottom-2">Navigation</p>
             <ul class="list-style-none py-half">
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Home</li>
-                <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Sign In</li>
+               <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Sign In</li>
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Sign Up</li>
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Terms & Conditions</li>
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">FAQ</li>
@@ -363,3 +367,4 @@
 </body>
 
 </html>
+<script src="//code.tidio.co/6doklndxagosfuihr1zrebl1cdeaghic.js" async></script>
