@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="css/update-user.css">
+    <link rel="stylesheet" href="css/loginNew.css">
 </head>
 <body>
     <nav class="bg-color-3 d-flex justify-around p-1">
@@ -67,7 +68,7 @@
     </nav>
     <br>
 
-    <form class="Login-form " action="AccountUpdate" method="post">
+   <!-- <form class="Login-form " action="AccountUpdate" method="post">
         <input type="hidden" name="action" value="update">
         <div class="input-field">
             <label>First Name:</label>
@@ -91,7 +92,46 @@
         </div>
 
         <input type="submit" value="Update" class="update-btn">
-    </form>
+    </form> -->
+    <div class="center">
+        <h1>Update</h1>
+        <form action="AccountUpdate" method="post">
+            <input type="hidden" name="action" value="update">
+
+
+            <div class="txt_field">
+                <input type="text" name="firstname" value="${account.firstName}" required>
+                <span></span>
+                <label>First Name</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" name="lastname" value="${account.lastName}" required>
+                <span></span>
+                <label>Last Name</label>
+            </div>
+            <div class="txt_field">
+                <p><i>${emailmessage}</i></p>
+                <input type="email" name="email" value="${account.email}" required>
+                <span></span>
+                <label>Email</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" name="phone" value="${account.phone}" required>
+                <span></span>
+                <label>Phone</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" name="address" value="${account.address}" required>
+                <span></span>
+                <label>Address</label>
+            </div>
+
+            <input  type="submit" value="Update" >
+            <div class="signup_link">
+
+            </div>
+        </form>
+    </div>
 
 </body>
 </html>

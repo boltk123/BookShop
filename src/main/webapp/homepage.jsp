@@ -76,14 +76,16 @@
                 </c:if>
             </li>
             <li>
-                <!--
+
                 <a href="Account">
                     <img src="./assets/images/person.svg" alt="user-img" class="image-highlight pl-1">
                 </a>
-                -->
+
+               <!-- <c:if test = "${sessionScope.account.role == 'admin'}">
                 <a href="EditFetching?book_id=2">
                     <img src="./assets/images/person.svg" alt="user-img" class="image-highlight pl-1">
                 </a>
+                </c:if>-->
             </li>
         </ul>
     </nav>

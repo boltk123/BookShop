@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Collection</title>
@@ -7,7 +8,7 @@
 </head>
 <body>
 <header>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
     <nav class="bg-color-3 d-flex justify-around p-1">
         <ul class="list-style-none d-flex align-center justify-center">
             <li>
@@ -96,7 +97,7 @@
         <div class="account-info">
             <p>Address: ${account.address}</p>
         </div>
-        <a class="account-update-btn" href="PurchaseHistory"><input type="hidden" name="action"
+        <a class="account-update-btn" href="purchase_history.jsp"><input type="hidden" name="action"
             value="invoice">Purchase History</a>
         <a class="account-update-btn" href="update_account.jsp">Update</a>
 
@@ -130,7 +131,7 @@
         <div class="flex-grow-1 p-1">
             <p class="font-style-2 color-1 font-size-s  border-bottom-2">Navigation</p>
             <ul class="list-style-none py-half">
-                <li class="font-style-2 color-2 font-size-sm underline pointer py-half"><a href="index.jsp" class="d-block">Home</a></li>
+                <li class="font-style-2 color-2 font-size-sm underline pointer py-half"><a href="HomePage" class="d-block">Home</a></li>
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Sign In</li>
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Sign Up</li>
                 <li class="font-style-2 color-2 font-size-sm underline pointer py-half">Terms & Conditions</li>
