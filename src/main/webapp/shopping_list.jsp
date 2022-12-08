@@ -11,11 +11,6 @@
     <script src="https://kit.fontawesome.com/e487c6bc79.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/shopping_list.css">
     <link rel="stylesheet" href="css/responsive_shop.css">
-    <style>
-        input:read-only {
-            color: red;
-        }
-    </style>
     <title>Shopping Cart</title>
 </head>
 <body>
@@ -72,7 +67,7 @@
                                     <c:forEach var="product" items="${products}">
                                         <c:if test = "${product.product_id eq book_item.book_id}">
                                             <div class="quantity">
-                                                <input readonly type="text" name="quantity" value="${product.quantity} ">
+                                                <input type="text" name="quantity" value="${product.quantity} ">
 
                                             </div>
                                         </c:if>
@@ -147,9 +142,9 @@
                             <img src="image/paypal-checkout.png"  alt="Paypal" style="width: 410px; margin-bottom: 15px;">
                         </a>
                     <div id="other-checkout">
-                       <!-- <a href="authorize_payment">
+                        <a href="authorize_payment">
                             <img src="image/other-checkout.png" alt="Other cards">
-                        </a>-->
+                        </a>
                         <a href="vnpay_main.jsp"><img src="image/vnpay-logo.png" width="225" height="200" alt="Other cards"></a>
                     </div>
                 </div>

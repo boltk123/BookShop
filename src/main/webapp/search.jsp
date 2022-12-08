@@ -157,9 +157,9 @@
                         <div class="d-flex flex-column purchase-details-container">
                             <a href="AddCart?book_id=${book.book_id}"
                                class="default-btn font-size-md font-style-2 bg-color-1 mr-half my-half">$${book.cost}</a>
-                            <!--<a href="Detail?book_id=${book.book_id}" class="default-btn font-size-sm font-style-2 bg-color-1 mr-half my-half"><img
+                            <a href="Detail?book_id=${book.book_id}" class="default-btn font-size-sm font-style-2 bg-color-1 mr-half my-half"><img
                                     src="./assets/images/supermarket-white.svg" alt="cart-logo-2"><span
-                                    class="pl-1">Purchase Details</span></a>-->
+                                    class="pl-1">Purchase Details</span></a>
                         </div>
                     </div>
                 </article>
