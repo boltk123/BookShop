@@ -138,9 +138,7 @@
 
                 <div class="checkout-with">
                     <p class="title">Available Methods:</p>
-                        <a href="authorize_payment">
-                            <img src="image/paypal-checkout.png"  alt="Paypal" style="width: 410px; margin-bottom: 15px;">
-                        </a>
+
                     <div id="other-checkout">
                         <a href="authorize_payment">
                             <img src="image/other-checkout.png" alt="Other cards">

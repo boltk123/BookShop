@@ -120,9 +120,9 @@
                     <a href="#" class="swipe"><img src="image/book-1.png" alt=""></a>
                     <a href="#" class="swipe"><img src="image/book-2.png" alt=""></a>
                     <a href="#" class="swipe"><img src="image/book-3.png" alt=""></a>
-                    <a href="#" class="swipe"><img src="image/book-4.png" alt=""></a>
+                   <!-- <a href="#" class="swipe"><img src="image/book-4.png" alt=""></a>
                     <a href="#" class="swipe"><img src="image/book-5.png" alt=""></a>
-                    <a href="#" class="swipe"><img src="image/book-6.png" alt=""></a>
+                    <a href="#" class="swipe"><img src="image/book-6.png" alt=""></a>-->
                 </div>
                 <img src="image/stand.png" class="stand" alt="">
             </div>
@@ -284,7 +284,7 @@
         <div class="content">
             <h3>deal of the day</h3>
             <h1>upto 50% off</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis in atque dolore tempora quaerat at fuga dolorum natus velit.</p>
+            <p>Buy now to receive a lot of good deal. I believe that, you will pleasure for this services.</p>
             <a href="#" class="btn">shop now</a>
         </div>
 

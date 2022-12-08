@@ -36,12 +36,13 @@ public class PurchasedServlet extends HttpServlet {
             Accounts current_account = (Accounts)session.getAttribute("account");
             int book_id = Integer.parseInt(request.getParameter("book_id"));
             boolean purchased = PurchasesDB.purchased(current_account.getUser_id(), book_id);
-            if (purchased != true) {
-                url = "/AddCart";
-            }
-            else{
-                url = "/PdfDownload";
-            }
+            url = "/PdfDownload";
+//            if (purchased != true) {
+//                url = "/AddCart";
+//            }
+//            else{
+//                url = "/PdfDownload";
+//            }
             request.getRequestDispatcher(url).forward(request, response);
         }
         catch (Exception e){
