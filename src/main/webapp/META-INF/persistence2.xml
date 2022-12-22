@@ -9,15 +9,15 @@
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="javax.persistence.jdbc.url"
-                      value="jdbc:postgresql://localhost:5432/test"/>
+                      value="jdbc:postgresql://ec2-54-167-168-52.compute-1.amazonaws.com:5432/d8rl6dl4jsi9m8"/>
             <property name="javax.persistence.jdbc.user"
-                      value="postgres"/>
+                      value="qougcpfvbckgew"/>
             <property name="javax.persistence.jdbc.password"
-                      value="12345"/>
+                      value="370a4bddbe667a9f07d0875f4cce2cdb1ec3f9d1fd01267c4ee9c5f19a87991f"/>
             <property name="javax.persistence.jdbc.driver"
                       value="org.postgresql.Driver"/>
             <property name="javax.persistence.schema-generation.database.action"
-                      value="create"/>
+                      value="none"/>
         </properties>
     </persistence-unit>
 </persistence>

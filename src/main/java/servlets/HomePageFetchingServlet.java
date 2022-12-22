@@ -19,9 +19,9 @@ public class HomePageFetchingServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String url = "/homepage.jsp";
-        List<Books> non_fiction_books = BooksDB.selectBooksByGenre("Non-Fiction");
-        List<Books> fiction_books = BooksDB.selectBooksByGenre("Fiction");
-        List<Books> academic_books = BooksDB.selectBooksByGenre("Academic");
+//        List<Books> non_fiction_books = BooksDB.selectBooksByGenre("Non-Fiction");
+//        List<Books> fiction_books = BooksDB.selectBooksByGenre("Fiction");
+//        List<Books> academic_books = BooksDB.selectBooksByGenre("Academic");
         String index_message = "LOG IN";
         ServletContext sc = getServletContext();
         HttpSession session = request.getSession();
@@ -33,9 +33,9 @@ public class HomePageFetchingServlet extends HttpServlet {
             index_message = "LOG IN";
         }
 
-        session.setAttribute("non_fiction_books", non_fiction_books);
-        session.setAttribute("fiction_books", fiction_books);
-        session.setAttribute("academic_books", academic_books);
+//        session.setAttribute("non_fiction_books", non_fiction_books);
+//        session.setAttribute("fiction_books", fiction_books);
+//        session.setAttribute("academic_books", academic_books);
         request.setAttribute("indexmessage",index_message);
         sc.getRequestDispatcher(url).
                 forward(request, response);
